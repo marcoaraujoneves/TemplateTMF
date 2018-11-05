@@ -1,5 +1,54 @@
 /*--------------------------------------------------------------------*/
 /*------------------------ Layout ------------------------------------*/
 
+.bg
+{
+    background-color:#6a6a6a;
+    height: 250px;
+    width: 100%;
+}
+
+#logo
+{
+    width:250px;
+    height:250px;
+}
+
+.textomenu
+{
+    text-align: center;
+    font-size: 20px;
+    line-height: 25px;
+    color: black;
+    padding-top: 90px;
+    
+}
+.navbar {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    letter-spacing: 5px;
+    background-color:#6a6a6a;
+
+}
+
+.navbar-nav li a:hover {
+    color: #163f63 !important;
+    background-color: #6a6a6a !important;
+}
+
+.social_icone
+{
+    width:30px;
+    height:30px;
+    margin:15px;
+    position: center;
+}
+
+
+
 /*--------------------------------------------------------------------*/
 /*------------------------ Tipografia --------------------------------*/
