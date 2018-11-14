@@ -1,5 +1,104 @@
 /*--------------------------------------------------------------------*/
 /*------------------------ Layout ------------------------------------*/
+.container-titulos{
+    padding: 30px;
+}
+/* Contato */
+.icone-contatenos{
+    height: 50px;
+    width: 13%;
+    float: left;
+}
+.icone-contatenos img{
+    height: 80%;
+    margin: 10% auto;
+}
 
+.info-contatenos{
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 6px;
+    height: 50px;
+    width: 86%;
+    float: left;
+}
+
+#mande_mensagem{
+    border-left: 1px solid #365C9A;
+    box-shadow: -2px 0px rgba(54, 92, 154, 0.151);
+}
+
+.info-contatenos #infemail{
+    margin-top: 9px;
+}
+
+.inpForm{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border: 2px solid #365C9A;
+    border-radius: 5px;
+    outline: none;
+    transition: box-shadow 0.25s ease 0s;
+}
+
+.inpForm:focus{
+    box-shadow: 3px 5px 6px rgba(54, 92, 154, 0.514);
+}
+
+
+#container-mapa{
+    position: absolute;
+    left: 0;
+    padding: 0;
+}
 /*--------------------------------------------------------------------*/
 /*------------------------ Tipografia --------------------------------*/
+@font-face {
+    font-family: Verdana4;
+    src:url(Fontes/verdana.ttf);
+}
+
+*{
+    font-family: Verdana4, Arial, sans-serif;
+}
+.titulo_secoes{
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+    color:#365C9A;
+}
+
+.titulo_secoes::after{
+    margin: 1px auto;
+    height: 4px;
+    width: 120px;
+    content: " ";
+    display: block;
+    background-color: #365C9A;
+    border-radius: 6px;
+}
+
+/* Contato */
+
+#contate-nos h3, #mande_mensagem h3{
+    text-align: center;
+    font-size: 33px;
+    font-weight: 600;
+    color: rgb(41, 70, 117);
+}
+
+.info-contatenos span{
+    font-size: 16px;
+    text-align: justify;
+    display: block;
+    padding: 0;
+    float: left;
+    color:  rgb(53, 51, 51);
+}
+
+.txtForm{
+    color: rgb(6, 30, 68);
+    font-weight: 600;
+    font-size: 18px;
+}
