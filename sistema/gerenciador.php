@@ -32,27 +32,27 @@
                         <ul type="none">
                             <li class="itemMenuSistema">
                                 <img src="../img/location.png">
-                                Serviços
+                                <span> Serviços </span>
                             </li>
                             <li class="itemMenuSistema">
                                 <img src="../img/location.png">
-                                Produtos
+                                <span> Produtos </span>
                             </li>
                             <li class="itemMenuSistema">
                                 <img src="../img/location.png">
-                                Portifólio
+                                <span> Portifólio </span>
                             </li>
                             <li class="itemMenuSistema">
                                 <img src="../img/location.png">
-                                Newsletter
+                                <span> Newsletter </span>
                             </li>
                             <li class="itemMenuSistema">
                                 <img src="../img/location.png">
-                                Mensagens
+                                <span> Mensagens </span>
                             </li>
                             <li class="itemMenuSistema">
                                 <img src="../img/location.png">
-                                Sair
+                                <span> Sair </span>
                             </li>
 
                         </ul>
@@ -66,11 +66,72 @@
                     </ul>
 
                     <div class="tab-content">
-                        <div class="tab-pane active"  role="tabpanel" id="listaEmails">
-                            teste 1
+                        <div class="tab-pane fade show active"  role="tabpanel" id="listaEmails">
+                            <p>
+                                <br>
+                                A lista abaixo contém uma relação completa de todos os e-mails que foram cadastrados no site
+                                para receber notificações de Promoções, Produtos, Serviços, Avisos, entre outros, bem como o 
+                                status do cadastro, ou seja, se o e-mail está Ativo ou Inativo na lista de destinatários, e opções para Deletar 
+                                o e-mail, Editar ou alternar o Status.
+                            </p>
+
+                            <div class="table-responsive">
+                                <table id="listaEmail" class="table table-striped table-hover ">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:6%;"> # </th>
+                                            <th style="width:24%;"> Nome </th>
+                                            <th style="width:40%;"> E-mail </th>
+                                            <th style="width:10%;"> Status </th>
+                                            <th style="width:15%;">  </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th> 1 </th>
+                                            <td> Marco </td>
+                                            <td> marcoaraujoneves@gmail.com </td>
+                                            <td> Inativo </td>
+                                            <td>
+                                                <center>
+                                                    <button class="botaoEmail" id="deletarEmail"> </button>
+                                                    <button class="botaoEmail" id="editarEmail"> </button>
+                                                    <button class="botaoEmail" id="statusEmail"> </button>
+                                                </center>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th> 2 </th>
+                                            <td> Marco </td>
+                                            <td> marcoaraujoneves@gmail.com </td>
+                                            <td> Ativo </td>
+                                            <td>
+                                                <center>
+                                                    <button class="botaoEmail" id="deletarEmail"> </button>
+                                                    <button class="botaoEmail" id="editarEmail"> </button>
+                                                    <button class="botaoEmail" id="statusEmail"> </button>
+                                                </center>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th> 3 </th>
+                                            <td> Marco </td>
+                                            <td> marcoaraujoneves@gmail.com </td>
+                                            <td> Ativo </td>
+                                            <td>
+                                                <center>
+                                                    <button class="botaoEmail" id="deletarEmail"> </button>
+                                                    <button class="botaoEmail" id="editarEmail"> </button>
+                                                    <button class="botaoEmail" id="statusEmail"> </button>
+                                                </center>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                             
-                        <div class="tab-pane"  role="tabpanel" id="enviarEmail">
+                        <div class="tab-pane fade"  role="tabpanel" id="enviarEmail">
                             teste 2
                         </div>
                     </div>
@@ -79,6 +140,7 @@
        </div>
 
     </body>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
     <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
 </html>

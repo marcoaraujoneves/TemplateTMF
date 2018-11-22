@@ -36,6 +36,7 @@ body{
 
 /*----- Gerenciador -----*/
 #menu-lateral{
+    overflow-x: auto;
     height: 100%;
     position: absolute;
     padding-right: 0px;
@@ -44,14 +45,6 @@ body{
     bottom: 0;
     left: 0;
     background-color: #365C9A;
-}
-
-#painelSistema{
-    height: 100%;
-    position: absolute;
-    top:0;
-    bottom: 0;
-    right: 0;
 }
 
 #usuarioSistema{
@@ -93,6 +86,46 @@ body{
     height: 20px;
 }
 
+#painelSistema{
+    height: 100%;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    padding-top: 20px;
+}
+
+ul.nav-tabs{
+    border-bottom: 1px solid rgb(64, 111, 187);
+}
+
+li.nav-item a.nav-link{
+    background: transparent;
+    border:1px solid transparent;
+    color: rgb(64, 111, 187);
+    transition: border 0.15s linear 0s,background-color 0.15s linear 0s, color 0.15s linear 0s, text-shadow 0.15s linear 0s;
+}
+
+li.nav-item a.nav-link:hover{
+    border: 1px solid rgb(64, 111, 187);
+}
+
+li.nav-item a.nav-link.active{
+    background-color: rgb(64, 111, 187);
+    border: 1px solid rgb(64, 111, 187);
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+thead{
+    background-color: rgb(8, 21, 43);
+    color: white;
+}
+
+.botaoEmail{
+    width: 25px;
+    height: 20px;
+}
+
 /*--------------------------------------------------------------------*/
 /*------------------------ Tipografia --------------------------------*/
 @font-face {
@@ -126,4 +159,10 @@ body{
 
 .itemMenuSistema{
     font-size: 27px;
+}
+
+li.nav-item a.nav-link{
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 19px;
 }

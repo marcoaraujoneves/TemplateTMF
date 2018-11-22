@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <form>
-                        <img src="../img/logo.png" class="img-responsive"><br>
+                        <img src="../img/logo.png" class="img-responsive centralizar"><br>
                         <label for="login" class="txtForm"> Login </label>
                         <input type="text" id="login" name="login" class="inpForm"><br>
 
