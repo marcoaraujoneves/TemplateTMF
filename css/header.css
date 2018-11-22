@@ -1,51 +1,44 @@
 /*--------------------------------------------------------------------*/
 /*------------------------ Layout ------------------------------------*/
 
-.bg
-{
-    background-color:#6a6a6a;
-    height: 250px;
-    width: 100%;
-}
-
-#logo
-{
+#logo{
     width:250px;
     height:250px;
 }
 
-.textomenu
-{
-    text-align: center;
+.textomenu{
+    text-align:center;
     font-size: 20px;
     line-height: 25px;
-    color: black;
-    padding-top: 90px;
-    
+    padding-top: 90px;    
 }
-.navbar {
-    padding-top: 10px;
-    padding-bottom: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 18px;
-    letter-spacing: 5px;
-    background-color:#6a6a6a;
-
+.sticky{
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -o-sticky;
+    position: -ms-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
 }
 
-.navbar-nav li a:hover {
-    color: #163f63 !important;
-    background-color: #6a6a6a !important;
+.navbar, #bg {
+    background-color:#365C9A;
+    color:white;
+
+}
+.nav-link{
+    color:white;
+}
+.nav-link:hover {
+    color:lightgray;
 }
 
-.social_icone
-{
+.social_icone{
     width:30px;
     height:30px;
-    margin:15px;
-    position: center;
+    margin:10px;
+    text-align:center;
 }
 
 
