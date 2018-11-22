@@ -46,6 +46,13 @@
     box-shadow: 3px 5px 6px rgba(54, 92, 154, 0.514);
 }
 
+.btnForm{
+    padding: 5px;
+    color: #365C9A;
+    font-weight: 600;
+    background-color: rgb(230, 230, 230);
+    border-radius: 6px;
+}
 
 #container-mapa{
     position: absolute;

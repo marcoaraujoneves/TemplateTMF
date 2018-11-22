@@ -1,0 +1,129 @@
+/*--------------------------------------------------------------------*/
+/*------------------------ Layout ------------------------------------*/
+body,html{
+    width: 100%;
+    height: 100%;
+}
+
+/*----- Tela de Login -----*/
+body{
+    margin: 0 auto;
+    position: relative;
+    overflow-x: hidden;
+    background:linear-gradient(45deg,white,rgba(211, 211, 211, 0.61),white);
+}
+
+#cardLogin{
+    width: 450px;
+    height: 450px;
+    margin: 8% auto;
+    background-color: #365C9A;
+    box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: 3px 5px 7px rgb(163, 162, 162);
+
+}
+
+#cardLogin form{
+    width: 80%;
+    margin: auto auto;
+}
+
+#cardLogin form img{
+    width: 60%;
+    margin: auto;
+}
+
+/*----- Gerenciador -----*/
+#menu-lateral{
+    height: 100%;
+    position: absolute;
+    padding-right: 0px;
+    padding-left: 0px;
+    top:0;
+    bottom: 0;
+    left: 0;
+    background-color: #365C9A;
+}
+
+#painelSistema{
+    height: 100%;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+}
+
+#usuarioSistema{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px groove rgb(46, 87, 155);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.288);
+}
+
+#menuSistema{
+    padding-top: 15px;
+    width: 100%;
+
+}
+
+#menuSistema ul{
+    padding: 0px;
+}
+
+.itemMenuSistema{
+    width: 95%;
+    margin: 0 auto;
+    padding: 15px;
+    color: lightgray;
+    border-bottom: 1px groove gray;
+    transition: padding-left 0.5s ease 0s, text-shadow 0.5s ease 0s, border-bottom 0.5s ease 0s;
+}
+
+.itemMenuSistema:hover{
+    padding-left: 25px;
+    text-shadow: 2px 2px 2px black;
+    border-bottom: 1px groove lightgray;
+    cursor: pointer;
+}
+
+.itemMenuSistema img{
+    height: 20px;
+}
+
+/*--------------------------------------------------------------------*/
+/*------------------------ Tipografia --------------------------------*/
+@font-face {
+    font-family: Verdana4;
+    src:url(Fontes/verdana.ttf);
+}
+
+*{
+    font-family: Verdana4, Arial, sans-serif;
+}
+
+#usuarioSistema h3{
+    color: white;
+    font-weight: 800;
+}
+
+#usuarioSistema h3::after{
+    margin: 5px auto;
+    height: 3px;
+    width: 120px;
+    content: "";
+    display: block;
+    background-color: white;
+    border-radius: 6px;
+}
+
+#usuarioSistema h4{
+    color: white;
+    font-weight: 500;
+}
+
+.itemMenuSistema{
+    font-size: 27px;
+}
