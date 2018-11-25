@@ -41,18 +41,30 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="col-md-6">
-                            <p class="texto"> XX projetos entregues </p>
+                            <div class="row">
+                                <div class="col-md-5">
+                                <p class="texto"> XX projetos entregues </p>
+                                </div>
+                                <div class="col-md-1">
+                                </div>
+                                <div class="col-md-5">
+                                <p class="texto"> XX anos no mercado </p>
+                                </div>
+                                <div class="col-md-1">
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                            <p class="texto"> XX anos no mercado </p>
-                            </div>
-                            <br>
-                            <div class="col-md-6">
-                            <p class="texto"> Mais de XX produtos próprios </p>
-                            </div>
-                            <div class="col-md-6">
-                            <p class="texto"> Mais de XX opções de serviço </p>
+                                <br>
+                                <div class="row">
+                                <div class="col-md-5">
+                                <p class="texto"> Mais de XX produtos próprios </p>
+                                </div>
+                                <div class="col-md-1">
+                                </div>
+                                <div class="col-md-5">
+                                <p class="texto"> Mais de XX opcções de serviço </p>
+                                </div>
+                                <div class="col-md-1">
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -69,7 +81,7 @@
             <!--SOBRE NÓS-->
 
             <!--SERVICOS-->
-            <section id="secaoSobre">
+            <section id="secaoservicos">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 container-titulos">
@@ -90,18 +102,26 @@
                         </div>
 
                         <div class="col-md-6">
-                            <div class="col-md-6">
-                            <img src="img/tornearia.png" class="imagem">
-                            </div>
-                            <div class="col-md-6">
-                            <img src="img/usinagem.png" class="imagem">
+                            <div class="row">
+                                <div class="col-md-2">
+                                </div>
+                                <div class="col-md-5">
+                                <img src="img/tornearia.png" class="imagem">
+                                </div>
+                                <div class="col-md-5">
+                                <img src="img/usinagem.png" class="imagem">
+                                </div>
                             </div>
                             <br>
-                            <div class="col-md-6">
-                            <img src="img/manutencao.png" class="imagem">
-                            </div>
-                            <div class="col-md-6">
-                            <img src="img/maquinas.png" class="imagem">
+                            <div class="row">
+                                <div class="col-md-2">
+                                </div>
+                                <div class="col-md-5">
+                                <img src="img/manutencao.png" class="imagem">
+                                </div>
+                                <div class="col-md-5">
+                                <img src="img/maquinas.png" class="imagem">
+                                </div>
                             </div>
                         </div>
                     </div>
