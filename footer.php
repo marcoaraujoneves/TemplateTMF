@@ -1,4 +1,6 @@
-<footer>
+<html>
+    <body>  
+        <footer>
             <!--Rodapé-->
             <div id="forma_rodape">
                 <div id="margem_conteudo">
@@ -79,6 +81,5 @@
             </div>
         </footer>
     </body>
-    <script src="js/scriptPrincipal.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </html>
