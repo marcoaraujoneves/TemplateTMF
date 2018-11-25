@@ -29,24 +29,85 @@
 
         <!-- Corpo principal -->
         <main>
-            <!-- Modelo de seção a ser utilizado -->
-            <section id="secao_modelo">
+            <!--SOBRE NÓS-->
+            <section id="secaoSobre">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 container-titulos">
                             <h1 class="titulo_secoes">
-                                Modelo
+                                Sobre Nós
                             </h1>
                         </div>
                     </div>
-
                     <div class="row">
-                        <div class="col-md-">
-
+                        <div class="col-md-6">
+                            <div class="col-md-6">
+                            <p class="texto"> XX projetos entregues </p>
+                            </div>
+                            <div class="col-md-6">
+                            <p class="texto"> XX anos no mercado </p>
+                            </div>
+                            <br>
+                            <div class="col-md-6">
+                            <p class="texto"> Mais de XX produtos próprios </p>
+                            </div>
+                            <div class="col-md-6">
+                            <p class="texto"> Mais de XX opções de serviço </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="texto">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis a nibh et cursus. 
+                            Aliquam lacinia sed mauris eget laoreet. 
+                            Mauris accumsan lectus dignissim, volutpat nisi vitae, vestibulum odio. 
+                            Quisque auctor lacus sed elit pulvinar vulputate. Vestibulum tristique nisi risus, in viverra lacus elementum non. 
+                            </p>
                         </div>
                     </div>
                 </div>
             </section>
+            <!--SOBRE NÓS-->
+
+            <!--SERVICOS-->
+            <section id="secaoSobre">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 container-titulos">
+                            <h1 class="titulo_secoes">
+                                Serviços
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="texto">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis a nibh et cursus. 
+                            Aliquam lacinia sed mauris eget laoreet. 
+                            Mauris accumsan lectus dignissim, volutpat nisi vitae, vestibulum odio. 
+                            Quisque auctor lacus sed elit pulvinar vulputate. Vestibulum tristique nisi risus, in viverra lacus elementum non. 
+                            </p>
+                            <a id="vermais">Ver mais...</a>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="col-md-6">
+                            <img src="img/tornearia.png" class="imagem">
+                            </div>
+                            <div class="col-md-6">
+                            <img src="img/usinagem.png" class="imagem">
+                            </div>
+                            <br>
+                            <div class="col-md-6">
+                            <img src="img/manutencao.png" class="imagem">
+                            </div>
+                            <div class="col-md-6">
+                            <img src="img/maquinas.png" class="imagem">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--SERVICOS-->
 
             <section id="secao_contato">
                 <div class="container">

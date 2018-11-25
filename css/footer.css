@@ -1,5 +1,114 @@
-/*--------------------------------------------------------------------*/
-/*------------------------ Layout ------------------------------------*/
+/*----------------------------------   Layout   -----------------------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
 
-/*--------------------------------------------------------------------*/
-/*------------------------ Tipografia --------------------------------*/
+#forma_rodape{
+    background-color: #333 ;
+    widows: 100%;
+    height: auto;
+}
+
+#forma_copyright{
+  background-color: #222 ;
+  border-top: 1px solid #555;
+  width: 100% ;
+  height: auto;
+}
+
+.rodape_link{
+    font-size: 12pt;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+}
+
+.rodape_link:hover{
+    color: #7ac1ed;
+    text-decoration: none ;
+    transition: 0.15s linear ;
+}
+
+.lista{
+    margin-top: 5pt;
+    list-style-type: none ;
+    padding: 0 ;
+}
+
+.rodape_elementos{
+    margin-top: 5pt;
+    cursor: pointer;
+}
+
+#margem_conteudo{
+    background-color: #333 ;
+    padding: 25px 0px 35px;
+    margin-top: 25px;
+}
+
+.tags{
+    margin-top: 10px ;
+    margin-left: 5px ;
+    float: left;
+    padding: 3px 10px;
+    color: #9E9E9E ;
+    background-color: #2C2C2C ;
+    border-radius: 10px ;
+    cursor: default;
+    cursor: pointer;
+}
+
+.tags:hover{
+    color: #333  ;
+    background-color: #bac3ca;
+    transition: 0.15s linear ;
+}
+
+.linha_rodape{
+    display: block;
+    margin: auto;
+    content: "";
+    width: 95%;
+    height: 3px;
+    margin-left: 0px ;
+    background: #bac3ca;
+    border-radius: 5px ;
+}
+
+.copyright_caixa{
+    margin-top: 0 ;
+}
+
+/*----------------------------------   Tipografia   -------------------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
+
+.tags{
+    font-size: 13px ;   
+    white-space: nowrap;
+}
+
+.rodape_titulos{
+    color:  #7ac1ed!important ;
+    font-size: 30px ;
+    font-weight: 500;
+    text-align: center;
+}
+
+.textoli{
+    margin-top: 5pt;
+        font-size: 12pt;
+        color: rgb(255, 255, 255);
+        text-align: justify;
+}
+
+.social_link{
+    font-size: 12px ;
+}
+
+.Copyright_texto{
+    font-size: 18px;
+    color: #C4C4C4;
+    margin: 25px 0px;
+    font-weight: 500;
+}
+
+.Copyright_sublinha_rodapedo{
+color: #EE3B24 ;
+}
