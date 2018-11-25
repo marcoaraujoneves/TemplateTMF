@@ -62,6 +62,20 @@ body{
 
 }
 
+#menu-lateral::-webkit-scrollbar-track {
+    background-color: rgba(54, 92, 154, 0.548);
+}
+
+#menu-lateral::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+
+#menu-lateral::-webkit-scrollbar-thumb {
+    background-color: rgb(38, 77, 141);
+    border-radius: 4px;
+}
+
 #menuSistema ul{
     padding: 0px;
 }
@@ -87,12 +101,27 @@ body{
 }
 
 #painelSistema{
+    overflow-x: auto;
     height: 100%;
     position: absolute;
     top:0;
     bottom: 0;
     right: 0;
     padding-top: 20px;
+}
+
+#painelSistema::-webkit-scrollbar-track {
+    background-color: rgba(54, 92, 154, 0.589);
+}
+
+#painelSistema::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+
+#painelSistema::-webkit-scrollbar-thumb {
+    background-color: #365C9A;
+    border-radius: 4px;
 }
 
 ul.nav-tabs{
@@ -165,4 +194,8 @@ li.nav-item a.nav-link{
     letter-spacing: 1px;
     font-weight: 600;
     font-size: 19px;
+}
+
+#listaEmails p{
+    text-align: justify;
 }

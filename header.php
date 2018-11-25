@@ -26,7 +26,7 @@
             </div>
 
             <div class="collapse navbar-collapse" id="menu-navegacao">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item navegacao"><a class="nav-link" href="#">Home</a></li>
                     <li class="nav-item navegacao"><a class="nav-link" href="#">Produtos</a></li>
                     <li class="nav-item navegacao"><a class="nav-link" href="#">Serviços</a></li>
