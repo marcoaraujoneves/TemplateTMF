@@ -93,9 +93,9 @@
 
 .textoli{
     margin-top: 5pt;
-        font-size: 12pt;
-        color: rgb(255, 255, 255);
-        text-align: justify;
+    font-size: 12pt;
+    color: rgb(255, 255, 255);
+    text-align: justify;
 }
 
 .social_link{
@@ -110,5 +110,5 @@
 }
 
 .Copyright_sublinha_rodapedo{
-color: #EE3B24 ;
+    color: #EE3B24 ;
 }
