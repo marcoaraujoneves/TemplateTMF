@@ -16,7 +16,7 @@
     <nav class="navbar navbar-expand-md navbar-light sticky-top" id="navbarTMF">
         <div class="container sticky-top">
             <img class="d-md-none"src="img/logo.png" id="logo">
-            <p class="textomenu d-md-none" style="padding-top:0px">(22)9999-8756<br><br>07h até as 17h</p>
+            <p class="textomenu d-md-none" style="padding-top:0px">(22)9999-8756<br><br>07h até as 18h</p>
 
             <div class="navbar-header">
                 <!-- Botao Toggle -->
