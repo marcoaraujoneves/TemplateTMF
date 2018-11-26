@@ -83,3 +83,27 @@
     </body>
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </html>
+
+<!-- MODELO
+
+    <section id="secaoModelo">
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-12 container-titulos">
+                        <h1 class="titulo_secoes">
+                            Modelo
+                        </h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                    </div>
+                <div class="col-md-6">
+
+                </div>
+                </div>
+            </div>
+    </section>
+
+/MODELO --> 
