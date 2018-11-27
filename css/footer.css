@@ -1,47 +1,41 @@
 /*----------------------------------   Layout   -----------------------------------------------*/
-/*---------------------------------------------------------------------------------------------*/
 
-#forma_rodape{
-    background-color: #333 ;
-    widows: 100%;
-    height: auto;
+#rodape{
+    color: rgb(red, rgb(76, 77, 82), blue);
 }
 
-#forma_copyright{
-  background-color: #222 ;
-  border-top: 1px solid #555;
-  width: 100% ;
-  height: auto;
-}
+/*-- Títulos --*/
 
-.rodape_link{
-    font-size: 12pt;
-    color: rgb(255, 255, 255);
-    text-align: justify;
-}
-
-.rodape_link:hover{
+.titulos_rodape{
     color: #7ac1ed;
-    text-decoration: none ;
-    transition: 0.15s linear ;
+    border-bottom: 1pt solid #bac3ca;
 }
 
-.lista{
-    margin-top: 5pt;
-    list-style-type: none ;
-    padding: 0 ;
-}
+/*-- Menu --*/
 
-.rodape_elementos{
+.item_menu_rodape{
     margin-top: 5pt;
+    color:black /*modificar para rgb(255, 255, 255) */;
     cursor: pointer;
 }
 
-#margem_conteudo{
-    background-color: #333 ;
-    padding: 25px 0px 35px;
-    margin-top: 25px;
+.item_menu_rodape:hover{
+    color: #7ac1ed!important;
+    transition: 0.15s linear;
 }
+
+/*-- Funcionamento --*/
+
+.pre_item_funcionamento{
+    color:black /*modificar para rgb(255, 255, 255) */;
+}
+
+.item_funcionamento {
+    margin-top: 6pt;
+    color:black /*modificar para rgb(255, 255, 255) */;
+}
+
+/*-- Tags Principais --*/
 
 .tags{
     margin-top: 10px ;
@@ -51,64 +45,65 @@
     color: #9E9E9E ;
     background-color: #2C2C2C ;
     border-radius: 10px ;
-    cursor: default;
     cursor: pointer;
 }
 
 .tags:hover{
-    color: #333  ;
-    background-color: #bac3ca;
+    color: black ;
+    background-color: #7ac1ed;
     transition: 0.15s linear ;
 }
 
-.linha_rodape{
-    display: block;
-    margin: auto;
-    content: "";
-    width: 95%;
-    height: 3px;
-    margin-left: 0px ;
-    background: #bac3ca;
-    border-radius: 5px ;
-}
+/*-- Parte Direitos --*/
 
-.copyright_caixa{
-    margin-top: 0 ;
-}
 
-/*----------------------------------   Tipografia   -------------------------------------------*/
 /*---------------------------------------------------------------------------------------------*/
 
-.tags{
-    font-size: 13px ;   
-    white-space: nowrap;
-}
+/*----------------------------------   Tipografia   -------------------------------------------*/
 
-.rodape_titulos{
-    color:  #7ac1ed!important ;
-    font-size: 30px ;
+/*-- Títulos --*/
+
+.titulos_rodape{
+    font-size: 16pt ;
     font-weight: 500;
     text-align: center;
 }
 
-.textoli{
-    margin-top: 5pt;
+/*-- Menu --*/
+
+.item_menu_rodape{
+    font-size: 10pt;
+    text-align: justify;
+    cursor: pointer;
+}
+
+li{
+    list-style-type: none;
+}
+
+/*-- Funcionamento --*/
+
+.pre_item_funcionamento{
     font-size: 12pt;
-    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.item_funcionamento {
+    font-size: 10pt;
     text-align: justify;
 }
 
-.social_link{
-    font-size: 12px ;
+/*-- Tags Principais --*/
+
+.tags{
+    font-size: 10pt;
 }
 
-.Copyright_texto{
-    font-size: 18px;
-    color: #C4C4C4;
-    margin: 25px 0px;
-    font-weight: 500;
+/*-- Parte Direitos --*/
+
+#texto_direitos{
+    font-size: 8pt;
+    font-weight: bold;
 }
 
-.Copyright_sublinha_rodapedo{
-    color: #EE3B24 ;
-}
+/*---------------------------------------------------------------------------------------------*/
