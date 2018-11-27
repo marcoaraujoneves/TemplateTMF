@@ -205,8 +205,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <label class="txtForm" for="mensagem"> &ensp;Mensagem </label> <br>
-                                            <textarea c
-                            lass="inpForm" id="mensagem" name="mensagem" rows="6"> </textarea>
+                                            <textarea class="inpForm" id="mensagem" name="mensagem" rows="6"> </textarea>
                                         </div>
                                     </div>
                                 </div>

@@ -1,13 +1,14 @@
 /*----------------------------------   Layout   -----------------------------------------------*/
 
 #rodape{
-    color: rgb(red, rgb(76, 77, 82), blue);
+    background-color: black !important;
+    color: white;
 }
 
 /*-- Títulos --*/
 
 .titulos_rodape{
-    color: #7ac1ed;
+    color: #365C9A;
     border-bottom: 1pt solid #bac3ca;
 }
 
@@ -15,24 +16,24 @@
 
 .item_menu_rodape{
     margin-top: 5pt;
-    color:black /*modificar para rgb(255, 255, 255) */;
+    /* color:black!important; modificar para rgb(255, 255, 255) */
     cursor: pointer;
 }
 
 .item_menu_rodape:hover{
-    color: #7ac1ed!important;
+    color: #365C9A!important;
     transition: 0.15s linear;
 }
 
 /*-- Funcionamento --*/
 
 .pre_item_funcionamento{
-    color:black /*modificar para rgb(255, 255, 255) */;
+    /* color:black;modificar para rgb(255, 255, 255) */
 }
 
 .item_funcionamento {
     margin-top: 6pt;
-    color:black /*modificar para rgb(255, 255, 255) */;
+    /* color:black; /*modificar para rgb(255, 255, 255) */
 }
 
 /*-- Tags Principais --*/
@@ -50,7 +51,7 @@
 
 .tags:hover{
     color: black ;
-    background-color: #7ac1ed;
+    background-color: #365C9A;
     transition: 0.15s linear ;
 }
 

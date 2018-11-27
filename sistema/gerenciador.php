@@ -63,6 +63,7 @@
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item"><a class="nav-link active" href="#listaEmails" role="tab" data-toggle="tab"> E-mails Cadastrados </a></li>
                         <li class="nav-item"><a class="nav-link" href="#enviarEmail" role="tab" data-toggle="tab"> Enviar e-mail </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#emailsEnviados" role="tab" data-toggle="tab"> Enviados </a></li>
                     </ul>
 
                     <div class="tab-content">
@@ -133,6 +134,10 @@
                             
                         <div class="tab-pane fade"  role="tabpanel" id="enviarEmail">
                             teste 2
+                        </div>
+
+                        <div class="tab-pane fade"  role="tabpanel" id="emailsEnviados">
+                            teste 3
                         </div>
                     </div>
                 </div>
