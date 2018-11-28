@@ -44,11 +44,11 @@
     <div class="col-md-2">
         <!--espaçamento--> 
     </div> 
-    <div class="col-md-6"> 
+    <div class="col-md-5"> 
         <span id="texto_direitos">©2018. Todos os direitos reservados.</span>
     </div>
-    <div class="col-md-2"> 
-        <!-- Inserir logo aqui -->
+    <div class="col-md-3"> 
+        <img src="img/logo1.png" id="logo">
     </div>
     <div class="com-md-2"> 
         <!--espaçamento--> 

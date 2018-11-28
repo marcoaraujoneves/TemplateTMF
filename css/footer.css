@@ -55,6 +55,12 @@ footer{
 #texto_direitos{
     color: whitesmoke;
 }
+#logo{
+    max-width:140px;
+    max-height:90px;
+    width: auto;
+    height: auto;
+}
 
 /*---------------------------------------------------------------------------------------------*/
 
