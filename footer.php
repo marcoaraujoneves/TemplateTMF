@@ -1,3 +1,4 @@
+<br><br>
 <!-- Títulos e Infos -->  
 <div class="row">
     <div class="col-md-1">
@@ -39,6 +40,7 @@
         <!--espaçamento--> 
     </div>
 </div>
+<br>
 <!-- Direitos --> 
 <div class="row">
     <div class="col-md-2">

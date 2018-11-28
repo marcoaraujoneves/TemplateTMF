@@ -9,6 +9,7 @@ footer{
 .titulos_rodape{
     color: #365C9A;
     border-bottom: 1pt solid #bac3ca;
+    margin-bottom: 25pt;
 }
 
 /*-- Menu --*/
@@ -28,6 +29,7 @@ footer{
 
 .pre_item_funcionamento{
     color: white;
+    margin-bottom: 15pt;
 }
 
 .item_funcionamento {
@@ -41,8 +43,7 @@ footer{
     padding: 2pt;
     color: white;
     background-color: #2C2C2C ;
-    border-radius: 10pt ;
-    cursor: pointer;
+    border-radius: 10pt;
 }
 
 .tags:hover{
