@@ -22,7 +22,7 @@
     <body>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-3" id="menu-lateral">
+                <div class="col-3" id="menu-lateral">
                     <div id="usuarioSistema">
                         <h3> Nome usuário </h3>
                         <h4> cargo </h4>
@@ -59,7 +59,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-9" id="painelSistema">
+                <div class="col-9" id="painelSistema">
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item"><a class="nav-link active" href="#listaEmails" role="tab" data-toggle="tab"> E-mails Cadastrados </a></li>
                         <li class="nav-item"><a class="nav-link" href="#enviarEmail" role="tab" data-toggle="tab"> Enviar e-mail </a></li>
@@ -133,7 +133,52 @@
                         </div>
                             
                         <div class="tab-pane fade"  role="tabpanel" id="enviarEmail">
-                            teste 2
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <br>
+                                        <form>
+                                            <div class"container-fluid">
+                                               <div class="row">
+                                                    <div class="col-md-4">
+                                                        <input type="radio" class="inpFormRadio" id="promocao" name="tagEmailRadio">
+                                                        <label class="txtForm" for="promocao">[PROMOÇÃO]</label>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <input type="radio" class="inpFormRadio" id="aviso" name="tagEmailRadio">
+                                                        <label class="txtForm" for="aviso">[AVISO]</label>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <input type="radio" class="inpFormRadio" id="novidade" name="tagEmailRadio">
+                                                        <label class="txtForm" for="novidade">[NOVIDADE]</label>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                            
+                                            
+                                            
+                                            
+                                            <br>
+                                            <input type="radio" class="inpFormRadio" id="outro" name="tagEmailRadio">
+                                            <label class="txtForm" for="outro">Outro</label>
+                                            <input type="text" class="inpForm" id="tagEmail" name="tagEmail">
+                                            <br><br>
+                                            <label class="txtForm" for="assunto">Assunto</label>
+                                            <br>
+                                            <input type="text" class="inpForm" id="assunto" name="assunto">
+                                            <br><br>
+                                            <label class="txtForm" for="msg">Mensagem</label>
+                                            <br>
+                                            <textarea class="inpForm" rows="10" id="msg" name="msg"></textarea>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-5">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            
                         </div>
 
                         <div class="tab-pane fade"  role="tabpanel" id="emailsEnviados">
