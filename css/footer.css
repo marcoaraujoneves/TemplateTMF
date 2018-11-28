@@ -1,8 +1,7 @@
 /*----------------------------------   Layout   -----------------------------------------------*/
 
-#rodape{
+footer{
     background-color: black !important;
-    color: white;
 }
 
 /*-- Títulos --*/
@@ -16,7 +15,7 @@
 
 .item_menu_rodape{
     margin-top: 5pt;
-    /* color:black!important; modificar para rgb(255, 255, 255) */
+    color: white!important;
     cursor: pointer;
 }
 
@@ -28,35 +27,40 @@
 /*-- Funcionamento --*/
 
 .pre_item_funcionamento{
-    /* color:black;modificar para rgb(255, 255, 255) */
+    color: white;
 }
 
 .item_funcionamento {
     margin-top: 6pt;
-    /* color:black; /*modificar para rgb(255, 255, 255) */
+    color: white;
 }
 
 /*-- Tags Principais --*/
 
 .tags{
-    margin-top: 10px ;
-    margin-left: 5px ;
-    float: left;
-    padding: 3px 10px;
-    color: #9E9E9E ;
+    padding: 2pt;
+    color: white;
     background-color: #2C2C2C ;
-    border-radius: 10px ;
+    border-radius: 10pt ;
     cursor: pointer;
 }
 
 .tags:hover{
-    color: black ;
     background-color: #365C9A;
     transition: 0.15s linear ;
 }
 
 /*-- Parte Direitos --*/
 
+#texto_direitos{
+    color: whitesmoke;
+}
+#logo{
+    max-width:140px;
+    max-height:90px;
+    width: auto;
+    height: auto;
+}
 
 /*---------------------------------------------------------------------------------------------*/
 
@@ -73,7 +77,7 @@
 /*-- Menu --*/
 
 .item_menu_rodape{
-    font-size: 10pt;
+    font-size: 11pt;
     text-align: justify;
     cursor: pointer;
 }
@@ -85,7 +89,7 @@ li{
 /*-- Funcionamento --*/
 
 .pre_item_funcionamento{
-    font-size: 12pt;
+    font-size: 11pt;
     font-weight: bold;
 }
 
@@ -97,7 +101,7 @@ li{
 /*-- Tags Principais --*/
 
 .tags{
-    font-size: 10pt;
+    font-size: 11pt;
 }
 
 /*-- Parte Direitos --*/
