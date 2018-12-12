@@ -123,6 +123,7 @@ body{
     color: #7ac1ed;
     text-decoration: none;
     transition: 0.15s linear;
+    cursor: pointer;
 }
 
 /* Contato */

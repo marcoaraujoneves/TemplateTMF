@@ -20,20 +20,20 @@
     <div class="col-md-4">
         <h1 class="titulos_rodape">Funcionamento</h1>
         <ul> 
-            <li class="item_funcionamento"> <span class="pre_item_funcionamento">Local:</span> Rua Prudente De morais, 200 - Lot. São João, Nova Friburgo - RJ </li>
-            <li class="item_funcionamento"> <span class="pre_item_funcionamento">Número para contato:</span> (22) 2523-2525 </li>
+            <li class="item_funcionamento"> <span class="pre_item_funcionamento">Local:</span> Rua Prudente De Morais, 200 - Lot. São João, Nova Friburgo - RJ </li>
+            <li class="item_funcionamento"> <span class="pre_item_funcionamento">Número para contato:</span> (22) 2523 - 2525 </li>
             <li class="item_funcionamento"> <span class="pre_item_funcionamento">Email para contato:</span> contato@tmf.com.br </li>
         </ul>
     </div>
     <!-- Tags -->
     <div class="col-md-3">
         <h1 class="titulos_rodape">Principais Tags</h1>
-        <span class="tags">Tornearia</span> 
-        <br>
-        <span class="tags">Projeto de Máquinas</span> 
-        <br>
+        <span class="tags">Tornearia</span>
+        <br><br>
+        <span class="tags">Projeto de Máquinas</span>
+        <br><br>
         <span class="tags">Usinagem</span>
-        <br>
+        <br><br>
         <span class="tags">Manutenção Preventiva</span>
     </div>
     <div class="col-md-1">

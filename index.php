@@ -160,6 +160,7 @@
             </section>
             <!--/PORTIFÓLIO-->
 
+            <!--CONTATO-->
             <section id="secao_contato">
                 <div class="container">
                     <div class="row">
@@ -254,6 +255,7 @@
                 </div>
             </section>
         </main>
+        <!--/CONTATO-->
 
         <!-- Inclusão do rodapé do site -->
         <footer>
