@@ -2,8 +2,9 @@
 /*------------------------ Layout ------------------------------------*/
 
 #logo{
-    width:150;
-    height:150px;
+    width:100%;
+    height:50px;
+
 }
 
 .textomenu{
@@ -11,6 +12,14 @@
     font-size: 15px;
     line-height: 25px;
     padding-top: 50px;    
+}
+.textomenu1{
+    text-align: center;
+    font-size: 15px;
+    line-height: 25px;
+    padding-top: 2px; 
+    margin-left: 15px;
+
 }
 .sticky{
     position: -webkit-sticky;
@@ -34,6 +43,9 @@
     color:white;
     font-size: 20px;
     text-align:center;
+    margin-left: 15px;
+    margin-right: 15px;
+
 }
 .nav-link:hover {
     color:lightgray;

@@ -140,11 +140,12 @@
                     </div>
                 <div class="container-fluid d-none d-md-block">
                     <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 text-center">
                         <div class="card">
-                            <img src="img/logo.png" alt="Avatar" class="img_prod">
-                            <div class="container">
-                            <h4><b>Nome do Produto1</b></h4> 
+                            <img src="img/Maquinas.png" alt="Avatar" class="img_prod">
+                            <div class="container" id="con_prod">
+                            <p><h4><b>Nome do Produto1</b></h4></p>
+                            <br><br>
                             </div>
                         </div>
                     </div>
@@ -157,11 +158,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">       
+                    <div class="col-md-4 text-center">       
                         <div class="card">
                             <img src="img/logo.png" alt="Avatar">
-                            <div class="container">
-                            <h4><b>Nome do Produto3</b></h4> 
+                            <div class="container" id="con_prod">
+                            <p><h4><b>Nome do Produto3</b></h4></p>
+                            <br><br>
                             </div>
                         </div>
                     </div>
