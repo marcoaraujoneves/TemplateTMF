@@ -2,15 +2,15 @@
 /*------------------------ Layout ------------------------------------*/
 
 #logo{
-    width:250px;
-    height:250px;
+    width:150;
+    height:150px;
 }
 
 .textomenu{
     text-align:center;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 25px;
-    padding-top: 90px;    
+    padding-top: 50px;    
 }
 .sticky{
     position: -webkit-sticky;
@@ -25,10 +25,15 @@
 .navbar, #bg {
     background-color:#365C9A;
     color:white;
+}
 
+#bg{
+    height:130px;
 }
 .nav-link{
     color:white;
+    font-size: 20px;
+    text-align:center;
 }
 .nav-link:hover {
     color:lightgray;
@@ -40,6 +45,7 @@
     margin:10px;
     text-align:center;
 }
+
 
 
 

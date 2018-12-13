@@ -128,6 +128,48 @@
                 </div>
             </section>
             <!--/SERVICOS-->
+            <!--Produtos-->
+            <section id="secao_produtos">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 container-titulos">
+                            <h1 class="titulo_secoes">
+                                Produtos
+                            </h1>
+                        </div>
+                    </div>
+                <div class="container-fluid d-none d-md-block">
+                    <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="img/logo.png" alt="Avatar" class="img_prod">
+                            <div class="container">
+                            <h4><b>Nome do Produto1</b></h4> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="card">
+                            <img src="img/logo.png" alt="Avatar">
+                            <div class="container" id="con_prod">
+                            <p><h4><b>Nome do Produto2</b></h4></p>
+                            <br><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">       
+                        <div class="card">
+                            <img src="img/logo.png" alt="Avatar">
+                            <div class="container">
+                            <h4><b>Nome do Produto3</b></h4> 
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <br><br>
+            <!--/PRODUTOS-->
 
             <section id="secao_contato">
                 <div class="container">
