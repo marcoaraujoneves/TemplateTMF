@@ -18,6 +18,8 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
+        <title> Indústria TMF | Home </title>
+
     </head>
 
     <body>
