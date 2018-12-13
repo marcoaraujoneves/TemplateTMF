@@ -129,6 +129,56 @@
             </section>
             <!--/SERVICOS-->
 
+            <!--PRODUTOS-->
+            <section id="secaoProdutos">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 container-titulos">
+                            <h1 class="titulo_secoes">
+                                Produtos
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--/PRODUTOS-->
+
+            <!--PORTIFÓLIO-->
+            <section id="secaoservicos">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 container-titulos">
+                            <h1 class="titulo_secoes">
+                                Portifólio
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1"> </div>
+                        <div class="col-md-5">
+                            <img src="img/tornearia.png" id="imagem_port">
+                        </div>
+                        <div class="col-md-5">
+                                <p id ="texto_port" class="texto">
+                                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam vel lacus ut tellus fringilla imperdiet.
+                                </p>                          
+                        </div>
+                        <div class="col-md-1"> </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"> </div>
+                        <div class="col-md-4">
+                            <input class="radio_port" id="radio1" type="radio" onClick="mudar(1)">
+                            <input class="radio_port" id="radio2" type="radio" onClick="mudar(2)">
+                            <input class="radio_port" id="radio3" type="radio" onClick="mudar(3)">
+                        </div>
+                        <div class="col-md-4"> </div>
+                    </div>
+                </div>
+            </section>
+            <!--/PORTIFÓLIO-->
+
+            <!--CONTATO-->
             <section id="secao_contato">
                 <div class="container">
                     <div class="row">
@@ -223,6 +273,7 @@
                 </div>
             </section>
         </main>
+        <!--/CONTATO-->
 
         <!-- Inclusão do rodapé do site -->
         <footer>

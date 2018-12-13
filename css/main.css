@@ -15,6 +15,17 @@ body{
     height: auto;
 }
 
+/* Portfólio */
+
+#imagem_port{
+    max-width:400px;
+    max-height:200px;
+}
+
+.radio_port{
+    margin-left: 20pt;
+}
+
 /* Contato */
 .icone-contatenos{
     height: 50px;
@@ -123,6 +134,7 @@ body{
     color: #7ac1ed;
     text-decoration: none;
     transition: 0.15s linear;
+    cursor: pointer;
 }
 
 /* Contato */

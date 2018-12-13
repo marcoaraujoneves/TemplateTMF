@@ -35,12 +35,13 @@ footer{
 .item_funcionamento {
     margin-top: 6pt;
     color: white;
+    margin-right: 40pt;
 }
 
 /*-- Tags Principais --*/
 
 .tags{
-    padding: 2pt;
+    padding: 6pt;
     color: white;
     background-color: #2C2C2C ;
     border-radius: 10pt;
@@ -49,6 +50,7 @@ footer{
 .tags:hover{
     background-color: #365C9A;
     transition: 0.15s linear ;
+    cursor: pointer;
 }
 
 /*-- Parte Direitos --*/
@@ -61,6 +63,7 @@ footer{
     max-height:90px;
     width: auto;
     height: auto;
+    margin-bottom: 15pt;
 }
 
 /*---------------------------------------------------------------------------------------------*/
@@ -70,7 +73,7 @@ footer{
 /*-- Títulos --*/
 
 .titulos_rodape{
-    font-size: 16pt ;
+    font-size: 30pt ;
     font-weight: 500;
     text-align: center;
 }
@@ -78,7 +81,7 @@ footer{
 /*-- Menu --*/
 
 .item_menu_rodape{
-    font-size: 11pt;
+    font-size: 16pt;
     text-align: justify;
     cursor: pointer;
 }
@@ -90,25 +93,25 @@ li{
 /*-- Funcionamento --*/
 
 .pre_item_funcionamento{
-    font-size: 11pt;
+    font-size: 14pt;
     font-weight: bold;
 }
 
 .item_funcionamento {
-    font-size: 10pt;
-    text-align: justify;
+    font-size: 13pt;
+    text-align: initial;
 }
 
 /*-- Tags Principais --*/
 
 .tags{
-    font-size: 11pt;
+    font-size: 15pt;
 }
 
 /*-- Parte Direitos --*/
 
 #texto_direitos{
-    font-size: 8pt;
+    font-size: 12pt;
     font-weight: bold;
 }
 
