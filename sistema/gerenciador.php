@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="../css/normalize.css">
         <link rel="stylesheet" href="../css/Sistema.css">
         <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/responsividade.css">
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 
         <title> Sistema de Gerenciamento | TMF </title>
@@ -135,7 +136,7 @@
                         <div class="tab-pane fade"  role="tabpanel" id="enviarEmail">
                             <div class="container-fluid">
                                 <div class="row">
-                                    <div class="col-md-7">
+                                    <div class="col-md-7" id="configEmail">
                                         <br>
                                         <form>
                                             <div class"container-fluid">
@@ -154,14 +155,12 @@
                                                     </div>
                                                </div>
                                             </div>
-                                            
-                                            
-                                            
-                                            
-                                            <br>
-                                            <input type="radio" class="inpFormRadio" id="outro" name="tagEmailRadio">
-                                            <label class="txtForm" for="outro">Outro</label>
-                                            <input type="text" class="inpForm" id="tagEmail" name="tagEmail">
+                    
+                                            <button type="button" class="btn btn-primary" id="outro" data-toggle="collapse" data-target="#tagEmailContainer" aria-expanded="false" aria-controls="tagEmailContainer"> Outro </button>
+                                            <div class="collapse" id="tagEmailContainer">
+                                                <br>
+                                                <input type="text" class="inpForm text-uppercase" id="tagEmail" name="tagEmail">
+                                            </div>
                                             <br><br>
                                             <label class="txtForm" for="assunto">Assunto</label>
                                             <br>
@@ -172,8 +171,37 @@
                                             <textarea class="inpForm" rows="10" id="msg" name="msg"></textarea>
                                         </form>
                                     </div>
-                                    <div class="col-md-5">
+                                    <div class="col-md-5" id="preview">
+                                        <div id="emailAssunto" style="background-color:white; width:100%; padding:5px;">
+                                            <span> [PROMOÇÃO] Desconto de 10% na compra da sua máquina </span>
+                                        </div>
+                                        <div style="background-color: #365C9A; width:90%; margin-top:20px; border-radius:7px;z-index:2;" id="emailCabecalho" class="mx-auto">
+                                            <img src="../img/logo.png" class="img-responsive rounded mx-auto d-block" style="height:80px;">
+                                        </div>
 
+                                        <div style="background-color: white; width:90%; margin-top:-5px; border-radius:3px; padding: 15px;z-index:1;" id="emailCorpo" class="mx-auto">
+                                            <h6> Olá Marilene,</h6>
+                                            <p style="text-align:justify; font-size:10px;">
+                                                &emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b> Aenean ut ex molestie </b>, euismod enim fringilla, consequat ante. <br>&emsp; Pellentesque consequat convallis orci. Donec eget eleifend erat. Praesent eget pretium ipsum. Sed vitae commodo eros. Nunc bibendum porta lectus, vel aliquet justo hendrerit interdum. Nam iaculis velit in sollicitudin ullamcorper. Vivamus consectetur mi et erat scelerisque dictum.
+                                                <br><br>
+                                                <span style="text-align:center;width:100%;">
+                                                    Abraços,<br>
+                                                    Equipe TMF
+                                                </span>
+                                            </p>
+                                        </div>
+
+                                        <div style="width:80%; margin-top:15px;padding: 15px; text-align:center;" id="emailRedes" class="mx-auto">
+                                            <a href="" target="_blank">
+                                                <img src="../img/fb.png" style="height:10px;">
+                                            </a>
+                                            <a href="" target="_blank">
+                                                <img src="../img/ig.png" style="height:10px;">
+                                            </a>
+                                            <a href="" target="_blank">
+                                                <img src="../img/fb.png" style="height:10px;">
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -193,4 +221,5 @@
     <script src="../js/jquery-3.3.1.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/Sistema.js"></script>
 </html>

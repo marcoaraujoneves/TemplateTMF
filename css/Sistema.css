@@ -5,6 +5,20 @@ body,html{
     height: 100%;
 }
 
+*::-webkit-scrollbar-track {
+    background-color: rgba(54, 92, 154, 0.589);
+}
+
+*::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #365C9A;
+    border-radius: 4px;
+}
+
 /*----- Tela de Login -----*/
 body{
     margin: 0 auto;
@@ -63,20 +77,6 @@ body{
 
 }
 
-#menu-lateral::-webkit-scrollbar-track {
-    background-color: rgba(54, 92, 154, 0.548);
-}
-
-#menu-lateral::-webkit-scrollbar {
-    width: 6px;
-    background: #F4F4F4;
-}
-
-#menu-lateral::-webkit-scrollbar-thumb {
-    background-color: rgb(38, 77, 141);
-    border-radius: 4px;
-}
-
 #menuSistema ul{
     padding: 0px;
 }
@@ -110,20 +110,6 @@ body{
     right: 0;
     padding-top: 20px;
     flex-wrap: nowrap;
-}
-
-#painelSistema::-webkit-scrollbar-track {
-    background-color: rgba(54, 92, 154, 0.589);
-}
-
-#painelSistema::-webkit-scrollbar {
-    width: 6px;
-    background: #F4F4F4;
-}
-
-#painelSistema::-webkit-scrollbar-thumb {
-    background-color: #365C9A;
-    border-radius: 4px;
 }
 
 ul.nav-tabs{
@@ -169,16 +155,11 @@ thead{
 .inpFormRadio:focus{
     box-shadow: 3px 5px 6px rgba(54, 92, 154, 0.514);
 }
-/* 
-#tagEmail{
-    width: auto!important;
-    margin-left: 25px;
-}
 
-#assunto{
-    width: 300px!important;
-    margin-left: 20px;
-} */
+#preview{
+    border-left: 1px solid gray;
+    background-color: rgb(219, 218, 218);
+}
 /*--------------------------------------------------------------------*/
 /*------------------------ Tipografia --------------------------------*/
 @font-face {
