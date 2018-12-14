@@ -14,6 +14,26 @@ body{
     width: auto;
     height: auto;
 }
+/* Produtos */
+.card{
+    height:300px;
+    width:300px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.img_prod
+{
+    height:240px;
+    width: 100%;
+    border: 2px solid #365C9A;
+}
+
+#con_prod{
+    height:60px;
+    border: 2px solid #365C9A;
+}
+#Prod_Nome{
+    color:#365C9A;
+}
 
 /* Portfólio */
 

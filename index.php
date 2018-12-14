@@ -21,7 +21,7 @@
         <title> Indústria TMF | Home </title> 
 
     </head>
-
+    
     <body>
 
         <!-- Inclusão do cabeçalho do site -->
@@ -63,7 +63,7 @@
                                 <div class="col-md-1">
                                 </div>
                                 <div class="col-md-5">
-                                <p class="texto"> Mais de XX opcções de serviço </p>
+                                <p class="texto"> Mais de XX opções de serviço </p>
                                 </div>
                                 <div class="col-md-1">
                                 </div>
@@ -130,6 +130,50 @@
                 </div>
             </section>
             <!--/SERVICOS-->
+            <!--Produtos-->
+            <section id="secao_produtos">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 container-titulos">
+                            <h1 class="titulo_secoes">
+                                Produtos
+                            </h1>
+                        </div>
+                    </div>
+                <div class="container-fluid d-none d-md-block">
+                    <div class="row">
+                    <div class="col-md-4 text-center">
+                        <div class="card">
+                            <img src="img/Maquinas.png" alt="Avatar" class="img_prod">
+                            <div class="container" id="con_prod">
+                            <p><h4><b style="color:#365C9A">Nome do Produto1</b></h4></p>
+                            <br><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="card">
+                            <img src="img/logo.png" alt="Avatar" class="img_prod">
+                            <div class="container" id="con_prod">
+                            <p><h4><b style="color:#365C9A">Nome do Produto2</b></h4></p>
+                            <br><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">       
+                        <div class="card">
+                            <img src="img/logo.png" alt="Avatar" class="img_prod">
+                            <div class="container" id="con_prod">
+                            <p><h4><b style="color:#365C9A">Nome do Produto3</b></h4></p>
+                            <br><br>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <br><br>
+            <!--/PRODUTOS-->
 
             <!--PRODUTOS-->
             <section id="secaoProdutos">
