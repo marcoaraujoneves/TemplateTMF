@@ -1,18 +1,26 @@
 /*--------------------------------------------------------------------*/
 /*------------------------ Layout ------------------------------------*/
 
-#logo{
-    width:100%;
-    height:50px;
-
+#logo_Menu{
+    width:170px;
+    height:150px;
 }
 
 .textomenu{
     text-align:center;
     font-size: 15px;
     line-height: 25px;
-    padding-top: 50px;    
+    padding-top: 50px;  
 }
+
+#texto_inf{
+        text-align:justify;
+        font-size: 15px;
+        line-height: 25px;
+        padding-top: 50px; 
+        margin-left: 130px; 
+}
+
 .textomenu1{
     text-align: center;
     font-size: 15px;

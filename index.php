@@ -61,7 +61,7 @@
                                 <div class="col-md-1">
                                 </div>
                                 <div class="col-md-5">
-                                <p class="texto"> Mais de XX opcções de serviço </p>
+                                <p class="texto"> Mais de XX opções de serviço </p>
                                 </div>
                                 <div class="col-md-1">
                                 </div>
@@ -144,25 +144,25 @@
                         <div class="card">
                             <img src="img/Maquinas.png" alt="Avatar" class="img_prod">
                             <div class="container" id="con_prod">
-                            <p><h4><b>Nome do Produto1</b></h4></p>
+                            <p><h4><b style="color:#365C9A">Nome do Produto1</b></h4></p>
                             <br><br>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 text-center">
                         <div class="card">
-                            <img src="img/logo.png" alt="Avatar">
+                            <img src="img/logo.png" alt="Avatar" class="img_prod">
                             <div class="container" id="con_prod">
-                            <p><h4><b>Nome do Produto2</b></h4></p>
+                            <p><h4><b style="color:#365C9A">Nome do Produto2</b></h4></p>
                             <br><br>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 text-center">       
                         <div class="card">
-                            <img src="img/logo.png" alt="Avatar">
+                            <img src="img/logo.png" alt="Avatar" class="img_prod">
                             <div class="container" id="con_prod">
-                            <p><h4><b>Nome do Produto3</b></h4></p>
+                            <p><h4><b style="color:#365C9A">Nome do Produto3</b></h4></p>
                             <br><br>
                             </div>
                         </div>
