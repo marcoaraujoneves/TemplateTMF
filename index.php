@@ -145,7 +145,7 @@
                     <div class="col-md-4 text-center wrap">
                         <div class="card tile">
                             <img src="img/logo.png" alt="Avatar" class="img_prod">
-                            <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2><!--Suporta 29 caracteres-->
+                            <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2><!--Suporta 29 caracteres papap-->
                             <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken.jdidmdldmdkdkd5555555 </p><!--Suporta até 168 caracteres-->
                             <br><br>
                             <div class="container" id="con_prod">
