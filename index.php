@@ -300,27 +300,29 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label class="txtForm" for="nome"> &ensp;Nome </label> <br>
-                                            <input type="text" class="inpForm" id="nome" name="nome">
+                                            <input type="text" class="inpForm" id="nome" name="nome" autocomplete="off" required>
                                         </div>
                                         <div class="col-md-6">
                                             <label class="txtForm" for="telefone"> &ensp;Telefone </label> <br>
-                                            <input type="text" class="inpForm" id="telefone" name="telefone">
+                                            <input type="text" class="inpForm" id="telefone" name="telefone" autocomplete="off" required>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <label class="txtForm" for="email"> &ensp;E-mail </label> <br>
-                                            <input type="email" class="inpForm" id="email" name="email">
+                                            <input type="email" class="inpForm" id="email" name="email" autocomplete="off" required>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <label class="txtForm" for="mensagem"> &ensp;Mensagem </label> <br>
-                                            <textarea class="inpForm" id="mensagem" name="mensagem" rows="6"> </textarea>
+                                            <textarea class="inpForm" id="mensagem" name="mensagem" rows="6" required> </textarea>
                                         </div>
                                     </div>
+                                    <br>
+                                    <input type="submit" class="btn btn-primary" id="enviar" name="enviar" value="Enviar">
                                 </div>
                             </form>
                         </div>

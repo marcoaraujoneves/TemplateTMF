@@ -88,7 +88,7 @@
                                             <th style="width:15%;">  </th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody style="vertical-align:center">
                                         <tr>
                                             <th> 1 </th>
                                             <td> Marco </td>
@@ -169,6 +169,7 @@
                                             <label class="txtForm" for="msg">Mensagem</label>
                                             <br>
                                             <textarea class="inpForm" rows="10" id="msg" name="msg"></textarea>
+                                            <input type="submit" class="btn btn-primary" id="enviar" name="enviar" value="Enviar">
                                         </form>
                                     </div>
                                     <div class="col-md-5" id="preview">
