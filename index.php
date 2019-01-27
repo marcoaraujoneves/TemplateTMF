@@ -149,7 +149,7 @@
                             <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken.jdidmdldmdkdkd5555555 </p><!--Suporta até 168 caracteres-->
                             <br><br>
                             <div class="container" id="con_prod">
-                            <p><h4><b>Nome do Produto 1</b></h4></p>
+                            <p><h4><b style="color:#365C9A">Nome do Produto 1</b></h4></p>
                             <br><br>
                             </div>
                         </div>
@@ -161,7 +161,7 @@
                             <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
                             <br><br>
                             <div class="container" id="con_prod">
-                            <p><h4><b>Nome do Produto 2</b></h4></p>
+                            <p><h4><b style="color:#365C9A">Nome do Produto 2</b></h4></p>
                             <br><br>
                             </div>
                         </div>
@@ -173,7 +173,7 @@
                             <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
                             <br><br>
                             <div class="container" id="con_prod">
-                            <p><h4><b>Nome do Produto 3</b></h4></p>
+                            <p><h4><b style="color:#365C9A">Nome do Produto 3</b></h4></p>
                             <br><br>
                             </div>
                         </div>
@@ -195,7 +195,7 @@
                             <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
                             <br><br>
                             <div class="container" id="con_prod">
-                            <p><h4><b>Nome do Produto2</b></h4></p>
+                            <p><h4><b style="color:#365C9A">Nome do Produto2</b></h4></p>
                             <br><br>
                             </div>
                         </div>
