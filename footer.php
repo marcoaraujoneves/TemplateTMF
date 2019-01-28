@@ -1,20 +1,19 @@
 <br><br>
 <!-- Títulos e Infos -->  
 <div class="row">
-    <div class="col-md-1">
-        <!--espaçamento--> 
-    </div>
     <!-- Menu -->
-    <div class="col-md-3">
+    <div class="col-md-4">
         <h1 class="titulos_rodape">Menu</h1>
-        <ul>
-            <li><a class="item_menu_rodape">> Início </a></li>
-            <li><a class="item_menu_rodape">> Sobre Nós </a></li>
-            <li><a class="item_menu_rodape">> Produtos </a></li>
-            <li><a class="item_menu_rodape">> Serviços </a></li>
-            <li><a class="item_menu_rodape">> Portfólios </a></li>
-            <li><a class="item_menu_rodape">> Contato </a></li>
-        </ul>
+        <div class="coluna_menu">
+            <ul>
+                <li><a class="item_menu_rodape">> Início </a></li>
+                <li><a class="item_menu_rodape">> Sobre Nós </a></li>
+                <li><a class="item_menu_rodape">> Produtos </a></li>
+                <li><a class="item_menu_rodape">> Serviços </a></li>
+                <li><a class="item_menu_rodape">> Portfólios </a></li>
+                <li><a class="item_menu_rodape">> Contato </a></li>
+            </ul>
+        </div>
     </div>
     <!-- Funcionamento -->
     <div class="col-md-4">
@@ -26,7 +25,7 @@
         </ul>
     </div>
     <!-- Tags -->
-    <div class="col-md-3">
+    <div class="col-md-4">
         <h1 class="titulos_rodape">Principais Tags</h1>
         <span class="tags">Tornearia</span>
         <br><br>
@@ -36,23 +35,14 @@
         <br><br>
         <span class="tags">Manutenção Preventiva</span>
     </div>
-    <div class="col-md-1">
-        <!--espaçamento--> 
-    </div>
 </div>
-<br>
+<br> <br>
 <!-- Direitos --> 
 <div class="row">
-    <div class="col-md-2">
-        <!--espaçamento--> 
-    </div> 
-    <div class="col-md-5"> 
+    <div class="col-md-6"> 
         <span id="texto_direitos">©2018. Todos os direitos reservados.</span>
     </div>
-    <div class="col-md-3"> 
+    <div class="col-md-6"> 
         <img src="img/logo1.png" id="logo">
-    </div>
-    <div class="com-md-2"> 
-        <!--espaçamento--> 
     </div>
 </div>
