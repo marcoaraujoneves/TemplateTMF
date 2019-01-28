@@ -1,3 +1,10 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['nome'])){
+        header('Location: index.php?erro=1');
+    }
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,8 +32,8 @@
             <div class="row">
                 <div class="col-3" id="menu-lateral">
                     <div id="usuarioSistema">
-                        <h3> Nome usuário </h3>
-                        <h4> cargo </h4>
+                        <h3> <?= isset($_SESSION['nome'])? $_SESSION['nome'] : 'Nome usuário' ?>  </h3>
+                        <h4> <?= isset($_SESSION['cargo'])? $_SESSION['cargo'] : 'cargo' ?> </h4>
                     </div>
 
                     <div id="menuSistema">
@@ -51,11 +58,12 @@
                                 <img src="../img/location.png">
                                 <span> Mensagens </span>
                             </li>
-                            <li class="itemMenuSistema">
-                                <img src="../img/location.png">
-                                <span> Sair </span>
-                            </li>
-
+                            <a href="sair.php" style="text-decoration:none">
+                                <li class="itemMenuSistema" >
+                                    <img src="../img/location.png">
+                                    <span> Sair </span>
+                                </li>
+                            </a>
                         </ul>
                     </div>
                 </div>

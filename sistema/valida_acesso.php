@@ -1,7 +1,11 @@
 <?php
+
+    session_start();
+
     include ('db.class.php');
+    
     $login = $_POST['login'];
-    $senha = $_POST['senha'];
+    $senha = md5($_POST['senha']);
 
     $objDB = new db();
     $link = $objDB->conecta_mysql();
@@ -14,6 +18,8 @@
         $dados_usuario = mysqli_fetch_array($resultado_id);
         
         if(isset($dados_usuario['login'])){
+            $_SESSION['nome'] = $dados_usuario['nome'];
+            $_SESSION['cargo'] = $dados_usuario['cargo'];
             header('Location: gerenciador.php');
         }else{
             header('Location: index.php?erro=1');
