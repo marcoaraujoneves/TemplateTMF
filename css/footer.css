@@ -25,6 +25,10 @@ footer{
     transition: 0.15s linear;
 }
 
+.coluna_menu{
+    margin-left: 20pt;
+}
+
 /*-- Funcionamento --*/
 
 .pre_item_funcionamento{
@@ -57,6 +61,7 @@ footer{
 
 #texto_direitos{
     color: whitesmoke;
+    margin-left: 250pt;
 }
 #logo{
     max-width:140px;
