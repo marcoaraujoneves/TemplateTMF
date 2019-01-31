@@ -79,15 +79,15 @@
                         <div class"container-fluid">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <input type="radio" class="inpFormRadio" id="promocao" name="tagEmailRadio">
+                                    <input type="radio" class="inpFormRadio" id="promocao" value="PROMOÇÃO" name="tagEmailRadio">
                                     <label class="txtForm" for="promocao">[PROMOÇÃO]</label>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="radio" class="inpFormRadio" id="aviso" name="tagEmailRadio">
+                                    <input type="radio" class="inpFormRadio" id="aviso" value="AVISO" name="tagEmailRadio">
                                     <label class="txtForm" for="aviso">[AVISO]</label>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="radio" class="inpFormRadio" id="novidade" name="tagEmailRadio">
+                                    <input type="radio" class="inpFormRadio" id="novidade" value="NOVIDADE" name="tagEmailRadio">
                                     <label class="txtForm" for="novidade">[NOVIDADE]</label>
                                 </div>
                             </div>
@@ -107,19 +107,22 @@
                         <br>
                         <textarea class="inpForm" rows="10" id="msg" name="msg"></textarea>
                         <input type="submit" class="btn btn-primary" id="enviar" name="enviar" value="Enviar">
+                        <br><br>
                     </form>
                 </div>
+
                 <div class="col-md-5" id="preview">
                     <div id="emailAssunto" style="background-color:white; width:100%; padding:5px;">
-                        <span> [PROMOÇÃO] Desconto de 10% na compra da sua máquina </span>
+                        <span id="tagPre"> [PROMOÇÃO]</span>
+                        <span id="assuntoPre"> Desconto de 10% na compra da sua máquina </span>
                     </div>
                     <div style="background-color: #365C9A; width:90%; margin-top:20px; border-radius:7px;z-index:2;" id="emailCabecalho" class="mx-auto">
                         <img src="../img/logo.png" class="img-responsive rounded mx-auto d-block" style="height:80px;">
                     </div>
 
                     <div style="background-color: white; width:90%; margin-top:-5px; border-radius:3px; padding: 15px;z-index:1;" id="emailCorpo" class="mx-auto">
-                        <h6> Olá Marilene,</h6>
-                        <p style="text-align:justify; font-size:10px;">
+                        <h6> Olá CLIENTE,</h6>
+                        <p style="text-align:justify; font-size:10px;" id="msgPre">
                             &emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b> Aenean ut ex molestie </b>, euismod enim fringilla, consequat ante. <br>&emsp; Pellentesque consequat convallis orci. Donec eget eleifend erat. Praesent eget pretium ipsum. Sed vitae commodo eros. Nunc bibendum porta lectus, vel aliquet justo hendrerit interdum. Nam iaculis velit in sollicitudin ullamcorper. Vivamus consectetur mi et erat scelerisque dictum.
                             <br><br>
                             <span style="text-align:center;width:100%;">
