@@ -125,11 +125,11 @@
                         <p style="text-align:justify; font-size:10px;" id="msgPre">
                             &emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b> Aenean ut ex molestie </b>, euismod enim fringilla, consequat ante. <br>&emsp; Pellentesque consequat convallis orci. Donec eget eleifend erat. Praesent eget pretium ipsum. Sed vitae commodo eros. Nunc bibendum porta lectus, vel aliquet justo hendrerit interdum. Nam iaculis velit in sollicitudin ullamcorper. Vivamus consectetur mi et erat scelerisque dictum.
                             <br><br>
-                            <span style="text-align:center;width:100%;">
+                        </p>
+                        <span style="text-align:center;width:100%;">
                                 Abraços,<br>
                                 Equipe TMF
-                            </span>
-                        </p>
+                        </span>
                     </div>
 
                     <div style="width:80%; margin-top:15px;padding: 15px; text-align:center;" id="emailRedes" class="mx-auto">
