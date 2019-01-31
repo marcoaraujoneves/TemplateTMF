@@ -100,7 +100,7 @@
                             Mauris accumsan lectus dignissim, volutpat nisi vitae, vestibulum odio. 
                             Quisque auctor lacus sed elit pulvinar vulputate. Vestibulum tristique nisi risus, in viverra lacus elementum non. 
                             </p>
-                            <a id="vermais">Ver mais...</a>
+                            <a id="vermais">Ver mais..</a>
                         </div>
 
                         <div class="col-md-6">
