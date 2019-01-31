@@ -23,15 +23,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 my-auto mx-auto">
-                    <form method="post" action=<?= isset($_GET['erro']) ? "valida_acesso.php" : "sistema/valida_acesso.php";?> >
+                    
+                    <form method="post" action="../sistema/valida_acesso.php">
                         <img src="../img/logo.png" class="img-responsive"><br>
                         <?= isset($_GET['erro']) ? '<span style="color:red;"> Usuário e/ou senha incorreto(s) </span> ' : "";?>
                         <br>
                         <label for="login" class="txtForm"> Login </label>
-                        <input type="text" id="login" name="login" class="inpForm" required><br>
+                        <input type="text" id="login" name="login" class="inpForm" required autocomplete="off"><br>
 
                         <label for="senha" class="txtForm"> Senha </label>
-                        <input type="password" id="senha" name="senha" class="inpForm" required>
+                        <input type="password" id="senha" name="senha" class="inpForm" required  autocomplete="off">
                         <br><br>
                         <input type="submit" class="btnForm" value="Entrar">
                     </form>
