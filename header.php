@@ -4,7 +4,7 @@
                     <p id="texto_inf">(22)9 999-8756<br>Aberto das 07h às 17h</p>
                 </div>
                 <div class="col-md-4 text-center">
-                    <img src="img/logo.png" id="logo_Menu">
+                    <img src="img/logoTMFBranco.png" id="logo_Menu">
                 </div>
                 <div class="col-md-4">       
                     <p class="textomenu">contato@industriatmf.com<br><a target="_blank" href="#"><img class="social_icone" src="img/fb.png"></a>

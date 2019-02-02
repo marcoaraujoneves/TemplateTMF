@@ -117,7 +117,7 @@
                         <span id="assuntoPre"> Desconto de 10% na compra da sua máquina </span>
                     </div>
                     <div style="background-color: #365C9A; width:90%; margin-top:20px; border-radius:7px;z-index:2;" id="emailCabecalho" class="mx-auto">
-                        <img src="../img/logo.png" class="img-responsive rounded mx-auto d-block" style="height:80px;">
+                        <img src="../img/logoTMFBranco.png" class="img-responsive rounded mx-auto d-block" style="height:70px;margin:8px;">
                     </div>
 
                     <div style="background-color: white; width:90%; margin-top:-5px; border-radius:3px; padding: 15px;z-index:1;" id="emailCorpo" class="mx-auto">

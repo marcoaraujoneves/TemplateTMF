@@ -25,7 +25,7 @@
                 <div class="col-md-4 my-auto mx-auto">
                     
                     <form method="post" action="../sistema/valida_acesso.php">
-                        <img src="../img/logo.png" class="img-responsive"><br>
+                        <img src="../img/logoTMF.png" class="img-responsive" style="width:80%;margin-top:10%;margin-left:10%"><br>
                         <?= isset($_GET['erro']) ? '<span style="color:red;"> Usuário e/ou senha incorreto(s) </span> ' : "";?>
                         <br>
                         <label for="login" class="txtForm"> Login </label>
