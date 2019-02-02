@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/responsividade.css">
 
         <title> Indústria TMF | Home </title> 
 
