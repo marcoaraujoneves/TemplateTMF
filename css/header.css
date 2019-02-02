@@ -1,11 +1,21 @@
 /*--------------------------------------------------------------------*/
 /*------------------------ Layout ------------------------------------*/
 
-#logo_Menu{
-    width:170px;
-    height:150px;
+#bg{
+    height:130px;
 }
 
+#logo_Menu{
+    height:105px;
+    margin:5px;
+}
+
+.navbar-toggler{
+    margin-right: 30px;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff !important;;
+}
 .textomenu{
     text-align:center;
     font-size: 15px;
@@ -14,11 +24,12 @@
 }
 
 #texto_inf{
-        text-align:justify;
-        font-size: 15px;
-        line-height: 25px;
-        padding-top: 50px; 
-        margin-left: 130px;
+    text-align:justify;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 25px;
+    padding-top: 50px; 
+    margin-left: 130px;
 }
 
 .textomenu1{
@@ -29,6 +40,7 @@
     margin-left: 15px;
 
 }
+
 .sticky{
     position: -webkit-sticky;
     position: -moz-sticky;
@@ -44,9 +56,6 @@
     color:white;
 }
 
-#bg{
-    height:130px;
-}
 .nav-link{
     color:white;
     font-size: 20px;
@@ -55,6 +64,7 @@
     margin-right: 15px;
 
 }
+
 .nav-link:hover {
     color:lightgray;
 }

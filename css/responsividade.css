@@ -1,6 +1,30 @@
 /*--------------------------------------------------------------------*/
 /*------------------------ Layout ------------------------------------*/
 
+/*-------------- Menu --------------*/
+@media (max-width:1008px){
+    #texto_inf{
+        margin-left: 100px;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px){
+    #logo_Menu{
+        height: 100px;
+    }
+    .navegacao .nav-link{
+        margin: 3px;
+    }
+}
+
+
+
+
+
+
+
+
+/*-------------- Rodapé --------------*/
 @media (max-width:500px){
     #texto_direitos{
         margin-left: 0px;

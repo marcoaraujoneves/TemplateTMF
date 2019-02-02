@@ -33,7 +33,7 @@
         <!-- Corpo principal -->
         <main>
             <!--SOBRE NÓS-->
-            <section id="secaoSobre">
+            <section id="secaoSobre" style="margin-top:140px;">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 container-titulos">
