@@ -1,5 +1,46 @@
 $(document).ready(function(){
+
+    var $doc = $('html, body');
     
+    $('.linkMenu ').click(function() {
+        $('.navbar-collapse').collapse("hide");
+        
+        $doc.animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top - 140
+        }, 500);
+        return false;
+    });
+    
+    var alturas = {};
+    var i=1;
+
+    $('.secaoSite').each(function () {
+        alturas[i] = this.id; // ex: alturas['section_2'] = 600
+        i++;
+    });
+
+    var numSecoes=parseInt(i) + 1;
+    i=parseInt(i);
+
+    var seccao;
+    var alturaSecaoI;
+    var windowTop;
+    
+    $(window).on('scroll', function() {
+        for(i=1;i < numSecoes; i++){
+            alturaSecaoI = $('#'+alturas[i]).offset().top;
+            windowTop = $(window).scrollTop() + 200;
+            if(windowTop <= 400 ){
+                $('.linkMenu').removeClass("link_ativo");
+                $('#link_secaoSobre').addClass("link_ativo");
+            }
+            if(windowTop >= alturaSecaoI ){
+                $('.linkMenu').removeClass("link_ativo");
+                seccao = alturas[i].replace("secao","link_secao");
+                $('#'+seccao).addClass("link_ativo");
+            }
+        }
+    });
 });
 
 function mudar(op) {

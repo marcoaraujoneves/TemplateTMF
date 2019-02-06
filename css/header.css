@@ -62,11 +62,16 @@
     text-align:center;
     margin-left: 15px;
     margin-right: 15px;
-
+    transition: color 0.15s ease 0s;
 }
 
 .nav-link:hover {
     color:lightgray;
+}
+
+.link_ativo{
+    color:lightgray;
+    text-shadow: 1px 1px 1px black;
 }
 
 .social_icone{
