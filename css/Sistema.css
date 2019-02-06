@@ -107,6 +107,7 @@ body{
     overflow-x: auto;
     height: 100%;
     position: absolute;
+    text-align: justify;
     top:0;
     bottom: 0;
     right: 0;
