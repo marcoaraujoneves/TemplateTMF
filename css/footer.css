@@ -61,14 +61,13 @@ footer{
 
 #texto_direitos{
     color: whitesmoke;
-    margin-left: 250pt;
 }
 #logo{
     max-width:140px;
     max-height:90px;
     width: auto;
     height: auto;
-    margin-bottom: 15pt;
+    margin-bottom: 15px;
 }
 
 /*---------------------------------------------------------------------------------------------*/

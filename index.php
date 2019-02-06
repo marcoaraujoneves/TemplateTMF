@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/responsividade.css">
 
         <title> Indústria TMF | Home </title> 
 
@@ -32,7 +33,7 @@
         <!-- Corpo principal -->
         <main>
             <!--SOBRE NÓS-->
-            <section id="secaoSobre">
+            <section id="secaoSobre" style="margin-top:140px;">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 container-titulos">
