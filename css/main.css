@@ -16,8 +16,8 @@ body{
 }
 /* Produtos */
 .card{
-    height:300px;
-    width:300px;
+    height:350px;
+    width:100%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 .wrap
@@ -120,16 +120,11 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 
 .img_prod
 {
-    height:240px;
+    height:100%x;
     width: 100%;
     border: 2px solid #365C9A;
 }
 
-#con_prod{
-    height:60px;
-    border: 2px solid #365C9A;
-    text-align: center;
-}
 /* Portfólio */
 
 #imagem_port{
