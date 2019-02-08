@@ -262,9 +262,11 @@
                     <div class="row">
                         <div class="col-md-4"> </div>
                         <div class="col-md-4">
-                            <input class="radio_port" id="radio1" type="button" onClick="mudar(1)">
-                            <input class="radio_port" id="radio2" type="button" onClick="mudar(2)">
-                            <input class="radio_port" id="radio3" type="button" onClick="mudar(3)">
+                            <center>
+                                <button class="btn btn-primary btn_port" onClick="mudar(1)">
+                                <button class="btn btn-primary btn_port" onClick="mudar(2)">
+                                <button class="btn btn-primary btn_port" onClick="mudar(3)">
+                            </center>
                         </div>
                         <div class="col-md-4"> </div>
                     </div>
