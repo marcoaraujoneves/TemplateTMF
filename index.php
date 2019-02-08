@@ -22,7 +22,31 @@
         <title> Indústria TMF | Home </title> 
 
     </head>
-    
+    <script type="text/javascript">
+        /* Máscara Para digitação do número de telefone no formulário de contato */
+        function mascara(o,f){
+            v_obj=o
+            v_fun=f
+            setTimeout("execmascara()",1)
+        }
+        function execmascara(){
+            v_obj.value=v_fun(v_obj.value)
+        }
+        function mtel(v){
+            v=v.replace(/\D/g,"");
+            v=v.replace(/^(\d{2})(\d)/g,"($1) $2");
+            v=v.replace(/(\d)(\d{4})$/,"$1-$2");
+            return v;
+        }
+        function id( el ){
+            return document.getElementById( el );
+        }
+        window.onload = function(){
+            id('telefone').onkeypress = function(){
+                mascara( this, mtel );
+            }
+        }
+    </script>
     <body>
 
         <!-- Inclusão do cabeçalho do site -->
@@ -44,39 +68,33 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 my-auto">
                             <div class="row">
-                                <div class="col-md-5">
-                                <p class="texto"> XX projetos entregues </p>
+                                <div class="col-md-6">
+                                    <p class="texto"> XX projetos entregues </p>
                                 </div>
-                                <div class="col-md-1">
-                                </div>
-                                <div class="col-md-5">
-                                <p class="texto"> XX anos no mercado </p>
-                                </div>
-                                <div class="col-md-1">
+                                <div class="col-md-6">
+                                    <p class="texto"> XX anos no mercado </p>
                                 </div>
                             </div>
                                 <br>
-                                <div class="row">
-                                <div class="col-md-5">
-                                <p class="texto"> Mais de XX produtos próprios </p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="texto"> Mais de XX produtos próprios </p>
                                 </div>
-                                <div class="col-md-1">
-                                </div>
-                                <div class="col-md-5">
-                                <p class="texto"> Mais de XX opções de serviço </p>
-                                </div>
-                                <div class="col-md-1">
+                                <div class="col-md-6">
+                                    <p class="texto"> Mais de XX opções de serviço </p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <p class="texto">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis a nibh et cursus. 
-                            Aliquam lacinia sed mauris eget laoreet. 
-                            Mauris accumsan lectus dignissim, volutpat nisi vitae, vestibulum odio. 
-                            Quisque auctor lacus sed elit pulvinar vulputate. Vestibulum tristique nisi risus, in viverra lacus elementum non. 
+                            <!-- Texto com até 700 caracteres, minimo 530 -->
+                            <h3 style="text-align:right;" id="subTituloSobre"> Conheça a TMF </h3>
+                            <p class="texto" style="text-align:justify;">
+                                &emsp;
+                                <span id="textoSobre">
+                                    Lorem ipsum dolor sit amet, consecttur adipiscing elit. Donec rutrum feugiat augue. Aenean ac laoreet mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce egestas augue sit amet posuere volutpat. Ut a leo ut risus accumsan luctus id eu velit. Curabitur sodales pharetra lectus sit amet luctus. Integer dignissim laoreet velit non cursus. Suspendisse sit amet neque scelerisque, vehicula libero ac, fermentum neque. Integer lacinia pulvinar massa, sit amet egestas turpis pulvinar a. Suspendisse hendrerit, ligula vel sagittis dignissim, odio lectus porta mauris, non sagittis velit arcu nec eros. Etiam non dui eu diam blandit mattis sit amet eu diam!
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -95,36 +113,43 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
-                            <p class="texto">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis a nibh et cursus. 
-                            Aliquam lacinia sed mauris eget laoreet. 
-                            Mauris accumsan lectus dignissim, volutpat nisi vitae, vestibulum odio. 
-                            Quisque auctor lacus sed elit pulvinar vulputate. Vestibulum tristique nisi risus, in viverra lacus elementum non. 
+                        <div class="col-md-5">
+                            <p class="texto" style="text-align:justify;">
+                                &emsp;
+                                <span id="textoServicos">
+                                Lorem ipsum dolor sit amet, consecttur adipiscing elit. Done c rutrum feugiat augue. Aenean ac laoreet mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce egestas augue sit amet posuere volutpat. Ut a leo ut risus accumsan luctus id eu velit. Curabitur sodales pharetra lectus sit amet luctus. Integer dignissim laoreet velit non cursus. Suspendisse sit amet neque scelerisque, vehicula libero ac, fermentum neque. Integer lacinia pulvinar massa, sit amet egestas turpis pulvinar a. Suspendisse hendrerit, marcoligula vel sagittis 
+                                </span>
                             </p>
-                            <a id="vermais">Ver mais..</a>
+                            <a id="vermais">Ver mais...</a>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-7 my-auto">
                             <div class="row">
-                                <div class="col-md-2">
+                                <div class="col-md-6">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <img src="img/usinagem.png" style="height" class="img-responsive">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h4 class="nomeServicos">Usinagem</h4>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-5">
-                                <img src="img/tornearia.png" class="imagem">
-                                </div>
-                                <div class="col-md-5">
-                                <img src="img/usinagem.png" class="imagem">
+                                <div class="col-md-6">
+                                    <img src="img/usinagem.png" class="imagem">
                                 </div>
                             </div>
                             <br>
                             <div class="row">
-                                <div class="col-md-2">
+                                <div class="col-md-6">
+                                    <img src="img/manutencao.png" class="imagem">
                                 </div>
-                                <div class="col-md-5">
-                                <img src="img/manutencao.png" class="imagem">
-                                </div>
-                                <div class="col-md-5">
-                                <img src="img/maquinas.png" class="imagem">
+                                <div class="col-md-6">
+                                    <img src="img/maquinas.png" class="imagem">
                                 </div>
                             </div>
                         </div>
@@ -295,36 +320,44 @@
 
                         <div class="col-md-8" id="mande_mensagem">
                             <h3> Mande uma mensagem </h3>
-                            <br><br>
-
-                            <form>
+                            <br>
+                            <div id="sucesso" class="alert alert-success" role="alert" style="display:none;">
+                                Mensagem enviada com sucesso!
+                            </div>
+                            <div id="fracasso" class="alert alert-danger" role="alert" style="display:none;">
+                                Houve um erro ao enviar sua mensagem, por favor, tente novamente mais tarde ou entre em contato diretamente pelos canais ao lado!
+                            </div>
+                            <div id="incompleto" class="alert alert-secondary" role="alert" style="display:none;">
+                                Por favor, informe todos os dados necessários!
+                            </div>
+                            <form id="formularioContato" method="post">
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label class="txtForm" for="nome"> &ensp;Nome </label> <br>
-                                            <input type="text" class="inpForm" id="nome" name="nome" autocomplete="off" required>
+                                            <input type="text" class="inpForm" id="nome" name="nome" autocomplete="off">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="txtForm" for="telefone"> &ensp;Telefone </label> <br>
-                                            <input type="text" class="inpForm" id="telefone" name="telefone" autocomplete="off" required>
+                                            <input type="text" class="inpForm" id="telefone" name="telefone" autocomplete="off" maxlength="15">
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <label class="txtForm" for="email"> &ensp;E-mail </label> <br>
-                                            <input type="email" class="inpForm" id="email" name="email" autocomplete="off" required>
+                                            <input type="email" class="inpForm" id="email" name="email" autocomplete="off">
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <label class="txtForm" for="mensagem"> &ensp;Mensagem </label> <br>
-                                            <textarea class="inpForm" id="mensagem" name="mensagem" rows="6" required> </textarea>
+                                            <textarea class="inpForm" id="mensagem" name="mensagem" rows="6"></textarea>
                                         </div>
                                     </div>
                                     <br>
-                                    <input type="submit" class="btn btn-primary" id="enviar" name="enviar" value="Enviar">
+                                    <button type="button" class="btn btn-primary" id="enviar" name="enviar"> Enviar </button>
                                 </div>
                             </form>
                         </div>

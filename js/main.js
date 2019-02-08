@@ -41,7 +41,44 @@ $(document).ready(function(){
             }
         }
     });
+
+    //Envio de e-mail com AJAX e PHP
+    $('#enviar').click(function(){
+        $('.alert').css('display','none');
+        var nome= $('#nome').val();
+        var telefone= $('#telefone').val();
+        var email= validaEmail($('#email').val());
+        var mensagem= $('#mensagem').val();
+
+        if(nome != '' &&  telefone != '' && email && mensagem != ''){
+            $.ajax({
+                url:'contato.php',
+                method: 'post',
+                data: $('#formularioContato').serialize(),
+                success: function(data){
+                    if(data  == '1'){
+                        alert(data);
+                        $('.inpForm').val('');
+                        $('#sucesso').css('display','block');
+                    }
+                    else{
+                        alert(data);
+                        $('#fracasso').css('display','block');
+                    }
+                }
+            });
+        }
+        else{
+            $('#incompleto').css('display','block');  
+        }
+    });
 });
+
+//Função para testar se o e-mail é válido
+function validaEmail(email) {
+    var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return regex.test(email);
+}
 
 function mudar(op) {
     if (op == 1) {

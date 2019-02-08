@@ -50,10 +50,13 @@
                                 <img src="../img/location.png">
                                 <span> Portifólio </span>
                             </li>
-                            
                             <li class="itemMenuSistema" id="mod_mensagens">
                                 <img src="../img/location.png">
                                 <span> Mensagens </span>
+                            </li>
+                            <li class="itemMenuSistema" id="mod_textos">
+                                <img src="../img/location.png">
+                                <span> Textos </span>
                             </li>
                             <li class="itemMenuSistema" id="mod_newsletter">
                                 <img src="../img/location.png">

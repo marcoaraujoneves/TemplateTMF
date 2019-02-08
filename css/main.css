@@ -265,7 +265,7 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 .texto {
     font-size: 14pt;
     color: rgb(26, 26, 26);
-    text-align: justify;
+    text-align: center;
 }
 
 #vermais{
@@ -283,7 +283,14 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 
 /* Contato */
 
-#contate-nos h3, #mande_mensagem h3{
+#contate-nos h3, #mande_mensagem h3, #subTituloSobre{
+    text-align: center;
+    font-size: 33px;
+    font-weight: 600;
+    color: rgb(41, 70, 117);
+}
+
+.nomeServicos{
     text-align: center;
     font-size: 33px;
     font-weight: 600;
