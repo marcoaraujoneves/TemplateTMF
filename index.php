@@ -32,8 +32,9 @@
 
         <!-- Corpo principal -->
         <main>
+            <span id="secaoHome"></span>
             <!--SOBRE NÓS-->
-            <section id="secaoSobre" style="margin-top:140px;">
+            <section id="secaoSobre" class="secaoSite" style="margin-top:140px;">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 container-titulos">
@@ -85,7 +86,7 @@
             <!--/SOBRE NÓS-->
 
             <!--SERVICOS-->
-            <section id="secaoservicos">
+            <section id="secaoServicos" class="secaoSite">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 container-titulos">
@@ -133,7 +134,7 @@
             </section>
             <!--/SERVICOS-->
             <!--Produtos-->
-            <section id="secao_produtos">
+            <section id="secaoProdutos" class="secaoSite">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 container-titulos">
@@ -213,7 +214,7 @@
             <!--/PRODUTOS-->
 
             <!--PORTIFÓLIO-->
-            <section id="secaoservicos">
+            <section id="secaoPortifolio" class="secaoSite">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 container-titulos">
@@ -248,7 +249,7 @@
             <!--/PORTIFÓLIO-->
 
             <!--CONTATO-->
-            <section id="secao_contato">
+            <section id="secaoContato" class="secaoSite">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 container-titulos">

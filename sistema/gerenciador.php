@@ -38,28 +38,29 @@
 
                     <div id="menuSistema">
                         <ul type="none">
-                            <li class="itemMenuSistema">
+                            <li class="itemMenuSistema" id="mod_servicos">
                                 <img src="../img/location.png">
                                 <span> Serviços </span>
                             </li>
-                            <li class="itemMenuSistema">
+                            <li class="itemMenuSistema" id="mod_produtos">
                                 <img src="../img/location.png">
                                 <span> Produtos </span>
                             </li>
-                            <li class="itemMenuSistema">
+                            <li class="itemMenuSistema" id="mod_portifolio">
                                 <img src="../img/location.png">
                                 <span> Portifólio </span>
                             </li>
-                            <li class="itemMenuSistema">
-                                <img src="../img/location.png">
-                                <span> Newsletter </span>
-                            </li>
-                            <li class="itemMenuSistema">
+                            
+                            <li class="itemMenuSistema" id="mod_mensagens">
                                 <img src="../img/location.png">
                                 <span> Mensagens </span>
                             </li>
+                            <li class="itemMenuSistema" id="mod_newsletter">
+                                <img src="../img/location.png">
+                                <span> Newsletter </span>
+                            </li>
                             <a href="sair.php" style="text-decoration:none">
-                                <li class="itemMenuSistema" >
+                                <li class="itemMenuSistema" id="sair">
                                     <img src="../img/location.png">
                                     <span> Sair </span>
                                 </li>
@@ -69,7 +70,9 @@
                 </div>
 
                 <div class="col-9" id="painelSistema">
-                
+                    <center>
+                        <img src="../img/loader.gif" style="margin-top:150px; display:none;" id="loader">
+                    </center>
                 </div>
            </div>
        </div>
