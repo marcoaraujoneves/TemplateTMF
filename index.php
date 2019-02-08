@@ -47,6 +47,7 @@
                             <div class="row">
                                 <div class="col-md-5">
                                 <p class="texto"> XX projetos entregues </p>
+                                
                                 </div>
                                 <div class="col-md-1">
                                 </div>
@@ -174,7 +175,11 @@
                         <div class="card tile">
                             <img src="img/prod.png" alt="Avatar" class="img_prod">
                                             <h2 class="animate-text">Nome do Produto 4</h2>
-                                            <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>              
+                                            <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>   
+                                            <br>
+                                            <div class="container" id="con_prod">
+                                            <p><h5><b style="color:#365C9A">Nome do Produto 3</b></h5></p>
+                                            </div>           
                         </div>
                     </div>
                 </div>

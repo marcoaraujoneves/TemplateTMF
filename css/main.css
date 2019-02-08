@@ -120,9 +120,14 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 
 .img_prod
 {
-    height:100%x;
-    width: 100%;
+    height:200px;
+    width: 200px;
     border: 2px solid #365C9A;
+}
+#con_prod{
+    height:60px;
+    border: 2px solid #365C9A;
+    text-align: center;
 }
 
 /* Portfólio */
