@@ -70,19 +70,8 @@
                     <div class="row">
                         <div class="col-md-6 my-auto">
                             <div class="row">
-<<<<<<< HEAD
                                 <div class="col-md-6">
                                     <p class="texto"> XX projetos entregues </p>
-=======
-                                <div class="col-md-5">
-                                <p class="texto"> XX projetos entregues </p>
-                                
-                                </div>
-                                <div class="col-md-1">
-                                </div>
-                                <div class="col-md-5">
-                                <p class="texto"> XX anos no mercado </p>
->>>>>>> a3925840b2511048a2099d52f6602709e5ca5957
                                 </div>
                                 <div class="col-md-6">
                                     <p class="texto"> XX anos no mercado </p>
