@@ -17,8 +17,40 @@
                 <th style="width:6%;">  Respondido?</th>
             </tr>
         </thead>
-        <tbody style="vertical-align:center" id="corpoMensagens">
-            
+        <tbody style="vertical-align:center">
+            <tr data-toggle="modal" data-target="#modalMsg">
+                <th> 1 </th>
+                <td> Marco Araujo </td>
+                <td> marcoaraujoneves@gmail.com </td>
+                <td style="text-align:justify;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean... </td>
+                <td>
+                    <center>
+                        <img src="../img/check.png" class="img-responsive" style="width:45%;">
+                    </center>
+                </td>
+            </tr>
+            <tr data-toggle="modal" data-target="#modalMsg">
+                <th> 2 </th>
+                <td> Marco Gomes </td>
+                <td> marcogomes@gmail.com </td>
+                <td style="text-align:justify;"> Donec hendrerit erat a metus tempor elementum. Aenean convallis... </td>
+                <td>
+                    <center>
+                        <img src="../img/check.png" class="img-responsive" style="width:45%;">
+                    </center>
+                </td>
+            </tr>
+            <tr data-toggle="modal" data-target="#modalMsg">
+                <th> 3 </th>
+                <td> João Vitor </td>
+                <td> buzzercorp@gmail.com </td>
+                <td style="text-align:justify;"> Morbi venenatis, est venenatis egesta, lorem ante euismod lacus... </td>
+                <td>
+                    <center>
+                        <img src="../img/check.png" class="img-responsive" style="width:45%;">
+                    </center>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -34,110 +66,26 @@
                 </button>
             </div>
             <div class="modal-body" id="corpoModalMsg">
+                <span> Nome: </span>
+                <label id="nomeDetalheMsg"> Marco Araujo </label>
+                <br><hr>
+                <span> Telefone: </span>
+                <label id="telefoneDetalheMsg"> (22)99776-6801 </label>
+                <br><hr>
+                <span> E-mail: </span>
+                <label id="emailDetalheMsg"> marcoaraujoneves@gmail.com </label>
+                <br><hr>
+                <span> Status: </span>
+                <label id="statusDetalheMsg"> Respondido </label>
+                <br><hr>
+                <span> Mensagem: </span>
+                <label id="mensagemDetalheMsg" style="text-align:justify;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean enim sem, gravida vel orci faucibus, mattis vehicula magna. In eu commodo lorem. Suspendisse non velit ut erat fringilla commodo. Phasellus nec rhoncus libero, ac elementum sem. Nullam tristique nulla eu facilisis dignissim.  </label>
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" id="modalDeletaMsg"  data-dismiss="modal" data-toggle='modal' data-target='#modalDeleteMsg'>Deletar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Deletar</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
             </div>
         </div>
     </div>
 </div>
-
-<!-- Modal de delete das mensagens -->
-<div class="modal fade" id="modalDeleteMsg" tabindex="-1" role="dialog" aria-labelledby="modalDeleteMsgTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
-                <h5 class="modal-title" id="exampleModalLongTitle"> Deseja mesmo deletar a mensagem? </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-footer">
-                <input type='hidden' id='deletaCod' data-idmsg="">
-                <button type="button" class="btn btn-danger" id="confirmaDeletarMsg" data-dismiss="modal">Sim</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        carregaMensagens();
-
-        var codMsg;
-        $(document).on('click', '.linhaMensagem', function(){
-	        codMsg = $(this).attr("data-id");
-            carregaMensagem(codMsg);
-        });
-
-        $(document).on('click', '#modalDeletaMsg', function(){
-            $('#deletaCod').attr("data-idmsg",$('#codigo').attr("data-idmsg"));
-        });
-
-        $('#confirmaDeletarMsg').click(function(){
-            deletaMensagem($('#deletaCod').attr("data-idmsg"));
-        });
-
-        $(document).on('click','#mudaStatus',function(){
-            trocaStatus($('#codigo').attr("data-idmsg"));
-        });
-    });
-
-    function carregaMensagens(){
-        $.ajax({
-            url:'Mensagens/carregaMensagens.php',
-            success:function(data){
-                $('#corpoMensagens').html(data);
-            },
-            error:function(){
-                $('#corpoMensagens').html('<td colspan="5" style="text-align:center"> Houve um erro na requisição, favor tentar novamente mais tarde! </td>');
-            }
-        });
-    }
-
-    function carregaMensagem(codMsg){
-        $.ajax({
-            url:'Mensagens/carregaMensagem.php',
-            method:'POST',
-            data:{codigo:codMsg},
-            success:function(data){
-                $('#corpoModalMsg').html(data);
-            },
-            error:function(){
-                $('#corpoModalMsg').html('<h3 style="text-align:center"> Houve um erro na requisição, favor tentar novamente mais tarde! </h3>');
-            }
-        });
-    }
-
-    function deletaMensagem(codMsg){
-        $.ajax({
-            url:'Mensagens/deletaMensagem.php',
-            method:'POST',
-            data:{codigo:codMsg},
-            success:function(data){
-                carregaMensagens();
-            },
-            error:function(){
-                $('#corpoModalMsg').html('<h3 style="text-align:center"> Houve um erro na requisição, favor tentar novamente mais tarde! </h3>');
-            }
-        });
-    }
-
-    function trocaStatus(codMsg){
-        $.ajax({
-            url:'Mensagens/atualizaMensagem.php',
-            method:'POST',
-            data:{codigo:codMsg,status:$("#mudaStatus").attr('data-status')},
-            success:function(data){
-                carregaMensagens();
-                carregaMensagem(codMsg);
-            },
-            error:function(){
-                $('#corpoModalMsg').html('<h3 style="text-align:center"> Houve um erro na requisição, favor tentar novamente mais tarde! </h3>');
-            }
-        });
-    }
-</script>

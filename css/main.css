@@ -16,8 +16,8 @@ body{
 }
 /* Produtos */
 .card{
-    height:350px;
-    width:100%;
+    height:300px;
+    width:300px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 .wrap
@@ -31,7 +31,7 @@ body{
 .tile
 {
   width:300px;
-  height:350px;
+  height:300px;
   margin:8px;
   background-color:#99aeff;
   display:inline-block;
@@ -137,22 +137,42 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
     max-height:200px;
 }
 
-.btn_port{
-    margin: 5px;
-    background-color: #365C9A;
-    height: 25px !important;
-    width: 25px !important;
-    border-radius: 100% !important;
-    padding: 0% !important;
+.radio_port {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9) );
+	background:-moz-linear-gradient( center top, #f9f9f9 5%, #e9e9e9 100% );
+	background-color:#f9f9f9;
+	-webkit-border-top-left-radius:37px;
+	-moz-border-radius-topleft:37px;
+	border-top-left-radius:37px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:37px;
+	-moz-border-radius-bottomright:37px;
+	border-bottom-right-radius:37px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#666666;
+	height:30px;
+	width:60px;
+}
+.radio_port:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9) );
+	background:-moz-linear-gradient( center top, #e9e9e9 5%, #f9f9f9 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9');
+    background-color:#e9e9e9;
+    cursor: pointer;
 }
 
-.img_btn_port{
-    max-width:11px;
-    max-height:11px;
-    border-radius: 100%;
-    margin-bottom: 18%;
-    margin-left: auto;
-    margin-right: auto;
+.radio_port:active {
+	position:relative;
+	top:1px;
 }
 
 /* Contato */
@@ -250,7 +270,7 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 .texto {
     font-size: 14pt;
     color: rgb(26, 26, 26);
-    text-align: center;
+    text-align: justify;
 }
 
 #vermais{
@@ -268,14 +288,7 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 
 /* Contato */
 
-#contate-nos h3, #mande_mensagem h3, #subTituloSobre{
-    text-align: center;
-    font-size: 33px;
-    font-weight: 600;
-    color: rgb(41, 70, 117);
-}
-
-.nomeServicos{
+#contate-nos h3, #mande_mensagem h3{
     text-align: center;
     font-size: 33px;
     font-weight: 600;
