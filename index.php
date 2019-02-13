@@ -263,9 +263,9 @@
                         <div class="col-md-4"> </div>
                         <div class="col-md-4">
                             <center>
-                                <button class="btn btn-primary btn_port" onClick="mudar(1)">
-                                <button class="btn btn-primary btn_port" onClick="mudar(2)">
-                                <button class="btn btn-primary btn_port" onClick="mudar(3)">
+                                <button class="btn btn-primary btn_port" onClick="mudar(1)"> <center> <img src="img/circulo.png" class="img_btn_port"> </center> </button>
+                                <button class="btn btn-primary btn_port" onClick="mudar(2)"> <center> <img src="img/circulo.png" class="img_btn_port"> </center> </button>
+                                <button class="btn btn-primary btn_port" onClick="mudar(3)"> <center> <img src="img/circulo.png" class="img_btn_port"> </center> </button>
                             </center>
                         </div>
                         <div class="col-md-4"> </div>
