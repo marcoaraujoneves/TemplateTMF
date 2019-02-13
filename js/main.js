@@ -72,6 +72,11 @@ $(document).ready(function(){
             $('#incompleto').css('display','block');  
         }
     });
+
+    $('.btn_port').click(function(){
+        $('.img_btn_port').attr("src","../img/circulo.png");
+        $("img",this).attr("src","../img/circulo2.png");
+    });
 });
 
 //Função para testar se o e-mail é válido
