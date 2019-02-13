@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
 
         <title> Indústria TMF | Home </title> 
 
@@ -31,6 +32,33 @@
 
         <!-- Corpo principal -->
         <main>
+        <section id="secaoServicos" class="secaoSite">
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-12 container-titulos">
+                        <h1 class="titulo_secoes">
+                            Serviços
+                        </h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card" style="width: 100%; height: 400px; margin: 50px;">
+                        <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-5"> 
+                                <img src="img/prod.png" alt="Avatar" class="img_ser">
+                            </div>
+                            <div class="col-md-7">
+                                <h5 class="card-title">Nome Serviço</h5>
+                                <p class="card-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken.</p>
+                                <a href="#" class="card-link">Contratar</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
             
         </main>
         <!-- Inclusão do rodapé do site -->
