@@ -10,7 +10,7 @@
     $objDB = new db();
     $conexao = $objDB->conecta_mysql();
     
-    $sql = "INSERT INTO mensagem(nome,telefone,email,mensagem,data) VALUES(?,?,?,?,CURRENT_TIMESTAMP())";
+    $sql = "INSERT INTO mensagem(nome,telefone,email,mensagem,data,respondido) VALUES(?,?,?,?,CURRENT_TIMESTAMP(),0)";
     $stmt = $conexao->prepare($sql);
     $stmt->bind_param('ssss',$nome,$numero,$email,$mensagem);
     if($stmt->execute()){

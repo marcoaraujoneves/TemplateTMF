@@ -1,5 +1,5 @@
 <h1 class="titulo_secoes"> Textos </h1>
-<p>
+<p style="text-align:center">
     <br>
     Neste módulo você poderá editar os textos que são exibidos no website!
 </p>
