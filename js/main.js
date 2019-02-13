@@ -42,6 +42,24 @@ $(document).ready(function(){
         }
     });
 
+    //Carregando as informações da página principal
+    $.ajax({  
+		url:"../sistema/Sobre/carregaDados.php",
+		dataType:"json",
+		success:function(data){
+            $('#indicador1qt').html(data.indicador1qt);
+            $('#indicador2qt').html(data.indicador2qt);
+            $('#indicador3qt').html(data.indicador3qt);
+            $('#indicador4qt').html(data.indicador4qt);
+
+            $('#indicador1').html(data.indicador1);  
+            $('#indicador2').html(data.indicador2);  
+            $('#indicador3').html(data.indicador3);  
+			$('#indicador4').html(data.indicador4);
+			$('#textoSobre').html(data.textoSobre);
+		}  
+	});
+
     //Envio de e-mail com AJAX e PHP
     $('#enviar').click(function(){
         $('.alert').css('display','none');

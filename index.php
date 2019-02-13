@@ -71,19 +71,31 @@
                         <div class="col-md-6 my-auto">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <p class="texto"> XX projetos entregues </p>
+                                    <p class="texto">
+                                        <span id="indicador1qt">0 </span> &nbsp;
+                                        <span id="indicador1"> </span>
+                                    </p>
                                 </div>
                                 <div class="col-md-6">
-                                    <p class="texto"> XX anos no mercado </p>
+                                    <p class="texto">
+                                        <span id="indicador2qt"> 0</span> &nbsp;
+                                        <span id="indicador2"> </span>
+                                    </p>
                                 </div>
                             </div>
                                 <br>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <p class="texto"> Mais de XX produtos próprios </p>
+                                    <p class="texto"> Mais de&nbsp;
+                                        <span id="indicador3qt"> 0</span> &nbsp;
+                                        <span id="indicador3"> </span>
+                                    </p>
                                 </div>
                                 <div class="col-md-6">
-                                    <p class="texto"> Mais de XX opções de serviço </p>
+                                    <p class="texto"> Mais de&nbsp;
+                                        <span id="indicador4qt"> 0</span> &nbsp;
+                                        <span id="indicador4"> </span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -93,7 +105,7 @@
                             <p class="texto" style="text-align:justify;">
                                 &emsp;
                                 <span id="textoSobre">
-                                    Lorem ipsum dolor sit amet, consecttur adipiscing elit. Donec rutrum feugiat augue. Aenean ac laoreet mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce egestas augue sit amet posuere volutpat. Ut a leo ut risus accumsan luctus id eu velit. Curabitur sodales pharetra lectus sit amet luctus. Integer dignissim laoreet velit non cursus. Suspendisse sit amet neque scelerisque, vehicula libero ac, fermentum neque. Integer lacinia pulvinar massa, sit amet egestas turpis pulvinar a. Suspendisse hendrerit, ligula vel sagittis dignissim, odio lectus porta mauris, non sagittis velit arcu nec eros. Etiam non dui eu diam blandit mattis sit amet eu diam!
+                                    
                                 </span>
                             </p>
                         </div>
