@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 28/01/2019 às 19:22
+-- Tempo de geração: 13/02/2019 às 15:11
 -- Versão do servidor: 5.7.21-1
 -- Versão do PHP: 5.6.26-1
 
@@ -59,8 +59,41 @@ CREATE TABLE `mensagem` (
   `telefone` varchar(15) NOT NULL,
   `email` varchar(150) NOT NULL,
   `mensagem` text NOT NULL,
-  `data` datetime NOT NULL
+  `data` datetime NOT NULL,
+  `respondido` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Fazendo dump de dados para tabela `mensagem`
+--
+
+INSERT INTO `mensagem` (`codMsg`, `nome`, `telefone`, `email`, `mensagem`, `data`, `respondido`) VALUES
+(49, 'Marco', '(31) 23123-1231', 'marco@gmail.cbr', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a tellus vel sem facilisis iaculis sed eu tortor. Vestibulum lobortis nisl non nunc tincidunt pretium et nec turpis. Curabitur commodo, dolor mollis malesuada tristique, felis turpis posuere turpis, id iaculis magna elit eu justo. Duis iaculis velit eros, sit amet dictum ipsum mattis id. Mauris posuere, felis vitae fermentum vehicula, felis dolor pellentesque quam, et finibus urna erat eget ligula. Curabitur bibendum et nibh et fringilla. Aenean nec lobortis turpis.\r\n\r\nMaecenas imperdiet quam vel est sollicitudin lobortis. Integer et eleifend eros. Curabitur sed aliquam mauris. Maecenas gravida rutrum sem ut commodo. Maecenas eu ex fringilla, vehicula sem vitae, elementum risus. Nulla aliquam tempus ipsum, ut gravida sapien tristique id. Vestibulum laoreet, magna id varius tempus, mi neque feugiat metus, eu tristique lorem purus ac nulla. Cras lacus libero, tempor sit amet ornare in, lacinia in justo.', '2019-02-13 13:07:26', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `sobre`
+--
+
+CREATE TABLE `sobre` (
+  `indicador1qt` int(11) NOT NULL,
+  `indicador2qt` int(11) NOT NULL,
+  `indicador3qt` int(11) NOT NULL,
+  `indicador4qt` int(11) NOT NULL,
+  `indicador1` varchar(20) NOT NULL,
+  `indicador2` varchar(16) NOT NULL,
+  `indicador3` varchar(18) NOT NULL,
+  `indicador4` varchar(18) NOT NULL,
+  `textoSobre` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Fazendo dump de dados para tabela `sobre`
+--
+
+INSERT INTO `sobre` (`indicador1qt`, `indicador2qt`, `indicador3qt`, `indicador4qt`, `indicador1`, `indicador2`, `indicador3`, `indicador4`, `textoSobre`) VALUES
+(23, 6, 10, 15, 'projetos entregues', 'anos no mercado', 'produtos próprios', 'opções de serviço', 'Lorem ipsum dolor sit amet, consecttur adipiscing elit. Donec rutrum feugiat augue. Aenean ac laoreet mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce egestas augue sit amet posuere volutpat. Ut a leo ut risus accumsan luctus id eu velit. Curabitur sodales pharetra lectus sit amet luctus. Integer dignissim laoreet velit non cursus. Suspendisse sit amet neque scelerisque, vehicula libero ac, fermentum neque. Integer lacinia pulvinar massa, sit amet egestas turpis pulvinar a. Suspendisse hendrerit, ligula vel sagittis dignissim, odio lectus porta mauris, non sagittis velit arcu nec eros. Etiam non dui eu diam blandit mattis sit amet eu diam!');
 
 -- --------------------------------------------------------
 
@@ -130,7 +163,7 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT de tabela `mensagem`
 --
 ALTER TABLE `mensagem`
-  MODIFY `codMsg` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `codMsg` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 --
 -- AUTO_INCREMENT de tabela `usuario`
 --
