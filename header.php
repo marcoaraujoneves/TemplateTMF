@@ -28,7 +28,7 @@
 
         <div class="collapse navbar-collapse" id="menu-navegacao">
             <ul class="navbar-nav mx-auto my-auto">
-                <li class="nav-item navegacao"><a class="nav-link linkMenu link_ativo" id="link_secaoHome" href="#secaohome">Home</a></li>
+                <li class="nav-item navegacao"><a class="nav-link linkMenu link_ativo" id="link_secaoHome" href="#secaoHome">Home</a></li>
                 <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoSobre" href="#secaoSobre">Sobre nós</a></li>
                 <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoServicos" href="#secaoServicos">Serviços</a></li>
                 <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoProdutos" href="#secaoProdutos">Produtos</a></li>
