@@ -186,14 +186,14 @@
                                 <div class="card tile">
                                     <img src="img/prod.png" alt="Avatar" class="img_prod">
                                                 <h2 class="animate-text">Nome do Produto 1</h2><!--Suporta 29 caracteres. Nome do produto-->
-                                                <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p><!--Suporta até 168 caracteres. Descrição-->
+                                                <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p><!--Suporta atÃ© 168 caracteres. DescriÃ§Ã£o-->
                                 </div>
                             </div>
                             <div class="col-md-6 text-center wrap">
                                 <div class="card tile">
                                     <img src="img/prod.png" alt="Avatar" class="img_prod">
                                                 <h2 class="animate-text">Nome do Produto 2</h2><!--Suporta 29 caracteres papap-->
-                                                <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p><!--Suporta até 168 caracteres-->         
+                                                <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p><!--Suporta atÃ© 168 caracteres-->         
                                 </div>
                             </div>
                         </div>
@@ -214,9 +214,6 @@
                                             <h2 class="animate-text">Nome do Produto 4</h2>
                                             <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>   
                                             <br>
-                                            <div class="container" id="con_prod">
-                                            <p><h5><b style="color:#365C9A">Nome do Produto 3</b></h5></p>
-                                            </div>           
                         </div>
                     </div>
                 </div>
