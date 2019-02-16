@@ -17,9 +17,9 @@ body{
 
 /* Produtos */
 .card{
-    height:350px;
-    width:100%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    height:300px;
+    width:300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
 }
 .wrap {
   margin:50px auto 0 auto;
@@ -31,7 +31,7 @@ body{
 
 .tile {
   width:300px;
-  height:350px;
+  height:300px;
   margin:8px;
   background-color:#99aeff;
   display:inline-block;

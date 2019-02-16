@@ -17,6 +17,8 @@
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        
 
         <title> Indústria TMF | Home </title> 
 
@@ -31,6 +33,80 @@
 
         <!-- Corpo principal -->
         <main>
+        <section id="secaoServicos" class="secaoSite">
+        <div class="container container-fluid">
+                <div class="row">
+                    <div class="col-md-12 container-titulos">
+                        <h1 class="titulo_secoes">
+                            Serviços
+                        </h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card" style="width: 100%; height: 400px; margin: 50px;background-color: rgba(109, 109, 109, 0.096);">
+                        <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-5"> 
+                                <img src="img/prod.png" alt="Avatar" class="img_ser">
+                            </div>
+                            <div class="col-md-7">
+                                <h4 style="font-size: 27px;font-weight: 600;color: rgb(41, 70, 117);">Nome Serviço</h4>
+                                <p class="card-text">Suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius duis at consectetur lorem donec massa sapien faucibus et molestie</p>
+                                <input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#ModalServ" id="enviar" name="contratar" value="Contratar">
+                                <!-- Modal -->
+                                <div class="modal fade" id="ModalServ" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" style="font-size: 27px;font-weight: 600;color: rgb(41, 70, 117);">Contato</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                            <form>
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label class="txtForm" for="nome"> &ensp;Nome </label> <br>
+                                                    <input type="text" class="inpForm" id="nome" name="nome" autocomplete="off" required>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="txtForm" for="telefone"> &ensp;Telefone </label> <br>
+                                                    <input type="text" class="inpForm" id="telefone" name="telefone" autocomplete="off" required>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <label class="txtForm" for="email"> &ensp;E-mail </label> <br>
+                                                    <input type="email" class="inpForm" id="email" name="email" autocomplete="off" required>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <label class="txtForm" for="mensagem"> &ensp;Mensagem </label> <br>
+                                                    <textarea class="inpForm" id="mensagem" name="mensagem" rows="6" required> </textarea>
+                                                </div>
+                                            </div>
+                                            <br>
+                                        </div>
+                                    </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <input type="submit" class="btn btn-primary" id="enviar" name="enviar" value="Enviar">  
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
             
         </main>
         <!-- Inclusão do rodapé do site -->
