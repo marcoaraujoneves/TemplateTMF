@@ -71,13 +71,13 @@
                         <div class="col-md-6 my-auto">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <p class="texto">
+                                    <p class="texto indicadores">
                                         <span id="indicador1qt">0 </span> &nbsp;
                                         <span id="indicador1"> </span>
                                     </p>
                                 </div>
                                 <div class="col-md-6">
-                                    <p class="texto">
+                                    <p class="texto indicadores">
                                         <span id="indicador2qt"> 0</span> &nbsp;
                                         <span id="indicador2"> </span>
                                     </p>
@@ -86,13 +86,13 @@
                                 <br>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <p class="texto"> Mais de&nbsp;
+                                    <p class="texto indicadores"> Mais de&nbsp;
                                         <span id="indicador3qt"> 0</span> &nbsp;
                                         <span id="indicador3"> </span>
                                     </p>
                                 </div>
                                 <div class="col-md-6">
-                                    <p class="texto"> Mais de&nbsp;
+                                    <p class="texto indicadores"> Mais de&nbsp;
                                         <span id="indicador4qt"> 0</span> &nbsp;
                                         <span id="indicador4"> </span>
                                     </p>
@@ -125,14 +125,14 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-md-5 my-auto">
                             <p class="texto" style="text-align:justify;">
                                 &emsp;
                                 <span id="textoServicos">
-                                Lorem ipsum dolor sit amet, consecttur adipiscing elit. Done c rutrum feugiat augue. Aenean ac laoreet mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce egestas augue sit amet posuere volutpat. Ut a leo ut risus accumsan luctus id eu velit. Curabitur sodales pharetra lectus sit amet luctus. Integer dignissim laoreet velit non cursus. Suspendisse sit amet neque scelerisque, vehicula libero ac, fermentum neque. Integer lacinia pulvinar massa, sit amet egestas turpis pulvinar a. Suspendisse hendrerit, marcoligula vel sagittis 
+                                Lorem ipsum dolor sit amet, consecttur adipiscing elit. Done c rutrum feugiat augue. Aenean ac laoreet mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce egestas augue sit amet posuere volutpat. Ut a leo ut risus accumsan luctus id eu velit. Curabitur sodales pharetra lectus sit amet luctus. Integer dignissim laoreet velit non cursus. Suspendisse sit amet neque scelerisque, vehicula libero ac, fermentum neque. Integer lacinia pulvinar massa, sit amet egestas turpis pulvinar a. Suspendisse hendrerit, marcoligula vel sagittis . Suspendisse hendrerit, marcoligula vel sagittis. Suspendisse hendrerit, marcoligula vel sagittis. Suspendisse hendrerit, marcoligula vel sagittis. Suspendisse hendrerit, marcoligula vel sagittisaaa
                                 </span>
                             </p>
-                            <a id="vermais">Ver mais...</a>
+                            <a href="servicos.php" id="vermais">Ver mais...</a>
                         </div>
 
                         <div class="col-md-7 my-auto">
@@ -140,8 +140,8 @@
                                 <div class="col-md-6">
                                     <div class="container">
                                         <div class="row">
-                                            <div class="col-md-12">
-                                                <img src="img/usinagem.png" style="height" class="img-responsive">
+                                            <div class="col-md-12" style="padding:20px;">
+                                                <img src="img/usinagem.png" style="max-height:250px;" class="img-fluid rounded mx-auto d-block">
                                             </div>
                                         </div>
                                         <div class="row">
@@ -152,16 +152,49 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <img src="img/usinagem.png" class="imagem">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12" style="padding:20px;">
+                                                <img src="img/manutencao.png" style="max-height:250px;" class="img-fluid rounded mx-auto d-block">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h4 class="nomeServicos">Manutenção Ferramentária</h4>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <br>
+                            
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img src="img/manutencao.png" class="imagem">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12" style="padding:20px;">
+                                                <img src="img/tornearia.png" style="max-height:250px;" class="img-fluid rounded mx-auto d-block">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h4 class="nomeServicos">Tornearia</h4>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <img src="img/maquinas.png" class="imagem">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12" style="padding:20px;">
+                                                <img src="img/maquinas.png" style="max-height:250px;" class="img-fluid rounded mx-auto d-block">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h4 class="nomeServicos">Projetos de Máquinas</h4>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -169,6 +202,7 @@
                 </div>
             </section>
             <!--/SERVICOS-->
+
             <!--Produtos-->
             <section id="secaoProdutos" class="secaoSite">
                 <div class="container">
@@ -180,75 +214,51 @@
                         </div>
                     </div>
                     <div class="row">
-                    <div class="col-lg-6">
-                        <div class="row">
-                            <div class="col-md-6 text-center wrap">
-                                <div class="card tile">
-                                    <img src="img/prod.png" alt="Avatar" class="img_prod">
-                                                <h2 class="animate-text">Nome do Produto 1</h2><!--Suporta 29 caracteres. Nome do produto-->
-                                                <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p><!--Suporta até 168 caracteres. Descrição-->
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-md-6 text-center wrap">
+                                    <div class="card tile">
+                                        <img src="img/prod.png" alt="Avatar" class="img_prod">
+                                        <h2 class="animate-text">Nome do Produto 1</h2><!--Suporta 29 caracteres. Nome do produto-->
+                                        <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p><!--Suporta até 168 caracteres. Descrição-->
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-center wrap">
+                                    <div class="card tile">
+                                        <img src="img/prod.png" alt="Avatar" class="img_prod">
+                                        <h2 class="animate-text">Nome do Produto 2</h2><!--Suporta 29 caracteres papap-->
+                                        <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p><!--Suporta até 168 caracteres-->         
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 text-center wrap">
-                                <div class="card tile">
-                                    <img src="img/prod.png" alt="Avatar" class="img_prod">
-                                                <h2 class="animate-text">Nome do Produto 2</h2><!--Suporta 29 caracteres papap-->
-                                                <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p><!--Suporta até 168 caracteres-->         
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        
-            <div class="col-lg-6">
-                <div class="row">
-                    <div class="col-md-6 text-center wrap">
-                        <div class="card tile">
-                            <img src="img/prod.png" alt="Avatar" class="img_prod">
+                        </div> 
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-md-6 text-center wrap">
+                                    <div class="card tile">
+                                        <img src="img/prod.png" alt="Avatar" class="img_prod">
                                             <h2 class="animate-text">Nome do Produto 3</h2>
                                             <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>          
-                        </div>
-                    </div>
-                    <div class="col-md-6 text-center wrap">
-                        <div class="card tile">
-                            <img src="img/prod.png" alt="Avatar" class="img_prod">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-center wrap">
+                                    <div class="card tile">
+                                        <img src="img/prod.png" alt="Avatar" class="img_prod">
                                             <h2 class="animate-text">Nome do Produto 4</h2>
                                             <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>   
                                             <br>
                                             <div class="container" id="con_prod">
-                                            <p><h5><b style="color:#365C9A">Nome do Produto 3</b></h5></p>
-                                            </div>           
+                                                <p><h5><b style="color:#365C9A">Nome do Produto 3</b></h5></p>
+                                                        </div>           
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-                            
-                    <!-- DIV ANTIGA<div class="col-md-4 text-center">       
-                        <div class="card">
-                            <img src="img/logo.png" alt="Avatar" class="img_prod">
-                            <div class="container" id="con_prod">
-                            <p><h4><b style="color:#365C9A">Nome do Produto3</b></h4></p>
-                            <br><br>
-                            </div>
-                        </div>
-                    </div>-->
-                   <!--/Quarta div para ser usado no for <div class="col-md-4 text-center wrap">
-                        <div class="card tile">
-                            <img src="img/logo.png" alt="Avatar" class="img_prod">
-                            <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2>
-                            <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
-                            <br><br>
-                            <div class="container" id="con_prod">
-                            <p><h4><b style="color:#365C9A">Nome do Produto2</b></h4></p>
-                            <br><br>
-                            </div>
-                        </div>
-                    </div>-->
-            <br><br>
+            </section>
             <!--/PRODUTOS-->
-
+            
             <!--PORTIFÓLIO-->
             <section id="secaoPortifolio" class="secaoSite">
                 <div class="container">
@@ -390,8 +400,9 @@
                     </div>
                 </div>
             </section>
+            <!--/CONTATO-->
         </main>
-        <!--/CONTATO-->
+        
 
         <!-- Inclusão do rodapé do site -->
         <footer>

@@ -25,46 +25,8 @@
                         <th style="width:15%;">  </th>
                     </tr>
                 </thead>
-                <tbody style="vertical-align:center">
-                    <tr>
-                        <th> 1 </th>
-                        <td> Marco </td>
-                        <td> marcoaraujoneves@gmail.com </td>
-                        <td> Inativo </td>
-                        <td>
-                            <center>
-                                <button class="botaoEmail" id="deletarEmail"> </button>
-                                <button class="botaoEmail" id="editarEmail"> </button>
-                                <button class="botaoEmail" id="statusEmail"> </button>
-                            </center>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th> 2 </th>
-                        <td> Marco </td>
-                        <td> marcoaraujoneves@gmail.com </td>
-                        <td> Ativo </td>
-                        <td>
-                            <center>
-                                <button class="botaoEmail" id="deletarEmail"> </button>
-                                <button class="botaoEmail" id="editarEmail"> </button>
-                                <button class="botaoEmail" id="statusEmail"> </button>
-                            </center>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th> 3 </th>
-                        <td> Marco </td>
-                        <td> marcoaraujoneves@gmail.com </td>
-                        <td> Ativo </td>
-                        <td>
-                            <center>
-                                <button class="botaoEmail" id="deletarEmail"> </button>
-                                <button class="botaoEmail" id="editarEmail"> </button>
-                                <button class="botaoEmail" id="statusEmail"> </button>
-                            </center>
-                        </td>
-                    </tr>
+                <tbody style="vertical-align:center" id="corpoTbClientes">
+                    
                 </tbody>
             </table>
         </div>
@@ -257,6 +219,16 @@ $(document).ready(function(){
 
     $('#msg').keyup(function(){
         $('#msgPre').html('&emsp;'+this.value.charAt(0).toUpperCase() + this.value.slice(1));
+    });
+
+    $.ajax({
+        url:'Newsletter/carregaClientes.php',
+        success:function(data){
+            $('#corpoTbClientes').html(data);
+        },
+        error:function(){
+            $('#corpoTbClientes').html('Houve um erro na requisição, por favor, tente novamente mais tarde!');
+        }
     });
 });
 </script>

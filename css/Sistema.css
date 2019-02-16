@@ -188,6 +188,14 @@ li.nav-item a.nav-link.active{
     color: rgb(20, 38, 68);
 }
 
+.btnAdiciona{
+    display: none!important;
+}
+
+.btnAtivo{
+    display: block!important;
+}
+
 /*--------------------------------------------------------------------*/
 /*------------------------ Tipografia --------------------------------*/
 @font-face {
@@ -231,4 +239,8 @@ li.nav-item a.nav-link{
 
 #listaEmails p{
     text-align: justify;
+}
+
+.inpForm{
+    background-color: white;
 }
