@@ -17,6 +17,8 @@
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        
 
         <title> Indústria TMF | Home </title> 
 
@@ -48,15 +50,15 @@
                                 <img src="img/prod.png" alt="Avatar" class="img_ser">
                             </div>
                             <div class="col-md-7">
-                                <h5 class="card-title">Nome Serviço</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla urna porttitor rhoncus dolor purus non. Parturient montes nascetur ridiculus mus mauris vitae ultricies. Etiam sit amet nisl purus. Vitae tortor condimentum lacinia quis vel eros donec. Sapien nec sagittis aliquam malesuada. Vitae nunc sed velit dignissim sodales. Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Aliquam id diam maecenas ultricies mi. Interdum velit euismod in pellentesque massa placerat duis.</p>
+                                <h4 style="font-size: 27px;font-weight: 600;color: rgb(41, 70, 117);">Nome Serviço</h4>
+                                <p class="card-text">Suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius duis at consectetur lorem donec massa sapien faucibus et molestie</p>
                                 <input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#ModalServ" id="enviar" name="contratar" value="Contratar">
                                 <!-- Modal -->
                                 <div class="modal fade" id="ModalServ" tabindex="-1" role="dialog" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" style="color:#365C9A">Contato</h5>
+                                        <h5 class="modal-title" style="font-size: 27px;font-weight: 600;color: rgb(41, 70, 117);">Contato</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                         </button>

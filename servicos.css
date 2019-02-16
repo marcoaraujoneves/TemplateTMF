@@ -7,14 +7,23 @@
     height: auto;
 }
 
-#secaoServicos
+header
 {
-    margin: 180px;
+ margin-bottom: 60px;
 }
 
 .card:hover
 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.425);
 }
+
+#nomeserv
+{
+    text-align: center;
+    font-size: 33px;
+    font-weight: 600;
+    color: rgb(41, 70, 117);
+}
+
 /*--------------------------------------------------------------------*/
 /*------------------------ Tipografia --------------------------------*/
