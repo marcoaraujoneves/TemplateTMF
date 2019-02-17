@@ -33,7 +33,7 @@
 
         <!-- Corpo principal -->
         <main>
-        <section id="secaoServicos" class="secaoSite">
+        <section id="secaoServicos" class="secaoSite" style="margin-top:140px;" >
         <div class="container container-fluid">
                 <div class="row">
                     <div class="col-md-12 container-titulos">
@@ -43,15 +43,19 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="card" style="width: 100%; height: 400px; margin: 50px;background-color: rgba(109, 109, 109, 0.096);">
+                    <div class="card" style="width: 100%; height: auto; margin: 50px;background-color: rgba(109, 109, 109, 0.096);">
                         <div class="card-body">
                         <div class="row">
-                            <div class="col-md-5"> 
+                            <div class="col-md-5 my-auto mx-auto"> 
                                 <img src="img/prod.png" alt="Avatar" class="img_ser">
                             </div>
                             <div class="col-md-7">
                                 <h4 style="font-size: 27px;font-weight: 600;color: rgb(41, 70, 117);">Nome Serviço</h4>
-                                <p class="card-text">Suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius duis at consectetur lorem donec massa sapien faucibus et molestie</p>
+                                <p class="card-text" style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor elit sed vulputate mi. Vitae et leo duis ut diam quam nulla. Turpis egestas sed tempus urna et pharetra pharetra massa massa. Lectus urna duis convallis convallis tellus id interdum velit laoreet. Eget duis at tellus at urna condimentum mattis pellentesque id. Blandit volutpat maecenas volutpat blandit aliquam. Augue ut lectus arcu bibendum at. Vehicula ipsum a arcu cursus vitae congue mauris. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Vitae ultricies leo integer malesuada nunc. Eu volutpat odio facilisis mauris sit amet. Quam viverra orci sagittis eu volutpat odio facilisis mauris sit.
+
+                                    Morbi tincidunt augue interdum velit. At in tellus integer feugiat scelerisque varius morbi. Porttitor massa id neque aliquam. Pellentesque massa placerat duis ultricies lacus sed. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu. Mattis nunc sed blandit libero volutpat sed cras ornare. Sem viverra aliquet eget sit amet tellus cras adipiscing. Scelerisque in dictum non consectetur a. Rhoncus mattis rhoncus urna neque. Adipiscing commodo elit at imperdiet. Placerat vestibulum lectus mauris ultrices eros in. Orci sagittis eu volutpat odio facilisis. Est ultricies integer quis auctor. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Erat nam at lectus urna duis convallis convallis tellus. Tincidunt eget nullam non nisi est sit. Mauris nunc congue nisi vitae suscipit tellus mauris. Magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Urna et pharetra pharetra massa massa ultricies.
+
+                                     Faucibus scelerisque eleifend donec pretium. Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet. Pretium nibh ipsum consequat nisl vel pretium lectus quam. Placerat orci nulla pellentesque dignissim. Et magnis dis parturient montes. Eu lobortis elementum nibh tellus molestie nunc non blandit. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. Auctor eu augue ut lectus arcu. Elementum integer enim neque volutpat ac tincidunt vitae. Ut eu sem integer vitae justo.</p>
                                 <input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#ModalServ" id="enviar" name="contratar" value="Contratar">
                                 <!-- Modal -->
                                 <div class="modal fade" id="ModalServ" tabindex="-1" role="dialog" aria-hidden="true">

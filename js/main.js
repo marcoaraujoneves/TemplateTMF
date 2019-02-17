@@ -102,16 +102,3 @@ function validaEmail(email) {
     var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
     return regex.test(email);
 }
-
-function mudar(op) {
-    if (op == 1) {
-    document.getElementById('imagem_port').src = '../img/tornearia.png';
-    document.getElementById('texto_port').innerHTML= "Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam vel lacus ut tellus fringilla imperdiet.";
-    }else if (op == 2) {
-    document.getElementById('imagem_port').src = '../img/usinagem.png';
-    document.getElementById('texto_port').innerHTML= "Pellentesque nec sem non arcu fringilla mattis sed nec turpis.";
-    }else {
-    document.getElementById('imagem_port').src = '../img/manutencao.png';
-    document.getElementById('texto_port').innerHTML= "Etiam ut consectetur lacus. Mauris sagittis orci ut odio pharetra, eget sagittis odio pharetra.";
-    }
-}
