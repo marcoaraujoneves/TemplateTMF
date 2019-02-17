@@ -3,8 +3,8 @@
     class db{
         //Host, usuário, senha e banco de dados
         private $host ='localhost';
-        private $usuario = 'marcoaraujo';
-        private $senha = 'password';
+        private $usuario = 'root';
+        private $senha = '';
         private $database='bdTMF';
 
         public function conecta_mysql(){

@@ -1,6 +1,6 @@
 <?php
     session_start();
-
+    
     if(!isset($_SESSION['nome'])){
         header('Location: index.php?erro=1');
     }
@@ -77,12 +77,14 @@
                         <img src="../img/loader.gif" style="margin-top:150px; display:none;" id="loader">
                     </center>
                 </div>
-           </div>
-       </div>
+            </div>
+        </div>
 
     </body>
     <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/servico.js"></script>
+    <script src="../js/produto.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
     <script src="../js/Sistema.js"></script>
-</html>
+    </html>
