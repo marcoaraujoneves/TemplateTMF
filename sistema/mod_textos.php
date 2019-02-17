@@ -218,7 +218,7 @@
     </div>
 </div>
 
-<!-- Modal de Edição da Seção Produtos -->
+<!-- Modal de Edição da Seção Portifólio -->
 <div class="modal fade" id="modalPortifolio" tabindex="-1" role="dialog" aria-labelledby="modalPortifolioTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">

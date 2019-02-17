@@ -200,35 +200,198 @@
     </div>
 </div>
 
+<!-- Modal de delete dos clientes -->
+<div class="modal fade" id="modalDeleteCliente" tabindex="-1" role="dialog" aria-labelledby="modalDeleteClienteTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
+                <h5 class="modal-title" id="exampleModalLongTitle"> Deseja mesmo deletar este cliente da lista de e-mails? </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <input type='hidden' id='deletaCod' data-id="">
+                <button type="button" class="btn btn-danger" id="confirmaDeletarMsg" data-dismiss="modal">Sim</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Edição do Cliente -->
+<div class="modal fade" id="modalEditaCliente" tabindex="-1" role="dialog" aria-labelledby="modalEditaClienteTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
+                <h5 class="modal-title" id="exampleModalLongTitle"> Editar Cliente </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="bodyEditaCliente">
+				<form id="formCliente">
+					<div class="container-fluid">
+						<div class="row">
+                            <input type="hidden" id="codigoCliente" name="codigo">
+							<div class="col-md-12">
+								<label for="nome"> Nome: </label>
+								<input type="text" class="inpForm" id="nome" name="nome">
+								<br><hr>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+                            <div class="col-md-12">
+								<label for="email"> E-mail: </label>
+								<input type="email" class="inpForm" id="email" name="email">
+								<br><hr>
+							</div>
+						</div>
+                        <br>
+						<div class="row">
+							<div class="col-md-12">
+								<label for="status"> Status: </label>
+								<select id="status" name="status">
+                                    <option value="1"> Ativo </option>
+                                    <option value="0"> Inativo </option>
+                                </select>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="salvarCliente" data-dismiss="modal">Salvar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div> 
+</div>
+
 <script type="text/javascript">
-$(document).ready(function(){
+    $(document).ready(function(){
 
-    //Os blocos a seguir manipulam os dados da div PREVIEW, baseado nos eventos de edição dos parâmetros pelo usuário
-    $('.inpFormRadio').click(function(){
-        $('#tagPre').html('['+this.value+']');
+        //Os blocos a seguir manipulam os dados da div PREVIEW, baseado nos eventos de edição dos parâmetros pelo usuário
+        $('.inpFormRadio').click(function(){
+            $('#tagPre').html('['+this.value+']');
+        });
+
+        $('#tagEmail').keyup(function(){
+            $(".inpFormRadio").prop("checked", false);
+            $('#tagPre').html('['+this.value.toUpperCase()+']');
+        });
+
+        $('#assunto').keyup(function(){
+            $('#assuntoPre').html(this.value.charAt(0).toUpperCase() + this.value.slice(1));
+        });
+
+        $('#msg').keyup(function(){
+            $('#msgPre').html('&emsp;'+this.value.charAt(0).toUpperCase() + this.value.slice(1));
+        });
+        
+        //Carrega a tabela de clientes
+        carregaClientes();
+
+        //Eventos associados aos botões da tabela de clientes
+        $(document).on('click','.btnDeleta',function(){
+            $('#confirmaDeletarMsg').attr("data-id",$(this).attr('data-id'));
+            $('#modalDeleteCliente').modal('show');
+        });
+
+        $(document).on('click','#confirmaDeletarMsg',function(){
+            deletarCliente($(this).attr("data-id"));
+        });
+
+        $(document).on('click','.btnEdita',function(){
+            $('#codigoCliente').val($(this).attr('data-id'));
+            carregaCliente($(this).attr('data-id'));
+            $('#modalEditaCliente').modal('show');
+        });
+
+        $(document).on('click','#salvarCliente',function(){
+            editarCliente($("#codigoCliente").val());
+        });
+
+        $(document).on('click','.btnStatus',function(){
+            statusCliente($(this).attr('data-id'),$(this).attr('data-status'));
+        });
+
     });
 
-    $('#tagEmail').keyup(function(){
-        $(".inpFormRadio").prop("checked", false);
-        $('#tagPre').html('['+this.value.toUpperCase()+']');
-    });
+    function carregaClientes(){
+        $.ajax({
+            url:'Newsletter/carregaClientes.php',
+            success:function(data){
+                $('#corpoTbClientes').html(data);
+            },
+            error:function(){
+                $('#corpoTbClientes').html('<tr> <td colspan="5" style="text-align:center;">Houve um erro na requisição, por favor, tente novamente mais tarde!</td></tr>');
+            }
+        });
+    }
 
-    $('#assunto').keyup(function(){
-        $('#assuntoPre').html(this.value.charAt(0).toUpperCase() + this.value.slice(1));
-    });
+    function carregaCliente(codCliente){
+        $.ajax({
+            url:'Newsletter/carregaCliente.php',
+            method:'POST',
+            data:{codigo:codCliente},
+            dataType:"json",
+            success:function(data){
+                console.log(data);
+                $('#nome').val(data.nome);
+				$('#email').val(data.email);
+                $('#status option').each(function(){
+                    if($(this).val() == data.status){
+                        $(this).attr("selected",true);
+                    }
+                });
+            },
+            error:function(){
+                $('#corpoTbClientes').html('<tr> <td colspan="5" style="text-align:center;">Houve um erro na requisição, por favor, tente novamente mais tarde!</td></tr>');
+            }
+        });
+    }
 
-    $('#msg').keyup(function(){
-        $('#msgPre').html('&emsp;'+this.value.charAt(0).toUpperCase() + this.value.slice(1));
-    });
+    function statusCliente(codCliente,statusAtual){
+        $.ajax({
+            url:'Newsletter/statusCliente.php',
+            method:'POST',
+            data:{codigo:codCliente,status:statusAtual},
+            success: function(data){
+                carregaClientes();
+            },
+            error: function(data){
 
-    $.ajax({
-        url:'Newsletter/carregaClientes.php',
-        success:function(data){
-            $('#corpoTbClientes').html(data);
-        },
-        error:function(){
-            $('#corpoTbClientes').html('Houve um erro na requisição, por favor, tente novamente mais tarde!');
-        }
-    });
-});
+            }
+        });
+    }
+    
+    function editarCliente(codCliente){
+        $.ajax({
+            url:'Newsletter/editarCliente.php',
+            method:'POST',
+            data:$('#formCliente').serialize(),
+            success: function(data){
+                carregaClientes();
+            },
+            error: function(data){
+
+            }
+        });
+    }
+
+    function deletarCliente(codCliente){
+        $.ajax({
+            url:'Newsletter/deletarCliente.php',
+            method:'POST',
+            data:{codigo:codCliente},
+            success: function(data){
+                carregaClientes();
+            },
+            error: function(data){
+
+            }
+        });
+    }
 </script>

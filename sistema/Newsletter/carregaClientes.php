@@ -12,16 +12,16 @@
     if($resultado){
         while($cliente = mysqli_fetch_array($resultado,MYSQLI_ASSOC)){
             $counter++;
-            echo("<tr data-id='".$cliente['codCliente']."'>
+            echo("<tr>
                     <th>".$counter."</th>
                     <td>".$cliente['nome']."</td>
                     <td>".$cliente['email']."</td>
                     <td>".($cliente['status'] ? 'Ativo': 'Inativo')."</td>
                     <td>
                         <center>
-                            <button class='botaoEmail' id='deletarEmail'> d </button>
-                            <button class='botaoEmail' id='editarEmail'> e </button>
-                            <button class='botaoEmail' id='statusEmail'> s </button>
+                            <button class='botaoEmail btnDeleta' data-id='".$cliente['codCliente']."' id='deletarEmail'> d </button>
+                            <button class='botaoEmail btnEdita' data-id='".$cliente['codCliente']."' id='editarEmail'> e </button>
+                            <button class='botaoEmail btnStatus' data-id='".$cliente['codCliente']."' data-status='".$cliente['status']."' id='statusEmail'> s </button>
                         </center>
                     </td>
                 </tr>");
