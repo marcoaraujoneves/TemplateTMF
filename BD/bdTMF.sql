@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.6.6deb5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: 17-Fev-2019 às 00:31
--- Versão do servidor: 10.1.30-MariaDB
--- PHP Version: 7.2.1
+-- Host: localhost:3306
+-- Tempo de geração: 20/02/2019 às 10:40
+-- Versão do servidor: 5.7.21-1
+-- Versão do PHP: 5.6.26-1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bdtmf`
+-- Banco de dados: `bdTMF`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `campanha`
+-- Estrutura para tabela `campanha`
 --
 
 CREATE TABLE `campanha` (
@@ -36,10 +34,18 @@ CREATE TABLE `campanha` (
   `data` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Fazendo dump de dados para tabela `campanha`
+--
+
+INSERT INTO `campanha` (`codCampanha`, `tag`, `assunto`, `mensagem`, `data`) VALUES
+(1, 'PROMOÇÃO', 'Máquina 10% OFF', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a tellus vel sem facilisis iaculis sed eu tortor. Vestibulum lobortis nisl non nunc tincidunt pretium et nec turpis. Curabitur commodo, dolor mollis malesuada tristique, felis turpis posuere turpis, id iaculis magna elit eu justo. Duis iaculis velit eros, sit amet dictum ipsum mattis id. Mauris posuere, felis vitae fermentum vehicula, felis dolor pellentesque quam, et finibus urna erat eget ligula. Curabitur bibendum et nibh et fringilla. Aenean nec lobortis turpis. Maecenas imperdiet quam vel est sollicitudin lobortis. Integer et eleifend eros. Curabitur sed aliquam mauris.', '2019-02-13 05:17:23'),
+(2, 'AVISO', 'Recesso de fim de ano', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a tellus vel sem facilisis iaculis sed eu tortor. Vestibulum lobortis nisl non nunc tincidunt pretium et nec turpis. Curabitur commodo, dolor mollis malesuada tristique, felis turpis posuere turpis, id iaculis magna elit eu justo. Duis iaculis velit eros, sit amet dictum ipsum mattis id. Mauris posuere, felis vitae fermentum vehicula, felis dolor pellentesque quam, et finibus urna erat eget ligula. Curabitur bibendum et nibh et fringilla. Aenean nec lobortis turpis. Maecenas imperdiet quam vel est sollicitudin lobortis. Integer et eleifend eros. Curabitur sed aliquam mauris.', '2019-02-26 23:44:45');
+
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `cliente`
+-- Estrutura para tabela `cliente`
 --
 
 CREATE TABLE `cliente` (
@@ -49,10 +55,19 @@ CREATE TABLE `cliente` (
   `status` bit(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Fazendo dump de dados para tabela `cliente`
+--
+
+INSERT INTO `cliente` (`codCliente`, `nome`, `email`, `status`) VALUES
+(1, 'Marco Araujo', 'marcoaraujon@hotmail.com', b'1'),
+(2, 'Duda Machado', 'duda@duda.com', b'1'),
+(3, 'Marco Gomes', 'marcogomes@gmail.com', b'0');
+
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `imagemproduto`
+-- Estrutura para tabela `imagemproduto`
 --
 
 CREATE TABLE `imagemproduto` (
@@ -64,7 +79,7 @@ CREATE TABLE `imagemproduto` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `mensagem`
+-- Estrutura para tabela `mensagem`
 --
 
 CREATE TABLE `mensagem` (
@@ -73,13 +88,21 @@ CREATE TABLE `mensagem` (
   `telefone` varchar(15) NOT NULL,
   `email` varchar(150) NOT NULL,
   `mensagem` text NOT NULL,
-  `data` datetime NOT NULL
+  `data` datetime NOT NULL,
+  `respondido` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Fazendo dump de dados para tabela `mensagem`
+--
+
+INSERT INTO `mensagem` (`codMsg`, `nome`, `telefone`, `email`, `mensagem`, `data`, `respondido`) VALUES
+(49, 'Marco', '(31) 23123-1231', 'marco@gmail.cbr', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a tellus vel sem facilisis iaculis sed eu tortor. Vestibulum lobortis nisl non nunc tincidunt pretium et nec turpis. Curabitur commodo, dolor mollis malesuada tristique, felis turpis posuere turpis, id iaculis magna elit eu justo. Duis iaculis velit eros, sit amet dictum ipsum mattis id. Mauris posuere, felis vitae fermentum vehicula, felis dolor pellentesque quam, et finibus urna erat eget ligula. Curabitur bibendum et nibh et fringilla. Aenean nec lobortis turpis.\r\n\r\nMaecenas imperdiet quam vel est sollicitudin lobortis. Integer et eleifend eros. Curabitur sed aliquam mauris. Maecenas gravida rutrum sem ut commodo. Maecenas eu ex fringilla, vehicula sem vitae, elementum risus. Nulla aliquam tempus ipsum, ut gravida sapien tristique id. Vestibulum laoreet, magna id varius tempus, mi neque feugiat metus, eu tristique lorem purus ac nulla. Cras lacus libero, tempor sit amet ornare in, lacinia in justo.', '2019-02-13 13:07:26', 0);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `produto`
+-- Estrutura para tabela `produto`
 --
 
 CREATE TABLE `produto` (
@@ -91,29 +114,53 @@ CREATE TABLE `produto` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `servico`
+-- Estrutura para tabela `servico`
 --
 
 CREATE TABLE `servico` (
   `codServico` int(11) NOT NULL,
   `nome` varchar(150) NOT NULL,
-  `descricao` varchar(150) NOT NULL,
+  `descricao` text NOT NULL,
   `imagem` varchar(150) NOT NULL,
   `estatus` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `servico`
+-- Fazendo dump de dados para tabela `servico`
 --
 
 INSERT INTO `servico` (`codServico`, `nome`, `descricao`, `imagem`, `estatus`) VALUES
-(43, 'dasd', 'dasdsa', '', 0),
-(44, 'reyd', '321', '', 1);
+(43, 'dasd', 'dasdsa', '', 0);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuario`
+-- Estrutura para tabela `sobre`
+--
+
+CREATE TABLE `sobre` (
+  `indicador1qt` int(11) NOT NULL,
+  `indicador2qt` int(11) NOT NULL,
+  `indicador3qt` int(11) NOT NULL,
+  `indicador4qt` int(11) NOT NULL,
+  `indicador1` varchar(20) NOT NULL,
+  `indicador2` varchar(16) NOT NULL,
+  `indicador3` varchar(18) NOT NULL,
+  `indicador4` varchar(18) NOT NULL,
+  `textoSobre` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Fazendo dump de dados para tabela `sobre`
+--
+
+INSERT INTO `sobre` (`indicador1qt`, `indicador2qt`, `indicador3qt`, `indicador4qt`, `indicador1`, `indicador2`, `indicador3`, `indicador4`, `textoSobre`) VALUES
+(23, 6, 10, 15, 'projetos entregues', 'anos no mercado', 'produtos próprios', 'opções de serviço', 'Lorem ipsum dolor sit amet, consecttur adipiscing elit. Donec rutrum feugiat augue. Aenean ac laoreet mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce egestas augue sit amet posuere volutpat. Ut a leo ut risus accumsan luctus id eu velit. Curabitur sodales pharetra lectus sit amet luctus. Integer dignissim laoreet velit non cursus. Suspendisse sit amet neque scelerisque, vehicula libero ac, fermentum neque. Integer lacinia pulvinar massa, sit amet egestas turpis pulvinar a. Suspendisse hendrerit, ligula vel sagittis dignissim, odio lectus porta mauris, non sagittis velit arcu nec eros. Etiam non dui eu diam blandit mattis sit amet eu diam!');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `usuario`
 --
 
 CREATE TABLE `usuario` (
@@ -125,117 +172,108 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `usuario`
+-- Fazendo dump de dados para tabela `usuario`
 --
 
 INSERT INTO `usuario` (`codUsuario`, `login`, `senha`, `nome`, `cargo`) VALUES
 (1, 'sandro', 'd4fa73a393db574d78e880f0f9b87ddd', 'Sandro Lopes', 'Chefe'),
-(2, 'admin', 'ac596daee40a92d6afa930c164953cf7', 'Serra Jr', 'Admin'),
-(3, 'marco', 'batata', 'Marco', 'Chefe');
+(2, 'admin', 'ac596daee40a92d6afa930c164953cf7', 'Serra Jr', 'Admin');
 
 --
--- Indexes for dumped tables
+-- Índices de tabelas apagadas
 --
 
 --
--- Indexes for table `campanha`
+-- Índices de tabela `campanha`
 --
 ALTER TABLE `campanha`
   ADD PRIMARY KEY (`codCampanha`);
 
 --
--- Indexes for table `cliente`
+-- Índices de tabela `cliente`
 --
 ALTER TABLE `cliente`
   ADD PRIMARY KEY (`codCliente`);
 
 --
--- Indexes for table `imagemproduto`
+-- Índices de tabela `imagemproduto`
 --
 ALTER TABLE `imagemproduto`
   ADD PRIMARY KEY (`codImagem`),
   ADD KEY `codProduto` (`codProduto`);
 
 --
--- Indexes for table `mensagem`
+-- Índices de tabela `mensagem`
 --
 ALTER TABLE `mensagem`
   ADD PRIMARY KEY (`codMsg`);
 
 --
--- Indexes for table `produto`
+-- Índices de tabela `produto`
 --
 ALTER TABLE `produto`
   ADD PRIMARY KEY (`codProduto`);
 
 --
--- Indexes for table `servico`
+-- Índices de tabela `servico`
 --
 ALTER TABLE `servico`
   ADD PRIMARY KEY (`codServico`);
 
 --
--- Indexes for table `usuario`
+-- Índices de tabela `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`codUsuario`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de tabelas apagadas
 --
 
 --
--- AUTO_INCREMENT for table `campanha`
+-- AUTO_INCREMENT de tabela `campanha`
 --
 ALTER TABLE `campanha`
-  MODIFY `codCampanha` bigint(20) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `codCampanha` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `cliente`
+-- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `codCliente` bigint(20) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `codCliente` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `imagemproduto`
+-- AUTO_INCREMENT de tabela `imagemproduto`
 --
 ALTER TABLE `imagemproduto`
-  MODIFY `codImagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
+  MODIFY `codImagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
--- AUTO_INCREMENT for table `mensagem`
+-- AUTO_INCREMENT de tabela `mensagem`
 --
 ALTER TABLE `mensagem`
-  MODIFY `codMsg` bigint(20) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `codMsg` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 --
--- AUTO_INCREMENT for table `produto`
+-- AUTO_INCREMENT de tabela `produto`
 --
 ALTER TABLE `produto`
   MODIFY `codProduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
 --
--- AUTO_INCREMENT for table `servico`
+-- AUTO_INCREMENT de tabela `servico`
 --
 ALTER TABLE `servico`
   MODIFY `codServico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
-
 --
--- AUTO_INCREMENT for table `usuario`
+-- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `codUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `codUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- Restrições para dumps de tabelas
+--
 
 --
--- Constraints for dumped tables
---
-
---
--- Limitadores para a tabela `imagemproduto`
+-- Restrições para tabelas `imagemproduto`
 --
 ALTER TABLE `imagemproduto`
   ADD CONSTRAINT `imagemproduto_ibfk_1` FOREIGN KEY (`codProduto`) REFERENCES `produto` (`codProduto`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
