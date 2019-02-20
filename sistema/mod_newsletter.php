@@ -1,7 +1,7 @@
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item"><a class="nav-link active" href="#listaEmails" role="tab" data-toggle="tab"> E-mails Cadastrados </a></li>
     <li class="nav-item"><a class="nav-link" href="#enviarEmail" role="tab" data-toggle="tab"> Enviar e-mail </a></li>
-    <li class="nav-item"><a class="nav-link" href="#emailsEnviados" role="tab" data-toggle="tab"> Enviados </a></li>
+    <li class="nav-item"><a class="nav-link" href="#emailsEnviados" role="tab" data-toggle="tab" id="campanhas"> Enviados </a></li>
 </ul>
 
 <div class="tab-content">
@@ -129,40 +129,8 @@
                         <th style="width:15%; text-align:center;">  Data</th>
                     </tr>
                 </thead>
-                <tbody style="vertical-align:center">
-                    <tr data-toggle="modal" data-target="#modalCampanha">
-                        <th> 1 </th>
-                        <td> PROMOÇÃO </td>
-                        <td> 10% de desconto na compra da máquina </td>
-                        <td style="text-align:justify;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean... </td>
-                        <td>
-                            <center>
-                                12/12/2020
-                            </center>
-                        </td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#modalCampanha">
-                        <th> 2 </th>
-                        <td> NOVIDADE </td>
-                        <td> Nova máquina de colagem </td>
-                        <td style="text-align:justify;"> Donec hendrerit erat a metus tempor elementum. Aenean convallis... </td>
-                        <td>
-                            <center>
-                                25/12/2019
-                            </center>
-                        </td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#modalCampanha">
-                        <th> 3 </th>
-                        <td> AVISO </td>
-                        <td> Recesso de ano novo </td>
-                        <td style="text-align:justify;"> Morbi venenatis, est venenatis egesta, lorem ante euismod lacus... </td>
-                        <td>
-                            <center>
-                                01/01/2020
-                            </center>
-                        </td>
-                    </tr>
+                <tbody style="vertical-align:center" id="corpoCampanhas">
+                    
                 </tbody>
             </table>
         </div>
@@ -252,7 +220,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<label for="status"> Status: </label>
-								<select id="status" name="status">
+								<select class="inpForm" id="status" name="status">
                                     <option value="1"> Ativo </option>
                                     <option value="0"> Inativo </option>
                                 </select>
@@ -315,6 +283,15 @@
 
         $(document).on('click','.btnStatus',function(){
             statusCliente($(this).attr('data-id'),$(this).attr('data-status'));
+        });
+
+        $(document).on('click','#campanhas',function(){
+            carregaCampanhas();
+        });
+        
+        $(document).on('click','.linhaCampanha',function(){
+            carregaCampanha($(this).attr('data-id'));
+            $('#modalCampanha').modal('show');
         });
 
     });
@@ -390,6 +367,36 @@
                 carregaClientes();
             },
             error: function(data){
+
+            }
+        });
+    }
+
+    function carregaCampanhas(){
+        $.ajax({
+            url:'Newsletter/carregaCampanhas.php',
+            success:function(data){
+                $('#corpoCampanhas').html(data);
+            },
+            error:function(){
+
+            }
+        });
+    }
+
+    function carregaCampanha(codCampanha){
+        $.ajax({
+            url:'Newsletter/carregaCampanha.php',
+            method:'POST',
+            data:{codigo:codCampanha},
+            dataType:"json",
+            success:function(data){
+                $('#tagDetalheCampanha').html(data.tag);
+                $('#assuntoDetalheCampanha').html(data.assunto);
+                $('#dataDetalheCampanha').html(data.data);
+                $('#mensagemDetalheCampanha').html(data.mensagem);
+            },
+            error:function(){
 
             }
         });
