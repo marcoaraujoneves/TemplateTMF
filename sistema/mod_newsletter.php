@@ -37,11 +37,11 @@
             <div class="row">
                 <div class="col-md-7" id="configEmail">
                     <br>
-                    <form>
+                    <form id="formCampanha">
                         <div class"container-fluid">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <input type="radio" class="inpFormRadio" id="promocao" value="PROMOÇÃO" name="tagEmailRadio">
+                                    <input type="radio" class="inpFormRadio" id="promocao" value="PROMOÇÃO" name="tagEmailRadio" checked>
                                     <label class="txtForm" for="promocao">[PROMOÇÃO]</label>
                                 </div>
                                 <div class="col-md-4">
@@ -58,7 +58,7 @@
                         <button type="button" class="btn btn-primary" id="outro" data-toggle="collapse" data-target="#tagEmailContainer" aria-expanded="false" aria-controls="tagEmailContainer"> Outro </button>
                         <div class="collapse" id="tagEmailContainer">
                             <br>
-                            <input type="text" class="inpForm text-uppercase" id="tagEmail" name="tagEmail">
+                            <input type="text" class="inpForm text-uppercase" value="" id="tagEmail" name="tagEmail">
                         </div>
                         <br><br>
                         <label class="txtForm" for="assunto">Assunto</label>
@@ -68,7 +68,7 @@
                         <label class="txtForm" for="msg">Mensagem</label>
                         <br>
                         <textarea class="inpForm" rows="10" id="msg" name="msg"></textarea>
-                        <input type="submit" class="btn btn-primary" id="enviar" name="enviar" value="Enviar">
+                        <button type="button" class="btn btn-primary" id="enviaCampanha"> Enviar </button>
                         <br><br>
                     </form>
                 </div>
@@ -243,6 +243,7 @@
         //Os blocos a seguir manipulam os dados da div PREVIEW, baseado nos eventos de edição dos parâmetros pelo usuário
         $('.inpFormRadio').click(function(){
             $('#tagPre').html('['+this.value+']');
+            $('#tagEmail').val('');
         });
 
         $('#tagEmail').keyup(function(){
@@ -292,6 +293,11 @@
         $(document).on('click','.linhaCampanha',function(){
             carregaCampanha($(this).attr('data-id'));
             $('#modalCampanha').modal('show');
+        });
+
+        $(document).on('click','#enviaCampanha',function(){
+            enviaCampanha();
+            //console.log($('#formCampanha').serialize());
         });
 
     });
@@ -397,6 +403,21 @@
                 $('#mensagemDetalheCampanha').html(data.mensagem);
             },
             error:function(){
+
+            }
+        });
+    }
+
+    function enviaCampanha(){
+        alert('oi');
+        $.ajax({
+            url:'Newsletter/enviaCampanha.php',
+            method:'POST',
+            data:$('#formCampanha').serialize(),
+            success: function(data){
+                alert(data);
+            },
+            error: function(){
 
             }
         });
