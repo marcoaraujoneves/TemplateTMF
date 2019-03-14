@@ -28,13 +28,28 @@
         <!-- Tags -->
         <div class="col-md-4">
             <h1 class="titulos_rodape">Principais Tags</h1>
-            <span class="tags">Tornearia</span>
-            <br><br>
-            <span class="tags">Projeto de Máquinas</span>
-            <br><br>
-            <span class="tags">Usinagem</span>
-            <br><br>
-            <span class="tags">Manutenção Preventiva</span>
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="tags">Automação</span>
+                    <br><br>
+                    <span class="tags">Manutenção Preventiva</span>
+                    <br> <br>
+                    <span class="tags">Máquinas Especiais</span>
+                    <br> <br>
+                    <span class="tags">Projetos de Máquinas</span>
+                    <br><br>
+                </div>
+                <div class="col-md-6">
+                    <span class="tags">Projetos em Mecatrônica</span>
+                    <br><br>
+                    <span class="tags">Projetos Especiais</span>
+                    <br><br>
+                    <span class="tags">Tornearia</span>
+                    <br><br>
+                    <span class="tags">Usinagem</span>
+                    <br><br>
+                </div>
+            </div>
         </div>
     </div>
 </div>
