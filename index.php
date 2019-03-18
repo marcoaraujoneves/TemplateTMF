@@ -401,7 +401,13 @@
                                         </div>
                                     </div>
                                     <br>
-                                    <button type="button" class="btn btn-primary" id="enviar" name="enviar"> Enviar </button>
+                                    <div class="float-left">
+                                        <input type="file" class="form-control" id="anexar" name="anexar"> 
+                                    </div>
+                                    <div class="float-right">
+                                        <button type="button" class="btn btn-primary" id="enviar" name="enviar"> Enviar </button>
+                                    </div>
+                                    
                                 </div>
                             </form>
                         </div>
