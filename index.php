@@ -254,7 +254,7 @@
             <!--/PRODUTOS-->
             
             <!--PORTIFÓLIO-->
-            <section id="secaoPortifolio" class="secaoSite">
+            <!-- <section id="secaoPortifolio" class="secaoSite">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 container-titulos">
@@ -308,6 +308,56 @@
                                 <li class="nav-item itemPortifolio"><button class="btn btn-primary btn_port" class="nav-link" href="#port3" role="tab" data-toggle="tab"> <center> <img src="img/circulo.png" class="img_btn_port"> </center> </button> </li>
                             </ul>
                         </div>
+                </div>
+            </section> -->
+            <section>
+                <div id="secaoPortifolio" class="container secaoSite">
+                    <div class="row">
+                        <div class="col-md-12 container-titulos">
+                            <h1 class="titulo_secoes">
+                                Portifólio
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="carouselPortifolio" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselPortifolio" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselPortifolio" data-slide-to="1"></li>
+                                    <li data-target="#carouselPortifolio" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item pb-3 active">
+                                        <img class="d-block w-100 imagem_port mx-auto" src="img/img1.jpg" alt="Primeiro Slide">
+                                        <div class="carousel-caption d-none d-md-block mx-auto">
+                                            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam vel lacus ut tellus fringilla imperdiet.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item pb-3">
+                                        <img class="d-block w-100 imagem_port mx-auto" src="img/img2.jpg" alt="Segundo Slide">
+                                        <div class="carousel-caption d-none d-md-block mx-auto">
+                                            <p>Pellentesque nec sem non arcu fringilla mattis sed nec turpis.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item pb-3">
+                                        <img class="d-block w-100 imagem_port mx-auto" src="img/img3.jpg" alt="Terceiro Slide">
+                                        <div class="carousel-caption d-none d-md-block mx-auto">
+                                            <p>Etiam ut consectetur lacus. Mauris sagittis orci ut odio pharetra, eget sagittis odio pharetra.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselPortifolio" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Anterior</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselPortifolio" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Próximo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!--/PORTIFÓLIO-->
