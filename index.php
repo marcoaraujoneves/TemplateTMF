@@ -330,19 +330,19 @@
                                 <div class="carousel-inner">
                                     <div class="carousel-item pb-3 active">
                                         <img class="d-block w-100 imagem_port mx-auto" src="img/img1.jpg" alt="Primeiro Slide">
-                                        <div class="carousel-caption d-none d-md-block mx-auto">
+                                        <div class="carousel-caption mx-auto">
                                             <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam vel lacus ut tellus fringilla imperdiet.</p>
                                         </div>
                                     </div>
                                     <div class="carousel-item pb-3">
                                         <img class="d-block w-100 imagem_port mx-auto" src="img/img2.jpg" alt="Segundo Slide">
-                                        <div class="carousel-caption d-none d-md-block mx-auto">
+                                        <div class="carousel-caption mx-auto">
                                             <p>Pellentesque nec sem non arcu fringilla mattis sed nec turpis.</p>
                                         </div>
                                     </div>
                                     <div class="carousel-item pb-3">
                                         <img class="d-block w-100 imagem_port mx-auto" src="img/img3.jpg" alt="Terceiro Slide">
-                                        <div class="carousel-caption d-none d-md-block mx-auto">
+                                        <div class="carousel-caption mx-auto">
                                             <p>Etiam ut consectetur lacus. Mauris sagittis orci ut odio pharetra, eget sagittis odio pharetra.</p>
                                         </div>
                                     </div>
@@ -464,36 +464,34 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-4" id="contate-nos">
-                            <h3> Contate-nos </h3>
-                            <br><br>
-                            <div style="position: relative;top: 30%;transform: translateY(-30%);">
+                        <div class="col-lg-4" id="contate-nos">
+                            <h3> Contate-nos</h3>
+                            <div class="row justify-content-center p-2">
                                 <div class="icone-contatenos">
                                     <img class="img-responsive" src='img/location.png'>
                                 </div>
-
                                 <div class="info-contatenos">
                                     <span id="infendereco"> 
                                         Rua Prudente de Moraes, 200 <br>
                                         Duas Pedras, Nova Friburgo-RJ
                                     </span>
                                 </div>
-                                <br><br><br>
+                            </div>
+                            <div class="row justify-content-center p-2">
                                 <div class="icone-contatenos">
                                     <img class="img-responsive" src='img/location.png'>
                                 </div>
-
                                 <div class="info-contatenos">
                                     <span id="inftelefones"> 
                                         (22) 2523-2525 <br>
                                         (22) 2528-9055
                                     </span>
                                 </div>
-                                <br><br><br>
+                            </div>
+                            <div class="row justify-content-center p-2">
                                 <div class="icone-contatenos">
                                     <img class="img-responsive" src='img/location.png'>
-                                </div>
-                                
+                                </div>    
                                 <div class="info-contatenos">
                                     <span id="infemail"> 
                                         industriatmf@gigalink.com.br
@@ -501,8 +499,7 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-md-8" id="mande_mensagem">
+                        <div class="col-lg-8 pt-3 pt-lg-0" id="mande_mensagem">
                             <h3> Mande uma mensagem </h3>
                             <br>
                             <div id="sucesso" class="alert alert-success" role="alert" style="display:none;">
