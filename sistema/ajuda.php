@@ -24,14 +24,15 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-md navbar-light" id="navbarTMF">
-        <div class="container">
-            <img src="../img/logoTMFBranco.png" class="mx-auto" id="logo_Menu">
-        </div>
-    </nav>
 
-    <section id="secaoServicos" class="secaoSite" style="margin-top:30px" >
-        <div class="container container-fluid">
+        <nav class="navbar navbar-expand-md navbar-light" id="navbarTMF">
+            <div class="container">
+                <img src="../img/logoTMFBranco.png" class="mx-auto" id="logo_Menu">
+            </div>
+        </nav>
+
+        <section id="secaoServicos" class="secaoSite" style="margin-top:30px" >
+            <div class="container container-fluid">
                 <div class="row">
                     <div class="col-md-12 container-titulos">
                         <h1 class="titulo_secoes">
@@ -45,13 +46,12 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6 my-auto"> 
-                                        <img src="../img/prod.png" alt="Avatar" class="img_ser" style="witdh:50%;height=50%">
+                                        <img src="../img/prod.png">
                                     </div>
                                     <div class="col-md-6">
-                                        <h4 style="font-size: 27px;font-weight: 600;color: rgb(41, 70, 117);">Serviços</h4>
-                                        <p class="card-text" style="text-align: justify;">Adicionar</p>
-                                        <p class="card-text" style="text-align: justify;">Remover</p>
-                                            
+                                        <h4 style="font-size: 24px;font-weight: 600;color: rgb(41, 70, 117);">Serviços</h4>
+                                        <a href="" style="text-align: justify;">Adicionar</a>
+                                        <a href="" style="text-align: justify;">Remover</a>                                              
                                         <input type="submit" class="btn btn-primary" id="enviar" name="SaibaMais" value="Saiba Mais">
                                     </div>
                                 </div>
@@ -63,13 +63,12 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6 my-auto"> 
-                                        <img src="../img/prod.png" alt="Avatar" class="img_ser" style="witdh:50%;height=50%">
+                                        <img src="../img/prod.png">
                                     </div>
                                     <div class="col-md-6">
-                                        <h4 style="font-size: 27px;font-weight: 600;color: rgb(41, 70, 117);">Produtos</h4>
-                                        <p class="card-text" style="text-align: justify;">Adicionar</p>
-                                        <p class="card-text" style="text-align: justify;">Remover</p>
-                                            
+                                        <h4 style="font-size: 24px;font-weight: 600;color: rgb(41, 70, 117);">Produtos</h4>
+                                        <a href="" style="text-align: justify;">Adicionar</a>
+                                        <a href="" style="text-align: justify;">Remover</a>                                               
                                         <input type="submit" class="btn btn-primary" id="enviar" name="SaibaMais" value="Saiba Mais">
                                     </div>
                                 </div>
@@ -81,13 +80,12 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6 my-auto"> 
-                                        <img src="../img/prod.png" alt="Avatar" class="img_ser">
+                                        <img src="../img/prod.png">
                                     </div>
                                     <div class="col-md-6">
-                                        <h4 style="font-size: 27px;font-weight: 600;color: rgb(41, 70, 117);">Potifólio</h4>
-                                        <p class="card-text" style="text-align: justify;">Adicionar</p>
-                                        <p class="card-text" style="text-align: justify;">Remover</p>
-                                            
+                                        <h4 style="font-size: 24px;font-weight: 600;color: rgb(41, 70, 117);">Potifólio</h4>
+                                        <a href="" style="text-align: justify;">Adicionar</a>
+                                        <a href="" style="text-align: justify;">Remover</a>                                                
                                         <input type="submit" class="btn btn-primary" id="enviar" name="SaibaMais" value="Saiba Mais">
                                     </div>
                                 </div>
@@ -101,13 +99,12 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6 my-auto"> 
-                                        <img src="../img/prod.png" alt="Avatar" class="img_ser" style="witdh:50%;height=50%">
+                                        <img src="../img/prod.png">
                                     </div>
                                     <div class="col-md-6">
-                                        <h4 style="font-size: 27px;font-weight: 600;color: rgb(41, 70, 117);">Mensagens</h4>
-                                        <p class="card-text" style="text-align: justify;">Adicionar</p>
-                                        <p class="card-text" style="text-align: justify;">Remover</p>
-                                            
+                                        <h4 style="font-size: 24px;font-weight: 600;color: rgb(41, 70, 117);">Mensagens</h4>
+                                        <a href="" style="text-align: justify;">Adicionar</a>
+                                        <a href="" style="text-align: justify;">Remover</a>                                               
                                         <input type="submit" class="btn btn-primary" id="enviar" name="SaibaMais" value="Saiba Mais">
                                     </div>
                                 </div>
@@ -119,13 +116,12 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6 my-auto"> 
-                                        <img src="../img/prod.png" alt="Avatar" class="img_ser" style="witdh:50%;height=50%">
+                                        <img src="../img/prod.png">
                                     </div>
                                     <div class="col-md-6">
-                                        <h4 style="font-size: 27px;font-weight: 600;color: rgb(41, 70, 117);">Textos</h4>
-                                        <p class="card-text" style="text-align: justify;">Adicionar</p>
-                                        <p class="card-text" style="text-align: justify;">Remover</p>
-                                            
+                                        <h4 style="font-size: 24px;font-weight: 600;color: rgb(41, 70, 117);">Textos</h4>
+                                        <a href="" style="text-align: justify;">Adicionar</a>
+                                        <a href="" style="text-align: justify;">Remover</a>                                               
                                         <input type="submit" class="btn btn-primary" id="enviar" name="SaibaMais" value="Saiba Mais">
                                     </div>
                                 </div>
@@ -137,13 +133,12 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6 my-auto"> 
-                                        <img src="../img/prod.png" alt="Avatar" class="img_ser" style="witdh:50%;height=50%">
+                                        <img src="../img/prod.png">
                                     </div>
                                     <div class="col-md-6">
-                                        <h4 style="font-size: 27px;font-weight: 600;color: rgb(41, 70, 117);">Newsletter</h4>
-                                        <p class="card-text" style="text-align: justify;">Adicionar</p>
-                                        <p class="card-text" style="text-align: justify;">Remover</p>
-                                            
+                                        <h4 style="font-size: 24px;font-weight: 600;color: rgb(41, 70, 117);">Newsletter</h4>
+                                        <a href="" style="text-align: justify;">Adicionar</a>
+                                        <a href="" style="text-align: justify;">Remover</a>                                            
                                         <input type="submit" class="btn btn-primary" id="enviar" name="SaibaMais" value="Saiba Mais">
                                     </div>
                                 </div>
@@ -152,9 +147,59 @@
                     </div>
                 </div>
             </div>
-    </section>
+        </section>
         
-
+        <div>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 container-titulos">
+                            <h1 class="titulo_secoes">
+                                Não encontrou o que buscava?
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" style="    text-align: center; font-size: 33px; font-weight: 600; color: rgb(41, 70, 117);">
+                            <h3> Mande uma mensagem </h3>               
+                            <div id="sucesso" class="alert alert-success" role="alert" style="display:none;">
+                                Mensagem enviada com sucesso!
+                            </div>
+                            <div id="fracasso" class="alert alert-danger" role="alert" style="display:none;">
+                                Houve um erro ao enviar sua mensagem, por favor, tente novamente mais tarde ou entre em contato diretamente pelos canais ao lado!
+                            </div>
+                            <div id="incompleto" class="alert alert-secondary" role="alert" style="display:none;">
+                                Por favor, informe todos os dados necessários!
+                            </div>
+                            <form id="formularioContato" method="post">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label class="txtForm" for="nome"> &ensp;Nome </label> <br>
+                                            <input type="text" class="inpForm" id="nome" name="nome" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label class="txtForm" for="mensagem"> &ensp;Mensagem </label> <br>
+                                            <textarea class="inpForm" id="mensagem" name="mensagem" rows="6"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="float-left">
+                                        <input type="file" class="form-control" id="anexar" name="anexar"> 
+                                    </div>
+                                    <div class="float-right">
+                                        <button type="button" class="btn btn-primary" id="enviar" name="enviar"> Enviar </button>
+                                    </div>                                   
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br> 
+            <br>
+        </div>
 
         <footer>
             <div class="container">
@@ -168,6 +213,7 @@
                 </div>
             </div>
         </footer>
+
     </body>
 
 
