@@ -1,15 +1,78 @@
 /*--------------------------------------------------------------------*/
-/*------------------------ Layout ------------------------------------*/
+/*------------------------ imagens (suas margens , tamnhos , e responsividade) ------------------------------------*/
 
 .img_prod2{
-    height:200px;
-    width: 200px;
+    max-height: 200px;
+    width:auto;
+    margin-bottom: 20px ;
+    border-radius: 10px ;
 }
-
-.card:hover
-{
+@media screen and (max-width: 1000px){
+    .img_prod2{
+        max-height: 170px;
+        width:auto;
+        margin-top: 10px ;
+        margin-bottom: 20px ;
+    }
+}
+@media screen and (max-width: 767px){
+    .img_prod2{
+        max-height: 125px;
+        width:auto;
+        margin-top: 10px ;
+        margin-bottom: 20px ;
+    }
+}
+@media screen and (max-width: 500px){
+    .img_prod2{
+        max-height: 100px;
+        width:auto;
+        margin-top: 10px ;
+        margin-bottom: 20px ;
+    }
+}
+/*----------------------------------------------------------------------------------------------*/
+/*------------------------  cor da caixa de texto e margem do botão(cor também) --------------------------------*/
+.card:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.425);
 }
-
-/*--------------------------------------------------------------------*/
-/*------------------------ Tipografia --------------------------------*/
+.margem_botao{
+    margin: 25px ;
+    padding-bottom: 30px ;
+}
+.caixa_texto{
+    background-color: rgba(54, 92, 154, 0.418);
+    border-radius: 20px ; 
+}
+.btn.btn-primary{
+    background-color: #365C9A !important ;
+    border-color: #365C9A !important ; 
+}
+.btn.btn-primary:hover{
+    background-color: rgb(55, 107, 190) !important ;
+    border-color: #365C9A !important ; 
+}
+/*----------------------------------------------------------------------------------------------*/
+/*------------------------ Tipografia / texto / responsividade --------------------------------*/
+.card-text{
+    text-align: justify;
+    font-size: 15px ;
+}
+@media screen and (max-width: 1100px){
+    .card-text{
+        text-align: justify;
+        font-size: 13px ;
+    }
+}
+@media screen and (max-width: 850px){
+    .card-text{
+        text-align: justify;
+        font-size: 12px ;
+    }
+}
+@media screen and (max-width: 600px){
+    .card-text{
+        text-align: justify;
+        font-size: 11px ;
+    }
+}
