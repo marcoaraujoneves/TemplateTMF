@@ -43,29 +43,46 @@
             </div> 
             <div class="container d-flex justify-content-center">
                 <div class="row">
-                    <div class="col-md-6 mx-auto caixa_imagem"> 
-                        <div class="row mt-5 ">
-                            <div class="col-xl-12 col-md-12 col-sm-6 col-6 d-flex justify-content-center">
+                    <div class="col-md-6 mx-auto my-auto"> 
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-6 d-flex justify-content-center">
                                 <img src="img/tornearia-1.gif" alt="Avatar" class="img_prod2">
                             </div>
-                            <div class="col-xl-12 col-md-12 col-sm-6 col-6 d-flex justify-content-center">
+                            <div class="col-xl-12 col-md-12 col-6 d-flex justify-content-center">
                                 <img src="img/tornearia-2.jpg" alt="Avatar" class="img_prod2">
                             </div>
-                            <div class="col-xl-12 col-md-12 col-sm-6 col-6 d-flex justify-content-center">
-                                <img src="img/usinagem-2.jpg" alt="Avatar" class="img_prod2">
-                            </div>
-                            <div class="col-xl-12 col-md-12 col-sm-6 col-6 d-flex justify-content-center">
-                                <img src="img/usinagem-1.jpg" alt="Avatar" class="img_prod2">
-                            </div>
-                            <div class="col-xl-12 col-md-12 col-sm-6 col-6 d-flex justify-content-center">
-                                <img src="img/usinagem-1.jpg" alt="Avatar" class="img_prod2">
-                            </div>
-                            <div class="col-xl-12 col-md-12 col-sm-6 col-6 d-flex justify-content-center">
-                                <img src="img/usinagem-1.jpg" alt="Avatar" class="img_prod2">
+                            <div class="col-12 d-flex justify-content-center mb-4">
+                                <div class="caixa_card_imagens ">
+                                    <h6 class="text-center"> Mais imagens...</h6>
+                                    <div class="card_imagens">
+                                        <ul class="lista_imagens">
+                                            <li> 
+                                                <div class="img_fit">
+                                                    <img src="img/tornearia-1.gif" alt="Avatar" class="img-fluid ">
+                                                </div>
+                                            </li>
+                                            <li> 
+                                                <div class="img_fit">
+                                                    <img src="img/tornearia-1.gif" alt="Avatar" class="img-fluid ">
+                                                </div>
+                                            </li>
+                                            <li> 
+                                                <div class="img_fit">
+                                                    <img src="img/tornearia-1.gif" alt="Avatar" class="img-fluid ">
+                                                </div>
+                                            </li>
+                                            <li> 
+                                                <div class="img_fit">
+                                                    <img src="img/tornearia-1.gif" alt="Avatar" class=" img-fluid ">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div> 
                             </div>
                         </div>
                     </div> 
-                    <div class="col-md-6 mx-auto mt-4 mb-4">
+                    <div class="col-md-6 mx-auto mt-2 mb-4">
                         <div class="container caixa_texto">
                             <div class="row">
                                 <div class="col-12 mt-2 mb-0 text-center">
@@ -73,16 +90,22 @@
                                 </div>
                             </div>
                             <div class="row mr-4 ml-4">
-                                <p class="card-text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor elit sed vulputate mi. Vitae et leo duis ut diam quam nulla. Turpis egestas sed tempus urna et pharetra pharetra massa massa.
-                                    Lectus urna duis convallis convallis tellus id interdum velit laoreet. Eget duis at tellus at urna condimentum mattis pellentesque id. Blandit volutpat maecenas volutpat blandit aliquam. Augue ut lectus arcu bibendum at.
-                                    Vehicula ipsum a arcu cursus vitae congue mauris. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Vitae ultricies leo integer malesuada nunc. Eu volutpat odio facilisis mauris sit amet. Quam viverra orci sagittis eu volutpat odio facilisis mauris sit.
-                                    Morbi tincidunt augue interdum velit. At in tellus integer feugiat scelerisque varius morbi. Porttitor massa id neque aliquam. Pellentesque massa placerat duis ultricies lacus sed. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu.
-                                    Mattis nunc sed blandit libero volutpat sed cras ornare. Sem viverra aliquet eget sit amet tellus cras adipiscing. Scelerisque in dictum non consectetur a. Rhoncus mattis rhoncus urna neque. Adipiscing commodo elit at imperdiet. Placerat vestibulum lectus mauris ultrices eros in.
-                                    Orci sagittis eu volutpat odio facilisis. Est ultricies integer quis auctor. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Erat nam at lectus urna duis convallis convallis tellus. Tincidunt eget nullam non nisi est sit. Mauris nunc congue nisi vitae suscipit tellus mauris.
-                                    Magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Urna et pharetra pharetra massa massa ultricies.Faucibus scelerisque eleifend donec pretium. Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet.
-                                    Pretium nibh ipsum consequat nisl vel pretium lectus quam. Placerat orci nulla pellentesque dignissim. Et magnis dis parturient montes. Eu lobortis elementum nibh tellus molestie nunc non blandit. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. Auctor eu augue ut lectus arcu. Elementum integer enim neque volutpat ac tincidunt vitae. Ut eu sem integer vitae justo.
-                                </p>
+                            <div class="caixa_card_texto ">
+                                <div class="col-12">
+                                    
+                                        <p class="card-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor elit sed vulputate mi. Vitae et leo duis ut diam quam nulla. Turpis egestas sed tempus urna et pharetra pharetra massa massa.
+                                            Lectus urna duis convallis convallis tellus id interdum velit laoreet. Eget duis at tellus at urna condimentum mattis pellentesque id. Blandit volutpat maecenas volutpat blandit aliquam. Augue ut lectus arcu bibendum at.
+                                            Vehicula ipsum a arcu cursus vitae congue mauris. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Vitae ultricies leo integer malesuada nunc. Eu volutpat odio facilisis mauris sit amet. Quam viverra orci sagittis eu volutpat odio facilisis mauris sit.
+                                            Morbi tincidunt augue interdum velit. At in tellus integer feugiat scelerisque varius morbi. Porttitor massa id neque aliquam. Pellentesque massa placerat duis ultricies lacus sed. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu.
+                                            Mattis nunc sed blandit libero volutpat sed cras ornare. Sem viverra aliquet eget sit amet tellus cras adipiscing. Scelerisque in dictum non consectetur a. Rhoncus mattis rhoncus urna neque. Adipiscing commodo elit at imperdiet. Placerat vestibulum lectus mauris ultrices eros in.
+                                            Orci sagittis eu volutpat odio facilisis. Est ultricies integer quis auctor. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Erat nam at lectus urna duis convallis convallis tellus. Tincidunt eget nullam non nisi est sit. Mauris nunc congue nisi vitae suscipit tellus mauris.
+                                            Magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Urna et pharetra pharetra massa massa ultricies.Faucibus scelerisque eleifend donec pretium. Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet.
+                                            Pretium nibh ipsum consequat nisl vel pretium lectus quam. Placerat orci nulla pellentesque dignissim. Et magnis dis parturient montes. Eu lobortis elementum nibh tellus molestie nunc non blandit. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. Auctor eu augue ut lectus arcu. Elementum integer enim neque volutpat ac tincidunt vitae. Ut eu sem integer vitae justo.
+                                        </p>
+                                        
+                                </div>
+                                </div>  
                             </div>
                             <div class="row text-center margem_botao">
                                 <div class="col-12">
