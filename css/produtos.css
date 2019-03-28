@@ -58,7 +58,7 @@
 /*----------------------------------------------------------------------------------------------*/
 /*------------------------  caixa , card e lista que contem as imagens redizidas e o texto  --------------------------------*/
 .caixa_card_imagens{
-    background-color: rgba(54, 92, 154, 0.452) ;
+    background-color: rgba(55, 110, 199, 0.192) ;
     padding : 15px ;
     border-radius: 20px ;
     overflow-x: auto !important;
@@ -90,7 +90,7 @@
     padding-bottom: 30px ;
 }
 .caixa_texto{
-    background-color: rgba(54, 92, 154, 0.418);
+    background-color: rgba(55, 110, 199, 0.192);
     border-radius: 20px ; 
 }
 .btn.btn-primary{
