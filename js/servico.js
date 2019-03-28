@@ -97,6 +97,7 @@ var addremove;
 $(document.body).on('click', '#deletaServico', function(){
  // Ao clicar no botão deletar na tabela produtos, ele ira receber o valor do codigo do produto a ser deletado 
  codServico = $(this).attr("value"); 
+
 });
 
 $(document.body).on('click', '#services', function(){
@@ -144,7 +145,6 @@ $('#blah').attr('src', ''); // Clear the src
 $(document).on('click', '#modificaServico', function(){
 
 codServico = $(this).attr("value");
-$("#blah").append("<img id='blah' src='../../Img/Servicos/"+codServico+".jpg'/>");
  // retorna os dados do fetch.php para preencher a tabela via ajax 
 	$.ajax({  
 		url:"php/servico/modificaServico.php",  
@@ -157,8 +157,9 @@ $("#blah").append("<img id='blah' src='../../Img/Servicos/"+codServico+".jpg'/>"
 
 		},
 		success:function(data){  
-			$('#nome').val(data.nome);
-			$('#description').val(data.descricao);
+			$('#modificanome').val(data.nome);
+			$('#modificadescription').val(data.descricao);
+			$('#modificacodigo').val(codServico);
  
 
 		}  
@@ -168,7 +169,55 @@ $("#blah").append("<img id='blah' src='../../Img/Servicos/"+codServico+".jpg'/>"
 
 }); 
 
+$(document.body).on('click', '#modificabatatas', function(){
+		$('#formModifica').validate({
+			rules: {
+			//nome: { required: true },
+			//descricao: { required: true },
+			//estatus: { required: true },
+		},
+		messages: {
+			//nome: { required: 'Preencha o campo nome'},
+			//descricao: { required: 'Preencha a descrição do serviço'},
+			//arquivo: { required: 'Coloque uma imagem'},
 
+
+		},
+		submitHandler: function( form ){
+			var dados = $( form ).serialize();
+			$.ajax({
+				type: "POST",
+				url: "php/servico/modifica.php",
+				data: new FormData($('form')[1]),
+
+        // Tell jQuery not to process data or worry about content-type
+        // You *must* include these options!
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function( data )
+        {	
+						$('#modificarServicos').hide(); // esconde o modal
+	 	    			$("#modificareturnServico").click(); // fecha o modal de fato
+	 	    			$('#formModifica').each (function(){
+	 	    				this.reset();
+	 	    			});
+	 	    			$.ajax({
+	 	    				url : 'mod_servicos.php',
+	 	    				success: function(data){
+
+	 	    					$('#painelSistema').empty();
+	 	    					$('#painelSistema').html(data);
+	 	    				}
+	 	    			});
+
+	 	    		}
+	 	    	});
+
+			return false;
+		}
+	});
+	});
 
 
 
