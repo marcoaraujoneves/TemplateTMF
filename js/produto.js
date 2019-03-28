@@ -54,27 +54,7 @@ var codProduto;
 	});
 	});
 
-	$(document.body).on('click', '#estatus', function(){
- // retorna os dados do fetch.php para preencher a tabela via ajax
- codigo = $(this).attr("value"); 
- $.ajax({  
- 	url:"php/servico/mudaEstatus.php",  
- 	method:"POST",
- 	data:{codigo:codigo},  
- 	beforeSend:function(data){  
 
-
-
- 	},
- 	success:function(data){
-
-			//$('#atracoesFesta').val(data.titulo);
-
-
-
-		}  
-	});
-}); 
 
 
 	
