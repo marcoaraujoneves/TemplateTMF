@@ -44,7 +44,7 @@ $(document).ready(function(){
 
     //Carregando as informações da página principal
     $.ajax({  
-		url:"http://localhost/TemplateTMF/sistema/Sobre/carregaDados.php",
+		url:"sistema/Sobre/carregaDados.php",
 		dataType:"json",
 		success:function(data){
             $('#indicador1qt').html(data.indicador1qt);

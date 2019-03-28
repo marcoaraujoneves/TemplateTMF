@@ -1,9 +1,9 @@
 $(document.body).ready(function(){
-var codProduto;
+	var codPortifolio;
 
 
-	$(document.body).on('click', '#potato', function(){
-		$('#formProduto').validate({
+	$(document.body).on('click', '#carai', function(){
+		$('#formPortifolio').validate({
 			rules: {
 			//nome: { required: true },
 			//descricao: { required: true },
@@ -18,11 +18,11 @@ var codProduto;
 		},
 		submitHandler: function( form ){
 			var dados = $( form ).serialize();
-			    var form = $('#formProduto')[0]; //  [0], because you need to use standart javascript object here
+			    var form = $('#formPortifolio')[0]; //  [0], because you need to use standart javascript object here
 			    var formData = new FormData(form);
 			    $.ajax({
 			    	type: "POST",
-			    	url: "php/produto/cadastrarProduto.php",
+			    	url: "php/portifolio/cadastrarPortifolio.php",
 			    	data: formData,
 
         // Tell jQuery not to process data or worry about content-type
@@ -32,13 +32,13 @@ var codProduto;
         processData: false,
         success: function( data )
         {	
-						$('#cadastrarServico').hide(); // esconde o modal
+						$('#cadastrarPortifolio').hide(); // esconde o modal
 	 	    			$("#returnServico").click(); // fecha o modal de fato
-	 	    			$('#formServico').each (function(){
+	 	    			$('#formPortifolio').each (function(){
 	 	    				this.reset();
 	 	    			});
 	 	    			$.ajax({
-	 	    				url : 'mod_produtos.php',
+	 	    				url : 'mod_portifolio.php',
 	 	    				success: function(data){
 
 	 	    					$('#painelSistema').empty();
@@ -49,36 +49,35 @@ var codProduto;
 	 	    		}
 	 	    	});
 
-			return false;
-		}
+			    return false;
+			}
+		});
 	});
-	});
-
 
 
 
 	
-$(document.body).on('click', '#deletaProduto', function(){
+	$(document.body).on('click', '#deletaPortifolio', function(){
  // Ao clicar no botão deletar na tabela produtos, ele ira receber o valor do codigo do produto a ser deletado 
- codProduto = $(this).attr("value"); 
+ codPortifolio = $(this).attr("value"); 
 });
 
 
 
-	$(document.body).on('click', '#excluidProd', function(){
+	$(document.body).on('click', '#excluidPort', function(){
  // Ao clicar no botão deletar na tabela produtos, ele ira receber o valor do codigo do produto a ser deletado 
  $.ajax({  
- 	url:"php/produto/excluirProduto.php",  
+ 	url:"php/portifolio/excluirPortifolio.php",  
  	method:"POST",  
- 	data:{codProduto:codProduto}, 
+ 	data:{codPortifolio:codPortifolio}, 
 
 
  	success:function(data)
  	{	
-						$('#excluirProduto').hide(); // esconde o modal
-	 	    			$("#returnProdExcluir").click(); // fecha o modal de fato
+						$('#excluirPortifolio').hide(); // esconde o modal
+	 	    			$("#returnPortExcluir").click(); // fecha o modal de fato
 	 	    			$.ajax({
-	 	    				url : 'mod_produtos.php',
+	 	    				url : 'mod_portifolio.php',
 	 	    				success: function(data){
 	 	    					$('#painelSistema').html(data);
 	 	    				}
@@ -93,22 +92,22 @@ $(document.body).on('click', '#deletaProduto', function(){
 });
 
 
-	$(document).on('click', '#previewImagens', function(){
-		$( "#galeria" ).empty();
-		var codProdutos = $(this).attr("value");
+	$(document).on('click', '#previewImagem', function(){
+		$( "#galerias" ).empty();
+		var codPortifolio = $(this).attr("value");
  // retorna os dados do fetch.php para preencher a tabela via ajax 
  $.ajax({  
- 	url:"php/produto/pegaGaleria.php",  
+ 	url:"php/portifolio/pegaGaleria.php",  
  	method:"POST",
- 	data:{codProdutos:codProdutos},
+ 	data:{codPortifolio:codPortifolio},
  	dataType:"json",   
  	beforeSend:function(){  
  	},
  	success:function(data){  
  		$.each(data, function(r) {
- 
+
  			
- 				$('#galeria').append('<img  src="Img/Produtos/'+data[r].nome+'" />')
+ 			$('#galerias').append('<img  src="Img/Portifolio/'+data[r].nome+'" />')
 
  		});
 
@@ -123,5 +122,5 @@ $(document.body).on('click', '#deletaProduto', function(){
 
 }); 
 
-});
 
+});

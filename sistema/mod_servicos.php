@@ -70,7 +70,7 @@ foreach($rows as $row){
 
 
 		}
-		echo '<td><button class="btn Botao" data-toggle="modal" id="modificaServico" data-target="#cadastrarServico" value="'.$codServico.'" type="button">Modificar</button><button class="btn Botao" data-toggle="modal" id="deletaServico" data-target="#exlcuirServico" value="'.$codServico.'" type="button">Excluir</button>';
+		echo '<td><button class="btn Botao" data-toggle="modal" id="modificaServico" data-target="#modificarServicos" value="'.$codServico.'" type="button">Modificar</button><button class="btn Botao" data-toggle="modal" id="deletaServico" data-target="#exlcuirServico" value="'.$codServico.'" type="button">Excluir</button>';
 		echo '</tr>';
 		unset($estatus);
 	}
@@ -115,7 +115,7 @@ foreach($rows as $row){
 </div>
 
 
-<div  class="modal" id="modificarServico" tabindex="-1" role="dialog">
+<div  class="modal" id="modificarServicos" tabindex="-1" role="dialog">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header" style="background-color:rgb(99,00,33);">
@@ -126,8 +126,6 @@ foreach($rows as $row){
 			</div>
 			<div class="modal-body">
 				<form method="post" enctype="multipart/form-data"  id="formModifica" >
-					<input  type='file' name="arquivo" id="arquivo" />
-					<img id="blah" src="#" alt="your image" />
 					<div class="form-group">
                                         <label for="nome">Nome</label>
                                         <input type="text" name="modificanome" id="modificanome" required  class="form-control"/>
@@ -137,6 +135,7 @@ foreach($rows as $row){
                                         <input type="text" name="modificadescription" id="modificadescription" required class="form-control"/>
                                   </div>
                                   <div>
+                                  	<input type="hidden" name="modificacodigo" id="modificacodigo" >
                                         <input type="submit" class="btn btn-success" id="modificabatatas" name="modificabatatas" value="Enviar"/>
                                         <button type="button" class="btn btn-secondary" id="modificareturnServico" data-dismiss="modal"> Cancelar </button>
                                   </div>

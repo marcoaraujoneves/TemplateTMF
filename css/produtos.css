@@ -1,5 +1,5 @@
-/*--------------------------------------------------------------------*/
-/*------------------------ imagens (suas margens , tamnhos , e responsividade) ------------------------------------*/
+/*------------------------ imagens  unicas e reduzidas (suas margens , tamnhos , e responsividade) ------------------------------------*/
+/*--------------------------img_prod2 : imagens unicas /img_fit : imagens reduzidas------------------------------------------*/
 
 .img_prod2{
     max-height: 200px;
@@ -7,12 +7,26 @@
     margin-bottom: 20px ;
     border-radius: 10px ;
 }
+.img_fit{
+    height: auto;
+    max-width: 300px ;
+    border-radius: 10px ;
+    margin-right: 5px ;
+}
+.img-fluid{
+    border-radius: 10px !important;
+}
 @media screen and (max-width: 1000px){
     .img_prod2{
         max-height: 170px;
         width:auto;
         margin-top: 10px ;
         margin-bottom: 20px ;
+    }
+    .img_fit{
+        height: auto;
+        max-width: 200px ;
+        border-radius: 10px ;
     }
 }
 @media screen and (max-width: 767px){
@@ -22,6 +36,11 @@
         margin-top: 10px ;
         margin-bottom: 20px ;
     }
+    .img_fit{
+        height: auto;
+        max-width: 180px ;
+        border-radius: 10px ;
+    }
 }
 @media screen and (max-width: 500px){
     .img_prod2{
@@ -30,18 +49,48 @@
         margin-top: 10px ;
         margin-bottom: 20px ;
     }
+    .img_fit{
+        height: auto;
+        max-width: 150px ;
+        border-radius: 10px ;
+    }
 }
 /*----------------------------------------------------------------------------------------------*/
-/*------------------------  cor da caixa de texto e margem do botão(cor também) --------------------------------*/
-.card:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.425);
+/*------------------------  caixa , card e lista que contem as imagens redizidas e o texto  --------------------------------*/
+.caixa_card_imagens{
+    background-color: rgba(55, 110, 199, 0.192) ;
+    padding : 15px ;
+    border-radius: 20px ;
+    overflow-x: auto !important;
+    display: block !important;
 }
+.caixa_card_texto{
+    overflow-y: auto !important;
+    overflow-x: auto !important;
+    display: block !important;
+    max-height: 600px ;
+}
+.card_imagens{
+    display:flex  !important;
+    overflow-x: auto  !important;
+}
+.lista_imagens{
+    white-space: nowrap;
+    padding: 0 ;
+}
+.lista_imagens>li{
+    display: inline-block  !important;
+    padding: 0 ;
+}
+
+/*----------------------------------------------------------------------------------------------*/
+/*------------------------  cor da caixa de texto e margem do botão(cor também) --------------------------------*/
 .margem_botao{
     margin: 25px ;
     padding-bottom: 30px ;
 }
 .caixa_texto{
-    background-color: rgba(54, 92, 154, 0.418);
+    background-color: rgba(55, 110, 199, 0.192);
     border-radius: 20px ; 
 }
 .btn.btn-primary{
@@ -51,6 +100,9 @@
 .btn.btn-primary:hover{
     background-color: rgb(55, 107, 190) !important ;
     border-color: #365C9A !important ; 
+}
+.btn-link{
+ font-style: none !important; 
 }
 /*----------------------------------------------------------------------------------------------*/
 /*------------------------ Tipografia / texto / responsividade --------------------------------*/

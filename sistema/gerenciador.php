@@ -84,6 +84,7 @@
     <script src="../js/jquery-3.3.1.js"></script>
     <script src="../js/servico.js"></script>
     <script src="../js/produto.js"></script>
+    <script src="../js/portifolio.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
     <script src="../js/Sistema.js"></script>
