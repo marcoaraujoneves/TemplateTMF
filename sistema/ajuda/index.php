@@ -12,12 +12,12 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         
-        <link rel="stylesheet" href="../css/main.css">
-        <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="../css/normalize.css">
-        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/responsividade.css">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../css/header.css">
+        <link rel="stylesheet" href="../../css/footer.css">
+        <link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../css/responsividade.css">
 
         <title> Indústria TMF | Home </title> 
 
@@ -27,7 +27,7 @@
 
         <nav class="navbar navbar-expand-md navbar-light" id="navbarTMF">
             <div class="container">
-                <img src="../img/logoTMFBranco.png" class="mx-auto" id="logo_Menu">
+                <img src="../../img/logoTMFBranco.png" class="mx-auto" id="logo_Menu">
             </div>
         </nav>
 
@@ -43,10 +43,10 @@
                 <div class="row">
                     <div class="col-md-4"> 
                         <div class="card" style="width: 100%; height: auto; margin: 50px;background-color: rgba(109, 109, 109, 0.096);">
-                            <div class="card-body">
+                            <div class="card-body" id="topServicos">
                                 <div class="row">
                                     <div class="col-md-6 my-auto"> 
-                                        <img src="../img/prod.png">
+                                        <img src="../../img/prod.png">
                                     </div>
                                     <div class="col-md-6">
                                         <h4 style="font-size: 24px;font-weight: 600;color: rgb(41, 70, 117);">Serviços</h4>
@@ -63,7 +63,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6 my-auto"> 
-                                        <img src="../img/prod.png">
+                                        <img src="../../img/prod.png">
                                     </div>
                                     <div class="col-md-6">
                                         <h4 style="font-size: 24px;font-weight: 600;color: rgb(41, 70, 117);">Produtos</h4>
@@ -80,7 +80,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6 my-auto"> 
-                                        <img src="../img/prod.png">
+                                        <img src="../../img/prod.png">
                                     </div>
                                     <div class="col-md-6">
                                         <h4 style="font-size: 24px;font-weight: 600;color: rgb(41, 70, 117);">Potifólio</h4>
@@ -99,7 +99,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6 my-auto"> 
-                                        <img src="../img/prod.png">
+                                        <img src="../../img/prod.png">
                                     </div>
                                     <div class="col-md-6">
                                         <h4 style="font-size: 24px;font-weight: 600;color: rgb(41, 70, 117);">Mensagens</h4>
@@ -116,7 +116,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6 my-auto"> 
-                                        <img src="../img/prod.png">
+                                        <img src="../../img/prod.png">
                                     </div>
                                     <div class="col-md-6">
                                         <h4 style="font-size: 24px;font-weight: 600;color: rgb(41, 70, 117);">Textos</h4>
@@ -133,7 +133,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6 my-auto"> 
-                                        <img src="../img/prod.png">
+                                        <img src="../../img/prod.png">
                                     </div>
                                     <div class="col-md-6">
                                         <h4 style="font-size: 24px;font-weight: 600;color: rgb(41, 70, 117);">Newsletter</h4>
@@ -214,7 +214,7 @@
                         <span id="texto_direitos">©2018. Todos os direitos reservados.</span>
                     </div>
                     <div class="col-md-6"> 
-                        <img src="../img/logo1.png" id="logo">
+                        <img src="../../img/logo1.png" id="logo">
                     </div>
                 </div>
             </div>
