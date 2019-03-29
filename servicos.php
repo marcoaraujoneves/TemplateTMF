@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,10 +18,35 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
-        
-
-        <title> Indústria TMF | Home </title> 
-
+        <title> Indústria TMF | Serviços </title> 
+        <!-- ---------------------------------------slider link e metas ------------------------------------- -->
+		<link rel="stylesheet" type="text/css" href="css/Slider/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/Slider/elastislide.css" />
+        <noscript>
+			<style>
+				.es-carousel ul{
+					display:block;
+				}
+			</style>
+		</noscript>
+		<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
+			<div class="rg-image-wrapper">
+				{{if itemsCount > 1}}
+					<div class="rg-image-nav">
+						<a href="#" class="rg-image-nav-prev">Previous Image</a>
+						<a href="#" class="rg-image-nav-next">Next Image</a>
+					</div>
+				{{/if}}
+				<div class="rg-image"></div>
+				<div class="rg-loading"></div>
+				<div class="rg-caption-wrapper">
+					<div class="rg-caption" style="display:none;">
+						<p></p>
+					</div>
+				</div>
+			</div>
+        </script>
+        <!--------------------------------------------slider links e metas  ------------------------------------->
     </head>
     
     <body>
@@ -33,7 +58,7 @@
 
         <!-- Corpo principal -->
         <main>
-        <section id="secaoProdutos" class="secaoSite" style="margin-top:140px;" >
+        <section id="secaoProdutos" class="secaoSite" style="margin-top:110px;" >
             <div class="container container-fluid">
                 <div class="row">
                     <div class="col-md-12 container-titulos pb-2">
@@ -44,44 +69,51 @@
                 </div>
             </div> 
             <div class="container d-flex justify-content-center">
-                <div class="row">
-                    <div class="col-md-6 mx-auto my-auto"> 
-                        <div class="row">
-                            <div class="col-xl-12 col-md-12 col-6 d-flex justify-content-center">
-                                <img src="img/tornearia-1.gif" alt="Avatar" class="img_prod2">
-                            </div>
-                            <div class="col-12 d-flex justify-content-center mb-4">
-                                <div class="caixa_card_imagens ">
-                                    <h6 class="text-center"> Mais imagens...</h6>
-                                    <div class="card_imagens">
-                                        <ul class="lista_imagens">
-                                            <li> 
-                                                <div class="img_fit">
-                                                    <img src="img/tornearia-1.gif" alt="Avatar" class="img-fluid ">
-                                                </div>
-                                            </li>
-                                            <li> 
-                                                <div class="img_fit">
-                                                    <img src="img/tornearia-1.gif" alt="Avatar" class="img-fluid ">
-                                                </div>
-                                            </li>
-                                            <li> 
-                                                <div class="img_fit">
-                                                    <img src="img/tornearia-1.gif" alt="Avatar" class="img-fluid ">
-                                                </div>
-                                            </li>
-                                            <li> 
-                                                <div class="img_fit">
-                                                    <img src="img/tornearia-1.gif" alt="Avatar" class=" img-fluid ">
-                                                </div>
-                                            </li>
-                                        </ul>
+                <div class="row d-flex justify-content-center">
+                    <div class="col mt-2 mb-4 d-flex justify-content-center">
+                        <div class="Conteudo_slider mx-auto">
+                            <div id="rg-gallery" class="rg-gallery">
+                                <div class="rg-thumbs">
+                                    <!-- Elastislide Carousel Thumbnail Viewer -->
+                                    <div class="es-carousel-wrapper">
+                                        <div class="es-nav">
+                                            <span class="es-nav-prev">Previous</span>
+                                            <span class="es-nav-next">Next</span>
+                                        </div>
+                                        <div class="es-carousel">
+                                            <ul class="lista_imagens ">                                       
+                                                <li><a href="#"><img src="img/tornearia-1.gif" data-large="img/tornearia-1.gif" " data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/usinagem-2.jpg" data-large="img/usinagem-2.jpg" " data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/usinagem-1.jpg" data-large="img/usinagem-1.jpg" " data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/tornearia-1.gif" data-large="img/tornearia-1.gif" " data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/usinagem-2.jpg" data-large="img/usinagem-2.jpg" " data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/usinagem-1.jpg" data-large="img/usinagem-1.jpg" " data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/tornearia-1.gif" data-large="img/tornearia-1.gif" " data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/usinagem-2.jpg" data-large="img/usinagem-2.jpg" " data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/usinagem-1.jpg" data-large="img/usinagem-1.jpg" " data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/tornearia-1.gif" data-large="img/tornearia-1.gif" " data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/usinagem-2.jpg" data-large="img/usinagem-2.jpg" " data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/usinagem-1.jpg" data-large="img/usinagem-1.jpg" " data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div> 
+                                </div>
                             </div>
                         </div>
-                    </div> 
-                    <div class="col-md-6 mx-auto mt-2 mb-4">
+                    </div>
+                    <div class="col mx-auto mt-2 mb-4">
                         <div class="container caixa_texto">
                             <div class="row">
                                 <div class="col-12 mt-2 mb-0 text-center">
@@ -171,28 +203,11 @@
     <script src="js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+     <!-- ---------------------------------------slider scripts ---------------------------------------- -->
+     <script type="text/javascript" src="js/Slider/ajax.libs.jquery.mim.js"></script>
+    <script type="text/javascript" src="js/Slider/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="js/Slider/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/Slider/jquery.elastislide.js"></script>
+    <script type="text/javascript" src="js/Slider/gallery.js"></script>
+    <!-- ---------------------------------------slider scripts ---------------------------------------- -->
 </html>
-
-<!-- MODELO
-
-    <section id="secaoModelo">
-        <div class="container">
-                <div class="row">
-                    <div class="col-md-12 container-titulos">
-                        <h1 class="titulo_secoes">
-                            Modelo
-                        </h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-
-                    </div>
-                <div class="col-md-6">
-
-                </div>
-                </div>
-            </div>
-    </section>
-
-/MODELO --> 
