@@ -136,6 +136,21 @@
 .btn-link{
  font-style: none !important; 
 }
+
+*::-webkit-scrollbar-track {
+    background-color: rgba(54, 92, 154, 0.589);
+}
+
+*::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #365C9A;
+    border-radius: 4px;
+}
+
 /*---------------------------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------- Tipografia / texto / responsividade ------------------------------------------*/
 .card-text{
