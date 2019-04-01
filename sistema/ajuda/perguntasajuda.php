@@ -11,11 +11,11 @@
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
             <![endif]-->
             
-            <link rel="stylesheet" href="../css/Sistema.css">
-            <link rel="stylesheet" href="../css/perguntasajuda.css">
-            <link rel="stylesheet" href="../css/normalize.css">
-            <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-            <link rel="stylesheet" href="../css/responsividade.css">
+            <link rel="stylesheet" href="../../css/Sistema.css">
+            <link rel="stylesheet" href="../../css/perguntasajuda.css">
+            <link rel="stylesheet" href="../../css/normalize.css">
+            <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../../css/responsividade.css">
 
             <title> Sistema de Gerenciamento | TMF </title>
 
@@ -187,13 +187,13 @@
                     </div>
                     <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
                         <div class="card-body">
-                            Para editar os textos da Seção Portifólio, siga os seguintes passos: <br>
-                            1. Vá até o gerenciador do sistema e clique em "Textos"; <br>
-                            2. Escolha a página de portifólio e clique no botão “Editar”; <br>
-                            3. Escolha a imagem que deseja exibir na página principal; <br> 
-                            4. Clique no botão de “+” para adicionar mais uma imagem na página inicial; <br>
-                            4. Clique no botão "Salvar"; <br>
-                            - Observação: No caso das imagens, é necessário adicioná-las previamente na aba em questão.
+                        Para editar o conteúdo da Seção Portifólio, você pode seguir estes passos: <br>
+                        1. Vá até o Gerenciador do Sistema e clique na opção "Conteúdo", do Menu Lateral; <br>
+                        2. Role a página até Portifólio e clique no botão “Editar”; <br>
+                        3. Escolha os projetos cujas imagens deseja exibir na página principal do site; <br> 
+                        4. Caso queira adicionar mais projetos à exibição, clique no botão de “+” ao lado da caixa de seleção; <br>
+                        5. Terminando a seleção, clique no botão "Salvar". <br>
+                        - Observação: Para que o projeto apareça nas opções de seleção, é necessário que o mesmo tenha sido cadastrado no menu Portifólio previamente.
                         </div>
                     </div>
                 </div>
@@ -201,8 +201,8 @@
             </div>
             
         </body>
-        <script src="../js/jquery-3.3.1.js"> <script>
-        <script src="../js/popper.min.js"></script>
-        <script src="../bootstrap/js/bootstrap.min.js"></script>
-        <script src="../js/main.js"></script>
+        <script src="../../js/jquery-3.3.1.js"> <script>
+        <script src="../../js/popper.min.js"></script>
+        <script src="../../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../js/main.js"></script>
 </html>

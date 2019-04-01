@@ -1,7 +1,7 @@
-<h1 class="titulo_secoes"> Textos </h1>
+<h1 class="titulo_secoes"> Conteúdo </h1>
 <p style="text-align:center">
     <br>
-    Neste módulo você poderá editar os textos que são exibidos no website!
+    Neste módulo você poderá editar todo o conteúdo das seções que são exibidas no website!
 </p>
 <div class="container">
 	<center>
@@ -47,6 +47,29 @@
 						<h5 class="card-title">Portifólio</h5>
 						<p class="card-text">Clique no botão abaixo para editar as informações desta seção!</p>
 						<button type="button" class="btn btn-primary" id="btnPortiflio" data-toggle="modal" data-target="#modalPortifolio">Editar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="card" style="width: auto;display:inline-block; height:auto;">
+					<img class="card-img-top" src="../img/Sistema/produtosCard.png" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Parceiros</h5>
+						<p class="card-text">Clique no botão abaixo para editar as informações desta seção!</p>
+						<button type="button" class="btn btn-primary" id="btnParceiros" data-toggle="modal" data-target="#modalParceiros">Editar</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="card" style="width: auto;display:inline-block; height:auto;">
+					<img class="card-img-top" src="../img/Sistema/portifolioCard.png" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Clientes</h5>
+						<p class="card-text">Clique no botão abaixo para editar as informações desta seção!</p>
+						<button type="button" class="btn btn-primary" id="btnClientes" data-toggle="modal" data-target="#modalClientes">Editar</button>
 					</div>
 				</div>
 			</div>
@@ -254,6 +277,145 @@
     </div>
 </div>
 
+<!-- Modal de Edição da Seção Parceiros -->
+<div class="modal fade" id="modalParceiros" tabindex="-1" role="dialog" aria-labelledby="modalParceirosTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
+                <h5 class="modal-title" id="exampleModalLongTitle"> Editar Parceiros </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+				<form id="formParceiros">	
+					<div class="container-fluid" id="listaParceiros">
+						<div class="row">
+							<div class="col-md-10">
+								<label for="parceiro_1"> Parceiro 1: </label>
+								<select class="inpForm" name="parceiro_1" id="parceiro_1">
+									<option> - </option>
+								</select>
+								<br><hr>
+							</div>
+							<div class="col-md-2 my-auto mx-auto">
+								<button type="button" class="btn btn-success btnAtivo" id="addParceiro"> + </button>
+							</div>
+						</div>
+					</div>
+				</form>	
+			</div>
+            <div class="modal-footer">
+				<button type="button" class="btn btn-success" id="cadastrarParceiro" data-toggle="modal" data-target="#modalCadastroParceiro">Cadastrar</button>
+				<button type="button" class="btn btn-primary" id="salvarParceiros" data-dismiss="modal">Salvar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Cadastro de Parceiros -->
+<div class="modal fade" id="modalCadastroParceiro" tabindex="-1" role="dialog" aria-labelledby="modalCadastroParceiroTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
+                <h5 class="modal-title" id="exampleModalLongTitle"> Cadastrar Parceiro </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+				<form id="formParceiro">	
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<label for="imgParceiro"> Adicione a imagem do Parceiro: </label>
+								<input type="file" class="inpForm" name="imgParceiro" id="imgParceiro">
+								<br><hr>
+								<label for="urlParceiro"> Adicione a URL do Parceiro: </label>
+								<input type="url" class="inpForm" name="urlParceiro" id="urlParceiro">
+							</div>
+						</div>
+					</div>
+				</form>	
+			</div>
+            <div class="modal-footer">
+				<button type="button" class="btn btn-primary" id="salvarParceiro" data-dismiss="modal">Salvar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Edição da Seção Clientes -->
+<div class="modal fade" id="modalClientes" tabindex="-1" role="dialog" aria-labelledby="modalClientesTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
+                <h5 class="modal-title" id="exampleModalLongTitle"> Editar Clientes </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+				<form id="formClientes">	
+					<div class="container-fluid" id="listaClientes">
+						<div class="row">
+							<div class="col-md-10">
+								<label for="cliente_1"> Cliente 1: </label>
+								<select class="inpForm" name="cliente_1" id="cliente_1">
+									<option> - </option>
+								</select>
+								<br><hr>
+							</div>
+							<div class="col-md-2 my-auto mx-auto">
+								<button type="button" class="btn btn-success btnAtivo" id="addCliente"> + </button>
+							</div>
+						</div>
+					</div>
+				</form>	
+			</div>
+            <div class="modal-footer">
+				<button type="button" class="btn btn-success" id="cadastrarCliente" data-toggle="modal" data-target="#modalCadastroCliente">Cadastrar</button>
+				<button type="button" class="btn btn-primary" id="salvarClientes" data-dismiss="modal">Salvar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Cadastro de Clientes -->
+<div class="modal fade" id="modalCadastroCliente" tabindex="-1" role="dialog" aria-labelledby="modalCadastroClienteTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
+                <h5 class="modal-title" id="exampleModalLongTitle"> Cadastrar Cliente </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+				<form id="formCliente">	
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<label for="imgCliente"> Adicione a imagem do Cliente: </label>
+								<input type="file" class="inpForm" name="imgCliente" id="imgCliente">
+								<br><hr>
+								<label for="urlCliente"> Adicione a URL do Parceiro: </label>
+								<input type="url" class="inpForm" name="urlCliente" id="urlCliente">
+							</div>
+						</div>
+					</div>
+				</form>	
+			</div>
+            <div class="modal-footer">
+				<button type="button" class="btn btn-primary" id="salvarCliente" data-dismiss="modal">Salvar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
 <script type="text/javascript">
 	$(document).ready(function(){
 
@@ -299,11 +461,19 @@
 		});
 
 		$(document).on('click','#addProduto',function(){
-			$('#listaProdutos').append('<div class="row"><div class="col-md-10"><label for="produto_1"> Produto 1: </label><select class="inpForm" name="produto_1" id="produto_1"><option> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addProduto"> + </button></div></div>');
+			$('#listaProdutos').append('<div class="row"><div class="col-md-10"><label for="produto_1"> Produto 2: </label><select class="inpForm" name="produto_1" id="produto_1"><option> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addProduto"> + </button></div></div>');
 		});
 
 		$(document).on('click','#addPortifolio',function(){
-			$('#listaPortifolio').append('<div class="row"><div class="col-md-10"><label for="portifolio_1"> Produto 1: </label><select class="inpForm" name="portifolio_1" id="portifolio_1"><option> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addPortifolio"> + </button></div></div>');
+			$('#listaPortifolio').append('<div class="row"><div class="col-md-10"><label for="portifolio_1"> Portifólio 2: </label><select class="inpForm" name="portifolio_1" id="portifolio_1"><option> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addPortifolio"> + </button></div></div>');
+		});
+
+		$(document).on('click','#addParceiro',function(){
+			$('#listaParceiros').append('<div class="row"><div class="col-md-10"><label for="parceiro_2"> Parceiro 2: </label><select class="inpForm" name="parceiro_2" id="parceiro_2"><option> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addParceiro"> + </button></div></div>');
+		});
+
+		$(document).on('click','#addCliente',function(){
+			$('#listaClientes').append('<div class="row"><div class="col-md-10"><label for="parceiro_2"> Cliente 2: </label><select class="inpForm" name="cliente_2" id="cliente_2"><option> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addCliente"> + </button></div></div>');
 		});
 	});
 </script>

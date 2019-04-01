@@ -54,9 +54,9 @@
                                 <img src="../img/location.png">
                                 <span> Mensagens </span>
                             </li>
-                            <li class="itemMenuSistema" id="mod_textos">
+                            <li class="itemMenuSistema" id="mod_conteudo">
                                 <img src="../img/location.png">
-                                <span> Textos </span>
+                                <span> Conteúdo </span>
                             </li>
                             <li class="itemMenuSistema" id="mod_newsletter">
                                 <img src="../img/location.png">
