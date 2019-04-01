@@ -71,7 +71,7 @@
             <div class="container d-flex justify-content-center">
                 <div class="row d-flex justify-content-center">
                     <div class="col mt-2 mb-4 d-flex justify-content-center">
-                        <div class="Conteudo_slider mx-auto">
+                        <div class="Conteudo_slider mx-auto my-auto">
                             <div id="rg-gallery" class="rg-gallery">
                                 <div class="rg-thumbs">
                                     <!-- Elastislide Carousel Thumbnail Viewer -->
