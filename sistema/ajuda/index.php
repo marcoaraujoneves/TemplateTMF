@@ -164,8 +164,8 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12" style="    text-align: center; font-size: 33px; font-weight: 600; color: rgb(41, 70, 117);">
-                            <h3> Mande uma mensagem </h3>               
+                        <div class="col-md-6 offset-md-3" style="text-align: center; font-size: 20px; font-weight: 600; color: rgb(41, 70, 117);">
+                            <h3> Mande-nos uma mensagem </h3>               
                             <div id="sucesso" class="alert alert-success" role="alert" style="display:none;">
                                 Mensagem enviada com sucesso!
                             </div>
@@ -179,8 +179,8 @@
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <label class="txtForm" for="nome"> &ensp;Nome </label> <br>
-                                            <input type="text" class="inpForm" id="nome" name="nome" autocomplete="off">
+                                            <label class="txtForm" for="assunto"> &ensp;Assunto </label> <br>
+                                            <input type="text" class="inpForm" id="assunto" name="assunto" autocomplete="off">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -189,12 +189,7 @@
                                             <textarea class="inpForm" id="mensagem" name="mensagem" rows="6"></textarea>
                                         </div>
                                     </div>
-                                    <div class="float-left">
-                                        <input type="file" class="form-control" id="anexar" name="anexar"> 
-                                    </div>
-                                    <div class="float-right">
-                                        <button type="button" class="btn btn-primary" id="enviar" name="enviar"> Enviar </button>
-                                    </div>                                   
+                                    <button type="button" class="btn btn-primary" id="enviar" name="enviar"> Enviar </button>
                                 </div>
                             </form>
                         </div>
