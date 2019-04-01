@@ -13,7 +13,14 @@
             status do cadastro, ou seja, se o e-mail está Ativo ou Inativo na lista de destinatários, e opções para Deletar 
             o e-mail, Editar ou alternar o Status.
         </p>
-
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <button data-toggle="modal" data-target="#modalCadastroCliente" id="addCliente" class="btn btn-lg">Cadastrar Cliente</button>
+                </div>
+            </div>
+        </div>
+        <br>
         <div class="table-responsive">
             <table id="listaEmail" class="table table-striped table-hover ">
                 <thead>
@@ -162,6 +169,55 @@
 
             </div>
             <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de cadastro dos clientes -->
+<div class="modal fade" id="modalCadastroCliente" tabindex="-1" role="dialog" aria-labelledby="modalCadastroClienteTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
+                <h5 class="modal-title" id="exampleModalLongTitle"> Cadastro de Cliente </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="cadastraCliente">
+                    <div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<label for="nome"> Nome: </label>
+								<input type="text" class="inpForm" id="nome" name="nome">
+								<br><hr>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+                            <div class="col-md-12">
+								<label for="email"> E-mail: </label>
+								<input type="email" class="inpForm" id="email" name="email">
+								<br><hr>
+							</div>
+						</div>
+                        <br>
+						<div class="row">
+							<div class="col-md-12">
+								<label for="status"> Status: </label>
+								<select class="inpForm" id="status" name="status">
+                                    <option value="1"> Ativo </option>
+                                    <option value="0"> Inativo </option>
+                                </select>
+							</div>
+						</div>
+					</div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="cadastrarCliente" data-dismiss="modal">Salvar</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
             </div>
         </div>

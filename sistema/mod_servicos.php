@@ -21,12 +21,12 @@ background:#2d2d2d;}
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12 offset-md-4">
+        <div class="col-md-4 offset-md-4">
             <button data-toggle="modal" data-target="#cadastrarServico" id="services" class="btn btn-lg BotaoCadastra">Cadastrar Serviço</button>
         </div>
     </div>
 </div>
-
+<br>
 <table  class="table table-striped table-bordered table-hover Tabela" style="width:1000px;" id="tb1">
     <thead >
         <tr >
