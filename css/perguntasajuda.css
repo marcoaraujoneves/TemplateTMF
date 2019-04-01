@@ -2,10 +2,43 @@
 /*------------------------ Layout ------------------------------------*/
 
 .card {
-    margin-left: 100px;
-    margin-right: 100px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24)!important;
+    width: 600px!important;
+    text-align: center!important;
+    height:auto!important;
+    background-color: rgba(173, 202, 250, 0.534)!important;
 }
+.card-body{
+    text-align:justify!important;
+}
+
 
 /*--------------------------------------------------------------------*/
 /*------------------------ Tipografia --------------------------------*/
+
+@font-face {
+    font-family: Verdana4;
+    src:url(Fontes/verdana.ttf);
+}
+
+*{
+    font-family: Verdana4, Arial, sans-serif;
+}
+.titulos_ajuda{
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+    color:#365C9A;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.titulos_ajuda::after{
+    margin: 1px auto;
+    height: 4px;
+    width: 120px;
+    content: " ";
+    display: block;
+    background-color: #365C9A;
+    border-radius: 6px;
+}

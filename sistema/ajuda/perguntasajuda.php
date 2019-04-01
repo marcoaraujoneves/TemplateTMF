@@ -11,19 +11,33 @@
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
             <![endif]-->
             
-            <link rel="stylesheet" href="../../css/Sistema.css">
+            <link rel="stylesheet" href="../../css/main.css">
             <link rel="stylesheet" href="../../css/perguntasajuda.css">
             <link rel="stylesheet" href="../../css/normalize.css">
             <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
             <link rel="stylesheet" href="../../css/responsividade.css">
+            <link rel="stylesheet" href="../../css/header.css">
+            <link rel="stylesheet" href="../../css/footer.css">
 
             <title> Sistema de Gerenciamento | TMF </title>
 
         </head>
 
+
         <body>
+            <nav class="navbar navbar-expand-md navbar-light" id="navbarTMF">
+                <div class="container">
+                    <img src="../../img/logoTMFBranco.png" class="mx-auto" id="logo_Menu">
+                </div>
+            </nav>
+        
             <div id="accordion">
-                <div class="card">
+            
+                <h1 class="titulos_ajuda">
+                    Serviços
+                </h1>
+
+                <div class="card mx-auto">
                     <div class="card-header" id="headingOne">
                         <h5 class="mb-0">
                             <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -42,7 +56,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card mx-auto">
                     <div class="card-header" id="headingTwo">
                         <h5 class="mb-0">
                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
@@ -61,7 +75,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card mx-auto">
                     <div class="card-header" id="headingThree">
                         <h5 class="mb-0">
                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -79,8 +93,11 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="card">
+                
+                <h1 class="titulos_ajuda">
+                    Produtos
+                </h1>
+                <div class="card mx-auto">
                     <div class="card-header" id="headingFour">
                         <h5 class="mb-0">
                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
@@ -98,7 +115,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card mx-auto">
                     <div class="card-header" id="headingFive">
                         <h5 class="mb-0">
                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -117,46 +134,7 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-header" id="headingSix">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                Como editar a seção Sobre Nós?
-                            </button>
-                        </h5>
-                    </div>
-                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
-                        <div class="card-body">
-                            Para editar os textos, siga os seguintes passos: <br>
-                            1. Vá até o gerenciador do sistema e clique em "Textos"; <br>
-                            2. Escolha a página que deseja editar e clique no botão “Editar”; <br>
-                            3. Modifique os dados que deseja; <br> 
-                            4. Clique no botão "Salvar". <br>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header" id="headingSeven">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                Como editar a seção serviços?
-                            </button>
-                        </h5>
-                    </div>
-                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
-                        <div class="card-body">
-                            Para editar os textos da seção Serviços, siga os seguintes passos: <br>
-                            1. Vá até o gerenciador do sistema e clique em "Textos"; <br>
-                            2. Escolha a página de serviços e clique no botão “Editar” <br>
-                            3. Modifique o texto de serviços e selecione os serviços que deseja mostrar na página inicial <br> 
-                            4. Clique no botão "Salvar"; <br>
-                            - Observação: No caso das imagens, é necessário adicioná-las previamente na aba em questão.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
+                <div class="card mx-auto">
                     <div class="card-header" id="headingEight">
                         <h5 class="mb-0">
                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
@@ -177,7 +155,33 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <h1 class="titulos_ajuda">
+                    Sobre nós
+                </h1>
+                <div class="card mx-auto">
+                    <div class="card-header" id="headingSix">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Como editar a seção Sobre Nós?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                        <div class="card-body">
+                            Para editar os textos, siga os seguintes passos: <br>
+                            1. Vá até o gerenciador do sistema e clique em "Textos"; <br>
+                            2. Escolha a página que deseja editar e clique no botão “Editar”; <br>
+                            3. Modifique os dados que deseja; <br> 
+                            4. Clique no botão "Salvar". <br>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h1 class="titulos_ajuda">
+                    Portifólio
+                </h1>
+                <div class="card mx-auto">
                     <div class="card-header" id="headingNine">
                         <h5 class="mb-0">
                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
@@ -197,9 +201,69 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-            
+
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 container-titulos">
+                            <h1 class="titulos_ajuda">
+                                Não encontrou o que buscava?
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" style="    text-align: center; font-size: 33px; font-weight: 600; color: rgb(41, 70, 117);">
+                            <h3> Mande uma mensagem </h3>               
+                            <div id="sucesso" class="alert alert-success" role="alert" style="display:none;">
+                                Mensagem enviada com sucesso!
+                            </div>
+                            <div id="fracasso" class="alert alert-danger" role="alert" style="display:none;">
+                                Houve um erro ao enviar sua mensagem, por favor, tente novamente mais tarde ou entre em contato diretamente pelos canais ao lado!
+                            </div>
+                            <div id="incompleto" class="alert alert-secondary" role="alert" style="display:none;">
+                                Por favor, informe todos os dados necessários!
+                            </div>
+                            <form id="formularioContato" method="post">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label class="txtForm" for="nome"> &ensp;Nome </label> <br>
+                                            <input type="text" class="inpForm" id="nome" name="nome" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label class="txtForm" for="mensagem"> &ensp;Mensagem </label> <br>
+                                            <textarea class="inpForm" id="mensagem" name="mensagem" rows="6"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="float-left">
+                                        <input type="file" class="form-control" id="anexar" name="anexar"> 
+                                    </div>
+                                    <div class="float-right">
+                                        <button type="button" class="btn btn-primary" id="enviar" name="enviar"> Enviar </button>
+                                    </div>                                   
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer style="margin-top:30px">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6"> 
+                            <span id="texto_direitos">©2018. Todos os direitos reservados.</span>
+                        </div>
+                        <div class="col-md-6"> 
+                            <img src="../../img/logo1.png" id="logo">
+                        </div>
+                    </div>
+                </div>
+            </footer>
+         
         </body>
         <script src="../../js/jquery-3.3.1.js"> <script>
         <script src="../../js/popper.min.js"></script>
