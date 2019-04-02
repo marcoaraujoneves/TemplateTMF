@@ -539,7 +539,18 @@
                                     </div>
                                     <br>
                                     <div class="float-left">
-                                        <input type="file" class="form-control" id="anexar" name="anexar"> 
+                                        <input type="file" class="form-control" id="anexar" name="_FILES"> 
+                                        <?php
+                                            // $format = $_FILES['arquivo']['tipo'];
+                                            // Verifique os formatos que você quer acessar 
+                                            // if($format != 'jpeg' OR $format != 'png' $format != 'pdf' $format != 'jpg'){
+                                            //     $response = 'Formato de upload não permitido';
+                                            //     echo $reponse;
+                                            // }
+                                            // else{
+                                            //     Continua o código de upload normal 
+                                            // }
+                                         ?> 
                                     </div>
                                     <div class="float-right">
                                         <button type="button" class="btn btn-primary" id="enviar" name="enviar"> Enviar </button>
