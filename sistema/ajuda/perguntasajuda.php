@@ -33,174 +33,241 @@
         
             <div id="accordion">
             
-                <h1 class="titulos_ajuda">
-                    Serviços
-                </h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1 class="titulos_ajuda">
+                            Serviços
+                        </h1>
+                    
+                        <div class="card mx-auto">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Como adicionar um serviço?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    Para adicionar um serviço, siga os seguintes passos: <br>
+                                    1. Vá até o gerenciador do sistema e clique em "Serviço"; <br>
+                                    2. Digite o Nome e a Descrição para seu novo Serviço em suas respectivas caixas; <br>
+                                    3. Adicione uma imagem para representar esse novo Serviço; <br>
+                                    4. Clique no botão "Enviar";
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="card mx-auto">
-                    <div class="card-header" id="headingOne">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Como adicionar um serviço?
-                            </button>
-                        </h5>
+                        <div class="card mx-auto">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                        Como remover um serviço?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    Para remover um serviço, siga os seguintes passos: <br>
+                                    1. Vá até o gerenciador do sistema e clique em "Serviço"; <br>
+                                    2. Na parte inferior da página, haverá uma lista dos serviços já cadastrados; <br>
+                                    3. Encontre o serviço que gostaria de excluir; <br> 
+                                    4. Clique no botão "Excluir"; <br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mx-auto">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Como editar a Seção Serviços?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                    Para editar os textos da seção Serviços, siga os seguintes passos:  <br> 
+                                    1. Vá até o gerenciador do sistema e clique em "Textos";  <br> 
+                                    2. Escolha a página de serviços e clique no botão “Editar”  <br> 
+                                    3. Modifique o texto de serviços e selecione os serviços que deseja mostrar na página inicial <br> 
+                                    4. Clique no botão "Salvar"; <br>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                        <div class="card-body">
-                            Para adicionar um serviço, siga os seguintes passos: <br>
-                            1. Vá até o gerenciador do sistema e clique em "Serviço"; <br>
-                            2. Digite o Nome e a Descrição para seu novo Serviço em suas respectivas caixas; <br>
-                            3. Adicione uma imagem para representar esse novo Serviço; <br>
-                            4. Clique no botão "Enviar";
+                        
+                    <div class="col-md-6">
+                        <h1 class="titulos_ajuda">
+                            Produtos
+                        </h1>
+
+                        <div class="card mx-auto">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        Como adicionar um produto?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                <div class="card-body">
+                                    Para adicionar um produto, siga os seguintes passos: <br>
+                                    1. Vá até o gerenciador do sistema e clique em "Produtos"; <br>
+                                    2. Na parte superior da página, haverá um botão “Cadastrar Produto”; <br>
+                                    3. Escolha a imagem e preencha o nome do produto e sua descrição; <br> 
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card mx-auto">
+                            <div class="card-header" id="headingFive">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        Como remover um produto?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                                <div class="card-body">
+                                    Para remover um produto, siga os seguintes passos: <br>
+                                    1. Vá até o gerenciador do sistema e clique em "Produtos"; <br>
+                                    2. Na parte inferior da página, haverá uma lista dos produtos já cadastrados; <br>
+                                    3. Encontre o produto que gostaria de excluir; <br> 
+                                    4. Clique no botão "Excluir"; <br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mx-auto">
+                            <div class="card-header" id="headingEight">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                        Como editar a seção produtos?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                                <div class="card-body">
+                                    Para editar os textos da seção produtos, siga os seguintes passos: <br>
+                                    1. Vá até o gerenciador do sistema e clique em "Textos"; <br>
+                                    2. Escolha a página de produtos e clique no botão “Editar”; <br>
+                                    3. Escolha o produto que deseja exibir na página principal; <br> 
+                                    4. Clique no botão de “+” para adicionar produtos na página inicial; <br>
+                                    4. Clique no botão "Salvar"; <br>
+                                    - Observação: No caso das imagens, é necessário adicioná-las previamente na aba em questão.
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card mx-auto">
-                    <div class="card-header" id="headingTwo">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                Como remover um serviço?
-                            </button>
-                        </h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1 class="titulos_ajuda">
+                            Sobre nós
+                        </h1>
+
+                        <div class="card mx-auto">
+                            <div class="card-header" id="headingSix">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        Como editar a seção Sobre Nós?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                                <div class="card-body">
+                                    Para editar os textos, siga os seguintes passos: <br>
+                                    1. Vá até o gerenciador do sistema e clique em "Textos"; <br>
+                                    2. Escolha a página que deseja editar e clique no botão “Editar”; <br>
+                                    3. Modifique os dados que deseja; <br> 
+                                    4. Clique no botão "Salvar". <br>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                        <div class="card-body">
-                            Para remover um serviço, siga os seguintes passos: <br>
-                            1. Vá até o gerenciador do sistema e clique em "Serviço"; <br>
-                            2. Na parte inferior da página, haverá uma lista dos serviços já cadastrados; <br>
-                            3. Encontre o serviço que gostaria de excluir; <br> 
-                            4. Clique no botão "Excluir"; <br>
+
+                    <div class="col-md-6">
+                        <h1 class="titulos_ajuda">
+                            Portifólio
+                        </h1>
+
+                        <div class="card mx-auto">
+                            <div class="card-header" id="headingNine">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                        Como editar a Seção Portifólio?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+                                <div class="card-body">
+                                Para editar o conteúdo da Seção Portifólio, você pode seguir estes passos: <br>
+                                1. Vá até o Gerenciador do Sistema e clique na opção "Conteúdo", do Menu Lateral; <br>
+                                2. Role a página até Portifólio e clique no botão “Editar”; <br>
+                                3. Escolha os projetos cujas imagens deseja exibir na página principal do site; <br> 
+                                4. Caso queira adicionar mais projetos à exibição, clique no botão de “+” ao lado da caixa de seleção; <br>
+                                5. Terminando a seleção, clique no botão "Salvar". <br>
+                                - Observação: Para que o projeto apareça nas opções de seleção, é necessário que o mesmo tenha sido cadastrado no menu Portifólio previamente.
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card mx-auto">
-                    <div class="card-header" id="headingThree">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Como editar a Seção Serviços?
-                            </button>
-                        </h5>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                        <div class="card-body">
-                            Para editar os textos da seção Serviços, siga os seguintes passos:  <br> 
-                            1. Vá até o gerenciador do sistema e clique em "Textos";  <br> 
-                            2. Escolha a página de serviços e clique no botão “Editar”  <br> 
-                            3. Modifique o texto de serviços e selecione os serviços que deseja mostrar na página inicial <br> 
-                            4. Clique no botão "Salvar"; <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1 class="titulos_ajuda">
+                            Senha
+                        </h1>
+
+                        <div class="card mx-auto">
+                            <div class="card-header" id="headingTen">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                        Perdeu sua senha?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
+                                <div class="card-body">
+                                    Para receber sua senha, clique no botão e enviaremos a senha para o seu email: <br>
+                                
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <h1 class="titulos_ajuda">
-                    Produtos
-                </h1>
-                <div class="card mx-auto">
-                    <div class="card-header" id="headingFour">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Como adicionar um produto?
-                            </button>
-                        </h5>
-                    </div>
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                        <div class="card-body">
-                            Para adicionar um produto, siga os seguintes passos: <br>
-                            1. Vá até o gerenciador do sistema e clique em "Produtos"; <br>
-                            2. Na parte superior da página, haverá um botão “Cadastrar Produto”; <br>
-                            3. Escolha a imagem e preencha o nome do produto e sua descrição; <br> 
+
+                    <div class="col-md-6">
+                        <h1 class="titulos_ajuda">
+                            Newsletter
+                        </h1>
+
+                        <div class="card mx-auto">
+                            <div class="card-header" id="headingEleven">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                        Insira pergunta 
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
+                                <div class="card-body">
+                                Para editar o conteúdo da Seção Portifólio, você pode seguir estes passos: <br>
+                                1. Vá até o Gerenciador do Sistema e clique na opção "Conteúdo", do Menu Lateral; <br>
+                                2. Role a página até Portifólio e clique no botão “Editar”; <br>
+                                3. Escolha os projetos cujas imagens deseja exibir na página principal do site; <br> 
+                                4. Caso queira adicionar mais projetos à exibição, clique no botão de “+” ao lado da caixa de seleção; <br>
+                                5. Terminando a seleção, clique no botão "Salvar". <br>
+                                - Observação: Para que o projeto apareça nas opções de seleção, é necessário que o mesmo tenha sido cadastrado no menu Portifólio previamente.
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card mx-auto">
-                    <div class="card-header" id="headingFive">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                Como remover um produto?
-                            </button>
-                        </h5>
-                    </div>
-                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                        <div class="card-body">
-                            Para remover um produto, siga os seguintes passos: <br>
-                            1. Vá até o gerenciador do sistema e clique em "Produtos"; <br>
-                            2. Na parte inferior da página, haverá uma lista dos produtos já cadastrados; <br>
-                            3. Encontre o produto que gostaria de excluir; <br> 
-                            4. Clique no botão "Excluir"; <br>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card mx-auto">
-                    <div class="card-header" id="headingEight">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                Como editar a seção produtos?
-                            </button>
-                        </h5>
-                    </div>
-                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
-                        <div class="card-body">
-                            Para editar os textos da seção produtos, siga os seguintes passos: <br>
-                            1. Vá até o gerenciador do sistema e clique em "Textos"; <br>
-                            2. Escolha a página de produtos e clique no botão “Editar”; <br>
-                            3. Escolha o produto que deseja exibir na página principal; <br> 
-                            4. Clique no botão de “+” para adicionar produtos na página inicial; <br>
-                            4. Clique no botão "Salvar"; <br>
-                            - Observação: No caso das imagens, é necessário adicioná-las previamente na aba em questão.
-                        </div>
-                    </div>
-                </div>
-
-                <h1 class="titulos_ajuda">
-                    Sobre nós
-                </h1>
-                <div class="card mx-auto">
-                    <div class="card-header" id="headingSix">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                Como editar a seção Sobre Nós?
-                            </button>
-                        </h5>
-                    </div>
-                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
-                        <div class="card-body">
-                            Para editar os textos, siga os seguintes passos: <br>
-                            1. Vá até o gerenciador do sistema e clique em "Textos"; <br>
-                            2. Escolha a página que deseja editar e clique no botão “Editar”; <br>
-                            3. Modifique os dados que deseja; <br> 
-                            4. Clique no botão "Salvar". <br>
-                        </div>
-                    </div>
-                </div>
-
-
-                <h1 class="titulos_ajuda">
-                    Portifólio
-                </h1>
-                <div class="card mx-auto">
-                    <div class="card-header" id="headingNine">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                Como editar a Seção Portifólio?
-                            </button>
-                        </h5>
-                    </div>
-                    <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
-                        <div class="card-body">
-                        Para editar o conteúdo da Seção Portifólio, você pode seguir estes passos: <br>
-                        1. Vá até o Gerenciador do Sistema e clique na opção "Conteúdo", do Menu Lateral; <br>
-                        2. Role a página até Portifólio e clique no botão “Editar”; <br>
-                        3. Escolha os projetos cujas imagens deseja exibir na página principal do site; <br> 
-                        4. Caso queira adicionar mais projetos à exibição, clique no botão de “+” ao lado da caixa de seleção; <br>
-                        5. Terminando a seleção, clique no botão "Salvar". <br>
-                        - Observação: Para que o projeto apareça nas opções de seleção, é necessário que o mesmo tenha sido cadastrado no menu Portifólio previamente.
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <section>

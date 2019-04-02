@@ -3,13 +3,27 @@
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24)!important;
-    width: 600px!important;
+    width: 480px!important;
     text-align: center!important;
     height:auto!important;
-    background-color: rgba(173, 202, 250, 0.534)!important;
+    background-color:#365C9A!important;
 }
 .card-body{
     text-align:justify!important;
+    background-color:rgba(81, 126, 199, 0.301)!important;
+    color: white;
+    font-weight: 600px;
+}
+
+body{
+    background-color:rgba(184, 220, 245, 0.418)!important;
+}
+
+.btn-link {
+    font-weight: 700px!important;
+    color: #fefeff!important;
+    background-color: transparent;
+    font-weight: bold!important;
 }
 
 
