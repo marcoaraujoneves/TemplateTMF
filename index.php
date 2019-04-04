@@ -365,45 +365,36 @@
             <!--PARCEIROS/CLIENTES-->
 
             <section id="secaoParceiros">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 container-titulos">
-                        <h1 class="titulo_secoes">
-                           Parceiros
-                        </h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class=" col-xl-2 col-md-2 col-sm-4 col-6 mx-auto text-center">
-                        <a href="www.fornecedor.com">
-                            <img src="img/ambev.jpeg" class="img_patro-forne img-responsive">
-                        </a>
-                    </div>
-                    <div class="col-xl-2 col-md-2 col-sm-4 col-6  mx-auto text-center">
-                        <a href="www.fornecedor.com">
-                            <img src="img/tornearia.png" class="img_patro-forne img-responsive">
-                        </a>  
-                    </div>
-                    <div class="col-xl-2 col-md-2 col-sm-4 col-6  mx-auto text-center">
-                        <a href="www.fornecedor.com">
-                            <img src="img/linkedin.png" class="img_patro-forne img-responsive">
-                        </a>
-                    </div>
-                    <div class="col-xl-2 col-md-2 col-sm-4 col-6 mx-auto text-center">
-                        <a href="www.fornecedor.com">
-                            <img src="img/tornearia.png" class="img_patro-forne img-responsive">
-                        </a>
-                    </div>
-                    <div class="col-xl-2 col-md-2 col-sm-4 col-6 mx-auto text-center">
-                        <a href="www.fornecedor.com">
-                            <img src="img/tornearia.png" class="img_patro-forne img-responsive">
-                        </a>
-                    </div>
-                    <div class="col-xl-2 col-md-2 col-sm-4 col-6 mx-auto text-center">
-                        <a href="www.fornecedor.com">
-                            <img src="img/tornearia.png" class="img_patro-forne img-responsive">
-                        </a>
-                    </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 container-titulos">
+                            <h1 class="titulo_secoes">
+                             Parceiros
+                         </h1>
+                     </div>
+                 </div>
+                 <div class="row">
+                    <?php 
+                    include ('sistema/db.class.php');
+                    $objDB = new db();
+                    $conn = $objDB->conecta_mysql();
+                    $query_select = "SELECT * FROM parceiros where estatus = '1' ;";
+                    $result_select = mysqli_query($conn,$query_select) or die(mysql_error());
+                    $rows = array();
+                    while($row = mysqli_fetch_array($result_select))
+                        $rows[] = $row;
+                    foreach($rows as $row){ 
+                        $codParceiro = $row['codParceiro'];
+                        $nome = $row['nome'];
+                        $extensao = $row['extensao'];
+                        $linkParceiro = $row['linkParceiro'];
+                        echo '<div class=" col-xl-2 col-md-2 col-sm-4 col-6 mx-auto text-center">';
+                        echo ' <a href="'.$linkParceiro.'">';
+                        echo ' <img src="sistema/Img/Parceiros/'.$codParceiro.'.'.$extensao.'" class="img_patro-forne img-responsive">';
+                        echo ' </a>';
+                        echo '</div>';
+                    }
+                    ?>  
                 </div>
             </div>
 
@@ -417,36 +408,26 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class=" col-xl-2 col-md-2 col-sm-4 col-6 mx-auto text-center">
-                        <a href="www.fornecedor.com">
-                            <img src="img/logoserra.png" class="img_patro-forne img-responsive">
-                        </a>
-                    </div>
-                    <div class="col-xl-2 col-md-2 col-sm-4 col-6 mx-auto text-center">
-                        <a href="www.fornecedor.com" class="mx-auto">
-                            <img src="img/linkedin.png" class="img_patro-forne img-responsive">
-                        </a>  
-                    </div>
-                    <div class="col-xl-2 col-md-2 col-sm-4 col-6 mx-auto text-center" >
-                        <a href="www.fornecedor.com">
-                            <img src="img/tornearia.png" class="img_patro-forne img-responsive">
-                        </a>
-                    </div>
-                    <div class="col-xl-2 col-md-2 col-sm-4 col-6 mx-auto text-center">
-                        <a href="www.fornecedor.com">
-                            <img src="img/tornearia.png" class="img_patro-forne img-responsive">
-                        </a>
-                    </div>
-                    <div class="col-xl-2 col-md-2 col-sm-4 col-6 mx-auto text-center">
-                        <a href="www.fornecedor.com">
-                            <img src="img/tornearia.png" class="img_patro-forne img-responsive">
-                        </a>
-                    </div>
-                    <div class="col-xl-2 col-md-2 col-sm-4 col-6 mx-auto text-center">
-                        <a href="www.fornecedor.com">
-                            <img src="img/tornearia.png" class="img_patro-forne img-responsive">
-                        </a>
-                    </div>
+                      <?php 
+     
+                   
+                   
+                    $query_select = "SELECT * FROM clienteempresa where estatus = '1' ;";
+                    $result_select = mysqli_query($conn,$query_select) or die(mysql_error());
+                    $rows = array();
+                    while($row = mysqli_fetch_array($result_select))
+                        $rows[] = $row;
+                    foreach($rows as $row){ 
+                        $codCliente = $row['codCliente'];
+                        $extensao = $row['extensao'];
+                        $linkCliente = $row['linkCliente'];
+                        echo '<div class=" col-xl-2 col-md-2 col-sm-4 col-6 mx-auto text-center">';
+                        echo ' <a href="'.$linkCliente.'">';
+                        echo ' <img src="sistema/Img/Clientes/'.$codCliente.'.'.$extensao.'" class="img_patro-forne img-responsive">';
+                        echo ' </a>';
+                        echo '</div>';
+                    }
+                    ?>  
                 </div>
             </div>
 

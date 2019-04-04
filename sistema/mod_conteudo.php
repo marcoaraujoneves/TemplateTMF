@@ -279,21 +279,36 @@
 
 <!-- Modal de Edição da Seção Parceiros -->
 <div class="modal fade" id="modalParceiros" tabindex="-1" role="dialog" aria-labelledby="modalParceirosTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
-                <h5 class="modal-title" id="exampleModalLongTitle"> Editar Parceiros </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
+				<h5 class="modal-title" id="exampleModalLongTitle"> Editar Parceiros </h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
 				<form id="formParceiros">	
 					<div class="container-fluid" id="listaParceiros">
 						<div class="row">
 							<div class="col-md-10">
 								<label for="parceiro_1"> Parceiro 1: </label>
 								<select class="inpForm" name="parceiro_1" id="parceiro_1">
+									<?php 
+									include ('db.class.php');
+									$objDB = new db();
+									$conn = $objDB->conecta_mysql();
+									$query_select = "SELECT * FROM parceiros ;";
+									$result_select = mysqli_query($conn,$query_select) or die(mysql_error());
+									$rows = array();
+									while($row = mysqli_fetch_array($result_select))
+										$rows[] = $row;
+									foreach($rows as $row){ 
+										$codParceiro = $row['codParceiro'];
+										$nome = $row['nome'];
+										echo '<option value="'.$codParceiro.'"> '.$nome.'</option>';
+									}
+									?>  
 									<option> - </option>
 								</select>
 								<br><hr>
@@ -316,32 +331,38 @@
 
 <!-- Modal de Cadastro de Parceiros -->
 <div class="modal fade" id="modalCadastroParceiro" tabindex="-1" role="dialog" aria-labelledby="modalCadastroParceiroTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
-                <h5 class="modal-title" id="exampleModalLongTitle"> Cadastrar Parceiro </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-				<form id="formParceiro">	
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-md-12">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
+				<h5 class="modal-title" id="exampleModalLongTitle"> Cadastrar Parceiro </h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12">
+							<form id="formParceiro" enctype="multipart/form-data">	
 								<label for="imgParceiro"> Adicione a imagem do Parceiro: </label>
 								<input type="file" class="inpForm" name="imgParceiro" id="imgParceiro">
 								<br><hr>
+								<label for="nomeParceiro"> Nome do parceiro: </label>
+								<input type="text" class="inpForm" name="nomeParceiro" id="nomeParceiro">
+								<br><hr>
 								<label for="urlParceiro"> Adicione a URL do Parceiro: </label>
-								<input type="url" class="inpForm" name="urlParceiro" id="urlParceiro">
-							</div>
+								<input type="text" class="inpForm" name="urlParceiro" id="urlParceiro">
+								<button type="submit" class="btn btn-primary" id="salvarParceiro">Salvar</button>
+								<button type="button" class="btn btn-secondary" id="returnParceiro" data-dismiss="modal">Fechar</button>
+							</form>	
 						</div>
 					</div>
-				</form>	
+				</div>
+
 			</div>
-            <div class="modal-footer">
-				<button type="button" class="btn btn-primary" id="salvarParceiro" data-dismiss="modal">Salvar</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+			<div class="modal-footer">
+
             </div>
         </div>
     </div>
@@ -387,33 +408,39 @@
 <!-- Modal de Cadastro de Clientes -->
 <div class="modal fade" id="modalCadastroCliente" tabindex="-1" role="dialog" aria-labelledby="modalCadastroClienteTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
-                <h5 class="modal-title" id="exampleModalLongTitle"> Cadastrar Cliente </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-				<form id="formCliente">	
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-md-12">
-								<label for="imgCliente"> Adicione a imagem do Cliente: </label>
-								<input type="file" class="inpForm" name="imgCliente" id="imgCliente">
-								<br><hr>
-								<label for="urlCliente"> Adicione a URL do Parceiro: </label>
-								<input type="url" class="inpForm" name="urlCliente" id="urlCliente">
-							</div>
-						</div>
-					</div>
-				</form>	
-			</div>
-            <div class="modal-footer">
-				<button type="button" class="btn btn-primary" id="salvarCliente" data-dismiss="modal">Salvar</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-            </div>
-        </div>
+    	<div class="modal-content">
+    		<div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
+    			<h5 class="modal-title" id="exampleModalLongTitle"> Cadastrar Cliente </h5>
+    			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    				<span aria-hidden="true">&times;</span>
+    			</button>
+    		</div>
+    		<div class="modal-body">
+    			
+    				<div class="container-fluid">
+    					<div class="row">
+    						<div class="col-md-12">
+    							<form id="formCliente" enctype="multipart/form-data">	
+    							<label for="imgCliente"> Adicione a imagem do Cliente: </label>
+    							<input type="file" class="inpForm" name="imgCliente" id="imgCliente">
+    							<br><hr>
+    							<label for="nomeCliente"> Nome do cliente: </label>
+    							<input type="text" class="inpForm" name="nomeCliente" id="nomeCliente">
+    							<br><hr>
+    							<label for="urlCliente"> Adicione a URL do Parceiro: </label>
+    							<input type="text" class="inpForm" name="urlCliente" id="urlCliente">
+    							<button type="submit" class="btn btn-primary" id="salvarCliente" >Salvar</button>
+    							<button type="button" class="btn btn-secondary" id="returnCliente" data-dismiss="modal">Fechar</button>
+    							</form>	
+    						</div>
+    					</div>
+    				</div>
+    			
+    		</div>
+    		<div class="modal-footer">
+
+    		</div>
+    	</div>
     </div>
 </div>
 <script type="text/javascript">
@@ -467,9 +494,23 @@
 		$(document).on('click','#addPortifolio',function(){
 			$('#listaPortifolio').append('<div class="row"><div class="col-md-10"><label for="portifolio_1"> Portifólio 2: </label><select class="inpForm" name="portifolio_1" id="portifolio_1"><option> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addPortifolio"> + </button></div></div>');
 		});
-
+		var contadorParceiros = 2;
 		$(document).on('click','#addParceiro',function(){
-			$('#listaParceiros').append('<div class="row"><div class="col-md-10"><label for="parceiro_2"> Parceiro 2: </label><select class="inpForm" name="parceiro_2" id="parceiro_2"><option> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addParceiro"> + </button></div></div>');
+			
+			$('#listaParceiros').append('<div class="row"><div class="col-md-10"><label for="parceiro_'+contadorParceiros+'"> Parceiro '+contadorParceiros+': </label><select class="inpForm" name="parceiro_'+contadorParceiros+'" id="parceiro_'+contadorParceiros+'"><?php 
+									
+									$query_select = "SELECT * FROM parceiros ;";
+									$result_select = mysqli_query($conn,$query_select) or die(mysql_error());
+									$rows = array();
+									while($row = mysqli_fetch_array($result_select))
+										$rows[] = $row;
+									foreach($rows as $row){ 
+										$codEstatus = $row['codParceiro'];
+										$nome = $row['nome'];
+										echo '<option value="'.$codEstatus.'"> '.$nome.'<option>';
+									}
+									?><option> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addParceiro"> + </button></div></div>');
+			contadorParceiros = contadorParceiros +1;
 		});
 
 		$(document).on('click','#addCliente',function(){
