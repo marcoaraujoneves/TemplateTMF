@@ -48,14 +48,16 @@ $(function() {
 	};
 
 	// gallery container
-	var $rgGallery			= $('#rg-gallery'),
+	// var $rgGallery			= $('#rg-gallery'),
 	// carousel container
+	
+	SelectRgGallery = function(rgTemp){
+	var $rgGallery = $(rgTemp); // store accepted parameter
 	$esCarousel			= $rgGallery.find('div.es-carousel-wrapper'),
 	// the carousel items
 	$items				= $esCarousel.find('ul > li'),
 	// total number of items
 	itemsCount			= $items.length;
-	
 	Gallery				= (function() {
 			// index of the current item
 		var current			= 0, 
@@ -66,7 +68,7 @@ $(function() {
 			init			= function() {
 				
 				// (not necessary) preloading the images here...
-				$items.add('<img src="images/ajax-loader.gif"/><img src="images/black.png"/>').imagesLoaded( function() {
+				$items.add('<img src="img/Slider/ajax-loader.gif"/>').imagesLoaded( function() {
 					// add options
 					_addViewModes();
 					
@@ -250,7 +252,7 @@ $(function() {
 	})();
 
 	Gallery.init();
-	
+}
 	/*
 	Example to add more items to the gallery:
 	

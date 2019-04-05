@@ -115,11 +115,12 @@
     overflow-y: auto !important;
     overflow-x: auto !important;
     display: block !important;
-    max-height: 450px ;
+    max-height: 450px !important ;
 }
-.margem_botao{
-    margin: 25px ;
-    padding-bottom: 30px ;
+@media screen and (max-width: 435px){
+    .caixa_card_texto{
+        max-height: 200px !important ;
+    }
 }
 .caixa_texto{
     background-color: rgba(55, 110, 199, 0.521);
