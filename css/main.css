@@ -15,14 +15,14 @@ body{
     height: auto;
 }
 /* Produtos */
-.card{
+/* .card{
     height:300px;
     width:300px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
 }
 .wrap
 {
-  margin:50px auto 0 auto;
+  margin:50px auto 0 auto; 
   width:300px;
   display:flex;
   align-items:space-around;
@@ -57,7 +57,7 @@ body{
 }
 .tile .text
 {
-/*   z-index:99; */
+/*   z-index:99; 
   position:absolute;
   padding:30px;
   height:calc(100% - 60px);
@@ -79,7 +79,7 @@ body{
   font-weight:300;
   margin:20px 0 0 0;
   line-height: 25px;
-/*   opacity:0; */
+/*   opacity:0; 
   transform: translateX(-200px);
   transition-delay: 0.2s;
 }
@@ -90,7 +90,7 @@ body{
 }
 .tile:hover
 {
-/*   background-color:#99aeff; */
+/*   background-color:#99aeff; 
 box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
   transform:scale(1.05);
   background-color: rgba(54, 92, 154, 0.938);
@@ -128,7 +128,7 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
     height:60px;
     border: 2px solid #365C9A;
     text-align: center;
-}
+} */
 
 /* Portfólio */
 
@@ -308,7 +308,7 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 
 /* Contato */
 
-#contate-nos h3, #mande_mensagem h3, #subTituloSobre{
+#contate-nos h3, #mande_mensagem h3, #subTituloSobre,#nomeProduto{
     text-align: center;
     font-size: 33px;
     font-weight: 600;
