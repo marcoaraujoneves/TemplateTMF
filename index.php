@@ -213,25 +213,76 @@
                             </h1>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-6">
+                    <div class="row mx-auto">
+                        <div class="col-lg-6 row">
+                            <div class="col-md-6" style="padding:5px;height:auto">
+                                <div class="" style="box-sizing:border-box;border:2px solid #365C9A;border-bottom:none;height:80%;padding:10px;">
+                                    <img src="img/produto1.jpg" class="img-fluid rounded my-auto mx-auto d-block" style="width:250px;height:200px;">
+                                </div>
+
+                                <div class="" style="border:2px solid #365C9A;height:20%;">
+                                    <div class="justify-content-center align-items-center d-flex" style="margin-top:7px; display:inline-block;" >
+                                        <h4 id="nomeProduto"> Produto 1 </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6" style="padding:5px;height:auto">
+                                <div class="" style="box-sizing:border-box;border:2px solid #365C9A;border-bottom:none;height:80%;padding:10px;">
+                                    <img src="img/produto2.jpg" class="img-fluid rounded my-auto mx-auto d-block" style="width:250px;height:200px;">
+                                </div>
+
+                                <div class="" style="border:2px solid #365C9A;height:20%;">
+                                    <div class="justify-content-center align-items-center d-flex" style="margin-top:7px; display:inline-block;" >
+                                        <h4 id="nomeProduto"> Produto 2 </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 row">
+                            <div class="col-md-6" style="padding:5px;height:auto">
+                                <div class="" style="box-sizing:border-box;border:2px solid #365C9A;border-bottom:none;height:80%;padding:10px;">
+                                    <img src="img/produto3.jpg" class="img-fluid rounded my-auto mx-auto d-block" style="width:250px;height:200px;">
+                                </div>
+
+                                <div class="" style="border:2px solid #365C9A;height:20%;">
+                                    <div class="justify-content-center align-items-center d-flex" style="margin-top:7px; display:inline-block;" >
+                                        <h4 id="nomeProduto"> Produto 3 </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6" style="padding:5px;height:auto">
+                                <div class="" style="box-sizing:border-box;border:2px solid #365C9A;border-bottom:none;height:80%;padding:10px;">
+                                    <h2 style="font-size:150px;text-align:center;color:#365C9A">+</span>
+                                </div>
+
+                                <div class="" style="border:2px solid #365C9A;height:20%;">
+                                    <div class="justify-content-center align-items-center d-flex" style="margin-top:7px; display:inline-block;" >
+                                        <h4 id="nomeProduto"> Ver Mais </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-lg-6">
                             <div class="row">
                                 <div class="col-md-6 text-center wrap">
                                     <div class="card tile">
                                         <img src="img/prod.png" alt="Avatar" class="img_prod">
-                                        <h2 class="animate-text">Nome do Produto 1</h2><!--Suporta 29 caracteres. Nome do produto-->
-                                        <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p><!--Suporta até 168 caracteres. Descrição-->
+                                        <h2 class="animate-text">Nome do Produto 1</h2><!--Suporta 29 caracteres. Nome do produto
+                                        <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p><!--Suporta até 168 caracteres. Descrição
                                     </div>
                                 </div>
                                 <div class="col-md-6 text-center wrap">
                                     <div class="card tile">
                                         <img src="img/prod.png" alt="Avatar" class="img_prod">
-                                        <h2 class="animate-text">Nome do Produto 2</h2><!--Suporta 29 caracteres papap-->
-                                        <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p><!--Suporta até 168 caracteres-->         
+                                        <h2 class="animate-text">Nome do Produto 2</h2><!--Suporta 29 caracteres papap
+                                        <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p><!--Suporta até 168 caracteres
                                     </div>
                                 </div>
                             </div>
-                        </div> 
+                        </div>  
                         <div class="col-lg-6">
                             <div class="row">
                                 <div class="col-md-6 text-center wrap">
@@ -247,7 +298,7 @@
                                             <h2 class="animate-text">Nome do Produto 4</h2>
                                             <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>   
                                             <br>       
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </section>
