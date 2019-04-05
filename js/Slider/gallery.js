@@ -215,9 +215,14 @@ $(function() {
 				var $thumb		= $item.find('img'),
 					largesrc	= $thumb.data('large'),
 					title		= $thumb.data('description');
-				
+					iframe		= $thumb.data('iframe');
+
 				$('<img/>').load( function() {
 					
+					if(iframe == "1"){
+						alert("teste");
+					}
+
 					$rgGallery.find('div.rg-image').empty().append('<img src="' + largesrc + '"/>');
 					
 					if( title )

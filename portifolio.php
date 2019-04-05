@@ -16,10 +16,35 @@
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/portifolio.css">
+        <link rel="stylesheet" href="css/produtos_servico.css">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/footer.css">
 
         <title> Indústria TMF | Home </title> 
+        <noscript>
+			<style>
+				.es-carousel ul{
+					display:block;
+				}
+			</style>
+		</noscript>
+		<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
+			<div class="rg-image-wrapper">
+				{{if itemsCount > 1}}
+					<div class="rg-image-nav">
+						<a href="#" class="rg-image-nav-prev">Previous Image</a>
+						<a href="#" class="rg-image-nav-next">Next Image</a>
+					</div>
+				{{/if}}
+				<div class="rg-image"></div>
+				<div class="rg-loading"></div>
+				<div class="rg-caption-wrapper">
+					<div class="rg-caption" style="display:none;">
+						<p></p>
+					</div>
+				</div>
+			</div>
+        </script>
 
     </head>
     
@@ -42,42 +67,46 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row" id="barraCard">
-                                    <ul class="nav nav-tabs" role="tablist">
-                                        <li class="nav-item"><a class="nav-link active" href="#imgPort" role="tab" data-toggle="tab"> Imagens e Descrição </a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#videoPort" role="tab" data-toggle="tab"> Vídeo </a></li>
-                                    </ul>
-                                </div>
-                                <div class="row" style="padding:20px">
-                                    <div class="col-md-12">
-                                        <div class="tab-content">
-                                            <div class="tab-pane fade show active"  role="tabpanel" id="imgPort">
-                                                <div class="row">
-                                                    <div class="col-md-5"> 
-                                                        <img src="img/prod.png" alt="Avatar" class="img_ser">
-                                                    </div>
-                                                    <div class="col-md-7">
-                                                        <h4 style="font-size: 27px;font-weight: 600;color: rgb(41, 70, 117);">Nome Serviço</h4>
-                                                        <p class="card-text">Suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius duis at consectetur lorem donec massa sapien faucibus et molestie</p>
-                                                        <input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#ModalServ" id="enviar" name="contratar" value="Contratar">
-                                                    </div>
-                                                </div>
+                        <div class="col  order-sm-1 mt-2 mb-4 d-flex">
+                            <div class="Conteudo_slider mx-auto my-auto">
+                                <div id="rg-gallery1" class="rg-gallery">
+                                    <div class="rg-thumbs">
+                                        <!-- Elastislide Carousel Thumbnail Viewer -->
+                                        <div class="es-carousel-wrapper">
+                                            <div class="es-nav">
+                                                <span class="es-nav-prev">Previous</span>
+                                                <span class="es-nav-next">Next</span>
                                             </div>
-                                                
-                                            <div class="tab-pane fade"  role="tabpanel" id="videoPort">
-                                                <div class="row">
-                                                    <div class="col-md-12 mx-auto my-auto"> 
-                                                        <iframe width="700" height="400" src="https://www.youtube.com/embed/TMZi25Pq3T8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-                                                </div>
+                                            <div class="es-carousel">
+                                                <ul class="lista_imagens ">                                       
+                                                    <li><a href="#"><img src="img/tornearia-1.gif" data-large="img/tornearia-1.gif" " data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/usinagem-2.jpg" data-large="img/usinagem-2.jpg" " data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/usinagem-1.jpg" data-large="img/usinagem-1.jpg" " data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/tornearia-1.gif" data-large="img/tornearia-1.gif" " data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/usinagem-2.jpg" data-large="img/usinagem-2.jpg" " data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/usinagem-1.jpg" data-large="img/usinagem-1.jpg" " data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/tornearia-1.gif" data-large="img/tornearia-1.gif" " data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/usinagem-2.jpg" data-large="img/usinagem-2.jpg" " data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/usinagem-1.jpg" data-large="img/usinagem-1.jpg" " data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/tornearia-1.gif" data-large="img/tornearia-1.gif" " data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/usinagem-2.jpg" data-large="img/usinagem-2.jpg" " data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                                    <li><a href="#"><img src="img/usinagem-1.jpg" data-large="img/usinagem-1.jpg" data-description="" data-iframe="1"/></a></li>
+                                                </ul>
                                             </div>
-                                            
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
                     </div>
@@ -88,58 +117,23 @@
         <footer>
             <?php include_once('footer.php'); ?>
         </footer>
-        
-        <!-- Modal -->
-        <div class="modal fade" id="ModalServ" tabindex="-1" role="dialog" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" style="font-size: 27px;font-weight: 600;color: rgb(41, 70, 117);">Contato</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                    <form>
-                                                <div class="container-fluid">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <label class="txtForm" for="nome"> &ensp;Nome </label> <br>
-                                                            <input type="text" class="inpForm" id="nome" name="nome" autocomplete="off" required>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <label class="txtForm" for="telefone"> &ensp;Telefone </label> <br>
-                                                            <input type="text" class="inpForm" id="telefone" name="telefone" autocomplete="off" required>
-                                                        </div>
-                                                    </div>
-                                                    <br>
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <label class="txtForm" for="email"> &ensp;E-mail </label> <br>
-                                                            <input type="email" class="inpForm" id="email" name="email" autocomplete="off" required>
-                                                        </div>
-                                                    </div>
-                                                    <br>
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <label class="txtForm" for="mensagem"> &ensp;Mensagem </label> <br>
-                                                            <textarea class="inpForm" id="mensagem" name="mensagem" rows="6" required> </textarea>
-                                                        </div>
-                                                    </div>
-                                                    <br>
-                                                </div>
-                                            </form>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <input type="submit" class="btn btn-primary" id="enviar" name="enviar" value="Enviar">  
-                                            </div>
-                                        </div>
-                                    </div>
     </body>
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    
+    <script>
+            jQuery(document).ready(function ($) {
+            SelectRgGallery("#rg-gallery1");
+            });
+    </script>
+
+    <script type="text/javascript" src="js/Slider/ajax.libs.jquery.mim.js"></script>
+    <script type="text/javascript" src="js/Slider/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="js/Slider/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/Slider/jquery.elastislide.js"></script>
+    <script type="text/javascript" src="js/Slider/gallery.js"></script>
 </html>
 
 <!-- MODELO
