@@ -241,7 +241,7 @@
                         </div>
 
                         <div class="col-lg-6 row">
-                            <div class="col-md-6" style="padding:5px;height:auto">
+                            <div class="col-md-6" style="padding:5px;height:auto;">
                                 <div class="" style="box-sizing:border-box;border:2px solid #365C9A;border-bottom:none;height:80%;padding:10px;">
                                     <img src="img/produto3.jpg" class="img-fluid rounded my-auto mx-auto d-block" style="width:250px;height:200px;">
                                 </div>
@@ -254,15 +254,17 @@
                             </div>
 
                             <div class="col-md-6" style="padding:5px;height:auto">
-                                <div class="" style="box-sizing:border-box;border:2px solid #365C9A;border-bottom:none;height:80%;padding:10px;">
-                                    <h2 style="font-size:150px;text-align:center;color:#365C9A">+</span>
-                                </div>
-
-                                <div class="" style="border:2px solid #365C9A;height:20%;">
-                                    <div class="justify-content-center align-items-center d-flex" style="margin-top:7px; display:inline-block;" >
-                                        <h4 id="nomeProduto"> Ver Mais </h4>
+                                <a href="produtos.php" style="text-decoration:none;">
+                                    <div class="" style="box-sizing:border-box;border:2px solid #365C9A;border-bottom:none;height:80%;padding:10px;">
+                                        <h2 style="font-size:150px;text-align:center;color:#365C9A">+</span>
                                     </div>
-                                </div>
+
+                                    <div class="" style="border:2px solid #365C9A;height:20%;">
+                                        <div class="justify-content-center align-items-center d-flex" style="margin-top:7px; display:inline-block;" >
+                                            <h4 id="nomeProduto"> Ver Mais </h4>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <!-- <div class="col-lg-6">
