@@ -91,9 +91,23 @@ $(document).ready(function(){
         }
     });
 
-    $('.btn_port').click(function(){
-        $('.img_btn_port').attr("src","../img/circulo.png");
-        $("img",this).attr("src","../img/circulo2.png");
+    $('.containerProduto').mouseover(function(){
+        $('#'+this.id+' .cardProdutosDescricao').addClass('cardProdutosDescricaoAtivo');
+        $('#'+this.id+' .cardProdutosDescricao').animate({
+            height:"82.5%",
+            "margin-top": "-75%"
+        },70);
+        $('#'+this.id+' .cardProdutosDescricao .descricaoProduto').removeClass("d-none");
+    });
+    
+    $('.containerProduto').mouseleave(function(){
+        
+        $('#'+this.id+' .cardProdutosDescricao').animate({
+            height:"20%",
+            "margin-top": "0%"
+        },30);
+        $('#'+this.id+' .cardProdutosDescricao').removeClass('cardProdutosDescricaoAtivo');
+        $('#'+this.id+' .cardProdutosDescricao .descricaoProduto').addClass("d-none");
     });
 });
 

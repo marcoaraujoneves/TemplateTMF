@@ -15,6 +15,49 @@ body{
     height: auto;
 }
 /* Produtos */
+
+.cardProdutos{
+    padding:5px;
+    height:auto;
+    position: relative;
+}
+
+.containerProduto{
+    height:100%;
+    position: relative;
+}
+
+.cardProdutosImgContainer{
+    box-sizing:border-box;
+    border:2px solid #365C9A;
+    border-bottom:none;
+    height:80%;
+    padding:10px;
+    position: static;
+}
+
+.cardProdutosImgContainer img{
+    width:250px;
+    height:200px;
+}
+
+.cardProdutosDescricao{
+    box-sizing: inherit;
+    border:2px solid #365C9A;
+    height:20%;
+    position: relative;
+    transition: background-color 0.2s linear 0s, color 0.2s linear 0s;
+}
+
+.cardProdutosDescricaoAtivo{
+    background-color: rgba(54, 92, 154, 0.90);
+    color: white!important;
+}
+
+.nomeProduto{
+    margin-top:7px;
+    display:inline-block;
+}
 /* .card{
     height:300px;
     width:300px;

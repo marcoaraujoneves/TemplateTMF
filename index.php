@@ -215,47 +215,71 @@
                     </div>
                     <div class="row mx-auto">
                         <div class="col-lg-6 row">
-                            <div class="col-md-6" style="padding:5px;height:auto">
-                                <div class="" style="box-sizing:border-box;border:2px solid #365C9A;border-bottom:none;height:80%;padding:10px;">
-                                    <img src="img/produto1.jpg" class="img-fluid rounded my-auto mx-auto d-block" style="width:250px;height:200px;">
-                                </div>
+                            <div class="col-md-6 cardProdutos" data-ativo="1">
+                                <div class="containerProduto" id="cardProduto1">
+                                    <div class="cardProdutosImgContainer">
+                                        <img src="img/produto1.jpg" class="img-fluid rounded my-auto mx-auto d-block">
+                                    </div>
 
-                                <div class="" style="border:2px solid #365C9A;height:20%;">
-                                    <div class="justify-content-center align-items-center d-flex" style="margin-top:7px; display:inline-block;" >
-                                        <h4 id="nomeProduto"> Produto 1 </h4>
+                                    <div class="cardProdutosDescricao">
+                                        <div class="justify-content-center align-items-center d-flex nomeProduto">
+                                            <h4 id="nomeProduto"> Produto 1 </h4>
+                                        </div>
+                                        <!-- <div class="descricaoProduto d-none">
+                                            <p class="text-justify p-1" style="transition: display 1s linear 1s;">
+                                                Lorem ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak...
+                                                <a href="#"> Ver mais... </a>
+                                            </p>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-md-6" style="padding:5px;height:auto">
-                                <div class="" style="box-sizing:border-box;border:2px solid #365C9A;border-bottom:none;height:80%;padding:10px;">
-                                    <img src="img/produto2.jpg" class="img-fluid rounded my-auto mx-auto d-block" style="width:250px;height:200px;">
-                                </div>
+                            <div class="col-md-6 cardProdutos" data-ativo="1">
+                                <div class="containerProduto" id="cardProduto2">
+                                    <div class="cardProdutosImgContainer">
+                                        <img src="img/produto2.jpg" class="img-fluid rounded my-auto mx-auto d-block">
+                                    </div>
 
-                                <div class="" style="border:2px solid #365C9A;height:20%;">
-                                    <div class="justify-content-center align-items-center d-flex" style="margin-top:7px; display:inline-block;" >
-                                        <h4 id="nomeProduto"> Produto 2 </h4>
+                                    <div class="cardProdutosDescricao">
+                                        <div class="justify-content-center align-items-center d-flex nomeProduto">
+                                            <h4 id="nomeProduto"> Produto 2 </h4>
+                                        </div>
+                                        <!-- <div class="descricaoProduto d-none">
+                                            <p class="text-justify p-1" style="transition: display 1s linear 1s;">
+                                                Lorem ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak...
+                                                <a href="#"> Ver mais... </a>
+                                            </p>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-6 row">
-                            <div class="col-md-6" style="padding:5px;height:auto;">
-                                <div class="" style="box-sizing:border-box;border:2px solid #365C9A;border-bottom:none;height:80%;padding:10px;">
-                                    <img src="img/produto3.jpg" class="img-fluid rounded my-auto mx-auto d-block" style="width:250px;height:200px;">
-                                </div>
+                            <div class="col-md-6 cardProdutos" data-ativo="1">
+                                <div class="containerProduto" id="cardProduto3">
+                                    <div class="cardProdutosImgContainer">
+                                        <img src="img/produto3.jpg" class="img-fluid rounded my-auto mx-auto d-block">
+                                    </div>
 
-                                <div class="" style="border:2px solid #365C9A;height:20%;">
-                                    <div class="justify-content-center align-items-center d-flex" style="margin-top:7px; display:inline-block;" >
-                                        <h4 id="nomeProduto"> Produto 3 </h4>
+                                    <div class="cardProdutosDescricao">
+                                        <div class="justify-content-center align-items-center d-flex nomeProduto">
+                                            <h4 id="nomeProduto"> Produto 3 </h4>
+                                        </div>
+                                        <!-- <div class="descricaoProduto d-none">
+                                            <p class="text-justify p-1" style="transition: display 1s linear 1s;">
+                                                Lorem ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak...
+                                                <a href="#"> Ver mais... </a>
+                                            </p>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-md-6" style="padding:5px;height:auto">
                                 <a href="produtos.php" style="text-decoration:none;">
-                                    <div class="" style="box-sizing:border-box;border:2px solid #365C9A;border-bottom:none;height:80%;padding:10px;">
+                                    <div style="box-sizing:border-box;border:2px solid #365C9A;border-bottom:none;height:80%;padding:10px;">
                                         <h2 style="font-size:150px;text-align:center;color:#365C9A">+</span>
                                     </div>
 
