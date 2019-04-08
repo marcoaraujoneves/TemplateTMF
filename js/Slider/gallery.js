@@ -215,11 +215,18 @@ $(function() {
 				var $thumb		= $item.find('img'),
 					largesrc	= $thumb.data('large'),
 					title		= $thumb.data('description');
-				
+					iframeimg	= $thumb.data('iframe');
+
 				$('<img/>').load( function() {
 					
-					$rgGallery.find('div.rg-image').empty().append('<img src="' + largesrc + '"/>');
-					
+					if(iframeimg != null){
+						$rgGallery.find('div.rg-image').empty().append(iframeimg);
+					} else {
+						$rgGallery.find('div.rg-image').empty().append('<img src="' + largesrc + '"/>');
+
+					}
+
+										
 					if( title )
 						$rgGallery.find('div.rg-caption').show().children('p').empty().text( title );
 					
