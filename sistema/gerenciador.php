@@ -23,6 +23,8 @@
         <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/responsividade.css">
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+        <!------------------------------- link para puxar os icones  ---------------------------->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
         <title> Sistema de Gerenciamento | TMF </title>
         
@@ -39,32 +41,32 @@
                     <div id="menuSistema">
                         <ul type="none">
                             <li class="itemMenuSistema" id="mod_servicos">
-                                <img src="../img/location.png">
+                                <i class="fa fa-flag" aria-hidden="true"></i>
                                 <span> Serviços </span>
                             </li>
                             <li class="itemMenuSistema" id="mod_produtos">
-                                <img src="../img/location.png">
+                                <i class="fa fa-briefcase" aria-hidden="true"></i>
                                 <span> Produtos </span>
                             </li>
                             <li class="itemMenuSistema" id="mod_portifolio">
-                                <img src="../img/location.png">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                 <span> Portifólio </span>
                             </li>
                             <li class="itemMenuSistema" id="mod_mensagens">
-                                <img src="../img/location.png">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
                                 <span> Mensagens </span>
                             </li>
                             <li class="itemMenuSistema" id="mod_conteudo">
-                                <img src="../img/location.png">
+                                <i class="fa fa-gears" aria-hidden="true"></i>
                                 <span> Conteúdo </span>
                             </li>
                             <li class="itemMenuSistema" id="mod_newsletter">
-                                <img src="../img/location.png">
+                                <i class="fa fa-newspaper-o" aria-hidden="true"></i>
                                 <span> Newsletter </span>
                             </li>
                             <a href="sair.php" style="text-decoration:none">
                                 <li class="itemMenuSistema" id="sair">
-                                    <img src="../img/location.png">
+                                    <i class="fa fa-user-times" aria-hidden="true"></i>
                                     <span> Sair </span>
                                 </li>
                             </a>
