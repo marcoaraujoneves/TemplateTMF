@@ -18,6 +18,8 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/responsividade.css">
+        <link rel="stylesheet" href="css/card.css">
+
 
         <title> Indústria TMF | Home </title> 
 
@@ -108,6 +110,38 @@
                                     
                                 </span>
                             </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container mt-3">
+                    <div class="row d-flex mx-auto my-auto">
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-0 mb-3">
+                            <div class="card border-danger d-flex justify-content-center p-3">
+                                <div class="text-info text-center"><h4 class="font_info_card"> Projetos entregues</h4></div>
+                                <div class="linha_separadora"></div>
+                                <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero1">1</div></h2></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-0 mb-3">
+                            <div class="card border-danger d-flex justify-content-center p-3">
+                                <div class="text-info text-center"><h4 class="font_info_card">Anos no mercado</h4></div>
+                                <div class="linha_separadora"></div>
+                                <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero2">1</div></h2></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-0 mb-3 ">
+                            <div class="card border-danger d-flex justify-content-center p-3">
+                                <div class="text-info text-center"><h4 class="font_info_card">Produtos próprios</h4></div>
+                                <div class="linha_separadora"></div>
+                                <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero3">1</div></h2></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-0 mb-3">
+                            <div class="card border-danger d-flex justify-content-center p-3">
+                                <div class="text-info text-center "><h4 class="font_info_card">Opções de serviço</h4></div>
+                                <div class="linha_separadora"></div>
+                                <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero4">1</div></h2></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -636,6 +670,71 @@
     <script src="js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <!-------------------------- scripts de contagem  ------------------------------------------>
+    <script info="primeiro card">
+        $(window).scroll(function(event){
+            if($(document).scrollTop()>200){
+                var numero = document.getElementById('numero1');
+                var min = 1;
+                var max = 28;
+                var duração = 5000; // 5 segundos
+                for (var i = min; i <= max; i++) {
+                    setTimeout(function(nr) {
+                    numero.innerHTML = nr;
+                    }, i * 2000 / max, i);
+                }
+                $( this ).off( event );
+            }
+        });
+    </script>
+    <script info="segundo card">
+        $(window).scroll(function(event){
+            if($(document).scrollTop()>200){
+                var numero = document.getElementById('numero2');
+                var min = 1;
+                var max = 6;
+                var duração = 5000; // 5 segundos
+                for (var i = min; i <= max; i++) {
+                    setTimeout(function(nr) {
+                    numero.innerHTML = nr;
+                    }, i * 2000 / max, i);
+                }
+                $( this ).off( event );
+            }
+        });
+    </script>
+    <script info="terceiro card">
+        $(window).scroll(function(event){
+            if($(document).scrollTop()>200){
+                var numero = document.getElementById('numero3');
+                var min = 1;
+                var max = 10;
+                var duração = 5000; // 5 segundos
+                for (var i = min; i <= max; i++) {
+                    setTimeout(function(nr) {
+                    numero.innerHTML = nr;
+                    }, i * 2000 / max, i);
+                }
+                $( this ).off( event );
+            }
+        });
+    </script>    
+    <script info="quarto card">
+        $(window).scroll(function(event){
+            if($(document).scrollTop()>200){
+                var numero = document.getElementById('numero4');
+                var min = 1;
+                var max = 15;
+                var duração = 5000; // 5 segundos
+                for (var i = min; i <= max; i++) {
+                    setTimeout(function(nr) {
+                    numero.innerHTML = nr;
+                    }, i * 2000 / max, i);
+                }
+                $( this ).off( event );
+            }
+        });
+    </script>
 </html>
 
 <!-- MODELO
