@@ -566,7 +566,7 @@
                             <h3> Contate-nos</h3>
                             <div class="row justify-content-center p-2">
                                 <div class="icone-contatenos">
-                                    <img class="img-responsive" src='img/location.png'>
+                                    <img class="img-responsive" src='img/Contato/local.png'>
                                 </div>
                                 <div class="info-contatenos">
                                     <span id="infendereco"> 
@@ -577,7 +577,7 @@
                             </div>
                             <div class="row justify-content-center p-2">
                                 <div class="icone-contatenos">
-                                    <img class="img-responsive" src='img/location.png'>
+                                    <img class="img-responsive" src='img/Contato/telefone.png'>
                                 </div>
                                 <div class="info-contatenos">
                                     <span id="inftelefones"> 
@@ -588,7 +588,7 @@
                             </div>
                             <div class="row justify-content-center p-2">
                                 <div class="icone-contatenos">
-                                    <img class="img-responsive" src='img/location.png'>
+                                    <img class="img-responsive" src='img/Contato/email.png'>
                                 </div>    
                                 <div class="info-contatenos">
                                     <span id="infemail"> 
