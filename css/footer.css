@@ -111,6 +111,8 @@ li{
 
 .tags{
     font-size: 12pt;
+    display: inline-block;
+    text-align: center;
 }
 
 /*-- Parte Direitos --*/
