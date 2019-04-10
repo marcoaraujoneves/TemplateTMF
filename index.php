@@ -70,11 +70,11 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 my-auto">
+                        <!-- <div class="col-md-6 my-auto">
                             <div class="row">
                                 <div class="col-md-6">
                                     <p class="texto indicadores">
-                                        <span id="indicador1qt">0 </span> &nbsp;
+                                        <span >0 </span> &nbsp;
                                         <span id="indicador1"> </span>
                                     </p>
                                 </div>
@@ -100,8 +100,8 @@
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
+                        </div> -->
+                        <div class="col-md-6 offset-md-6">
                             <!-- Texto com até 700 caracteres, minimo 530 -->
                             <h3 style="text-align:right;" id="subTituloSobre"> Conheça a TMF </h3>
                             <p class="texto" style="text-align:justify;">
@@ -117,28 +117,28 @@
                     <div class="row d-flex mx-auto my-auto">
                         <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-0 mb-3">
                             <div class="card border-danger d-flex justify-content-center p-3">
-                                <div class="text-info text-center"><h4 class="font_info_card"> Projetos entregues</h4></div>
+                                <div class="text-info text-center"><h4 class="font_info_card text-capitalize" id="indicador1"> Projetos entregues</h4></div>
                                 <div class="linha_separadora"></div>
                                 <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero1">1</div></h2></div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-0 mb-3">
                             <div class="card border-danger d-flex justify-content-center p-3">
-                                <div class="text-info text-center"><h4 class="font_info_card">Anos no mercado</h4></div>
+                                <div class="text-info text-center"><h4 class="font_info_card text-capitalize" id="indicador2">Anos no mercado</h4></div>
                                 <div class="linha_separadora"></div>
                                 <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero2">1</div></h2></div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-0 mb-3 ">
                             <div class="card border-danger d-flex justify-content-center p-3">
-                                <div class="text-info text-center"><h4 class="font_info_card">Produtos próprios</h4></div>
+                                <div class="text-info text-center"><h4 class="font_info_card text-capitalize" id="indicador3">Produtos próprios</h4></div>
                                 <div class="linha_separadora"></div>
                                 <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero3">1</div></h2></div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-0 mb-3">
                             <div class="card border-danger d-flex justify-content-center p-3">
-                                <div class="text-info text-center "><h4 class="font_info_card">Opções de serviço</h4></div>
+                                <div class="text-info text-center "><h4 class="font_info_card text-capitalize" id="indicador4">Opções de serviço</h4></div>
                                 <div class="linha_separadora"></div>
                                 <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero4">1</div></h2></div>
                             </div>
@@ -673,7 +673,7 @@
     <!-------------------------- scripts de contagem  ------------------------------------------>
     <script info="primeiro card">
         $(window).scroll(function(event){
-            if($(document).scrollTop()>200){
+            if($(document).scrollTop()>175){
                 var numero = document.getElementById('numero1');
                 var min = 1;
                 var max = 28;
@@ -689,7 +689,7 @@
     </script>
     <script info="segundo card">
         $(window).scroll(function(event){
-            if($(document).scrollTop()>200){
+            if($(document).scrollTop()>175){
                 var numero = document.getElementById('numero2');
                 var min = 1;
                 var max = 6;
@@ -705,7 +705,7 @@
     </script>
     <script info="terceiro card">
         $(window).scroll(function(event){
-            if($(document).scrollTop()>200){
+            if($(document).scrollTop()>175){
                 var numero = document.getElementById('numero3');
                 var min = 1;
                 var max = 10;
@@ -721,7 +721,7 @@
     </script>    
     <script info="quarto card">
         $(window).scroll(function(event){
-            if($(document).scrollTop()>200){
+            if($(document).scrollTop()>175){
                 var numero = document.getElementById('numero4');
                 var min = 1;
                 var max = 15;

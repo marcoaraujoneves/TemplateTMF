@@ -87,16 +87,23 @@ body{
     width: 95%;
     margin: 0 auto;
     padding: 15px;
-    color: lightgray;
+    color: rgb(219, 219, 219);
     border-bottom: 1px groove gray;
     transition: padding-left 0.5s ease 0s, text-shadow 0.5s ease 0s, border-bottom 0.5s ease 0s;
 }
 
 .itemMenuSistema:hover{
     padding-left: 25px;
-    text-shadow: 2px 2px 2px black;
+    color: white!important;
+    text-shadow: 2px 2px 7px rgb(231, 231, 231);
     border-bottom: 1px groove lightgray;
     cursor: pointer;
+}
+
+.itemMenuSistemaAtivo{
+    padding-left: 25px;
+    color: white!important;
+    text-shadow: 2px 2px 7px rgb(231, 231, 231);
 }
 
 .itemMenuSistema img{

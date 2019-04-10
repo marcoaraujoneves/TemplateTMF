@@ -41,6 +41,11 @@
         display: none;
     }
 
+    .itemMenuSistema{
+        /* display: block; */
+        text-align: center!important;
+    }
+    
     .itemMenuSistema span{
         display: none;
     }

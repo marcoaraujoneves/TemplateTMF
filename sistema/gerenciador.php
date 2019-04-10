@@ -40,7 +40,7 @@
 
                     <div id="menuSistema">
                         <ul type="none">
-                            <li class="itemMenuSistema" id="mod_servicos">
+                            <li class="itemMenuSistema itemMenuSistemaAtivo mx-auto" id="mod_servicos">
                                 <i class="fa fa-flag" aria-hidden="true"></i>
                                 <span> Serviços </span>
                             </li>

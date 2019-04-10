@@ -22,61 +22,63 @@ background:#2d2d2d;}
 <div class="container">
     <div class="row">
         <div class="col-md-4 offset-md-4">
-            <button data-toggle="modal" data-target="#cadastrarServico" id="services" class="btn btn-lg BotaoCadastra">Cadastrar Serviço</button>
+            <button data-toggle="modal" data-target="#cadastrarServico" id="services" class="mx-auto d-block btn btn-lg BotaoCadastra">Cadastrar Serviço</button>
         </div>
     </div>
 </div>
 <br>
-<table  class="table table-striped table-bordered table-hover Tabela" style="width:1000px;" id="tb1">
-    <thead >
-        <tr >
-            <th width='50px' >Imagem</th>
-            <th>Código</th>
-            <th>Nome</th>
-            <th>Descrição</th>
-            <th>Estatus</th>
-            <th style="text-align:center;">Operação</th>
-        </tr>
-    </thead>
-    <tbody>
-<!-- Foi utilizado um foreach para pegar e gerar os dados de cada slide. O fechamento de aspas e . são utilizados para concatenar o php com html-->
-<?php 
-include ('db.class.php');
-$objDB = new db();
-$conn = $objDB->conecta_mysql();
-$query_select = "SELECT * FROM servico;";
-$result_select = mysqli_query($conn,$query_select) or die(mysql_error());
-$rows = array();
-while($row = mysqli_fetch_array($result_select))
-	$rows[] = $row;
-foreach($rows as $row){ 
-	$codServico = $row['codServico'];
-	$nome = $row['nome'];
-	$descricao = $row['descricao'];
-	$estatus = $row['estatus'];
-	echo '<tr class="odd gradeX">';
-	echo '<td><img src="Img/Servicos/'.$codServico.'.jpg" class="ImgTd"></td>';
-	echo '<td>'.$codServico.'</td>';
-	echo '<td>'.$nome.'</td>';
-	echo '<td>'.$descricao.'</td>';
-	if($estatus){
-		echo '<td >
-		<input id="estatus" name="estatus"  value="'.$codServico.'" type="checkbox" checked>
-		</td>';}else{
-			echo $estatus;
-			echo '<td >
-			<input id="estatus" name="estatus"  value="'.$codServico.'" type="checkbox" >
-			</td>';
+<div class="table-responsive">
+	<table  class="table table-striped table-hover Tabela" style="width:1000px;" id="tb1">
+		<thead >
+			<tr >
+				<th width='50px' >Imagem</th>
+				<th>Código</th>
+				<th>Nome</th>
+				<th>Descrição</th>
+				<th>Estatus</th>
+				<th style="text-align:center;">Operação</th>
+			</tr>
+		</thead>
+		<tbody>
+		<!-- Foi utilizado um foreach para pegar e gerar os dados de cada slide. O fechamento de aspas e . são utilizados para concatenar o php com html-->
+		<?php 
+		include ('db.class.php');
+		$objDB = new db();
+		$conn = $objDB->conecta_mysql();
+		$query_select = "SELECT * FROM servico;";
+		$result_select = mysqli_query($conn,$query_select) or die(mysql_error());
+		$rows = array();
+		while($row = mysqli_fetch_array($result_select))
+			$rows[] = $row;
+		foreach($rows as $row){ 
+			$codServico = $row['codServico'];
+			$nome = $row['nome'];
+			$descricao = $row['descricao'];
+			$estatus = $row['estatus'];
+			echo '<tr class="odd gradeX">';
+			echo '<td><img src="Img/Servicos/'.$codServico.'.jpg" class="ImgTd"></td>';
+			echo '<td>'.$codServico.'</td>';
+			echo '<td>'.$nome.'</td>';
+			echo '<td>'.$descricao.'</td>';
+			if($estatus){
+				echo '<td >
+				<input id="estatus" name="estatus"  value="'.$codServico.'" type="checkbox" checked>
+				</td>';}else{
+					echo $estatus;
+					echo '<td >
+					<input id="estatus" name="estatus"  value="'.$codServico.'" type="checkbox" >
+					</td>';
 
 
-		}
-		echo '<td><button class="btn Botao" data-toggle="modal" id="modificaServico" data-target="#modificarServicos" value="'.$codServico.'" type="button">Modificar</button><button class="btn Botao" data-toggle="modal" id="deletaServico" data-target="#exlcuirServico" value="'.$codServico.'" type="button">Excluir</button>';
-		echo '</tr>';
-		unset($estatus);
-	}
-	?>
-</tbody>
-</table>
+				}
+				echo '<td><button class="btn Botao" data-toggle="modal" id="modificaServico" data-target="#modificarServicos" value="'.$codServico.'" type="button">Modificar</button><button class="btn Botao" data-toggle="modal" id="deletaServico" data-target="#exlcuirServico" value="'.$codServico.'" type="button">Excluir</button>';
+				echo '</tr>';
+				unset($estatus);
+			}
+			?>
+		</tbody>
+	</table>
+</div>
 
 <div  class="modal" id="cadastrarServico" tabindex="-1" role="dialog">
 	<div class="modal-dialog" role="document">
