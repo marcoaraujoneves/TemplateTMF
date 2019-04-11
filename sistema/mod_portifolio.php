@@ -8,8 +8,7 @@ img{
 }
 input[type=file]{
 	padding:10px;
-	background:#2d2d2d;}
-
+}
 </style>
 <h1 class="titulo_secoes"> Portifólio </h1>
 <p>
@@ -70,35 +69,35 @@ input[type=file]{
 	</table>
 </div>
 
-<div  class="modal" id="cadastrarPortifolio" tabindex="-1" role="dialog">
-	<div class="modal-dialog" role="document">
+<div  class="modal fade" id="cadastrarPortifolio" tabindex="-1" role="dialog" aria-labelledby="modalCadastrarPortifolioTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
-			<div class="modal-header" style="background-color:rgb(99,00,33);">
-				<h5 class="modal-title" style="color:white;">Cadastramento de Portifolio:</h5>
+			<div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
+				<h5 class="modal-title">Cadastrar no Portifólio:</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
 			<div class="modal-body">
 				<form method="post" enctype="multipart/form-data"  id="formPortifolio" >
-					<input name="filesToUpload[]" id="filesToUpload" type="file" multiple="" />
+					<input name="filesToUpload[]" class="inpForm" id="filesToUpload" type="file" multiple="" />
 					<div class="form-group">
 						<label for="nomePortifolio">Nome</label>
-						<input type="text" name="nomePortifolio" id="nomePortifolio"   class="form-control"/>
+						<input type="text" name="nomePortifolio" id="nomePortifolio" class="inpForm" />
 					</div>
 					<div class="form-group">
 						<label for="descricaoPortifolio">Descrição</label>
-						<input type="text" name="descricaoPortifolio" id="descricaoPortifolio"   class="form-control"/>
+						<input type="text" name="descricaoPortifolio" id="descricaoPortifolio" class="inpForm"/>
 					</div>
 					<div class="form-group">
 						<label for="linkYoutube">Youtube Link</label>
-						<input type="text" name="linkYoutube" id="linkYoutube"   class="form-control"/>
+						<input type="text" name="linkYoutube" id="linkYoutube" class="inpForm"/>
 					</div>
-					<div>
-						<input type="submit" class="btn btn-success" id="carai" name="carai" value="Enviar"/>
-						<button type="button" class="btn btn-secondary" id="returnServico" data-dismiss="modal"> Cancelar </button>
-						<input type="hidden" id="addremove">
-					</div>
+			</div>
+			<div class="modal-footer">
+				<input type="submit" class="btn btn-success" id="carai" name="carai" value="Cadastrar"/>
+				<button type="button" class="btn btn-secondary" id="returnServico" data-dismiss="modal"> Cancelar </button>
+				<input type="hidden" id="addremove">
 				</form>
 			</div>
 		</div>

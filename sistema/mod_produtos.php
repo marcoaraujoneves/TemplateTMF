@@ -3,12 +3,12 @@
 <style type="text/css" media="screen">
 
 img{
-  max-width:100px;
-  max-height: :100px;
+	max-width:100px;
+	max-height: :100px;
 }
 input[type=file]{
-padding:10px;
-background:#2d2d2d;}
+	padding:10px;
+}
 
 </style>
 
@@ -69,31 +69,31 @@ background:#2d2d2d;}
 	</table>
 </div>
 
-<div  class="modal" id="cadastrarProduto" tabindex="-1" role="dialog">
-	<div class="modal-dialog" role="document">
+<div  class="modal fade" id="cadastrarProduto"  tabindex="-1" role="dialog" aria-labelledby="modalCadastrarProdutoTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
-			<div class="modal-header" style="background-color:rgb(99,00,33);">
-				<h5 class="modal-title" style="color:white;">Cadastramento de Serviço:</h5>
+			<div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
+				<h5 class="modal-title">Cadastrar Produto:</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
 			<div class="modal-body">
 				<form method="post" enctype="multipart/form-data"  id="formProduto" >
-					<input name="filesToUpload[]" id="filesToUpload" type="file" multiple="" />
+					<input name="filesToUpload[]" class="inpForm" id="filesToUpload" type="file" multiple="" />
 					<div class="form-group">
 						<label for="nomeProduto">Nome</label>
-						<input type="text" name="nomeProduto" id="nomeProduto" required  class="form-control"/>
+						<input type="text" name="nomeProduto" id="nomeProduto" required class="inpForm"/>
 					</div>
 					<div class="form-group">
 						<label for="descricaoProduto">Descrição</label>
-						<input type="text" name="descricaoProduto" id="descricaoProduto" required  class="form-control"/>
+						<input type="text" name="descricaoProduto" id="descricaoProduto" required class="inpForm"/>
 					</div>
-					<div>
-						<input type="submit" class="btn btn-success" id="potato" name="potato" value="Enviar"/>
-						<button type="button" class="btn btn-secondary" id="returnServico" data-dismiss="modal"> Cancelar </button>
-						<input type="hidden" id="addremove">
-					</div>
+			</div>
+			<div class="modal-footer">
+				<input type="submit" class="btn btn-success" id="potato" name="potato" value="Cadastrar"/>
+				<button type="button" class="btn btn-secondary" id="returnServico" data-dismiss="modal"> Cancelar </button>
+				<input type="hidden" id="addremove">
 				</form>
 			</div>
 		</div>
