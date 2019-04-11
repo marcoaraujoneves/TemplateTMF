@@ -4,19 +4,12 @@ footer{
     background-color: black !important;
 }
 
-/*-- Títulos --*/
-
-.titulos_rodape{
-    color: #365C9A;
-    border-bottom: 1pt solid #bac3ca;
-    margin-bottom: 25pt;
-}
-
 /*-- Menu --*/
 
 .item_menu_rodape{
     margin-top: 5pt;
     color: white!important;
+    display: block;
     cursor: pointer;
 }
 
@@ -26,7 +19,7 @@ footer{
 }
 
 .coluna_menu{
-    margin-left: 20pt;
+    /* margin-left: 20pt; */
 }
 
 /*-- Funcionamento --*/
@@ -45,14 +38,15 @@ footer{
 /*-- Tags Principais --*/
 
 .tags{
-    padding: 6pt;
+    /* padding: 5px; */
     color: white;
-    background-color: #2C2C2C ;
+    /* background-color: #2C2C2C ; */
     border-radius: 10pt;
+    /* font-size: 12px; */
 }
 
 .tags:hover{
-    background-color: #365C9A;
+    color: #365C9A;
     transition: 0.15s linear ;
     cursor: pointer;
 }
@@ -78,17 +72,21 @@ footer{
 /*-- Títulos --*/
 
 .titulos_rodape{
-    font-size: 30pt ;
+    color: #365C9A;
+    /* font-size: 12px ; */
     font-weight: 500;
     text-align: center;
+    border-bottom: 1pt solid #bac3ca;
+    margin-bottom: 25pt;
 }
 
 /*-- Menu --*/
 
 .item_menu_rodape{
-    font-size: 16pt;
-    text-align: justify;
+    /* font-size: 16pt; */
+    /* text-align: center; */
     cursor: pointer;
+    margin: 0;
 }
 
 li{
@@ -98,27 +96,28 @@ li{
 /*-- Funcionamento --*/
 
 .pre_item_funcionamento{
-    font-size: 14pt;
+    /* font-size: 14pt; */
     font-weight: bold;
 }
 
 .item_funcionamento {
-    font-size: 13pt;
+    /* font-size: 13pt; */
     text-align: initial;
 }
 
 /*-- Tags Principais --*/
 
 .tags{
-    font-size: 12pt;
+    /* font-size: 12pt; */
     display: inline-block;
     text-align: center;
+    text-decoration: underline;
 }
 
 /*-- Parte Direitos --*/
 
 #texto_direitos{
-    font-size: 12pt;
+    /* font-size: 12pt; */
     font-weight: bold;
 }
 

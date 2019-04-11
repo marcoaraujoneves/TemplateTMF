@@ -248,8 +248,8 @@
                         </div>
                     </div>
                     <div class="row mx-auto">
-                        <div class="col-lg-6 row">
-                            <div class="col-md-6 cardProdutos">
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="cardProdutos">
                                 <div class="containerProduto" id="cardProduto1">
                                     <div class="cardProdutosImgContainer">
                                         <img src="img/produto1.jpg" class="img-fluid rounded my-auto mx-auto d-block">
@@ -270,8 +270,9 @@
                                     </div> 
                                 </div>
                             </div>
-
-                            <div class="col-md-6 cardProdutos">
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="cardProdutos">
                                 <div class="containerProduto" id="cardProduto2">
                                     <div class="cardProdutosImgContainer">
                                         <img src="img/produto2.jpg" class="img-fluid rounded my-auto mx-auto d-block">
@@ -293,9 +294,8 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-lg-6 row">
-                            <div class="col-md-6 cardProdutos">
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="cardProdutos">
                                 <div class="containerProduto" id="cardProduto3">
                                     <div class="cardProdutosImgContainer">
                                         <img src="img/produto3.jpg" class="img-fluid rounded my-auto mx-auto d-block">
@@ -316,21 +316,21 @@
                                     </div> 
                                 </div>
                             </div>
-
-                            <div class="col-md-6" style="padding:5px;height:auto">
-                                <a href="produtos.php" style="text-decoration:none;">
-                                    <div style="box-sizing:border-box;border:2px solid #365C9A;border-bottom:none;height:80%;padding:10px;">
-                                        <h2 style="font-size:150px;text-align:center;color:#365C9A">+</span>
-                                    </div>
-
-                                    <div class="" style="border:2px solid #365C9A;height:20%;">
-                                        <div class="justify-content-center align-items-center d-flex nomeProduto" style="margin-top:7px; display:inline-block;" >
-                                            <h4 id="nomeProduto"> Ver Mais </h4>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
                         </div>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <a href="produtos.php" style="text-decoration:none;">
+                                <div style="box-sizing:border-box;border:2px solid #365C9A;border-bottom:none;height:80%;padding:10px;">
+                                    <h2 style="font-size:150px;text-align:center;color:#365C9A">+</span>
+                                </div>
+
+                                <div class="" style="border:2px solid #365C9A;height:20%;">
+                                    <div class="justify-content-center align-items-center d-flex nomeProduto" style="margin-top:7px; display:inline-block;" >
+                                        <h4 id="nomeProduto"> Ver Mais </h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                         <!-- <div class="col-lg-6">
                             <div class="row">
                                 <div class="col-md-6 text-center wrap">
@@ -365,7 +365,7 @@
                                             <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>   
                                             <br>       
                         </div>-->
-                    </div>
+                    
                 </div>
             </section>
             <!--/PRODUTOS-->
@@ -564,36 +564,36 @@
                     <div class="row">
                         <div class="col-lg-4" id="contate-nos">
                             <h3> Contate-nos</h3>
-                            <div class="row justify-content-center p-2">
-                                <div class="icone-contatenos">
-                                    <img class="img-responsive" src='img/Contato/local.png'>
-                                </div>
-                                <div class="info-contatenos">
-                                    <span id="infendereco"> 
-                                        Rua Prudente de Moraes, 200 <br>
-                                        Duas Pedras, Nova Friburgo-RJ
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="row justify-content-center p-2">
-                                <div class="icone-contatenos">
-                                    <img class="img-responsive" src='img/Contato/telefone.png'>
-                                </div>
-                                <div class="info-contatenos">
-                                    <span id="inftelefones"> 
-                                        (22) 2523-2525 <br>
-                                        (22) 2528-9055
-                                    </span>
+                            <div class="row p-2">
+                                <div class="col-md-12">
+                                    <div class="icone-contatenos">
+                                        <img class="img-responsive float-left d-inline-block" src='img/Contato/local.png'>
+                                    </div>
+                                    <div class="info-contatenos text-center">
+                                        <p class="m-0"><a href="https://goo.gl/maps/3fBXQVXTmBF2">Rua Prudente de Moraes, 200 <br> Duas Pedras, Nova Friburgo-RJ</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row justify-content-center p-2">
-                                <div class="icone-contatenos">
-                                    <img class="img-responsive" src='img/Contato/email.png'>
-                                </div>    
-                                <div class="info-contatenos">
-                                    <span id="infemail"> 
-                                        industriatmf@gigalink.com.br
-                                    </span>
+                            <div class="row p-2">
+                                <div class="col-md-12">
+                                    <div class="icone-contatenos">
+                                        <img class="img-responsive float-left d-inline-block" src='img/Contato/telefone.png'>
+                                    </div>
+                                    <div class="info-contatenos text-center">
+                                        <p class="m-0"><a href="tel:2225232525">(22) 2523-2525</a></p>
+                                        <p class="m-0"><a href="tel:2225289055">(22) 2528-9055</a></p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="row p-2">
+                                <div class="col-md-12">
+                                    <div class="icone-contatenos">
+                                        <img class="img-responsive float-left d-inline-block" src='img/Contato/email.png'>
+                                    </div>    
+                                    <div class="info-contatenos text-center">
+                                        <p><a href="mailto:industriatmf@gigalink.com.br">industriatmf@gigalink.com.br</a></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

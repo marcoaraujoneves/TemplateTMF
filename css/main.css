@@ -249,12 +249,12 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 }
 
 .info-contatenos{
-    display: table-cell;
+    /* display: table-cell; */
     vertical-align: middle;
-    padding-left: 6px;
+    /* padding-left: 6px; */
     height: 50px;
     /* width: 86%; */
-    float: left;
+    /* float: left; */
 }
 
 #mande_mensagem{
