@@ -10,6 +10,11 @@
     margin:5px;
 }
 
+.img_pequena{
+    height: 60px !important;
+    margin: 5px !important;
+}
+
 .navbar-toggler{
     margin-right: 30px;
 }

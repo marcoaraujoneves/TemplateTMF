@@ -27,6 +27,13 @@ $(document).ready(function(){
     var windowTop;
     
     $(window).on('scroll', function() {
+
+        if(windowTop >= 350){
+            $('#logo_Menu').addClass("img_pequena");
+        } else if(windowTop < 350){
+            $('#logo_Menu').removeClass("img_pequena");
+        }
+        
         for(i=1;i < numSecoes; i++){
             alturaSecaoI = $('#'+alturas[i]).offset().top;
             windowTop = $(window).scrollTop() + 200;
@@ -40,6 +47,12 @@ $(document).ready(function(){
                 $('#'+seccao).addClass("link_ativo");
             }
         }
+        if(windowTop >= 300){
+            $('#logo_Menu').addClass("img_pequena");
+        } else if(windowTop < 300){
+            $('#logo_Menu').removeClass("img_pequena");
+        }
+
     });
 
     //Carregando as informações da página principal
