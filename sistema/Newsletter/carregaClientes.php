@@ -19,9 +19,9 @@
                     <td>".($cliente['status'] ? 'Ativo': 'Inativo')."</td>
                     <td>
                         <center>
-                            <button class='botaoEmail btnDeleta' data-id='".$cliente['codCliente']."' id='deletarEmail' data-toggle='modal' data-target='#modalDeleteCliente' > d </button>
-                            <button class='botaoEmail btnEdita' data-id='".$cliente['codCliente']."' id='editarEmail' data-toggle='modal' data-target='#modalEditaCliente' > e </button>
-                            <button class='botaoEmail btnStatus' data-id='".$cliente['codCliente']."' data-status='".$cliente['status']."' id='statusEmail'> s </button>
+                            <button class='botaoEmail btnDeleta' data-id='".$cliente['codCliente']."' id='deletarEmail' data-toggle='modal' data-target='#modalDeleteCliente' > <i class='fa fa-trash'></i> </button>
+                            <button class='botaoEmail btnEdita' data-id='".$cliente['codCliente']."' id='editarEmail' data-toggle='modal' data-target='#modalEditaCliente' > <i class='fa fa-pencil'></i> </button>
+                            <button class='botaoEmail btnStatus' data-id='".$cliente['codCliente']."' data-status='".$cliente['status']."' id='statusEmail'> <i class='fa fa-toggle-".($cliente['status'] ? 'on': 'off')."'></i> </button>
                         </center>
                     </td>
                 </tr>");

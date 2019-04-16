@@ -56,7 +56,7 @@ input[type=file]{
 			$descricao = $row['descricao'];
 			$estatus = $row['estatus'];
 			echo '<tr class="odd gradeX">';
-			echo '<td><img src="Img/Servicos/'.$codServico.'.jpg" class="ImgTd"></td>';
+			//echo '<td><img src="Img/Servicos/'.$codServico.'.jpg" class="ImgTd"></td>';
 			echo '<td>'.$codServico.'</td>';
 			echo '<td>'.$nome.'</td>';
 			echo '<td>'.$descricao.'</td>';

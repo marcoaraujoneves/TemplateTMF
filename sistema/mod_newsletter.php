@@ -295,7 +295,6 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-
         //Os blocos a seguir manipulam os dados da div PREVIEW, baseado nos eventos de edição dos parâmetros pelo usuário
         $('.inpFormRadio').click(function(){
             $('#tagPre').html('['+this.value+']');
@@ -311,7 +310,11 @@
             $('#assuntoPre').html(this.value.charAt(0).toUpperCase() + this.value.slice(1));
         });
 
-        $('#msg').keyup(function(){
+        $('#msg').keyup(function(event){
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if(keycode == 13){
+                //$(this).val(this.value+'\r\n')
+            }
             $('#msgPre').html('&emsp;'+this.value.charAt(0).toUpperCase() + this.value.slice(1));
         });
         
@@ -465,7 +468,6 @@
     }
 
     function enviaCampanha(){
-        alert('oi');
         $.ajax({
             url:'Newsletter/enviaCampanha.php',
             method:'POST',
