@@ -113,31 +113,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="container mt-3">
-                    <div class="row d-flex mx-auto my-auto">
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-0 mb-3">
-                            <div class="card border-danger d-flex justify-content-center p-3">
+                <div class="container-fluid mt-3 tema">
+                    <div class="row d-flex m-5 p-3 my-auto">
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-3 m-0">
+                            <div class="card border-danger d-flex justify-content-center p-3 sombra-cartao">
                                 <div class="text-info text-center"><h4 class="font_info_card text-capitalize" id="indicador1"> Projetos entregues</h4></div>
                                 <div class="linha_separadora"></div>
                                 <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero1">1</div></h2></div>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-0 mb-3">
-                            <div class="card border-danger d-flex justify-content-center p-3">
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-3 m-0">
+                            <div class="card border-danger d-flex justify-content-center p-3 sombra-cartao">
                                 <div class="text-info text-center"><h4 class="font_info_card text-capitalize" id="indicador2">Anos no mercado</h4></div>
                                 <div class="linha_separadora"></div>
                                 <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero2">1</div></h2></div>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-0 mb-3 ">
-                            <div class="card border-danger d-flex justify-content-center p-3">
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-3 m-0">
+                            <div class="card border-danger d-flex justify-content-center p-3 sombra-cartao">
                                 <div class="text-info text-center"><h4 class="font_info_card text-capitalize" id="indicador3">Produtos próprios</h4></div>
                                 <div class="linha_separadora"></div>
                                 <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero3">1</div></h2></div>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-0 mb-3">
-                            <div class="card border-danger d-flex justify-content-center p-3">
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-3 m-0">
+                            <div class="card border-danger d-flex justify-content-center p-3 sombra-cartao">
                                 <div class="text-info text-center "><h4 class="font_info_card text-capitalize" id="indicador4">Opções de serviço</h4></div>
                                 <div class="linha_separadora"></div>
                                 <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero4">1</div></h2></div>
@@ -239,18 +239,18 @@
 
             <!--Produtos-->
             <section id="secaoProdutos" class="secaoSite">
-                <div class="container">
+                <div class="container-fluid tema">
                     <div class="row">
                         <div class="col-md-12 container-titulos">
-                            <h1 class="titulo_secoes">
+                            <h1 class="titulo_secoes_tema">
                                 Produtos
                             </h1>
                         </div>
                     </div>
-                    <div class="row mx-auto">
+                    <div class="row mx-auto pb-5 pl-5 pr-5">
                         <div class="col-12 col-sm-6 col-lg-3">
                             <div class="cardProdutos">
-                                <div class="containerProduto" id="cardProduto1">
+                                <div class="containerProduto sombra-cartao" id="cardProduto1">
                                     <div class="cardProdutosImgContainer">
                                         <img src="img/produto1.jpg" class="img-fluid rounded my-auto mx-auto d-block">
                                     </div>
@@ -259,7 +259,7 @@
                                             <h4> Produto 1 </h4>
                                         </div>
                                     </div>
-                                    <div class="descricaoProduto">
+                                    <div class="descricaoProduto sombra-cartao">
                                         
                                         <h4 class="nomeProdutoInterno"> Produto 1 </h4>
                                         <p class="text-justify px-2 py-1 " style="transition: display 1s linear 1s;">
@@ -273,7 +273,7 @@
                         </div>
                         <div class="col-12 col-sm-6 col-lg-3">
                             <div class="cardProdutos">
-                                <div class="containerProduto" id="cardProduto2">
+                                <div class="containerProduto sombra-cartao" id="cardProduto2">
                                     <div class="cardProdutosImgContainer">
                                         <img src="img/produto2.jpg" class="img-fluid rounded my-auto mx-auto d-block">
                                     </div>
@@ -282,7 +282,7 @@
                                             <h4> Produto 2 </h4>
                                         </div>
                                     </div>
-                                    <div class="descricaoProduto">
+                                    <div class="descricaoProduto sombra-cartao">
                                         
                                         <h4 class="nomeProdutoInterno"> Produto 2 </h4>
                                         <p class="text-justify p-2" style="transition: display 1s linear 1s;">
@@ -296,7 +296,7 @@
                         </div>
                         <div class="col-12 col-sm-6 col-lg-3">
                             <div class="cardProdutos">
-                                <div class="containerProduto" id="cardProduto3">
+                                <div class="containerProduto sombra-cartao" id="cardProduto3">
                                     <div class="cardProdutosImgContainer">
                                         <img src="img/produto3.jpg" class="img-fluid rounded my-auto mx-auto d-block">
                                     </div>
@@ -305,7 +305,7 @@
                                             <h4> Produto 3 </h4>
                                         </div>
                                     </div>
-                                    <div class="descricaoProduto">
+                                    <div class="descricaoProduto sombra-cartao">
                                         
                                         <h4 class="nomeProdutoInterno"> Produto 3 </h4>
                                         <p class="text-justify p-2" style="transition: display 1s linear 1s;">
@@ -319,11 +319,11 @@
                         </div>
                         <div class="col-12 col-sm-6 col-lg-3">
                             <a href="produtos.php" style="text-decoration:none;">
-                                <div style="box-sizing:border-box;border:2px solid #365C9A;border-bottom:none;height:80%;padding:10px;">
-                                    <h2 style="font-size:150px;text-align:center;color:#365C9A">+</span>
+                                <div id="cardProdutosVerMais" class="sombra-cartao" style="box-sizing:border-box;border:2px solid #FFFFFF;background-color:#808080;border-bottom:none;height:80%;padding:10px;">
+                                    <h2 style="font-size:150px;text-align:center;color:#FFFFFF">+</span>
                                 </div>
 
-                                <div class="" style="border:2px solid #365C9A;height:20%;">
+                                <div id="cardProdutosVerMaisDescricao" class="sombra-cartao" style="border:2px solid #FFFFFF;height:20%;">
                                     <div class="justify-content-center align-items-center d-flex nomeProduto" style="margin-top:7px; display:inline-block;" >
                                         <h4 id="nomeProduto"> Ver Mais </h4>
                                     </div>
@@ -562,7 +562,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-lg-4" id="contate-nos">
+                        <div class="col-lg-4 tema pt-3" id="contate-nos">
                             <h3> Contate-nos</h3>
                             <div class="row p-2">
                                 <div class="col-md-12">
@@ -597,7 +597,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-8 pt-3 pt-lg-0" id="mande_mensagem">
+                        <div class="col-lg-8 pt-3 pt-lg-2" id="mande_mensagem">
                             <h3> Mande uma mensagem </h3>
                             <br>
                             <div id="sucesso" class="alert alert-success" role="alert" style="display:none;">

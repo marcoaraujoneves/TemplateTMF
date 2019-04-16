@@ -14,6 +14,18 @@ body{
     width: auto;
     height: auto;
 }
+
+.tema{
+    background-color: #365c9a;
+}
+
+.centro-vertical{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
 /* Produtos */
 
 .cardProdutos{
@@ -29,8 +41,10 @@ body{
 
 .cardProdutosImgContainer{
     box-sizing:border-box;
-    border:2px solid #365C9A;
-    border-bottom:none;
+    border:2px solid #FFFFFF;
+    border-bottom: 1px solid #BFBFBF;
+    background-color: #FFFFFF;
+    border-radius: .5rem .5rem 0 0;
     height:80%;
     padding:10px;
     position: static;
@@ -44,25 +58,39 @@ body{
 
 .cardProdutosDescricao{
     box-sizing: inherit;
-    border:2px solid #365C9A;
+    background-color: #FFFFFF;
+    border:2px solid #FFFFFF;
+    border-radius: 0 0 .5rem .5rem;
     height:20%;
     transition: background-color 0.2s linear 0s, color 0.2s linear 0s;
+}
+
+#cardProdutosVerMais{
+    border-radius: .5rem .5rem 0 0;
+}
+
+#cardProdutosVerMaisDescricao{
+    background-color: #FFFFFF;
+    border-radius: 0 0 .5rem .5rem;
 }
 
 .descricaoProduto{
     opacity: 0;
     position: absolute;
+    border-radius: 0 0 .5rem .5rem;
     bottom: 0;
     height: 85%;
     z-index: 3!important;
     margin-top: -85%;
-    background-color: rgba(54, 92, 154, 0.90);
-    color: white!important;
+    background-color: #FFFFFFC0;
+    color: #000000;
 }
 
 .nomeProduto{
     margin-top:7px;
     display:inline-block;
+    color: #FFFFFF;
+
 }
 /* .card{
     height:300px;
@@ -257,8 +285,13 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
     /* float: left; */
 }
 
+.info-contatenos a, .info-contatenos a:hover, .info-contatenos a:active, .info-contatenos a:visited{
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
 #mande_mensagem{
-    border-left: 1px solid #365C9A;
+    /* border-left: 1px solid #365C9A; */
     box-shadow: -2px 0px rgba(54, 92, 154, 0.151);
 }
 
@@ -336,9 +369,31 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
     border-radius: 6px;
 }
 
+.titulo_secoes_tema{
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+    color:#FFFFFF;
+}
+
+.titulo_secoes_tema::after{
+    margin: 1px auto;
+    height: 4px;
+    width: 120px;
+    content: " ";
+    display: block;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+}
+
+/* Produtos */
+.cardProdutosDescricao h4, #cardProdutosVerMaisDescricao h4{
+    color: #000000;
+}
+
 .texto {
-    font-size: 14pt;
-    color: rgb(26, 26, 26);
+    /* font-size: 14pt; */
+    /* color: rgb(26, 26, 26); */
     text-align: center;
 }
 
@@ -357,33 +412,44 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 
 /* Contato */
 
-#contate-nos h3, #mande_mensagem h3, #subTituloSobre,.nomeProduto h4{
+#mande_mensagem h3, #subTituloSobre{
     text-align: center;
     font-size: 33px;
     font-weight: 600;
     color: rgb(41, 70, 117);
 }
 
+
+#contate-nos{
+    border-radius: .5rem;
+}
+
+#contate-nos h3{
+    color: #FFFFFF;
+    text-align: center;
+}
+
 .nomeProdutoInterno{
     text-align: center;
     font-size: 33px;
     font-weight: 600;
-    color: white;
+    color: #000000;
+    padding-top: 1rem !important;
 }
 
 .descricaoProduto a{
-    color: white;
-    text-decoration: none;
+    color: #000000;
+    text-decoration: underline;
 }
 
 .descricaoProduto a:hover{
-    color: white;
+    color: #000000;
     text-decoration: underline;
 }
 
 .descricaoProduto a:visited{
-    color: white;
-    text-decoration: none;
+    color: #000000;
+    text-decoration: underline;
 }
 
 .nomeServicos{
