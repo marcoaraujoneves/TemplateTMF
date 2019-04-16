@@ -248,75 +248,50 @@
                         </div>
                     </div>
                     <div class="row mx-auto pb-5 pl-5 pr-5">
-                        <div class="col-12 col-sm-6 col-lg-3">
-                            <div class="cardProdutos">
-                                <div class="containerProduto sombra-cartao" id="cardProduto1">
-                                    <div class="cardProdutosImgContainer">
-                                        <img src="img/produto1.jpg" class="img-fluid rounded my-auto mx-auto d-block">
-                                    </div>
-                                    <div class="cardProdutosDescricao">
-                                        <div class="justify-content-center align-items-center d-flex nomeProduto">
-                                            <h4> Produto 1 </h4>
-                                        </div>
-                                    </div>
-                                    <div class="descricaoProduto sombra-cartao">
-                                        
-                                        <h4 class="nomeProdutoInterno"> Produto 1 </h4>
-                                        <p class="text-justify px-2 py-1 " style="transition: display 1s linear 1s;">
-                                            Lorem ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak...
+                        <?php 
+                        include ('sistema/db.class.php');
+                        $objDB = new db();
+                        $conn = $objDB->conecta_mysql();
+                        $query_select = "SELECT * FROM produto;";
+                        $result_select = mysqli_query($conn,$query_select) or die(mysql_error());
+                        $rows = array();
+                        $contadorProdutos = 0;
+                        while($row = mysqli_fetch_array($result_select))
+                            $rows[] = $row;
+                        foreach($rows as $row){
+                            $contadorProdutos = $contadorProdutos + 1;
+                            $codProduto = $row['codProduto'];
+                            $nome = $row['nome'];
+                            $descricao = $row['descricao'];
+                            echo '<div class="col-12 col-sm-6 col-lg-3">';
+                            echo '<div class="cardProdutos">';
+                            echo '<div class="containerProduto sombra-cartao" id="cardProduto'.$contadorProdutos.'">';
+                            echo '<div class="cardProdutosImgContainer">';
+                            echo '<img src="sistema/Img/Produtos/'.$codProduto.'.jpg" class="img-fluid rounded my-auto mx-auto d-block">';
+                            echo '</div>';
+                            echo '<div class="cardProdutosDescricao">';
+                            echo '<div class="justify-content-center align-items-center d-flex nomeProduto">';
+                            echo '<h4> '.$nome.' </h4>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '<div class="descricaoProduto sombra-cartao">';
+                            echo '<h4 class="nomeProdutoInterno"> '.$nome.' </h4>';
+                            echo '<p class="text-justify px-2 py-1 " style="transition: display 1s linear 1s;">
+                                            '.$descricao.'
                                             <br>
                                             <a href="#"> Ver mais... </a>
-                                        </p>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-3">
-                            <div class="cardProdutos">
-                                <div class="containerProduto sombra-cartao" id="cardProduto2">
-                                    <div class="cardProdutosImgContainer">
-                                        <img src="img/produto2.jpg" class="img-fluid rounded my-auto mx-auto d-block">
-                                    </div>
-                                    <div class="cardProdutosDescricao">
-                                        <div class="justify-content-center align-items-center d-flex nomeProduto">
-                                            <h4> Produto 2 </h4>
-                                        </div>
-                                    </div>
-                                    <div class="descricaoProduto sombra-cartao">
-                                        
-                                        <h4 class="nomeProdutoInterno"> Produto 2 </h4>
-                                        <p class="text-justify p-2" style="transition: display 1s linear 1s;">
-                                            Lorem ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak...
-                                            <br>
-                                            <a href="#"> Ver mais... </a>
-                                        </p>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-3">
-                            <div class="cardProdutos">
-                                <div class="containerProduto sombra-cartao" id="cardProduto3">
-                                    <div class="cardProdutosImgContainer">
-                                        <img src="img/produto3.jpg" class="img-fluid rounded my-auto mx-auto d-block">
-                                    </div>
-                                    <div class="cardProdutosDescricao">
-                                        <div class="justify-content-center align-items-center d-flex nomeProduto">
-                                            <h4> Produto 3 </h4>
-                                        </div>
-                                    </div>
-                                    <div class="descricaoProduto sombra-cartao">
-                                        
-                                        <h4 class="nomeProdutoInterno"> Produto 3 </h4>
-                                        <p class="text-justify p-2" style="transition: display 1s linear 1s;">
-                                            Lorem ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak...
-                                            <br>
-                                            <a href="#"> Ver mais... </a>
-                                        </p>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
+                                        </p>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+                            if($contadorProdutos == 3){
+
+                                break;
+                            }
+                        }
+                        ?>                            
+                       
                         <div class="col-12 col-sm-6 col-lg-3">
                             <a href="produtos.php" style="text-decoration:none;">
                                 <div id="cardProdutosVerMais" class="sombra-cartao" style="box-sizing:border-box;border:2px solid #FFFFFF;background-color:#808080;border-bottom:none;height:80%;padding:10px;">
@@ -439,34 +414,39 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div id="carouselPortifolio" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
-                                    <li data-target="#carouselPortifolio" data-slide-to="0" class="active"></li>
-                                    <li data-target="#carouselPortifolio" data-slide-to="1"></li>
-                                    <li data-target="#carouselPortifolio" data-slide-to="2"></li>
-                                </ol>
+                                
                                 <div class="carousel-inner">
-                                    <div class="carousel-item pb-3 active">
-                                        <img class="d-block w-100 imagem_port mx-auto" src="img/img1.jpg" alt="Primeiro Slide">
-                                        <div class="carousel-caption mx-auto">
-                                            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam vel lacus ut tellus fringilla imperdiet.</p>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item pb-3">
-                                        <img class="d-block w-100 imagem_port mx-auto" src="img/img2.jpg" alt="Segundo Slide">
-                                        <div class="carousel-caption mx-auto">
-                                            <p>Pellentesque nec sem non arcu fringilla mattis sed nec turpis.</p>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item pb-3">
-                                        <img class="d-block w-100 imagem_port mx-auto" src="img/img3.jpg" alt="Terceiro Slide">
-                                        <div class="carousel-caption mx-auto">
-                                            <p>Etiam ut consectetur lacus. Mauris sagittis orci ut odio pharetra, eget sagittis odio pharetra.</p>
-                                        </div>
-                                    </div>
-                                </div>
+
+                                    <?php 
+                                    $cont_slide = 0;
+                                    $i = 0;
+                                    $query_select = "SELECT * FROM portifolio;";
+                                    $result_select = mysqli_query($conn,$query_select) or die(mysql_error());
+                                    $rows = array();
+                                    while($row = mysqli_fetch_array($result_select))
+                                        $rows[] = $row;
+                                    foreach($rows as $row){
+                                        $active = "";
+                                        if($cont_slide == 0){
+                                            $active = "active";
+                                        } 
+                                        $codPortifolio = $row['codPortifolio'];
+                                        $nome = $row['nome'];
+                                        $descricao = $row['descricao'];
+
+                                        echo '<div class="carousel-item pb-3 '.$active.'">';
+                                        echo '<img class="d-block w-100 imagem_port mx-auto" src="sistema/Img/Portifolio/'.$codPortifolio.'.jpg"  >';
+                                        echo '<div class="carousel-caption mx-auto">';
+                                        echo '<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam vel lacus ut tellus fringilla imperdiet.</p>';
+                                        echo '</div>';
+                                        echo '</div>';
+                                        $cont_slide = $cont_slide + 1;
+                                        }
+                                        ?>
+                                          
                                 <a class="carousel-control-prev" href="#carouselPortifolio" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Anterior</span>
+                                    <span class="sr-only">Previous</span>
                                 </a>
                                 <a class="carousel-control-next" href="#carouselPortifolio" role="button" data-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -492,9 +472,6 @@
                  </div>
                  <div class="row">
                     <?php 
-                    include ('sistema/db.class.php');
-                    $objDB = new db();
-                    $conn = $objDB->conecta_mysql();
                     $query_select = "SELECT * FROM parceiros where estatus = '1' ;";
                     $result_select = mysqli_query($conn,$query_select) or die(mysql_error());
                     $rows = array();
@@ -551,7 +528,7 @@
             <!--PATROCÌNIO/FORNECEDORES-->
             
             <!--CONTATO-->
-            <section id="secaoContato" class="secaoSite">
+           <section id="secaoContato" class="secaoSite">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 container-titulos">
@@ -671,70 +648,8 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <!-------------------------- scripts de contagem  ------------------------------------------>
-    <script info="primeiro card">
-        $(window).scroll(function(event){
-            if($(document).scrollTop()>175){
-                var numero = document.getElementById('numero1');
-                var min = 1;
-                var max = 28;
-                var duração = 5000; // 5 segundos
-                for (var i = min; i <= max; i++) {
-                    setTimeout(function(nr) {
-                    numero.innerHTML = nr;
-                    }, i * 2000 / max, i);
-                }
-                $( this ).off( event );
-            }
-        });
-    </script>
-    <script info="segundo card">
-        $(window).scroll(function(event){
-            if($(document).scrollTop()>175){
-                var numero = document.getElementById('numero2');
-                var min = 1;
-                var max = 6;
-                var duração = 5000; // 5 segundos
-                for (var i = min; i <= max; i++) {
-                    setTimeout(function(nr) {
-                    numero.innerHTML = nr;
-                    }, i * 2000 / max, i);
-                }
-                $( this ).off( event );
-            }
-        });
-    </script>
-    <script info="terceiro card">
-        $(window).scroll(function(event){
-            if($(document).scrollTop()>175){
-                var numero = document.getElementById('numero3');
-                var min = 1;
-                var max = 10;
-                var duração = 5000; // 5 segundos
-                for (var i = min; i <= max; i++) {
-                    setTimeout(function(nr) {
-                    numero.innerHTML = nr;
-                    }, i * 2000 / max, i);
-                }
-                $( this ).off( event );
-            }
-        });
-    </script>    
-    <script info="quarto card">
-        $(window).scroll(function(event){
-            if($(document).scrollTop()>175){
-                var numero = document.getElementById('numero4');
-                var min = 1;
-                var max = 15;
-                var duração = 5000; // 5 segundos
-                for (var i = min; i <= max; i++) {
-                    setTimeout(function(nr) {
-                    numero.innerHTML = nr;
-                    }, i * 2000 / max, i);
-                }
-                $( this ).off( event );
-            }
-        });
-    </script>
+
+  
 </html>
 
 <!-- MODELO

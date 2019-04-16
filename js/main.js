@@ -1,5 +1,88 @@
 $(document).ready(function(){
+var max1;
+var max2;
+var max3;
+var max4;
+ $.ajax({  
+        url:"sistema/Sobre/carregaDados.php",
+        dataType:"json",
+        success:function(data){
+            //$('#indicador1qt').html(data.indicador1qt);
+            //$('#indicador2qt').html(data.indicador2qt);
+            //$('#indicador3qt').html(data.indicador3qt);
+            //$('#indicador4qt').html(data.indicador4qt);
+            max1 = data.indicador1qt;
+            max2 = data.indicador2qt;
+            max3 = data.indicador3qt;
+            max4 = data.indicador4qt;
+            $('#indicador1').html(data.indicador1);  
+            $('#indicador2').html(data.indicador2);  
+            $('#indicador3').html(data.indicador3);  
+            $('#indicador4').html(data.indicador4);
+            $('#textoSobre').html(data.textoSobre);
+        }  
+    });
+    $(window).on('scroll', function(event) {
 
+        if($(document).scrollTop()>175){
+            var numero = document.getElementById('numero1');
+            var min = 1;
+            var max = max1;
+                var duração = 5000; // 5 segundos
+                for (var i = min; i <= max; i++) {
+                    setTimeout(function(nr) {
+                        numero.innerHTML = nr;
+                    }, i * 2000 / max, i);
+                }
+                $( this ).off( event );
+            }
+        });
+
+    $(window).scroll(function(event){
+        if($(document).scrollTop()>175){
+            var numero = document.getElementById('numero2');
+            var min = 1;
+            var max = max2;
+                var duração = 5000; // 5 segundos
+                for (var i = min; i <= max; i++) {
+                    setTimeout(function(nr) {
+                        numero.innerHTML = nr;
+                    }, i * 2000 / max, i);
+                }
+                $( this ).off( event );
+            }
+        });
+
+    $(window).scroll(function(event){
+        if($(document).scrollTop()>175){
+            var numero = document.getElementById('numero3');
+            var min = 1;
+            var max = max3;
+                var duração = 5000; // 5 segundos
+                for (var i = min; i <= max; i++) {
+                    setTimeout(function(nr) {
+                        numero.innerHTML = nr;
+                    }, i * 2000 / max, i);
+                }
+                $( this ).off( event );
+            }
+        });
+
+    
+    $(window).scroll(function(event){
+        if($(document).scrollTop()>175){
+            var numero = document.getElementById('numero4');
+            var min = 1;
+            var max = max4;
+                var duração = 5000; // 5 segundos
+                for (var i = min; i <= max; i++) {
+                    setTimeout(function(nr) {
+                        numero.innerHTML = nr;
+                    }, i * 2000 / max, i);
+                }
+                $( this ).off( event );
+            }
+        });
     var $doc = $('html, body');
     
     $('.linkMenu ').click(function() {
@@ -56,30 +139,8 @@ $(document).ready(function(){
     });
 
     //Carregando as informações da página principal
-    $.ajax({  
-		url:"sistema/Sobre/carregaDados.php",
-		dataType:"json",
-		success:function(data){
-            $('#indicador1qt').html(data.indicador1qt);
-            $('#indicador2qt').html(data.indicador2qt);
-            $('#indicador3qt').html(data.indicador3qt);
-            $('#indicador4qt').html(data.indicador4qt);
 
-            $('#indicador1').html(data.indicador1);  
-            $('#indicador2').html(data.indicador2);  
-            $('#indicador3').html(data.indicador3);  
-			$('#indicador4').html(data.indicador4);
-			$('#textoSobre').html(data.textoSobre);
-		}  
-    });
-    
-    // $.ajax({  
-	// 	url:"sistema/Servicos/carregaDados.php",
-	// 	dataType:"json",
-	// 	success:function(data){
-    //         alert(data);
-	// 	}  
-	// });
+   
 
     //Envio de e-mail com AJAX e PHP
     $('#enviar').click(function(){
@@ -129,6 +190,10 @@ $(document).ready(function(){
             opacity:1
         },70);
     });
+
+
+    
+
 });
 
 //Função para testar se o e-mail é válido
