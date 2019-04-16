@@ -468,6 +468,23 @@
 			});
 		});
 
+		$(document).on('click','#btnServicos', function(){
+			$.ajax({
+				url:'Servicos/carregaDados.php',
+				dataType:"json",
+				success:function(data){
+					$('#servico1').val(data.servico1);
+					$('#servico2').val(data.servico2);
+					$('#servico3').val(data.servico3);
+					$('#servico4').val(data.servico4);
+					$('#textoServicos').val(data.introServicos);
+				},
+				error: function(){
+					$('#bodySobre').html('Houve um erro na requisição, tente novamente mais tarde!');
+				}
+			});
+		});
+
 		$(document).on('click','#salvarSobre', function(){
 			$.ajax({
 				url:'Sobre/salvarDados.php',

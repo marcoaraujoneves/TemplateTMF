@@ -71,7 +71,15 @@ $(document).ready(function(){
 			$('#indicador4').html(data.indicador4);
 			$('#textoSobre').html(data.textoSobre);
 		}  
-	});
+    });
+    
+    // $.ajax({  
+	// 	url:"sistema/Servicos/carregaDados.php",
+	// 	dataType:"json",
+	// 	success:function(data){
+    //         alert(data);
+	// 	}  
+	// });
 
     //Envio de e-mail com AJAX e PHP
     $('#enviar').click(function(){

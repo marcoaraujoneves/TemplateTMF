@@ -27,15 +27,16 @@ input[type=file]{
 </div>
 <br>
 <div class="table-responsive">
-	<table  class="table table-striped table-hover Tabela" style="width:1000px;" id="tb1">
-		<thead >
-			<tr >
-				<th width='50px' >Imagens</th>
-				<th>Código</th>
-				<th>Nome</th>
-				<th>Descrição</th>
-				<th>Youtube</th>
-				<th style="text-align:center;">Operação</th>
+	<table  class="table table-striped table-hover Tabela" id="tb1">
+		<thead>
+			<tr>
+				<th style="width:6%;"> # </th>
+				<th style="width:25%;"> Nome </th>
+				<th style="width:36%;"> Descrição </th>
+				<th style="width:17%;text-align:center"> Youtube </th>
+				<th style="width:15%;">  </th>
+
+				
 			</tr>
 		</thead>
 		<tbody>
@@ -47,22 +48,29 @@ input[type=file]{
 		$query_select = "SELECT * FROM portifolio;";
 		$result_select = mysqli_query($conn,$query_select) or die(mysql_error());
 		$rows = array();
+		$counter = 0;
 		while($row = mysqli_fetch_array($result_select))
 			$rows[] = $row;
-		foreach($rows as $row){ 
+		foreach($rows as $row){
+			$counter = $counter +1;
 			$codPortifolio = $row['codPortifolio'];
 			$nome = $row['nome'];
 			$descricao = $row['descricao'];
 			$linkYoutube = $row['linkYoutube'];
 			echo '<tr class="odd gradeX">';
-			echo '<td><button class="btn Botao" data-toggle="modal" id="previewImagem" data-target="#mostrarImagem" value="'.$codPortifolio.'" type="button">Imagens</button></td>';
-			echo '<td>'.$codPortifolio.'</td>';
+			//echo '<td><button class="btn Botao" data-toggle="modal" id="previewImagem" data-target="#mostrarImagem" value="'.$codPortifolio.'" type="button">Imagens</button></td>';
+			echo '<td>'.$counter.'</td>';
 			echo '<td>'.$nome.'</td>';
 			echo '<td>'.$descricao.'</td>';
 			echo '<td>'.$linkYoutube.'</td>';
-				echo '<td><button class="btn Botao" data-toggle="modal" id="deletaPortifolio" data-target="#excluirPortifolio" value="'.$codPortifolio.'" type="button">Excluir</button>';
-				echo '</tr>';
-				unset($estatus);
+			echo '<td>
+				<center>
+					<button class="botaoEmail Botao" data-toggle="modal" id="modificaPortifolio" data-target="#modificarPortifolio" value="'.$codPortifolio.'" type="button"><i class="fa fa-pencil"></i> </button>
+					<button class="botaoEmail Botao" data-toggle="modal" id="deletaPortifolio" data-target="#excluirPortifolio" value="'.$codPortifolio.'" type="button"> <i class="fa fa-trash"></i> </button>
+					<button class="botaoEmail Botao" data-toggle="modal" id="previewImagem" data-target="#mostrarImagem" value="'.$codPortifolio.'" type="button"><i class="fa fa-image"></i></button>
+				</center>';
+			echo '</tr>';
+			unset($estatus);
 			}
 			?>
 		</tbody>
@@ -110,31 +118,28 @@ input[type=file]{
 
 
 
-<div  class="modal" id="excluirPortifolio" tabindex="-1" role="dialog">
-	<div class="modal-dialog" role="document">
+<div  class="modal fade" id="excluirPortifolio" tabindex="-1" role="dialog" aria-labelledby="modalDeletarPortifolioTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
-			<div class="modal-header" style="background-color:rgb(99,00,33);">
-				<h5 class="modal-title" style="color:white;">Deseja Excluir este portifolio?</h5>
+			<div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
+				<h5 class="modal-title" style="color:white;">Deseja excluir este portifolio?</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-			<div class="modal-body">
-
-			</div>
 			<div class="modal-footer">
-				<input type="button" name="excluidProd" id="excluidPort" value="Excluir" class="btn BotaoModal"">
-				<button type="button" class="btn btn-secondary" id="returnPortExcluir" data-dismiss="modal"> Retornar </button>
+				<input type="button" name="excluidProd" id="excluidPort" value="Sim" class="btn btn-danger BotaoModal">
+				<button type="button" class="btn btn-secondary" id="returnPortExcluir" data-dismiss="modal"> Não </button>
 			</div>
 		</div>
 	</div>
 </div>
 
 
-<div class="modal" id="mostrarImagem" tabindex="-1" role="dialog">
-	<div class="modal-dialog" role="document">
+<div class="modal fade" id="mostrarImagem" tabindex="-1" role="dialog" aria-labelledby="modalImagensPortifolioTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
-			<div class="modal-header" style="background-color:rgb(99,00,33);">
+			<div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
 				<h5 class="modal-title" style="color:white;">Imagens</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
