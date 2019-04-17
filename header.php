@@ -38,3 +38,14 @@
         </div>
     </div>
 </nav>
+<script>
+var pagina = window.location.href
+if ( (pagina.search("produtos")!=-1)||(pagina.search("servicos")!=-1)||(pagina.search("portifolio")!=-1) ){
+    document.getElementById("link_secaoHome").href="index.php#secaoHome" ;
+    document.getElementById("link_secaoSobre").href="index.php#secaoSobre";
+    document.getElementById("link_secaoServicos").href="index.php#secaoServicos";
+    document.getElementById("link_secaoProdutos").href="index.php#secaoProdutos";
+    document.getElementById("link_secaoPortifolio").href="index.php#secaoPortifolio";
+    document.getElementById("link_secaoContato").href="index.php#secaoContato";
+}
+</script>

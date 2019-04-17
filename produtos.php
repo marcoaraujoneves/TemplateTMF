@@ -318,11 +318,11 @@
             <?php include_once('footer.php'); ?>
         </footer>
     </body>
-    <!------------------------------------- bootstrap/jquery/popper scripts----------------------------------------------------->
+    <!------------------------------------- bootstrap/jquery/popper scripts------------------------------------------------------>
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/main.js"></script> 
     <!------------------------------------- adicionar galerias nesse script (#rg-galleryNUM) ------------------------------------>
     <script>
             jQuery(document).ready(function ($) {
@@ -330,11 +330,11 @@
             SelectRgGallery("#rg-gallery2");
             });
     </script>
-     <!-- ---------------------------------------slider scripts --------------------------------------------------------------- -->
+    <!-- ---------------------------------------galeria scripts --------------------------------------------------------------- -->
     <script type="text/javascript" src="js/Slider/ajax.libs.jquery.mim.js"></script>
     <script type="text/javascript" src="js/Slider/jquery.tmpl.min.js"></script>
     <script type="text/javascript" src="js/Slider/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="js/Slider/jquery.elastislide.js"></script>
     <script type="text/javascript" src="js/Slider/gallery.js"></script>
-    <!-- ---------------------------------------slider scripts ---------------------------------------------------------------- -->
+    <!-- ---------------------------------------galeria scripts ---------------------------------------------------------------- -->
 </html>
