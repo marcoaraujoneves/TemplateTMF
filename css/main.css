@@ -5,7 +5,7 @@ body{
 }
 
 .container-titulos{
-    padding: 30px;
+    padding: 15px;
 }
 
 .imagem{
@@ -329,17 +329,17 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 }
 
 #container-mapa{
-    position: absolute;
+    position: relative;
     left: 0;
     padding: 0;
 }
 
 #linha-mapa{
-    height: 500px;
+    height: auto;
 }
 
 #mapa{
-    height: 450px;
+    height: auto;
 }
 
 /*--------------------------------------------------------------------*/
@@ -354,15 +354,15 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 }
 .titulo_secoes{
     text-align: center;
-    font-weight: 700;
-    font-size: 50px;
+    font-weight: 50;
+    font-size: 40px;
     color:#365C9A;
 }
 
 .titulo_secoes::after{
     margin: 1px auto;
-    height: 4px;
-    width: 120px;
+    height: 3px;
+    width: 100px;
     content: " ";
     display: block;
     background-color: #365C9A;
@@ -371,15 +371,15 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 
 .titulo_secoes_tema{
     text-align: center;
-    font-weight: 700;
-    font-size: 50px;
+    font-weight: 50;
+    font-size: 40px;
     color:#FFFFFF;
 }
 
 .titulo_secoes_tema::after{
     margin: 1px auto;
-    height: 4px;
-    width: 120px;
+    height: 3px;
+    width: 100px;
     content: " ";
     display: block;
     background-color: #FFFFFF;
