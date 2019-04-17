@@ -70,38 +70,11 @@
                         </div>
                     </div>
                     <div class="row">
-                        <!-- <div class="col-md-6 my-auto">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p class="texto indicadores">
-                                        <span >0 </span> &nbsp;
-                                        <span id="indicador1"> </span>
-                                    </p>
-                                </div>
-                                <div class="col-md-6">
-                                    <p class="texto indicadores">
-                                        <span id="indicador2qt"> 0</span> &nbsp;
-                                        <span id="indicador2"> </span>
-                                    </p>
-                                </div>
-                            </div>
-                                <br>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p class="texto indicadores"> Mais de&nbsp;
-                                        <span id="indicador3qt"> 0</span> &nbsp;
-                                        <span id="indicador3"> </span>
-                                    </p>
-                                </div>
-                                <div class="col-md-6">
-                                    <p class="texto indicadores"> Mais de&nbsp;
-                                        <span id="indicador4qt"> 0</span> &nbsp;
-                                        <span id="indicador4"> </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div> -->
-                        <div class="col-md-6 offset-md-6">
+                        <div class="col-md-5 my-auto">
+                            <img src="img/tmf.PNG" class="img-fluid mx-auto d-block" style="margin-right:50px;">
+                            <br>
+                        </div>
+                        <div class="col-md-7">
                             <!-- Texto com até 700 caracteres, minimo 530 -->
                             <h3 style="text-align:right;" id="subTituloSobre"> Conheça a TMF </h3>
                             <p class="texto" style="text-align:justify;">
@@ -647,6 +620,7 @@
     <script src="js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/header.js"></script>
     <!-------------------------- scripts de contagem  ------------------------------------------>
 
   

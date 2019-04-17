@@ -8,6 +8,7 @@
 #logo_Menu{
     height:105px;
     margin:5px;
+    transition: height 0.15s linear 0s;
 }
 
 .img_pequena{

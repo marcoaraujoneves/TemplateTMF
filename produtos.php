@@ -95,8 +95,8 @@
                                     <div class="modal fade" id="ModalProd" tabindex="-1" role="dialog" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" style="font-size: 27px;font-weight: 600;color: rgb(41, 70, 117);">Contato</h5>
+                                                <div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
+                                                    <h5 class="modal-title" style="color: white;">Contato</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                     </button>
@@ -322,7 +322,8 @@
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script> 
+    <script src="js/header.js"></script>
+     <script src="js/main.js"></script> 
     <!------------------------------------- adicionar galerias nesse script (#rg-galleryNUM) ------------------------------------>
     <script>
             jQuery(document).ready(function ($) {
