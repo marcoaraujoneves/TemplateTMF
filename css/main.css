@@ -80,6 +80,7 @@ body{
     border-radius: 0 0 .5rem .5rem;
     bottom: 0;
     height: 85%;
+    width: 100%;
     z-index: 3!important;
     margin-top: -85%;
     background-color: #FFFFFFC0;

@@ -647,6 +647,7 @@
     <script src="js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/header.js"></script>
     <!-------------------------- scripts de contagem  ------------------------------------------>
 
   

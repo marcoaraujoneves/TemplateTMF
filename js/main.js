@@ -177,7 +177,7 @@ var max4;
         $('#'+this.id+' .descricaoProduto').animate({
             opacity:1
         },150);
-        $('#'+this.id+' .cardProdutosDescricao').animate({
+        $('#'+this.id+' .cardProdutosDescricao .nomeProduto').animate({
             opacity:0
         },70);
     });
@@ -186,7 +186,7 @@ var max4;
         $('#'+this.id+' .descricaoProduto').animate({
             opacity:0
         },10);
-        $('#'+this.id+' .cardProdutosDescricao').animate({
+        $('#'+this.id+' .cardProdutosDescricao .nomeProduto').animate({
             opacity:1
         },70);
     });
