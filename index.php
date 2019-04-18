@@ -72,7 +72,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-5 my-auto">
-                            <img src="img/tmf.PNG" class="img-fluid mx-auto d-block" style="margin-right:50px;">
+                            <img src="img/tmf.png" class="img-fluid mx-auto d-block" style="margin-right:50px;">
                             <br>
                         </div>
                         <div class="col-md-7">
