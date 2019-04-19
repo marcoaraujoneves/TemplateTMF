@@ -14,7 +14,7 @@
     </div>
 </div> -->
 
-<nav class="navbar navbar-expand-md navbar-light fixed-top" id="navbarTMF">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" id="navbarTMF">
     <div class="container">
         <img src="img/logoTMFBranco.png" id="logo_Menu">
         <p id="texto_inf" class="d-none d-sm-block d-md-none mx-auto" style="padding-top:0px">(22)9999-8756<br><br>07h até as 17h</p>

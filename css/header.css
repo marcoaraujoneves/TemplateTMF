@@ -57,13 +57,17 @@
     z-index: 1;
 }
 
+
+/* navbar */
+
 .navbar, #bg {
     background-color:#365C9A;
+    background-image: url("../img/tmfcover.png");
     color:white;
 }
 
 .nav-link{
-    color:white;
+    color:rgb(231, 231, 231) !important;
     font-size: 20px;
     text-align:center;
     margin-left: 15px;
@@ -72,12 +76,27 @@
 }
 
 .nav-link:hover {
-    color:lightgray;
+    color:#ffffff !important;
+    text-shadow: 0 0px 5px white;
 }
 
+  
+  .navbar-dark .navbar-toggler {
+    color: rgba(255, 255, 255, 1.0) !important;
+    border-color: rgba(255, 255, 255, 1.0) !important;
+  }
+  .navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1.0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+  }
+
+
+
+
+/* ============================================= */
+
 .link_ativo{
-    color:lightgray;
-    text-shadow: 1px 1px 1px black;
+    color:#f8aa00 !important;
+    text-shadow: 0 0 15px #f8aa00;
 }
 
 .social_icone{

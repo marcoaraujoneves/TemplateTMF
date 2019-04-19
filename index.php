@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="container-fluid mt-3 tema">
-                    <div class="row d-flex m-5 p-3 my-auto">
+                    <div class="row d-flex m-0 m-md-5 p-3 my-auto">
                         <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-3 m-0">
                             <div class="card border-danger d-flex justify-content-center p-3 sombra-cartao">
                                 <div class="text-info text-center"><h4 class="font_info_card text-capitalize" id="indicador1"> Projetos entregues</h4></div>
