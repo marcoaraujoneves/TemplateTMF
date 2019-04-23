@@ -20,6 +20,7 @@ var max4;
             $('#indicador3').html(data.indicador3);  
             $('#indicador4').html(data.indicador4);
             $('#textoSobre').html(data.textoSobre);
+            $('#textoServicos').html(data.textoServicos);
         }  
     });
     $(window).on('scroll', function(event) {

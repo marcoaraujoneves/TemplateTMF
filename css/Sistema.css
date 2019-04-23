@@ -61,6 +61,7 @@ body{
     bottom: 0;
     left: 0;
     background-color: #365C9A;
+    background-image: url("../img/tmfcover.png");
     flex-wrap: nowrap;
 }
 

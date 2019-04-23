@@ -22,7 +22,7 @@
         if(isset($resultado_id['login']) && isset($resultado_id['cargo'])) {
             $_SESSION['nome'] = $resultado_id['nome'];
             $_SESSION['cargo'] = $resultado_id['cargo'];
-            header('Location: gerenciador.php');
+            header('Location: gerenciador.php?mod=1');
         }else{
             //header('Location: index.php?erro=1');
         }
