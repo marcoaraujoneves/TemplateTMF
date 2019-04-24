@@ -37,14 +37,7 @@ $(document.body).ready(function(){
 	 	    			$('#formPortifolio').each (function(){
 	 	    				this.reset();
 	 	    			});
-	 	    			$.ajax({
-	 	    				url : 'mod_portifolio.php',
-	 	    				success: function(data){
-
-	 	    					$('#painelSistema').empty();
-	 	    					$('#painelSistema').html(data);
-	 	    				}
-	 	    			});
+	 	    			location.reload();
 
 	 	    		}
 	 	    	});
@@ -76,12 +69,7 @@ $(document.body).ready(function(){
  	{	
 						$('#excluirPortifolio').hide(); // esconde o modal
 	 	    			$("#returnPortExcluir").click(); // fecha o modal de fato
-	 	    			$.ajax({
-	 	    				url : 'mod_portifolio.php',
-	 	    				success: function(data){
-	 	    					$('#painelSistema').html(data);
-	 	    				}
-	 	    			});
+	 	    			location.reload();
 
 	 	    		}
 
@@ -121,6 +109,78 @@ $(document.body).ready(function(){
 
 
 }); 
+	$(document).on('click', '#modificaPortifolio', function(){
+
+		codPortifolio = $(this).attr("value");
+ // retorna os dados do fetch.php para preencher a tabela via ajax 
+ $.ajax({  
+ 	url:"php/portifolio/modificaPortifolio.php",  
+ 	method:"POST",
+ 	data:{codPortifolio:codPortifolio},
+ 	dataType:"json",   
+ 	beforeSend:function(data){  
+
+
+
+ 	},
+ 	success:function(data){  
+ 		$('#modificanomePortifolio').val(data.nome);
+ 		$('#modificadescricaoPortifolio').val(data.descricao);
+ 		$('#modificacodigoPortifolio').val(data.codPortifolio);
+ 		$('#modificalinkYoutube').val(data.linkYoutube);
+
+
+ 	}  
+ });
+
+
+
+}); 
+
+
+	$(document.body).on('click', '#modificacarai', function(){
+		
+		$('#formPortifolioModifica').validate({
+			rules: {
+			//nome: { required: true },
+			//descricao: { required: true },
+			//estatus: { required: true },
+		},
+		messages: {
+			//nome: { required: 'Preencha o campo nome'},
+			//descricao: { required: 'Preencha a descrição do serviço'},
+			//arquivo: { required: 'Coloque uma imagem'},
+
+
+		},
+		submitHandler: function( form ){
+			var dados = $( form ).serialize();
+			$.ajax({
+				type: "POST",
+				url: "php/portifolio/modifica.php",
+				data: new FormData($('form')[1]),
+
+        // Tell jQuery not to process data or worry about content-type
+        // You *must* include these options!
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function( data )
+        {	
+						$('#modificarProduto').hide(); // esconde o modal
+	 	    			$("#modificareturnServico").click(); // fecha o modal de fato
+	 	    			$('#formProdutoModifica').each (function(){
+	 	    				this.reset();
+	 	    			});
+	 	    			location.reload();
+
+	 	    		}
+	 	    	});
+
+			return false;
+		}
+	});
+	});
 
 
 });

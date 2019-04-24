@@ -14,6 +14,7 @@ if(isset($_POST['nomePortifolio'])){
     $results = mysqli_query($conn, $sql);
     $batata = $conn->insert_id;
     echo $sql;
+    $contador = 1;
 
 
 
@@ -24,10 +25,19 @@ if(isset($_POST['nomePortifolio'])){
 
 
         $fileext = strtolower($filename);
+    // Pega a extensão
+        $extensao = pathinfo ( $filename, PATHINFO_EXTENSION );
 
+    // Converte a extensão para minúsculo
+        $extensao = strtolower ( $extensao );
+       
+
+        $fileext = strtolower($filename);
+        $galeriaProduto = $batata . '-' . $contador. '.'.$extensao;
+        $contador = $contador + 1;
 
         // Concatena a pasta com o nome
-        $destino = '../../Img/Portifolio/' . $fileext;
+        $destino = '../../Img/Portifolio/' . $galeriaProduto;
         echo $destino;
         // tenta mover o arquivo para o destino
         if ( @move_uploaded_file ( $filetempname, $destino ) ) {
@@ -35,7 +45,7 @@ if(isset($_POST['nomePortifolio'])){
             echo ' < img src = "' . $destino . '" />';
             $sql = "  
             INSERT INTO imagemportifolio(nome,codPortifolio)
-            VALUES ('$filename','$batata') ";
+            VALUES ('$galeriaProduto','$batata') ";
             $results = mysqli_query($conn, $sql);
             echo $sql;
 

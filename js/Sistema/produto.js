@@ -1,5 +1,5 @@
 $(document.body).ready(function(){
-var codProduto;
+	var codProduto;
 
 
 	$(document.body).on('click', '#potato', function(){
@@ -37,28 +37,26 @@ var codProduto;
 	 	    			$('#formServico').each (function(){
 	 	    				this.reset();
 	 	    			});
-	 	    			$.ajax({
-	 	    				url : 'mod_produtos.php',
-	 	    				success: function(data){
-
-	 	    					$('#painelSistema').empty();
-	 	    					$('#painelSistema').html(data);
-	 	    				}
-	 	    			});
+	 	    			location.reload();
 
 	 	    		}
 	 	    	});
 
-			return false;
-		}
+			    return false;
+			}
+		});
 	});
-	});
 
 
 
+	$(document.body).on('click', '#modificaProduto', function(){
 
+$('#blah').attr('src', ''); // Clear the src
+$("#formProduto").trigger('reset');
+
+});
 	
-$(document.body).on('click', '#deletaProduto', function(){
+	$(document.body).on('click', '#deletaProduto', function(){
  // Ao clicar no botão deletar na tabela produtos, ele ira receber o valor do codigo do produto a ser deletado 
  codProduto = $(this).attr("value"); 
 });
@@ -77,12 +75,7 @@ $(document.body).on('click', '#deletaProduto', function(){
  	{	
 						$('#excluirProduto').hide(); // esconde o modal
 	 	    			$("#returnProdExcluir").click(); // fecha o modal de fato
-	 	    			$.ajax({
-	 	    				url : 'mod_produtos.php',
-	 	    				success: function(data){
-	 	    					$('#painelSistema').html(data);
-	 	    				}
-	 	    			});
+	 	    			location.reload();
 
 	 	    		}
 
@@ -106,9 +99,9 @@ $(document.body).on('click', '#deletaProduto', function(){
  	},
  	success:function(data){  
  		$.each(data, function(r) {
- 
+
  			
- 				$('#galeria').append('<img  src="Img/Produtos/'+data[r].nome+'" />')
+ 			$('#galeria').append('<img  src="Img/Produtos/'+data[r].nome+'" />')
 
  		});
 
@@ -122,6 +115,80 @@ $(document.body).on('click', '#deletaProduto', function(){
 
 
 }); 
+
+	$(document).on('click', '#modificaProduto', function(){
+
+		codProdutos = $(this).attr("value");
+ // retorna os dados do fetch.php para preencher a tabela via ajax 
+ $.ajax({  
+ 	url:"php/produto/modificaProduto.php",  
+ 	method:"POST",
+ 	data:{codProdutos:codProdutos},
+ 	dataType:"json",   
+ 	beforeSend:function(data){  
+
+
+
+ 	},
+ 	success:function(data){  
+ 		$('#modificanomeProduto').val(data.nome);
+ 		$('#modificadescricaoProduto').val(data.descricao);
+ 		$('#modificacodigoProduto').val(data.codProduto);
+
+
+ 	}  
+ });
+
+
+
+}); 
+
+
+	$(document.body).on('click', '#modificapotato', function(){
+		
+		$('#formProdutoModifica').validate({
+			rules: {
+			//nome: { required: true },
+			//descricao: { required: true },
+			//estatus: { required: true },
+		},
+		messages: {
+			//nome: { required: 'Preencha o campo nome'},
+			//descricao: { required: 'Preencha a descrição do serviço'},
+			//arquivo: { required: 'Coloque uma imagem'},
+
+
+		},
+		submitHandler: function( form ){
+			var dados = $( form ).serialize();
+			$.ajax({
+				type: "POST",
+				url: "php/produto/modifica.php",
+				data: new FormData($('form')[1]),
+
+        // Tell jQuery not to process data or worry about content-type
+        // You *must* include these options!
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function( data )
+        {	
+						$('#modificarProduto').hide(); // esconde o modal
+	 	    			$("#modificareturnServico").click(); // fecha o modal de fato
+	 	    			$('#formProdutoModifica').each (function(){
+	 	    				this.reset();
+	 	    			});
+	 	    			location.reload();
+
+	 	    		}
+	 	    	});
+
+			return false;
+		}
+	});
+	});
+
+
 
 });
 

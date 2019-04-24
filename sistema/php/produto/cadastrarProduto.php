@@ -13,20 +13,27 @@ if(isset($_POST['nomeProduto'])){
     $results = mysqli_query($conn, $sql);
     $batata = $conn->insert_id;
     echo $sql;
-
+    $contador = 1;
 
 
     foreach ($_FILES['filesToUpload']['tmp_name'] as $key => $val ) {
+        $galeiraProduto = '';
         $filename = $_FILES['filesToUpload']['name'][$key];
         $filesize = $_FILES['filesToUpload']['size'][$key];
         $filetempname = $_FILES['filesToUpload']['tmp_name'][$key];
 
+    // Pega a extensão
+        $extensao = pathinfo ( $filename, PATHINFO_EXTENSION );
+
+    // Converte a extensão para minúsculo
+        $extensao = strtolower ( $extensao );
+       
 
         $fileext = strtolower($filename);
-
-
+        $galeriaProduto = $batata . '-' . $contador. '.'.$extensao;
+        $contador = $contador + 1;
         // Concatena a pasta com o nome
-        $destino = '../../Img/Produtos/' . $fileext;
+        $destino = '../../Img/Produtos/' . $galeriaProduto;
         echo $destino;
         // tenta mover o arquivo para o destino
         if ( @move_uploaded_file ( $filetempname, $destino ) ) {
@@ -34,7 +41,7 @@ if(isset($_POST['nomeProduto'])){
             echo ' < img src = "' . $destino . '" />';
             $sql = "  
             INSERT INTO imagemproduto(nome,codProduto)
-            VALUES ('$filename','$batata') ";
+            VALUES ('$galeriaProduto','$batata') ";
             $results = mysqli_query($conn, $sql);
             echo $sql;
 

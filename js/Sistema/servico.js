@@ -53,14 +53,7 @@ var addremove;
 	 	    			$('#formServico').each (function(){
 	 	    				this.reset();
 	 	    			});
-	 	    			$.ajax({
-	 	    				url : 'mod_servicos.php',
-	 	    				success: function(data){
-
-	 	    					$('#painelSistema').empty();
-	 	    					$('#painelSistema').html(data);
-	 	    				}
-	 	    			});
+	 	    			location.reload();
 
 	 	    		}
 	 	    	});
@@ -126,12 +119,7 @@ $('#blah').attr('src', ''); // Clear the src
  	{	
 						$('#excluirServico').hide(); // esconde o modal
 	 	    			$("#returnExcluir").click(); // fecha o modal de fato
-	 	    			$.ajax({
-	 	    				url : 'mod_servicos.php',
-	 	    				success: function(data){
-	 	    					$('#painelSistema').html(data);
-	 	    				}
-	 	    			});
+	 	    			location.reload();
 
 	 	    		}
 
@@ -202,14 +190,7 @@ $(document.body).on('click', '#modificabatatas', function(){
 	 	    			$('#formModifica').each (function(){
 	 	    				this.reset();
 	 	    			});
-	 	    			$.ajax({
-	 	    				url : 'mod_servicos.php',
-	 	    				success: function(data){
-
-	 	    					$('#painelSistema').empty();
-	 	    					$('#painelSistema').html(data);
-	 	    				}
-	 	    			});
+	 	    			location.reload();
 
 	 	    		}
 	 	    	});

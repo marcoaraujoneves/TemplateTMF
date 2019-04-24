@@ -150,11 +150,11 @@
 										<img id="blah" src="#" alt="your image" />
 										<div class="form-group">
 											<label for="nome">Nome</label>
-											<input type="text" name="nome" id="nome" required class="inpForm"/>
+											<input type="text" name="nome" id="nome" required class="inpForm"/ autocomplete="off">
 										</div>
 										<div class="form-group">
 											<label for="description">Descrição</label>
-											<input type="text" name="description" id="description" required class="inpForm"/>
+											<input type="text" name="description" id="description" required class="inpForm"/ autocomplete="off">
 										</div>
 								</div>
 								<div class="modal-footer">
@@ -181,11 +181,11 @@
 									<form method="post" enctype="multipart/form-data"  id="formModifica" >
 										<div class="form-group">
 											<label for="nome">Nome</label>
-											<input type="text" name="modificanome" id="modificanome" required  class="form-control"/>
+											<input type="text" name="modificanome" id="modificanome" required  class="form-control"/ autocomplete="off">
 										</div>
 										<div class="form-group">
 											<label for="description">Descrição</label>
-											<input type="text" name="modificadescription" id="modificadescription" required class="form-control"/>
+											<input type="text" name="modificadescription" id="modificadescription" required class="form-control"/ autocomplete="off">
 										</div>
 									</div>
 								<div class="modal-footer">
