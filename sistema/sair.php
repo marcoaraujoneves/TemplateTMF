@@ -1,8 +1,12 @@
 <?php
-    session_start();
+session_start();
 
-    unset($_SESSION['nome']);
-    unset($_SESSION['cargo']);
+    // Unset all of the session variables
+$_SESSION = array();
 
-    header('Location: index.php');
+// Destroy the session.
+session_destroy();
+
+header('Location: index.php');
+exit;
 ?>
