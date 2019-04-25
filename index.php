@@ -226,7 +226,7 @@
                         include ('sistema/db.class.php');
                         $objDB = new db();
                         $conn = $objDB->conecta_mysql();
-                        $query_select = "SELECT * FROM produto;";
+                        $query_select = "SELECT imagemproduto.nome,produto.nome as nomes,codImagem,produto.codProduto, descricao FROM produto INNER Join imagemproduto on produto.codProduto = imagemproduto.codProduto group by imagemproduto.codProduto;";
                         $result_select = mysqli_query($conn,$query_select) or die(mysql_error());
                         $rows = array();
                         $contadorProdutos = 0;
@@ -236,20 +236,21 @@
                             $contadorProdutos = $contadorProdutos + 1;
                             $codProduto = $row['codProduto'];
                             $nome = $row['nome'];
+                            $nomes = $row['nomes'];
                             $descricao = $row['descricao'];
                             echo '<div class="col-12 col-sm-6 col-lg-3">';
                             echo '<div class="cardProdutos">';
                             echo '<div class="containerProduto sombra-cartao" id="cardProduto'.$contadorProdutos.'">';
                             echo '<div class="cardProdutosImgContainer">';
-                            echo '<img src="sistema/Img/Produtos/'.$codProduto.'.jpg" class="img-fluid rounded my-auto mx-auto d-block">';
+                            echo '<img src="sistema/Img/Produtos/'.$nome.'" class="img-fluid rounded my-auto mx-auto d-block">';
                             echo '</div>';
                             echo '<div class="cardProdutosDescricao">';
                             echo '<div class="justify-content-center align-items-center d-flex nomeProduto">';
-                            echo '<h4> '.$nome.' </h4>';
+                            echo '<h4> '.$nomes.' </h4>';
                             echo '</div>';
                             echo '</div>';
                             echo '<div class="descricaoProduto sombra-cartao">';
-                            echo '<h4 class="nomeProdutoInterno"> '.$nome.' </h4>';
+                            echo '<h4 class="nomeProdutoInterno"> '.$nomes.' </h4>';
                             echo '<p class="text-justify px-2 py-1 " style="transition: display 1s linear 1s;">
                                             '.$descricao.'
                                             <br>
@@ -388,13 +389,14 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div id="carouselPortifolio" class="carousel slide" data-ride="carousel">
-                                
+
                                 <div class="carousel-inner">
 
                                     <?php 
                                     $cont_slide = 0;
                                     $i = 0;
-                                    $query_select = "SELECT * FROM portifolio;";
+                                    $query_select = "SELECT imagemportifolio.nome,codImagem,portifolio.codPortifolio, descricao FROM portifolio INNER Join imagemportifolio on portifolio.codPortifolio = imagemportifolio.codPortifolio group by imagemportifolio.codPortifolio
+                                    ;";
                                     $result_select = mysqli_query($conn,$query_select) or die(mysql_error());
                                     $rows = array();
                                     while($row = mysqli_fetch_array($result_select))
@@ -409,9 +411,9 @@
                                         $descricao = $row['descricao'];
 
                                         echo '<div class="carousel-item pb-3 '.$active.'">';
-                                        echo '<img class="d-block w-100 imagem_port mx-auto" src="sistema/Img/Portifolio/'.$codPortifolio.'.jpg"  >';
+                                        echo '<img class="d-block w-100 imagem_port mx-auto" src="sistema/Img/Portifolio/'.$nome.'"  >';
                                         echo '<div class="carousel-caption mx-auto">';
-                                        echo '<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam vel lacus ut tellus fringilla imperdiet.</p>';
+                                        echo '<p>'.$descricao.'.</p>';
                                         echo '</div>';
                                         echo '</div>';
                                         $cont_slide = $cont_slide + 1;

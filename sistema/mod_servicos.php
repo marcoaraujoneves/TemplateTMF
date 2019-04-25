@@ -146,8 +146,8 @@
 								</div>
 								<div class="modal-body">
 									<form method="post" enctype="multipart/form-data"  id="formServico" >
-										<input  type='file' class="inpForm" name="arquivo" id="arquivo" />
-										<img id="blah" src="#" alt="your image" />
+										<input name="filesToUpload[]" class="inpForm" id="filesToUpload" type="file" multiple="" />
+										
 										<div class="form-group">
 											<label for="nome">Nome</label>
 											<input type="text" name="nome" id="nome" required class="inpForm"/ autocomplete="off">
@@ -192,39 +192,56 @@
 									<input type="hidden" name="modificacodigo" id="modificacodigo" >
 									<input type="submit" class="btn btn-success" id="modificabatatas" name="modificabatatas" value="Enviar"/>
 									<button type="button" class="btn btn-secondary" id="modificareturnServico" data-dismiss="modal"> Cancelar </button>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>				
-
+								</form>
 							</div>
 						</div>
 					</div>
+				</div>				
 
-					<div class="modal fade" id="exlcuirServico" tabindex="-1" role="dialog" aria-labelledby="modalConfirmaDeleteServicoTitle" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered" role="document">
-							<div class="modal-content">
-								<div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
-									<h5 class="modal-title">Deseja excluir este serviço?</h5>
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-footer">
-									<input type="button" name="excluiServ" id="excluiServ" value="Sim" class="btn btn-danger BotaoModal">
-									<button type="button" class="btn btn-secondary" id="returnExcluir" data-dismiss="modal"> Não </button>
-								</div>
-							</div>
-						</div>
-					</div>
-                </div>
-            </div>
-        </div>
+			</div>
+		</div>
+	</div>
 
-    </body>
-    <script src="../js/jquery-3.3.1.js"></script>
-	<script src="../js/jquery.validate.min.js"></script>
+	<div class="modal fade " id="mostrarImagens" tabindex="-1" role="dialog" aria-labelledby="modalImagensProdutoTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
+					<h5 class="modal-title">Imagens</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div id="galeria"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal fade" id="exlcuirServico" tabindex="-1" role="dialog" aria-labelledby="modalConfirmaDeleteServicoTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
+					<h5 class="modal-title">Deseja excluir este serviço?</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-footer">
+					<input type="button" name="excluiServ" id="excluiServ" value="Sim" class="btn btn-danger BotaoModal">
+					<button type="button" class="btn btn-secondary" id="returnExcluir" data-dismiss="modal"> Não </button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+</body>
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../js/jquery.validate.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
     <script src="../js/Sistema/Sistema.js"></script>

@@ -129,6 +129,7 @@ if(!isset($_SESSION['nome'])){
 							</div>
 							<div class="modal-body">
 								<form method="post" enctype="multipart/form-data"  id="formProduto" >
+									
 									<input name="filesToUpload[]" class="inpForm" id="filesToUpload" type="file" multiple="" />
 									<div class="form-group">
 										<label for="nomeProduto">Nome</label>

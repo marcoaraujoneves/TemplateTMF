@@ -2,27 +2,11 @@ $(document.body).ready(function(){
 var codServico;
 var addremove;
 
-	function readURL(input) {
-
-		if (input.files && input.files[0]) {
-			var reader = new FileReader();
-
-			reader.onload = function(e) {
-				$('#blah').attr('src', e.target.result);
-			}
-
-			reader.readAsDataURL(input.files[0]);
-		}
-	}
-
-	$(document.body).on('change', '#arquivo', function(){
-		readURL(this);
-	});
 
 
-	$(document.body).on('click', '#batatas', function(){
-		$('#formServico').validate({
-			rules: {
+$(document.body).on('click', '#batatas', function(){
+	$('#formServico').validate({
+		rules: {
 			//nome: { required: true },
 			//descricao: { required: true },
 			//estatus: { required: true },
@@ -36,10 +20,12 @@ var addremove;
 		},
 		submitHandler: function( form ){
 			var dados = $( form ).serialize();
+			var form = $('#formServico')[0]; //  [0], because you need to use standart javascript object here
+			var formData = new FormData(form);
 			$.ajax({
 				type: "POST",
 				url: "php/servico/cadastrarServico.php",
-				data: new FormData($('form')[0]),
+				data: formData,
 
         // Tell jQuery not to process data or worry about content-type
         // You *must* include these options!
@@ -201,6 +187,35 @@ $(document.body).on('click', '#modificabatatas', function(){
 	});
 
 
+	$(document).on('click', '#previewImagens', function(){
+		$( "#galeria" ).empty();
+		var codServico = $(this).attr("value");
+ // retorna os dados do fetch.php para preencher a tabela via ajax 
+ $.ajax({  
+ 	url:"php/servico/pegaGaleria.php",  
+ 	method:"POST",
+ 	data:{codServico:codServico},
+ 	dataType:"json",   
+ 	beforeSend:function(){  
+ 	},
+ 	success:function(data){  
+ 		$.each(data, function(r) {
+
+ 			
+ 			$('#galeria').append('<img  src="Img/Servicos/'+data[r].nome+'" />')
+
+ 		});
+
+
+ 		
+
+
+ 	}  
+ });
+
+
+
+}); 
 
 
 
