@@ -154,7 +154,7 @@
                                         </div>
                                         <div class="es-carousel">
                                             <ul class="lista_imagens ">                                       
-                                                <li><a href="#"><img src="img/tornearia-1.gif" data-large="img/tornearia-1.gif" " data-description="" /></a></li>
+                                                
                                                 <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
                                                 <li><a href="#"><img src="img/usinagem-2.jpg" data-large="img/usinagem-2.jpg" " data-description="" /></a></li>
                                                 <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>

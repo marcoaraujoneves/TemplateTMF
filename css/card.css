@@ -19,8 +19,8 @@
 }
 .font_info_card_num{
     display:  block ;
-    font-weight: 900 ;
-    font-size: 34px;
+    /*font-weight: 200 ;*/
+    font-size: 70px;
 }
 .linha_separadora{
     display: block;
