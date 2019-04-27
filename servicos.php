@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <title> Indústria TMF | Serviços </title> 
-        <!-- ---------------------------------------slider link e metas ------------------------------------- -->
+        <!-- ---------------------------------------slider link e metas ---------------------------------------------->
         <noscript>
 			<style>
 				.es-carousel ul{
@@ -44,14 +44,14 @@
 				</div>
 			</div>
         </script>
-        <!--------------------------------------------slider links e metas  ------------------------------------->
+        <!--------------------------------------------/slider links e metas  ------------------------------------------>
     </head>
     <body>
-        <!-- Inclusão do cabeçalho do site -->
+        <!------------------------------------------ Inclusão do cabeçalho do site ----------------------------------->
         <header>
             <?php include_once('header.php'); ?>
         </header>
-        <!-- Corpo principal -->
+        <!--------------------------------------------- Corpo principal ---------------------------------------------->
         <main>
         <section id="secaoProdutos" class="secaoSite" style="margin-top:110px;" >
             <div class="container container-fluid">
@@ -146,37 +146,15 @@
                         <div class="Conteudo_slider mx-auto my-auto">
                             <div id="rg-gallery1" class="rg-gallery">
                                 <div class="rg-thumbs">
-                                    <!-- Elastislide Carousel Thumbnail Viewer -->
                                     <div class="es-carousel-wrapper">
                                         <div class="es-nav">
                                             <span class="es-nav-prev">Previous</span>
                                             <span class="es-nav-next">Next</span>
                                         </div>
                                         <div class="es-carousel">
-                                            <ul class="lista_imagens ">                                       
-                                                
+                                            <ul class="lista_imagens ">                                
                                                 <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/usinagem-2.jpg" data-large="img/usinagem-2.jpg" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/usinagem-1.jpg" data-large="img/usinagem-1.jpg" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-1.gif" data-large="img/tornearia-1.gif" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/usinagem-2.jpg" data-large="img/usinagem-2.jpg" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/usinagem-1.jpg" data-large="img/usinagem-1.jpg" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-1.gif" data-large="img/tornearia-1.gif" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/usinagem-2.jpg" data-large="img/usinagem-2.jpg" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/usinagem-1.jpg" data-large="img/usinagem-1.jpg" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-1.gif" data-large="img/tornearia-1.gif" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/usinagem-2.jpg" data-large="img/usinagem-2.jpg" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/usinagem-1.jpg" data-large="img/usinagem-1.jpg" " data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/usinagem-2.jpg" data-large="img/usinagem-2.jpg"  data-description="" /></a></li>
                                                 <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
                                             </ul>
                                         </div>
@@ -200,14 +178,7 @@
                                 <div class="caixa_card_texto ">
                                     <div class="col-12">
                                         <p class="card-text">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor elit sed vulputate mi. Vitae et leo duis ut diam quam nulla. Turpis egestas sed tempus urna et pharetra pharetra massa massa.
-                                            Lectus urna duis convallis convallis tellus id interdum velit laoreet. Eget duis at tellus at urna condimentum mattis pellentesque id. Blandit volutpat maecenas volutpat blandit aliquam. Augue ut lectus arcu bibendum at.
-                                            Vehicula ipsum a arcu cursus vitae congue mauris. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Vitae ultricies leo integer malesuada nunc. Eu volutpat odio facilisis mauris sit amet. Quam viverra orci sagittis eu volutpat odio facilisis mauris sit.
-                                            Morbi tincidunt augue interdum velit. At in tellus integer feugiat scelerisque varius morbi. Porttitor massa id neque aliquam. Pellentesque massa placerat duis ultricies lacus sed. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu.
-                                            Mattis nunc sed blandit libero volutpat sed cras ornare. Sem viverra aliquet eget sit amet tellus cras adipiscing. Scelerisque in dictum non consectetur a. Rhoncus mattis rhoncus urna neque. Adipiscing commodo elit at imperdiet. Placerat vestibulum lectus mauris ultrices eros in.
-                                            Orci sagittis eu volutpat odio facilisis. Est ultricies integer quis auctor. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Erat nam at lectus urna duis convallis convallis tellus. Tincidunt eget nullam non nisi est sit. Mauris nunc congue nisi vitae suscipit tellus mauris.
-                                            Magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Urna et pharetra pharetra massa massa ultricies.Faucibus scelerisque eleifend donec pretium. Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet.
-                                            Pretium nibh ipsum consequat nisl vel pretium lectus quam. Placerat orci nulla pellentesque dignissim. Et magnis dis parturient montes. Eu lobortis elementum nibh tellus molestie nunc non blandit. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. Auctor eu augue ut lectus arcu. Elementum integer enim neque volutpat ac tincidunt vitae. Ut eu sem integer vitae justo.
+                                             parturient montes
                                         </p>
                                     </div>
                                 </div>  
@@ -270,38 +241,15 @@
                         <div class="Conteudo_slider mx-auto my-auto">
                             <div id="rg-gallery2" class="rg-gallery">
                                 <div class="rg-thumbs">
-                                    <!-- Elastislide Carousel Thumbnail Viewer -->
                                     <div class="es-carousel-wrapper">
                                         <div class="es-nav">
                                             <span class="es-nav-prev">Previous</span>
                                             <span class="es-nav-next">Next</span>
                                         </div>
                                         <div class="es-carousel">
-                                            <ul class="lista_imagens ">                                       
-                                                <li><a href="#"><img src="img/tornearia-1.gif" data-large="img/tornearia-1.gif" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/usinagem-2.jpg" data-large="img/usinagem-2.jpg" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/usinagem-1.jpg" data-large="img/usinagem-1.jpg" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-1.gif" data-large="img/tornearia-1.gif" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/usinagem-2.jpg" data-large="img/usinagem-2.jpg" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/usinagem-1.jpg" data-large="img/usinagem-1.jpg" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-1.gif" data-large="img/tornearia-1.gif" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/usinagem-2.jpg" data-large="img/usinagem-2.jpg" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/usinagem-1.jpg" data-large="img/usinagem-1.jpg" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-1.gif" data-large="img/tornearia-1.gif" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/usinagem-2.jpg" data-large="img/usinagem-2.jpg" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/usinagem-1.jpg" data-large="img/usinagem-1.jpg" " data-description="" /></a></li>
-                                                <li><a href="#"><img src="img/tornearia-2.jpg" data-large="img/tornearia-2.jpg" data-description="" /></a></li>
+                                            <ul class="lista_imagens ">
+                                                <li><a href="#"><img src="img/tornearia-1.gif" data-large="img/tornearia-1.gif"  data-description="" /></a></li>
+                                                <li><a href="#"><img src="img/usinagem-1.jpg" data-large="img/usinagem-1.jpg"  data-description="" /></a></li>
                                             </ul>
                                         </div>
                                     </div>

@@ -126,6 +126,11 @@
     background-color: rgba(55, 110, 199, 0.521);
     border-radius: 20px ; 
 }
+@media screen and (min-width: 967px){
+    .caixa_texto{
+       min-width: 550px ;
+    }
+}
 .btn.btn-primary{
     background-color: #365C9A !important ;
     border-color: #365C9A !important ; 
