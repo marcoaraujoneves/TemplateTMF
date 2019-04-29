@@ -85,7 +85,11 @@
                 $descricao = $row['descricao'];
                 echo '<div class="container d-flex justify-content-center">';
                 echo '<div class="row d-flex justify-content-center">';
-                echo '<div class="col order-sm-12 mt-2 mb-4 mx-auto ">';
+                if ($contadorProdutos%2 == 0) {
+                    echo '<div class="col  mt-2 mb-4 mx-auto ">';
+                }else{
+                    echo '<div class="col order-sm-12 mt-2 mb-4 mx-auto ">';
+                }
                 echo '<div class="container caixa_texto">';
                 echo '<div class="row">';
                 echo '<div class="col-12 mt-2 mb-0 text-center">';
