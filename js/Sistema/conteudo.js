@@ -1,3 +1,4 @@
+var listaParceiros;
 $(document).ready(function(){
 
     $(document).on('click','#btnSobre', function(){
@@ -21,20 +22,58 @@ $(document).ready(function(){
             }
         });
     });
-
-    $(document).on('click','#btnServicos', function(){
+    $.ajax({
+        url:'Servicos/carregaDados.php',
+        success:function(data){
+            $('#servico1').html(data);
+            $('#servico2').html(data);
+            $('#servico3').html(data);
+            $('#servico4').html(data);
+        },
+        error: function(){
+            $('#bodyServicos').html('Houve um erro na requisição, tente novamente mais tarde!');
+        }
+    });
+    $(document).on('click','#btnServicos', function(){        
         $.ajax({
             url:'Sobre/carregaDados.php',
             dataType:"json",
             success:function(data){
+                $('#textoServicos').val(data.textoServicos);
                 $('#servico1').val(data.servico1);
                 $('#servico2').val(data.servico2);
                 $('#servico3').val(data.servico3);
                 $('#servico4').val(data.servico4);
-                $('#textoServicos').val(data.textoServicos);
             },
             error: function(){
-                $('#bodyServicos').html('Houve um erro na requisição, tente novamente mais tarde!');
+
+            }
+        });
+    });
+
+    $.ajax({
+        url:'Produtos/carregaDados.php',
+        success:function(data){
+            $('#produto1').html(data);
+            $('#produto2').html(data);
+            $('#produto3').html(data);
+        },
+        error: function(){
+            $('#bodyProdutos').html('Houve um erro na requisição, tente novamente mais tarde!');
+        }
+    });
+
+    $(document).on('click','#btnProdutos', function(){        
+        $.ajax({
+            url:'Sobre/carregaDados.php',
+            dataType:"json",
+            success:function(data){
+                $('#produto1').val(data.produto1);
+                $('#produto2').val(data.produto2);
+                $('#produto3').val(data.produto3);
+            },
+            error: function(){
+                
             }
         });
     });
@@ -59,7 +98,7 @@ $(document).ready(function(){
             method:'POST',
             data:$('#formServicos').serialize(),
             success:function(data){
-                alert(data);
+                
             },
             error: function(){
                 $('#bodyServicos').html('Houve um erro na requisição, tente novamente mais tarde!');
@@ -67,22 +106,49 @@ $(document).ready(function(){
         });
     });
 
+    $(document).on('click','#salvarProdutos', function(){
+        $.ajax({
+            url:'Sobre/salvarDadosProdutos.php',
+            method:'POST',
+            data:$('#formProdutos').serialize(),
+            success:function(data){
+                
+            },
+            error: function(){
+                $('#bodyProduto').html('Houve um erro na requisição, tente novamente mais tarde!');
+            }
+        });
+    });
+
+
+
     $(document).on('click','.btnAtivo',function(){
         $(this).addClass('d-none');
         $(this).removeClass('btnAtivo');
     });
 
-    $(document).on('click','#addProduto',function(){
-        $('#listaProdutos').append('<div class="row"><div class="col-md-10"><label for="produto_1"> Produto 2: </label><select class="inpForm" name="produto_1" id="produto_1"><option> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addProduto"> + </button></div></div>');
-    });
-
     $(document).on('click','#addPortifolio',function(){
         $('#listaPortifolio').append('<div class="row"><div class="col-md-10"><label for="portifolio_1"> Portifólio 2: </label><select class="inpForm" name="portifolio_1" id="portifolio_1"><option> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addPortifolio"> + </button></div></div>');
     });
+    
+    
+    $.ajax({
+        url:'Parceiros/carregaDados.php',
+        success:function(data){
+            listaParceiros = data;
+        },
+        error: function(){
+            $('#bodyParceiros').html('Houve um erro na requisição, tente novamente mais tarde!');
+        }
+    });
     var contadorParceiros = 2;
-    /* $(document).on('click','#addParceiro',function(){
+    $(document).on('click','#btnParceiros', function(){
+        $('#parceiro1').html(listaParceiros);
         
-        $('#listaParceiros').append('<div class="row"><div class="col-md-10"><label for="parceiro_'+contadorParceiros+'"> Parceiro '+contadorParceiros+': </label><select class="inpForm" name="parceiro_'+contadorParceiros+'" id="parceiro_'+contadorParceiros+'"><?php 
+    });
+    // $(document).on('click','#addParceiro',function(){
+        
+       /* $('#listaParceiros').append('<div class="row"><div class="col-md-10"><label for="parceiro_'+contadorParceiros+'"> Parceiro '+contadorParceiros+': </label><select class="inpForm" name="parceiro_'+contadorParceiros+'" id="parceiro_'+contadorParceiros+'"><?php 
                                 
                                 $query_select = "SELECT * FROM parceiros ;";
                                 $result_select = mysqli_query($conn,$query_select) or die(mysql_error());

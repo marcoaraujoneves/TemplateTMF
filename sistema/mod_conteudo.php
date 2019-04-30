@@ -205,14 +205,14 @@
 												<div class="col-md-6" style="border-right:1px solid lightgray;">
 													<label for="servico1"> Serviço 1: </label>
 													<select class="inpForm" id="servico1" name="servico1">
-														<option value="43"> - </option>
+														<option> - </option>
 													</select>
 													<br><hr>
 												</div>
 												<div class="col-md-6" style="border-right:1px solid lightgray;">
 													<label for="servico2"> Serviço 2: </label>
 													<select class="inpForm" id="servico2" name="servico2">
-														<option value="44"> - </option>
+														<option> - </option>
 													</select>
 													<br><hr>
 												</div>
@@ -222,14 +222,14 @@
 												<div class="col-md-6" style="border-right:1px solid lightgray;">
 													<label for="servico3"> Serviço 3: </label>
 													<select class="inpForm" id="servico3" name="servico3">
-														<option value="45"> - </option>
+														<option> - </option>
 													</select>
 													<br><hr>
 												</div>
 												<div class="col-md-6" style="border-right:1px solid lightgray;">
 													<label for="servico4"> Serviço 4: </label>
 													<select class="inpForm" id="servico4" name="servico4">
-														<option value="43"> - </option>
+														<option> - </option>
 													</select>
 													<br><hr>
 												</div>
@@ -265,15 +265,27 @@
 									<form id="formProdutos">	
 										<div class="container-fluid" id="listaProdutos">
 											<div class="row">
-												<div class="col-md-10">
-													<label for="produto_1"> Produto 1: </label>
-													<select class="inpForm" name="produto_1" id="produto_1">
+												<div class="col-md-6" style="border-right:1px solid lightgray;">
+													<label for="produto1"> Produto 1: </label>
+													<select class="inpForm" id="produto1" name="produto1">
 														<option> - </option>
 													</select>
 													<br><hr>
 												</div>
-												<div class="col-md-2 my-auto mx-auto">
-													<button type="button" class="btn btn-success btnAtivo" id="addProduto"> + </button>
+												<div class="col-md-6">
+													<label for="produto2"> Produto 2: </label>
+													<select class="inpForm" id="produto2" name="produto2">
+														<option> - </option>
+													</select>
+													<br><hr>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-6 offset-md-3">
+													<label for="produto3"> Produto 3: </label>
+													<select class="inpForm" id="produto3" name="produto3">
+														<option> - </option>
+													</select>
 												</div>
 											</div>
 										</div>
@@ -338,22 +350,22 @@
 										<div class="container-fluid" id="listaParceiros">
 											<div class="row">
 												<div class="col-md-10">
-													<label for="parceiro_1"> Parceiro 1: </label>
-													<select class="inpForm" name="parceiro_1" id="parceiro_1">
+													<label for="parceiro1"> Parceiro 1: </label>
+													<select class="inpForm" name="parceiro1" id="parceiro1">
 														<?php 
-														include ('db.class.php');
-														$objDB = new db();
-														$conn = $objDB->conecta_mysql();
-														$query_select = "SELECT * FROM parceiros ;";
-														$result_select = mysqli_query($conn,$query_select) or die(mysql_error());
-														$rows = array();
-														while($row = mysqli_fetch_array($result_select))
-															$rows[] = $row;
-														foreach($rows as $row){ 
-															$codParceiro = $row['codParceiro'];
-															$nome = $row['nome'];
-															echo '<option value="'.$codParceiro.'"> '.$nome.'</option>';
-														}
+														// include ('db.class.php');
+														// $objDB = new db();
+														// $conn = $objDB->conecta_mysql();
+														// $query_select = "SELECT * FROM parceiros ;";
+														// $result_select = mysqli_query($conn,$query_select) or die(mysql_error());
+														// $rows = array();
+														// while($row = mysqli_fetch_array($result_select))
+														// 	$rows[] = $row;
+														// foreach($rows as $row){ 
+														// 	$codParceiro = $row['codParceiro'];
+														// 	$nome = $row['nome'];
+														// 	echo '<option value="'.$codParceiro.'"> '.$nome.'</option>';
+														// }
 														?>  
 														<option> - </option>
 													</select>
