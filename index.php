@@ -395,7 +395,7 @@
                                     <?php 
                                     $cont_slide = 0;
                                     $i = 0;
-                                    $query_select = "SELECT imagemportifolio.nome,codImagem,portifolio.codPortifolio, descricao FROM portifolio INNER Join imagemportifolio on portifolio.codPortifolio = imagemportifolio.codPortifolio group by imagemportifolio.codPortifolio
+                                    $query_select = "SELECT imagemportifolio.nome,codImagem,portifolio.codPortifolio, descricao FROM portifolio INNER Join imagemportifolio on portifolio.codPortifolio = imagemportifolio.codPortifolio where status ='1' group by imagemportifolio.codPortifolio 
                                     ;";
                                     $result_select = mysqli_query($conn,$query_select) or die(mysql_error());
                                     $rows = array();

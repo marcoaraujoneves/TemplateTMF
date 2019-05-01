@@ -85,6 +85,45 @@ $("#formProduto").trigger('reset');
 	 	    	}); 
 });
 
+	$(document.body).on('click', '#statusProduto', function(){
+ // retorna os dados do fetch.php para preencher a tabela via ajax
+ codigo = $(this).attr("value"); 
+ $.ajax({  
+ 	url:"php/produto/mudaStatus.php",  
+ 	method:"POST",
+ 	data:{codigo:codigo},  
+ 	beforeSend:function(data){  
+
+
+
+ 	},
+ 	success:function(data){
+ 		
+ 		$('#onoff'+codigo).html(data);
+ 		$('#status'+codigo).html("Inativo");
+ 		teste = $('#status'+codigo).attr("value"); 
+ 		if(teste=='Ativo'){
+ 			$('#status'+codigo).html("Inativo");
+ 			$('#status'+codigo).attr("value","Inativo");
+ 			
+
+ 		}
+ 		if(teste=='Inativo'){
+ 			$('#status'+codigo).html("Ativo");
+ 			$('#status'+codigo).attr("value","Ativo");
+ 			
+
+ 		}
+
+
+
+ 	}  
+ });
+}); 
+
+
+
+
 
 	$(document).on('click', '#previewImagens', function(){
 		$( "#galeria" ).empty();

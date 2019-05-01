@@ -11,10 +11,11 @@ $coluna = mysqli_fetch_array($resultado);
 $bool =  $coluna[0];
 if($bool=='0'){
 	$sql = "update servico set estatus = '1' where codServico = '$codigo';";
+	echo '<span id="onoff'.$codigo.'"><button value="'.$codigo.'" class="botaoEmail btnStatus" data-id="'.$codigo.'" data-status='.$codigo.' id="statusServico"> <i class="fa fa-toggle-on")"></i> </button></span>';
 }else{
 	$sql = "update servico set estatus = '0' where codServico = '$codigo';";
+	echo '<span id="onoff'.$codigo.'"><button value="'.$codigo.'" class="botaoEmail btnStatus" data-id="'.$codigo.'" data-status='.$codigo.' id="statusServico"> <i class="fa fa-toggle-off")"></i> </button></span>';
 }
-echo $sql;
 $results = mysqli_query($conn, $sql);  
 
 

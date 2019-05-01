@@ -74,10 +74,11 @@ if(!isset($_SESSION['nome'])){
 					<table  class="table table-striped table-hover Tabela" id="tb1">
 						<thead>
 							<tr>
-								<th style="width:6%;"> # </th>
-								<th style="width:25%;"> Nome </th>
-								<th style="width:36%;"> Descrição </th>
-								<th style="width:17%;text-align:center"> Youtube </th>
+								<th style="width:3%;"> # </th>
+								<th style="width:20%;"> Nome </th>
+								<th style="width:30%;"> Descrição </th>
+								<th style="width:17%;"> Youtube </th>
+								<th style="width:17%;"> Status </th>
 								<th style="width:15%;">  </th>
 
 
@@ -100,6 +101,7 @@ if(!isset($_SESSION['nome'])){
 								$codPortifolio = $row['codPortifolio'];
 								$nome = $row['nome'];
 								$descricao = $row['descricao'];
+								$status = $row['status'];
 								$linkYoutube = $row['linkYoutube'];
 								echo '<tr class="odd gradeX">';
 								//echo '<td><button class="btn Botao" data-toggle="modal" id="previewImagem" data-target="#mostrarImagem" value="'.$codPortifolio.'" type="button">Imagens</button></td>';
@@ -107,14 +109,33 @@ if(!isset($_SESSION['nome'])){
 								echo '<td>'.$nome.'</td>';
 								echo '<td>'.$descricao.'</td>';
 								echo '<td>'.$linkYoutube.'</td>';
+								if($status){
+										echo '<td >
+										<span id="status'.$codPortifolio.'" value="Ativo">Ativo</span>
+										</td>';
+									}else{
+										
+										echo '<td>
+										<span id="status'.$codPortifolio.'" value="Inativo">Inativo</span>
+										</td>';
+									}
 								echo '<td>
 								<center>
 								<button class="botaoEmail Botao" data-toggle="modal" id="modificaPortifolio" data-target="#modificarPortifolio" value="'.$codPortifolio.'" type="button"><i class="fa fa-pencil"></i> </button>
 								<button class="botaoEmail Botao" data-toggle="modal" id="deletaPortifolio" data-target="#excluirPortifolio" value="'.$codPortifolio.'" type="button"> <i class="fa fa-trash"></i> </button>
 								<button class="botaoEmail Botao" data-toggle="modal" id="previewImagem" data-target="#mostrarImagem" value="'.$codPortifolio.'" type="button"><i class="fa fa-image"></i></button>
-								</center>';
-								echo '</tr>';
-								unset($estatus);
+								';
+								if($status){
+										echo '
+										<span id="onoff'.$codPortifolio.'"><button value="'.$codPortifolio.'" class="botaoEmail btnStatus" data-id="'.$codPortifolio.'" data-status='.$codPortifolio.' id="statusPortifolio"> <i class="fa fa-toggle-on")"></i> </button></span>';
+									}else{
+										
+										echo '
+										<span id="onoff'.$codPortifolio.'"><button value="'.$codPortifolio.'" class="botaoEmail btnStatus" data-id="'.$codPortifolio.'" data-status='.$codPortifolio.' id="statusPortifolio"> <i class="fa fa-toggle-off")"></i> </button></span>';
+									}
+									echo '	</center>
+									</tr>';
+								unset($status);
 							}
 							?>
 						</tbody>

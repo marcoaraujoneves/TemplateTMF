@@ -47,9 +47,9 @@ $(document.body).on('click', '#batatas', function(){
 			return false;
 		}
 	});
-	});
+});
 
-	$(document.body).on('click', '#estatus', function(){
+$(document.body).on('click', '#statusServico', function(){
  // retorna os dados do fetch.php para preencher a tabela via ajax
  codigo = $(this).attr("value"); 
  $.ajax({  
@@ -62,8 +62,22 @@ $(document.body).on('click', '#batatas', function(){
 
  	},
  	success:function(data){
-
-			//$('#atracoesFesta').val(data.titulo);
+ 		
+ 		$('#onoff'+codigo).html(data);
+ 		$('#status'+codigo).html("Inativo");
+ 		teste = $('#status'+codigo).attr("value"); 
+ 		if(teste=='Ativo'){
+ 			$('#status'+codigo).html("Inativo");
+ 			$('#status'+codigo).attr("value","Inativo");
+ 			$('#status'+codigo).val('Inativo');
+			
+ 		}
+ 		if(teste=='Inativo'){
+ 			$('#status'+codigo).html("Ativo");
+ 			$('#status'+codigo).attr("value","Ativo");
+ 			$('#status'+codigo).val('Ativo');
+			
+ 		}
 
 
 
@@ -72,7 +86,7 @@ $(document.body).on('click', '#batatas', function(){
 }); 
 
 
-	
+
 $(document.body).on('click', '#deletaServico', function(){
  // Ao clicar no botão deletar na tabela produtos, ele ira receber o valor do codigo do produto a ser deletado 
  codServico = $(this).attr("value"); 

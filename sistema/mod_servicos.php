@@ -109,27 +109,32 @@
 									echo '<td>'.$descricao.'</td>';
 									if($estatus){
 										echo '<td >
-												<center>
-													<input id="estatus" name="estatus"  value="'.$codServico.'" type="checkbox" checked>
-												</center>
-											</td>';
+										<span id="status'.$codServico.'" value="Ativo">Ativo</span>
+										</td>';
 									}else{
-										echo $estatus;
+										
 										echo '<td>
-												<center>
-													<input id="estatus" name="estatus"  value="'.$codServico.'" type="checkbox" >
-												</center>
-											</td>';
-										}
-										echo '<td>
-												<center>
-													<button class="botaoEmail Botao" data-toggle="modal" id="modificaServico" data-target="#modificarServicos" value="'.$codServico.'" type="button"><i class="fa fa-pencil"></i> </button>
-													<button class="botaoEmail Botao" data-toggle="modal" id="deletaServico" data-target="#exlcuirServico" value="'.$codServico.'" type="button"><i class="fa fa-trash"></i> </button>
-													<button class="botaoEmail Botao" data-toggle="modal" id="previewImagens" data-target="#mostrarImagens" value="'.$codServico.'" type="button"><i class="fa fa-image"></i></button>';
-										echo '	</center>
-											</tr>';
-										unset($estatus);
+										<span id="status'.$codServico.'" value="Inativo">Inativo</span>
+										</td>';
 									}
+									echo '<td>
+									<center>
+									<button class="botaoEmail Botao" data-toggle="modal" id="modificaServico" data-target="#modificarServicos" value="'.$codServico.'" type="button"><i class="fa fa-pencil"></i> </button>
+									<button class="botaoEmail Botao" data-toggle="modal" id="deletaServico" data-target="#exlcuirServico" value="'.$codServico.'" type="button"><i class="fa fa-trash"></i> </button>
+									<button class="botaoEmail Botao" data-toggle="modal" id="previewImagens" data-target="#mostrarImagens" value="'.$codServico.'" type="button"><i class="fa fa-image"></i></button>
+									';
+									if($estatus){
+										echo '
+										<span id="onoff'.$codServico.'"><button value="'.$codServico.'" class="botaoEmail btnStatus" data-id="'.$codServico.'" data-status='.$codServico.' id="statusServico"> <i class="fa fa-toggle-on")"></i> </button></span>';
+									}else{
+										
+										echo '
+										<span id="onoff'.$codServico.'"><button value="'.$codServico.'" class="botaoEmail btnStatus" data-id="'.$codServico.'" data-status='.$codServico.' id="statusServico"> <i class="fa fa-toggle-off")"></i> </button></span>';
+									}
+									echo '	</center>
+									</tr>';
+									unset($estatus);
+								}
 								?>
 							</tbody>
 						</table>

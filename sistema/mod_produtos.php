@@ -98,19 +98,38 @@ if(!isset($_SESSION['nome'])){
 								$counter = $counter+1;
 								$codProduto = $row['codProduto'];
 								$nome = $row['nome'];
+								$status = $row['status'];
 								$descricao = $row['descricao'];
 								echo '<tr class="odd gradeX">';
 								echo '<td> '.$counter.' </td>';
 								echo '<td>'.$nome.'</td>';
 								echo '<td>'.$descricao.'</td>';
-								echo '<td style="text-align:center"> Ativo </td>';
+								if($status){
+										echo '<td >
+										<span id="status'.$codProduto.'" value="Ativo">Ativo</span>
+										</td>';
+									}else{
+										
+										echo '<td>
+										<span id="status'.$codProduto.'" value="Inativo">Inativo</span>
+										</td>';
+									}
 								echo '<td>
 								<center>
 								<button class="botaoEmail Botao" data-toggle="modal" id="modificaProduto" data-target="#modificarProduto" value="'.$codProduto.'" type="button"><i class="fa fa-pencil"></i> </button>
 								<button class="botaoEmail Botao" data-toggle="modal" id="deletaProduto" data-target="#excluirProduto" value="'.$codProduto.'" type="button"><i class="fa fa-trash"></i></button>
 								<button class="botaoEmail Botao" data-toggle="modal" id="previewImagens" data-target="#mostrarImagens" value="'.$codProduto.'" type="button"><i class="fa fa-image"></i></button>
-								</center>';
-								echo '</tr>';
+								';
+								if($status){
+										echo '
+										<span id="onoff'.$codProduto.'"><button value="'.$codProduto.'" class="botaoEmail btnStatus" data-id="'.$codProduto.'" data-status='.$codProduto.' id="statusProduto"> <i class="fa fa-toggle-on")"></i> </button></span>';
+									}else{
+										
+										echo '
+										<span id="onoff'.$codProduto.'"><button value="'.$codProduto.'" class="botaoEmail btnStatus" data-id="'.$codProduto.'" data-status='.$codProduto.' id="statusProduto"> <i class="fa fa-toggle-off")"></i> </button></span>';
+									}
+									echo '	</center>
+									</tr>';
 								unset($estatus);
 							}
 							?>
