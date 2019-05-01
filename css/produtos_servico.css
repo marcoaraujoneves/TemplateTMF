@@ -129,6 +129,7 @@
 @media screen and (min-width: 967px){
     .caixa_texto{
        min-width: 550px ;
+       min-height: 450pX ;
     }
 }
 .btn.btn-primary{
@@ -192,12 +193,12 @@
 	text-align:center;
 	line-height:0px;
 	min-height: 250px ;
-	min-width: 450px ;
 }
 .rg-image img{
 	height: 260px;
-    width: auto ;
     border-radius: 10px ;
+    object-fit: contain;
+    max-width:100% !important;
 }
 .rg-image-nav a{
 	position:absolute;
