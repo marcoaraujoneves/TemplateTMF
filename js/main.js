@@ -3,7 +3,11 @@ var max1;
 var max2;
 var max3;
 var max4;
- $.ajax({  
+var servico1ID;
+var servico2ID;
+var servico3ID;
+var servico4ID;
+    $.ajax({  
         url:"sistema/Sobre/carregaDados.php",
         dataType:"json",
         success:function(data){
@@ -15,12 +19,31 @@ var max4;
             max2 = data.indicador2qt;
             max3 = data.indicador3qt;
             max4 = data.indicador4qt;
+            servico1ID = data.servico1;
+            servico1ID = data.servico2;
+            servico1ID = data.servico3;
+            servico1ID = data.servico4;
             $('#indicador1').html(data.indicador1);  
             $('#indicador2').html(data.indicador2);  
             $('#indicador3').html(data.indicador3);  
             $('#indicador4').html(data.indicador4);
             $('#textoSobre').html(data.textoSobre);
             $('#textoServicos').html(data.textoServicos);
+            
+            $.ajax({
+                url:"sistema/Sobre/carregaServicos.php?ser1="+servico1ID+"&ser2="+servico2ID+"&ser3="+servico3ID+"&ser4="+servico4ID,
+                dataType:"json",
+                success:function(){
+                    $('#imgservico1').attr("src",data.imgservico1);
+                    $('#imgservico2').attr("src",data.imgservico2);
+                    $('#imgservico3').attr("src",data.imgservico3);
+                    $('#imgservico4').attr("src",data.imgservico4);
+                    $('#nomeservico1').html(data.nomeservico1);
+                    $('#nomeservico2').html(data.nomeservico2);
+                    $('#nomeservico3').html(data.nomeservico3);
+                    $('#nomeservico4').html(data.nomeservico4);
+                }
+            });
         }  
     });
     $(window).on('scroll', function(event) {

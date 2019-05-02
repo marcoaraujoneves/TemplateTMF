@@ -149,12 +149,12 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-12" style="padding:20px;">
-                                                <img src="img/usinagem.png" style="max-height:250px;" class="img-fluid rounded mx-auto d-block">
+                                                <img src="img/usinagem.png" id="imgservico1" style="max-height:250px;" class="img-fluid rounded mx-auto d-block">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <h4 class="nomeServicos">Usinagem</h4>
+                                                <h4 class="nomeServicos" id="nomeservico1">Usinagem</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -163,12 +163,12 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-12" style="padding:20px;">
-                                                <img src="img/manutencao.png" style="max-height:250px;" class="img-fluid rounded mx-auto d-block">
+                                                <img src="img/manutencao.png"  id="imgservico2" style="max-height:250px;" class="img-fluid rounded mx-auto d-block">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <h4 class="nomeServicos">Manutenção Ferramentária</h4>
+                                                <h4 class="nomeServicos" id="nomeservico2">Manutenção Ferramentária</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -180,12 +180,12 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-12" style="padding:20px;">
-                                                <img src="img/tornearia.png" style="max-height:250px;" class="img-fluid rounded mx-auto d-block">
+                                                <img src="img/tornearia.png" id="imgservico3" style="max-height:250px;" class="img-fluid rounded mx-auto d-block">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <h4 class="nomeServicos">Tornearia</h4>
+                                                <h4 class="nomeServicos" id="nomeservico3">Tornearia</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -194,12 +194,12 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-12" style="padding:20px;">
-                                                <img src="img/maquinas.png" style="max-height:250px;" class="img-fluid rounded mx-auto d-block">
+                                                <img src="img/maquinas.png" id="imgservico4" style="max-height:250px;" class="img-fluid rounded mx-auto d-block">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <h4 class="nomeServicos">Projetos de Máquinas</h4>
+                                                <h4 class="nomeServicos" id="nomeservico4">Projetos de Máquinas</h4>
                                             </div>
                                         </div>
                                     </div>
