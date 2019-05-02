@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 01-Maio-2019 às 08:36
--- Versão do servidor: 10.1.30-MariaDB
--- PHP Version: 7.2.1
+-- Generation Time: 02-Maio-2019 às 23:38
+-- Versão do servidor: 10.1.38-MariaDB
+-- versão do PHP: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -87,7 +87,8 @@ CREATE TABLE `clienteempresa` (
 --
 
 INSERT INTO `clienteempresa` (`codCliente`, `nome`, `linkCliente`, `estatus`, `extensao`) VALUES
-(8, 'Ambev', 'Ambev', 1, 'jpeg');
+(8, 'Ambev', 'Ambev', 1, 'jpeg'),
+(9, 'cabo hdmi', 'mercadolivre', 0, 'png');
 
 -- --------------------------------------------------------
 
@@ -124,6 +125,19 @@ CREATE TABLE `imagemservico` (
   `codServico` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `imagemservico`
+--
+
+INSERT INTO `imagemservico` (`codImagem`, `codServico`, `nome`) VALUES
+(30, 65, '65-1.png'),
+(31, 66, '66-1.png'),
+(32, 67, '67-1.jpg'),
+(33, 68, '68-1.jpg'),
+(38, 73, '73-1.png'),
+(39, 73, '73-2.png'),
+(40, 73, '73-3.png');
 
 -- --------------------------------------------------------
 
@@ -168,7 +182,7 @@ CREATE TABLE `parceiros` (
 
 INSERT INTO `parceiros` (`codParceiro`, `nome`, `linkParceiro`, `estatus`, `extensao`) VALUES
 (44, 'Ambev', 'https://www.ambev.com.br/', 0, ''),
-(45, 'Ambev', 'https://www.ambev.com.br/', 1, 'jpeg');
+(45, 'Serra', 'https://www.ambev.com.br/', 1, 'jpeg');
 
 -- --------------------------------------------------------
 
@@ -184,6 +198,13 @@ CREATE TABLE `portifolio` (
   `status` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Extraindo dados da tabela `portifolio`
+--
+
+INSERT INTO `portifolio` (`codPortifolio`, `nome`, `descricao`, `linkYoutube`, `status`) VALUES
+(9, 'Filme', 'batata', 'https://www.youtube.com/watch?v=pCCd11-ddEY', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -196,6 +217,13 @@ CREATE TABLE `produto` (
   `descricao` varchar(150) NOT NULL,
   `status` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `produto`
+--
+
+INSERT INTO `produto` (`codProduto`, `nome`, `descricao`, `status`) VALUES
+(31, 'Solda de estanho', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ultricies lectus sed porta. Mauris eget feugiat magna. Pellentesque mollis eros', 1);
 
 -- --------------------------------------------------------
 
@@ -210,6 +238,17 @@ CREATE TABLE `servico` (
   `imagem` varchar(150) NOT NULL,
   `estatus` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `servico`
+--
+
+INSERT INTO `servico` (`codServico`, `nome`, `descricao`, `imagem`, `estatus`) VALUES
+(65, 'Manutenção Ferramentária', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ultricies lectus sed porta. Mauris eget feugiat magna. Pellentesque mollis eros sem, a scelerisque magna facilisis sed. Nunc ornare elit bibendum eros auctor, id luctus dolor accumsan. Pellentesque vulputate dignissim risus, tincidunt luctus tellus egestas quis!', '', 1),
+(66, 'Projeto de Máquinas', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ultricies lectus sed porta. Mauris eget feugiat magna. Pellentesque mollis eros sem, a scelerisque magna facilisis sed. Nunc ornare elit bibendum eros auctor, id luctus dolor accumsan. Pellentesque vulputate dignissim risus, tincidunt luctus tellus egestas quis!', '', 1),
+(67, 'Tornearia', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ultricies lectus sed porta. Mauris eget feugiat magna. Pellentesque mollis eros sem, a scelerisque magna facilisis sed. Nunc ornare elit bibendum eros auctor, id luctus dolor accumsan. Pellentesque vulputate dignissim risus, tincidunt luctus tellus egestas quis!', '', 1),
+(68, 'Soldagem', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ultricies lectus sed porta. Mauris eget feugiat magna. Pellentesque mollis eros sem, a scelerisque magna facilisis sed. Nunc ornare elit bibendum eros auctor, id luctus dolor accumsan. Pellentesque vulputate dignissim risus, tincidunt luctus tellus egestas quis!', '', 1),
+(73, 'Vent', 'asdsad asd as das asd das das das das das ads das asd asd asdsad asd as das asd das das das das das ads das asd asd asdsad asd as das asd das das das das das ads das asd asd asdsad asd as das asd das das das das das ads das asd asd asdsad asd as das asd das das das das das ads das asd asd asdsad asd as das asd das das das das das ads das asd asd asdsad asd as das asd das das das das das ads das asd asd asdsad asd as das asd das das das das das ads das asd asd ', '', 1);
 
 -- --------------------------------------------------------
 
@@ -231,15 +270,18 @@ CREATE TABLE `sobre` (
   `servico1` int(11) NOT NULL,
   `servico2` int(11) NOT NULL,
   `servico3` int(11) NOT NULL,
-  `servico4` int(11) NOT NULL
+  `servico4` int(11) NOT NULL,
+  `produto1` int(11) NOT NULL,
+  `produto2` int(11) NOT NULL,
+  `produto3` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `sobre`
 --
 
-INSERT INTO `sobre` (`indicador1qt`, `indicador2qt`, `indicador3qt`, `indicador4qt`, `indicador1`, `indicador2`, `indicador3`, `indicador4`, `textoSobre`, `textoServicos`, `servico1`, `servico2`, `servico3`, `servico4`) VALUES
-(57, 42, 52, 30, 'máquinas próprias', 'anos no mercado', 'serviços próprios', 'opções de produtos', 'Lorem ipsum dolores sit amet, consecttur adipiscing elit. Donec rutrum feugiat augue. Aenean ac laoreet mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce egestas augue sit amet posuere volutpat. Ut a leo ut risus accumsan luctus id eu velit. Curabitur sodales pharetra lectus sit amet luctus. Integer dignissim laoreet velit non cursus. Suspendisse sit amet neque scelerisque, vehicula libero ac, fermentum neque. Integer lacinia pulvinar massa, sit amet egestas turpis pulvinar a. Suspendisse hendrerit, ligula vel sagittis dignissim, odio lectus porta mauris, non sagittis velit arcu nec eros. Etiam non dui eu diam blandit mattis sit amet eu diam!', 'Lorem ipsum dolor sit amet, consecttur adipiscing elit. Done c rutrum feugiat augue. Aenean ac laoreet mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusquinha egestas augue sit amet posuere volutpat. Ut a leo ut risus accumsan luctus id eu velit. Curabitur sodales pharetra lectus sit amet luctus. Integer dignissim laoreet velit non cursus. Suspendisse sit amet neque scelerisque, vehicula libero ac, fermentum neque. Integer lacinia pulvinar massa, sit amet egestas turpis pulvinar a. Suspendisse hendrerit, marcoligula vel sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos!', 55, 55, 55, 55);
+INSERT INTO `sobre` (`indicador1qt`, `indicador2qt`, `indicador3qt`, `indicador4qt`, `indicador1`, `indicador2`, `indicador3`, `indicador4`, `textoSobre`, `textoServicos`, `servico1`, `servico2`, `servico3`, `servico4`, `produto1`, `produto2`, `produto3`) VALUES
+(57, 42, 52, 30, 'máquinas próprias', 'anos no mercado', 'serviços próprios', 'opções de produtos', 'Lorem ipsum dolor sit amet, consecttur adipiscing elit. Donec rutrum feugiat augue. Aenean ac laoreet mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce egestas augue sit amet posuere volutpat. Ut a leo ut risus accumsan luctus id eu velit. Curabitur sodales pharetra lectus sit amet luctus. Integer dignissim laoreet velit non cursus. Suspendisse sit amet neque scelerisque, vehicula libero ac, fermentum neque. Integer lacinia pulvinar massa, sit amet egestas turpis pulvinar a. Suspendisse hendrerit, ligula vel sagittis dignissim, odio lectus porta mauris, non sagittis velit arcu nec eros. Etiam non dui eu diam blandit mattis sit amet eu diam!', 'Lorem ipsum dolor sit amet, consecttur adipiscing elit. Done c rutrum feugiat augue. Aenean ac laoreet mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusquinha egestas augue sit amet posuere volutpat. Ut a leo ut risus accumsan luctus id eu velit. Curabitur sodales pharetra lectus sit amet luctus. Integer dignissim laoreet velit non cursus. Suspendisse sit amet neque scelerisque, vehicula libero ac, fermentum neque. Integer lacinia pulvinar massa, sit amet egestas turpis pulvinar a. Suspendisse hendrerit, marcoligula vel sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos!', 68, 65, 67, 66, 29, 28, 30);
 
 -- --------------------------------------------------------
 
@@ -362,25 +404,25 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT for table `clienteempresa`
 --
 ALTER TABLE `clienteempresa`
-  MODIFY `codCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `codCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `imagemportifolio`
 --
 ALTER TABLE `imagemportifolio`
-  MODIFY `codImagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `codImagem` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `imagemproduto`
 --
 ALTER TABLE `imagemproduto`
-  MODIFY `codImagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `codImagem` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `imagemservico`
 --
 ALTER TABLE `imagemservico`
-  MODIFY `codImagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `codImagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `mensagem`
@@ -404,13 +446,13 @@ ALTER TABLE `portifolio`
 -- AUTO_INCREMENT for table `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `codProduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `codProduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `servico`
 --
 ALTER TABLE `servico`
-  MODIFY `codServico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `codServico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT for table `usuario`
