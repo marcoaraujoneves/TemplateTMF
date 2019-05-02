@@ -25,6 +25,8 @@
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
         <!------------------------------- link para puxar os icones  ---------------------------->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" rel="stylesheet">
+
 
         <title> Sistema de Gerenciamento | TMF </title>
         

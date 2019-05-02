@@ -103,8 +103,8 @@ body{
 
 .itemMenuSistemaAtivo{
     padding-left: 25px;
-    color: white!important;
-    text-shadow: 2px 2px 7px rgb(231, 231, 231);
+    color:#f8aa00 !important;
+    text-shadow: 0 0 15px #f8aa00;
 }
 
 .itemMenuSistema img{

@@ -15,6 +15,8 @@
         <link rel="stylesheet" href="../css/Sistema.css">
         <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" rel="stylesheet">
+
 
         <title> Sistema de Gerenciamento | TMF </title>
         
