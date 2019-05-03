@@ -90,19 +90,6 @@
 								</div>
 								<div class="col-md-6">
 									<div class="card" style="width: auto;display:inline-block; height:auto;">
-										<img class="card-img-top" src="../img/Sistema/portifolioCard.png" alt="Card image cap">
-										<div class="card-body">
-											<h5 class="card-title">Portifólio</h5>
-											<p class="card-text">Clique no botão abaixo para editar as informações desta seção!</p>
-											<button type="button" class="btn btn-primary" id="btnPortiflio" data-toggle="modal" data-target="#modalPortifolio">Editar</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<br><br>
-							<div class="row">
-								<div class="col-md-6">
-									<div class="card" style="width: auto;display:inline-block; height:auto;">
 										<img class="card-img-top" src="../img/Sistema/produtosCard.png" alt="Card image cap">
 										<div class="card-body">
 											<h5 class="card-title">Parceiros</h5>
@@ -111,6 +98,19 @@
 										</div>
 									</div>
 								</div>
+								<!-- <div class="col-md-6">
+									<div class="card" style="width: auto;display:inline-block; height:auto;">
+										<img class="card-img-top" src="../img/Sistema/portifolioCard.png" alt="Card image cap">
+										<div class="card-body">
+											<h5 class="card-title">Portifólio</h5>
+											<p class="card-text">Clique no botão abaixo para editar as informações desta seção!</p>
+											<button type="button" class="btn btn-primary" id="btnPortiflio" data-toggle="modal" data-target="#modalPortifolio">Editar</button>
+										</div>
+									</div>
+								</div> -->
+							</div>
+							<br><br>
+							<div class="row">
 								<div class="col-md-6">
 									<div class="card" style="width: auto;display:inline-block; height:auto;">
 										<img class="card-img-top" src="../img/Sistema/portifolioCard.png" alt="Card image cap">
@@ -121,6 +121,15 @@
 										</div>
 									</div>
 								</div>
+								
+								<!-- Esta div foi mantida aqui para não quebrar o layout, corrigir durante a refatoração -->
+								<div class="col-md-6">
+									<div class="card" style="width: auto;display:inline-block; height:auto;">
+										
+									</div>
+								</div>
+								
+
 							</div>
 							<br>
 						</div>
@@ -301,7 +310,7 @@
 						</div>
 					</div>
 
-					<!-- Modal de Edição da Seção Portifólio -->
+					<!-- Modal de Edição da Seção Portifólio 
 					<div class="modal fade" id="modalPortifolio" tabindex="-1" role="dialog" aria-labelledby="modalPortifolioTitle" aria-hidden="true">
 						<div class="modal-dialog modal-dialog-centered" role="document">
 							<div class="modal-content">
@@ -335,7 +344,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div>-->
 
 					<!-- Modal de Edição da Seção Parceiros -->
 					<div class="modal fade" id="modalParceiros" tabindex="-1" role="dialog" aria-labelledby="modalParceirosTitle" aria-hidden="true">
@@ -350,25 +359,10 @@
 								<div class="modal-body">
 									<form id="formParceiros">	
 										<div class="container-fluid" id="listaParceiros">
-											<div class="row">
+											<!-- <div class="row">
 												<div class="col-md-10">
 													<label for="parceiro1"> Parceiro 1: </label>
 													<select class="inpForm" name="parceiro1" id="parceiro1">
-														<?php 
-														// include ('db.class.php');
-														// $objDB = new db();
-														// $conn = $objDB->conecta_mysql();
-														// $query_select = "SELECT * FROM parceiros ;";
-														// $result_select = mysqli_query($conn,$query_select) or die(mysql_error());
-														// $rows = array();
-														// while($row = mysqli_fetch_array($result_select))
-														// 	$rows[] = $row;
-														// foreach($rows as $row){ 
-														// 	$codParceiro = $row['codParceiro'];
-														// 	$nome = $row['nome'];
-														// 	echo '<option value="'.$codParceiro.'"> '.$nome.'</option>';
-														// }
-														?>  
 														<option> - </option>
 													</select>
 													<br><hr>
@@ -376,7 +370,7 @@
 												<div class="col-md-2 my-auto mx-auto">
 													<button type="button" class="btn btn-success btnAtivo" id="addParceiro"> + </button>
 												</div>
-											</div>
+											</div> -->
 										</div>
 									</form>	
 								</div>

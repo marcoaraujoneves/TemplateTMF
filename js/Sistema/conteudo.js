@@ -132,19 +132,29 @@ $(document).ready(function(){
     });
     
     
+    var contadorParceiros;
     $.ajax({
         url:'Parceiros/carregaDados.php',
         success:function(data){
             listaParceiros = data;
+            var count = (listaParceiros.match(/option/g) || []).length;
+            contadorParceiros = count/2;
         },
         error: function(){
             $('#bodyParceiros').html('Houve um erro na requisição, tente novamente mais tarde!');
         }
     });
-    var contadorParceiros = 2;
+    
     $(document).on('click','#btnParceiros', function(){
-        $('#parceiro1').html(listaParceiros);
-        
+        $('#listaParceiros').html('');
+        var i;
+        for(i=1;i<=contadorParceiros;i++){
+            var lista="<div class='row'> <div class='col-md-10'><label for='parceiro"+i+"'> Parceiro "+i+": </label><select class='inpForm' name='parceiro"+i+"' id='parceiro"+i+"'> <option> - </option></select><br><hr></div><div class='col-md-2 my-auto mx-auto'><button type='button' class='btn btn-success btnAtivo' id='addParceiro'> + </button></div></div>";                
+            $('#listaParceiros').append(lista);
+        }
+        for(i=1;i<=contadorParceiros;i++){
+            $('#parceiro'+i).html(listaParceiros);
+        }
     });
     // $(document).on('click','#addParceiro',function(){
         
@@ -163,7 +173,17 @@ $(document).ready(function(){
                                 ?><option> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addParceiro"> + </button></div></div>');
         contadorParceiros = contadorParceiros +1;
     }); */
-
+    $(document).on('click','#btnClientes', function(){
+        $.ajax({
+            url:'Clientes/carregaDados.php',
+            success:function(data){
+                $('#listaClientes').html(data);
+            },
+            error: function(){
+                $('#bodyClientes').html('Houve um erro na requisição, tente novamente mais tarde!');
+            }
+        });
+    });
     $(document).on('click','#addCliente',function(){
         $('#listaClientes').append('<div class="row"><div class="col-md-10"><label for="parceiro_2"> Cliente 2: </label><select class="inpForm" name="cliente_2" id="cliente_2"><option> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addCliente"> + </button></div></div>');
     });
