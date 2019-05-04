@@ -34,7 +34,7 @@
                 foreach($listaoption as $option){
                     $html.= "<option value=".$option['codParceiro']." ".($option['codParceiro']==$codParceiro?'selected':'')."> ".$option['nome']." </option>";
                 }
-                $html .= "</select><br><hr></div><div class='col-md-2 my-auto mx-auto'>".($counter==$rowcount2?"<button type='button' class='btn btn-success btnAtivo' id='addParceiro'> + </button>":"")."</div></div>";
+                $html .= "</select><br><hr></div><div class='col-md-2 my-auto mx-auto'>".($counter==$rowcount2?"<button type='button' class='btn btn-success btnAtivo' id='addParceiro' data-count=".$rowcount2."> + </button>":"")."</div></div>";
                 $counter = $counter + 1;
             }
             echo $html;

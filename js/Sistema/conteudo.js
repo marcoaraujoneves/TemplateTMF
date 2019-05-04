@@ -122,10 +122,10 @@ $(document).ready(function(){
 
 
 
-    $(document).on('click','.btnAtivo',function(){
+    /* $(document).on('click','.btnAtivo',function(){
         $(this).addClass('d-none');
         $(this).removeClass('btnAtivo');
-    });
+    }); */
 
  /*    $(document).on('click','#addPortifolio',function(){
         $('#listaPortifolio').append('<div class="row"><div class="col-md-10"><label for="portifolio_1"> Portifólio 2: </label><select class="inpForm" name="portifolio_1" id="portifolio_1"><option> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addPortifolio"> + </button></div></div>');
@@ -174,9 +174,10 @@ $(document).ready(function(){
         contadorParceiros = contadorParceiros +1;
     }); */
     
+    var contadorParceiros=0;
     $(document).on('click','#btnParceiros', function(){
         $.ajax({
-            url:'Parceiros/carregaDados.php',
+            url:'Parceiros/carregaLista.php',
             success:function(data){
                 $('#listaParceiros').html(data);
             },
@@ -186,12 +187,19 @@ $(document).ready(function(){
         });
     });
     $(document).on('click','#addParceiro',function(){
-        $('#listaParceiros').append('<div class="row"><div class="col-md-10"><label for="parceiro2"> Cliente 2: </label><select class="inpForm" name="parceiro2" id="parceiro2"><option> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addParceiro"> + </button></div></div>');
+        contadorParceiros = $(this).attr("data-count");
+        if($('#parceiro'+contadorParceiros).val()!=0){
+            $(this).addClass('d-none');
+            $(this).removeClass('btnAtivo');
+            contadorParceiros = parseInt(contadorParceiros);
+            $('#listaParceiros').append('<div class="row"><div class="col-md-10"><label for="parceiro'+(contadorParceiros+1)+'"> Parceiro '+(contadorParceiros+1)+': </label><select class="inpForm" name="parceiro'+(contadorParceiros+1)+'" id="parceiro'+(contadorParceiros+1)+'"><option value="0"> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addParceiro" data-count='+(contadorParceiros+1)+'> + </button></div></div>');
+        }
     });
 
+    var contadorClientes=0;
     $(document).on('click','#btnClientes', function(){
         $.ajax({
-            url:'Clientes/carregaDados.php',
+            url:'Clientes/carregaLista.php',
             success:function(data){
                 $('#listaClientes').html(data);
             },
@@ -201,6 +209,12 @@ $(document).ready(function(){
         });
     });
     $(document).on('click','#addCliente',function(){
-        $('#listaClientes').append('<div class="row"><div class="col-md-10"><label for="parceiro_2"> Cliente 2: </label><select class="inpForm" name="cliente_2" id="cliente_2"><option> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addCliente"> + </button></div></div>');
+        contadorClientes = $(this).attr("data-count");
+        if($('#cliente'+contadorClientes).val()!=0){
+            $(this).addClass('d-none');
+            $(this).removeClass('btnAtivo');
+            contadorClientes = parseInt(contadorClientes);
+            $('#listaClientes').append('<div class="row"><div class="col-md-10"><label for="cliente'+(contadorClientes+1)+'"> Cliente '+(contadorClientes+1)+': </label><select class="inpForm" name="cliente'+(contadorClientes+1)+'" id="cliente'+(contadorClientes+1)+'"><option value="0"> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addCliente" data-count="'+(contadorClientes+1)+'"> + </button></div></div>');
+        }
     });
 });
