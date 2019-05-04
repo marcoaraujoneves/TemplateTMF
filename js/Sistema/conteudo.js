@@ -127,12 +127,12 @@ $(document).ready(function(){
         $(this).removeClass('btnAtivo');
     });
 
-    $(document).on('click','#addPortifolio',function(){
+ /*    $(document).on('click','#addPortifolio',function(){
         $('#listaPortifolio').append('<div class="row"><div class="col-md-10"><label for="portifolio_1"> Portifólio 2: </label><select class="inpForm" name="portifolio_1" id="portifolio_1"><option> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addPortifolio"> + </button></div></div>');
-    });
+    }); */
     
     
-    var contadorParceiros;
+    /* var contadorParceiros;
     $.ajax({
         url:'Parceiros/carregaDados.php',
         success:function(data){
@@ -155,7 +155,7 @@ $(document).ready(function(){
         for(i=1;i<=contadorParceiros;i++){
             $('#parceiro'+i).html(listaParceiros);
         }
-    });
+    }); */
     // $(document).on('click','#addParceiro',function(){
         
        /* $('#listaParceiros').append('<div class="row"><div class="col-md-10"><label for="parceiro_'+contadorParceiros+'"> Parceiro '+contadorParceiros+': </label><select class="inpForm" name="parceiro_'+contadorParceiros+'" id="parceiro_'+contadorParceiros+'"><?php 
@@ -173,6 +173,22 @@ $(document).ready(function(){
                                 ?><option> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addParceiro"> + </button></div></div>');
         contadorParceiros = contadorParceiros +1;
     }); */
+    
+    $(document).on('click','#btnParceiros', function(){
+        $.ajax({
+            url:'Parceiros/carregaDados.php',
+            success:function(data){
+                $('#listaParceiros').html(data);
+            },
+            error: function(){
+                $('#bodyParceiros').html('Houve um erro na requisição, tente novamente mais tarde!');
+            }
+        });
+    });
+    $(document).on('click','#addParceiro',function(){
+        $('#listaParceiros').append('<div class="row"><div class="col-md-10"><label for="parceiro2"> Cliente 2: </label><select class="inpForm" name="parceiro2" id="parceiro2"><option> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addParceiro"> + </button></div></div>');
+    });
+
     $(document).on('click','#btnClientes', function(){
         $.ajax({
             url:'Clientes/carregaDados.php',

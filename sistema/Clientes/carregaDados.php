@@ -22,13 +22,19 @@
         
         if($rowcount>0){
             $html = "";
+            $listaoption = array();
             $counter = 1;
+            while($resultado = mysqli_fetch_array($clientes,MYSQLI_ASSOC)){    
+                $listaoption[$counter] = $resultado;
+                $counter++;
+            }
+            $counter=1;
             foreach($lista2 as $codCliente){
                 $html .= "<div class='row'> <div class='col-md-10'><label for='cliente".$counter."'> Cliente ".$counter.": </label><select class='inpForm' name='cliente".$counter."' id='cliente".$counter."'> <option value=0> - </option>";
-                while($resultado = mysqli_fetch_array($clientes,MYSQLI_ASSOC)){
-                    $html.= "<option value=".$resultado['codCliente']." ".($resultado['estatus']==1?'selected':'')."> ".$resultado['nome']." </option>";
+                foreach($listaoption as $option){
+                    $html.= "<option value=".$option['codCliente']." ".($option['codCliente']==$codCliente?'selected':'')."> ".$option['nome']." </option>";
                 }
-                $html .= "</select><br><hr></div><div class='col-md-2 my-auto mx-auto'><button type='button' class='btn btn-success btnAtivo' id='addCliente'> + </button></div></div>";
+                $html .= "</select><br><hr></div><div class='col-md-2 my-auto mx-auto'>".($counter==$rowcount2?"<button type='button' class='btn btn-success btnAtivo' id='addCliente'> + </button>":"")."</div></div>";
                 $counter = $counter + 1;
             }
             echo $html;
