@@ -193,6 +193,15 @@ $(document).ready(function(){
             $(this).removeClass('btnAtivo');
             contadorParceiros = parseInt(contadorParceiros);
             $('#listaParceiros').append('<div class="row"><div class="col-md-10"><label for="parceiro'+(contadorParceiros+1)+'"> Parceiro '+(contadorParceiros+1)+': </label><select class="inpForm" name="parceiro'+(contadorParceiros+1)+'" id="parceiro'+(contadorParceiros+1)+'"><option value="0"> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addParceiro" data-count='+(contadorParceiros+1)+'> + </button></div></div>');
+            $.ajax({
+                url:'Parceiros/carregaDados.php',
+                success:function(data){
+                    $('#parceiro'+(contadorParceiros+1)).append(data);
+                },
+                error: function(){
+                    $('#bodyParceiros').html('Houve um erro na requisição, tente novamente mais tarde!');
+                }
+            });
         }
     });
 
@@ -215,6 +224,15 @@ $(document).ready(function(){
             $(this).removeClass('btnAtivo');
             contadorClientes = parseInt(contadorClientes);
             $('#listaClientes').append('<div class="row"><div class="col-md-10"><label for="cliente'+(contadorClientes+1)+'"> Cliente '+(contadorClientes+1)+': </label><select class="inpForm" name="cliente'+(contadorClientes+1)+'" id="cliente'+(contadorClientes+1)+'"><option value="0"> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addCliente" data-count="'+(contadorClientes+1)+'"> + </button></div></div>');
+            $.ajax({
+                url:'Clientes/carregaDados.php',
+                success:function(data){
+                    $('#cliente'+(contadorClientes+1)).append(data);
+                },
+                error: function(){
+                    $('#bodyClientes').html('Houve um erro na requisição, tente novamente mais tarde!');
+                }
+            }); 
         }
     });
 });
