@@ -122,7 +122,7 @@
 									echo '<td>
 									<center>
 									<button class="botaoEmail Botao" data-toggle="modal" id="modificaServico" data-target="#modificarServicos" value="'.$codServico.'" type="button"><i class="fa fa-pencil"></i> </button>
-									<button class="botaoEmail Botao" data-toggle="modal" id="deletaServico" data-target="#exlcuirServico" value="'.$codServico.'" type="button"><i class="fa fa-trash"></i> </button>
+									<button class="botaoEmail Botao" data-toggle="modal" id="deletaServico" data-target="#exlcuirServico" value="'.$codServico.'" type="button"><i class="fa fa-trash"></i> </button><br>
 									<button class="botaoEmail Botao" data-toggle="modal" id="previewImagens" data-target="#mostrarImagens" value="'.$codServico.'" type="button"><i class="fa fa-image"></i></button>
 									';
 									if($estatus){

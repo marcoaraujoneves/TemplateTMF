@@ -124,7 +124,7 @@ if(!isset($_SESSION['nome'])){
 								echo '<td>
 								<center>
 								<button class="botaoEmail Botao" data-toggle="modal" id="modificaPortifolio" data-target="#modificarPortifolio" value="'.$codPortifolio.'" type="button"><i class="fa fa-pencil"></i> </button>
-								<button class="botaoEmail Botao" data-toggle="modal" id="deletaPortifolio" data-target="#excluirPortifolio" value="'.$codPortifolio.'" type="button"> <i class="fa fa-trash"></i> </button>
+								<button class="botaoEmail Botao" data-toggle="modal" id="deletaPortifolio" data-target="#excluirPortifolio" value="'.$codPortifolio.'" type="button"> <i class="fa fa-trash"></i> </button><br>
 								<button class="botaoEmail Botao" data-toggle="modal" id="previewImagem" data-target="#mostrarImagem" value="'.$codPortifolio.'" type="button"><i class="fa fa-image"></i></button>
 								';
 								if($status){

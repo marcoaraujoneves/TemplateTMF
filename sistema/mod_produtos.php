@@ -119,7 +119,7 @@ if(!isset($_SESSION['nome'])){
 								echo '<td>
 								<center>
 								<button class="botaoEmail Botao" data-toggle="modal" id="modificaProduto" data-target="#modificarProduto" value="'.$codProduto.'" type="button"><i class="fa fa-pencil"></i> </button>
-								<button class="botaoEmail Botao" data-toggle="modal" id="deletaProduto" data-target="#excluirProduto" value="'.$codProduto.'" type="button"><i class="fa fa-trash"></i></button>
+								<button class="botaoEmail Botao" data-toggle="modal" id="deletaProduto" data-target="#excluirProduto" value="'.$codProduto.'" type="button"><i class="fa fa-trash"></i></button><br>
 								<button class="botaoEmail Botao" data-toggle="modal" id="previewImagens" data-target="#mostrarImagens" value="'.$codProduto.'" type="button"><i class="fa fa-image"></i></button>
 								';
 								if($status){

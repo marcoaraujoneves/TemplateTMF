@@ -154,7 +154,9 @@ li.nav-item a.nav-link.active{
     color: white;
     text-shadow: 2px 2px 2px black;
 }
-
+.botaoEmail {
+    margin: 2px;
+}
 .botaoEmail i{
     width: 15px;
     height: 10px;
