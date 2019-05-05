@@ -24,6 +24,11 @@ $(document).ready(function(){
     
     //Carrega a tabela de clientes
     carregaClientes();
+    $(document).on('click','#cadastrarCliente',function(){
+        if($('#nome').val()!='' && $('#email').val()!=''){
+            cadastraCliente();
+        }
+    });
 
     //Eventos associados aos botões da tabela de clientes
     $(document).on('click','.btnDeleta',function(){
@@ -73,6 +78,20 @@ function carregaClientes(){
         },
         error:function(){
             $('#corpoTbClientes').html('<tr> <td colspan="5" style="text-align:center;">Houve um erro na requisição, por favor, tente novamente mais tarde!</td></tr>');
+        }
+    });
+}
+
+function cadastraCliente(){
+    $.ajax({
+        url:'Newsletter/cadastrarCliente.php',
+        method:'POST',
+        data:$('#cadastraCliente').serialize(),
+        success: function(data){
+            carregaClientes();
+        },
+        error: function(){
+            alert('Ocorreu um erro');
         }
     });
 }

@@ -180,6 +180,17 @@ $(document).ready(function(){
             url:'Parceiros/carregaLista.php',
             success:function(data){
                 $('#listaParceiros').html(data);
+                if($('#addParceiro').attr("data-vazio")=='1'){
+                    $.ajax({
+                        url:'Parceiros/carregaDados.php',
+                        success:function(data){
+                            $('#parceiro1').append(data);
+                        },
+                        error: function(){
+                            $('#bodyParceiros').html('Houve um erro na requisição, tente novamente mais tarde!');
+                        }
+                    }); 
+                }
             },
             error: function(){
                 $('#bodyParceiros').html('Houve um erro na requisição, tente novamente mais tarde!');
@@ -204,6 +215,19 @@ $(document).ready(function(){
             });
         }
     });
+    $(document).on('click','#salvarParceiros',function(){
+        $.ajax({
+            url:'Parceiros/salvarDados.php',
+            method:'POST',
+            data:$('#formParceiros').serialize(),
+            success:function(data){
+
+            },
+            error: function(){
+                $('#bodyParceiros').html('Houve um erro na requisição, tente novamente mais tarde!');
+            }
+        });
+    });
 
     var contadorClientes=0;
     $(document).on('click','#btnClientes', function(){
@@ -211,6 +235,17 @@ $(document).ready(function(){
             url:'Clientes/carregaLista.php',
             success:function(data){
                 $('#listaClientes').html(data);
+                if($('#addCliente').attr("data-vazio")=='1'){
+                    $.ajax({
+                        url:'Clientes/carregaDados.php',
+                        success:function(data){
+                            $('#cliente1').append(data);
+                        },
+                        error: function(){
+                            $('#bodyClientes').html('Houve um erro na requisição, tente novamente mais tarde!');
+                        }
+                    }); 
+                }
             },
             error: function(){
                 $('#bodyClientes').html('Houve um erro na requisição, tente novamente mais tarde!');
@@ -234,5 +269,19 @@ $(document).ready(function(){
                 }
             }); 
         }
+    });
+
+    $(document).on('click','#salvarClientes',function(){
+        $.ajax({
+            url:'Clientes/salvarDados.php',
+            method:'POST',
+            data:$('#formClientes').serialize(),
+            success:function(data){
+                
+            },
+            error: function(){
+                $('#bodyClientes').html('Houve um erro na requisição, tente novamente mais tarde!');
+            }
+        });
     });
 });

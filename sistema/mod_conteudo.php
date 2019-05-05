@@ -356,7 +356,7 @@
 										<span aria-hidden="true">&times;</span>
 									</button>
 								</div>
-								<div class="modal-body">
+								<div class="modal-body" id="bodyParceiros">
 									<form id="formParceiros">	
 										<div class="container-fluid" id="listaParceiros">
 											<!-- <div class="row">
@@ -432,7 +432,7 @@
 										<span aria-hidden="true">&times;</span>
 									</button>
 								</div>
-								<div class="modal-body">
+								<div class="modal-body" id="bodyClientes">
 									<form id="formClientes">	
 										<div class="container-fluid" id="listaClientes">
 											<div class="row">

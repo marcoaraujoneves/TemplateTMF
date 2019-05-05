@@ -42,6 +42,6 @@
             echo 0;
         }
     }else{
-        echo 0;
+        echo '<div class="row"><div class="col-md-10"><label for="cliente1"> Cliente 1: </label><select class="inpForm" name="cliente1" id="cliente1"><option value="0"> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addCliente" data-count="1" data-vazio="1"> + </button></div></div>';
     }
  ?>
