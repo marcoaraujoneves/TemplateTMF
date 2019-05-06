@@ -20,9 +20,9 @@ var servico4ID;
             max3 = data.indicador3qt;
             max4 = data.indicador4qt;
             servico1ID = data.servico1;
-            servico1ID = data.servico2;
-            servico1ID = data.servico3;
-            servico1ID = data.servico4;
+            servico2ID = data.servico2;
+            servico3ID = data.servico3;
+            servico4ID = data.servico4;
             $('#indicador1').html(data.indicador1);  
             $('#indicador2').html(data.indicador2);  
             $('#indicador3').html(data.indicador3);  
@@ -31,17 +31,20 @@ var servico4ID;
             $('#textoServicos').html(data.textoServicos);
             
             $.ajax({
-                url:"sistema/Sobre/carregaServicos.php?ser1="+servico1ID+"&ser2="+servico2ID+"&ser3="+servico3ID+"&ser4="+servico4ID,
+                url:"sistema/php/dadosIndexServico.php",
+                method:"POST",  
+                data:{servico1:servico1ID,servico2:servico2ID,servico3:servico3ID,servico4:servico4ID},
                 dataType:"json",
-                success:function(){
-                    $('#imgservico1').attr("src",data.imgservico1);
-                    $('#imgservico2').attr("src",data.imgservico2);
-                    $('#imgservico3').attr("src",data.imgservico3);
-                    $('#imgservico4').attr("src",data.imgservico4);
-                    $('#nomeservico1').html(data.nomeservico1);
-                    $('#nomeservico2').html(data.nomeservico2);
-                    $('#nomeservico3').html(data.nomeservico3);
-                    $('#nomeservico4').html(data.nomeservico4);
+                success:function(data){
+                    
+                    $('#imgservico1').attr("src",'sistema/img/servicos/'+data[0].imagem);
+                    $('#imgservico2').attr("src",'sistema/img/servicos/'+data[1].imagem);
+                    $('#imgservico3').attr("src",'sistema/img/servicos/'+data[2].imagem);
+                    $('#imgservico4').attr("src",'sistema/img/servicos/'+data[3].imagem);
+                    $('#nomeservico1').html(data[0].nome);
+                    $('#nomeservico2').html(data[1].nome);
+                    $('#nomeservico3').html(data[2].nome);
+                    $('#nomeservico4').html(data[3].nome);
                 }
             });
         }  

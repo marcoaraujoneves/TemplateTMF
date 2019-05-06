@@ -73,7 +73,7 @@
                 include ('sistema/db.class.php');
                 $objDB = new db();
                 $conn = $objDB->conecta_mysql();
-                $query_select = "SELECT * from portifolio;";
+                $query_select = "SELECT * from portifolio where status ='1';";
                 $result_select = mysqli_query($conn,$query_select) or die(mysql_error());
                 $rows = array();
                 $contadorPortifolio = 0;

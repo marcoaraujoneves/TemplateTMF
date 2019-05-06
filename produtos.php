@@ -72,7 +72,7 @@
             include ('sistema/db.class.php');
             $objDB = new db();
             $conn = $objDB->conecta_mysql();
-            $query_select = "SELECT * from produto;";
+            $query_select = "SELECT * from produto where status ='1';";
             $result_select = mysqli_query($conn,$query_select) or die(mysql_error());
             $rows = array();
             $contadorProdutos = 0;

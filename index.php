@@ -154,7 +154,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <h4 class="nomeServicos" id="nomeservico1">Usinagem</h4>
+                                                <h4 class="nomeServicos" id="nomeservico1"></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -168,7 +168,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <h4 class="nomeServicos" id="nomeservico2">Manutenção Ferramentária</h4>
+                                                <h4 class="nomeServicos" id="nomeservico2"></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -180,12 +180,12 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-12" style="padding:20px;">
-                                                <img src="img/tornearia.png" id="imgservico3" style="max-height:250px;" class="img-fluid rounded mx-auto d-block">
+                                                <img src="sistema/img/servico/tornearia.png" id="imgservico3" style="max-height:250px;" class="img-fluid rounded mx-auto d-block">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <h4 class="nomeServicos" id="nomeservico3">Tornearia</h4>
+                                                <h4 class="nomeServicos" id="nomeservico3"></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -199,7 +199,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <h4 class="nomeServicos" id="nomeservico4">Projetos de Máquinas</h4>
+                                                <h4 class="nomeServicos" id="nomeservico4"></h4>
                                             </div>
                                         </div>
                                     </div>
@@ -226,7 +226,7 @@
                         include ('sistema/db.class.php');
                         $objDB = new db();
                         $conn = $objDB->conecta_mysql();
-                        $query_select = "SELECT imagemproduto.nome,produto.nome as nomes,codImagem,produto.codProduto, descricao FROM produto INNER Join imagemproduto on produto.codProduto = imagemproduto.codProduto group by imagemproduto.codProduto;";
+                        $query_select = "SELECT imagemproduto.nome,produto.nome as nomes,codImagem,produto.codProduto, descricao FROM produto INNER Join imagemproduto on produto.codProduto = imagemproduto.codProduto where produto.codProduto in ( select produto2 from sobre) or produto.codProduto in ( select produto1 from sobre) or produto.codProduto in ( select produto3 from sobre) group by imagemproduto.codProduto ;";
                         $result_select = mysqli_query($conn,$query_select) or die(mysql_error());
                         $rows = array();
                         $contadorProdutos = 0;
@@ -260,10 +260,7 @@
                             echo '</div>';
                             echo '</div>';
                             echo '</div>';
-                            if($contadorProdutos == 3){
-
-                                break;
-                            }
+                            
                         }
                         ?>                            
                        
