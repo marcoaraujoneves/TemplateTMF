@@ -22,7 +22,7 @@
             <ul> 
                 <li class="item_funcionamento"> <span class="pre_item_funcionamento">Local:</span> Rua Prudente De Morais, 200 - Lot. São João, Nova Friburgo - RJ </li>
                 <li class="item_funcionamento"> <span class="pre_item_funcionamento">Número para contato:</span> (22) 2523 - 2525 </li>
-                <li class="item_funcionamento"> <span class="pre_item_funcionamento">Email para contato:</span> contato@tmf.com.br </li>
+                <li class="item_funcionamento"> <span class="pre_item_funcionamento">Email para contato:</span> usinagemtmf@gmail.com </li>
             </ul>
         </div>
         <!-- Tags -->

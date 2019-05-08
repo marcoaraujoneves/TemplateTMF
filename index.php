@@ -542,7 +542,7 @@
                                         <img class="img-responsive float-left d-inline-block" src='img/Contato/email.png'>
                                     </div>    
                                     <div class="info-contatenos text-center">
-                                        <p><a href="mailto:industriatmf@gigalink.com.br">industriatmf@gigalink.com.br</a></p>
+                                        <p><a href="mailto:industriatmf@gigalink.com.br">usinagemtmf@gmail.com</a></p>
                                     </div>
                                 </div>
                             </div>
