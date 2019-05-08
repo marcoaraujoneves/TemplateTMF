@@ -108,7 +108,7 @@
 									//echo '<td><center><img src="Img/Servicos/'.$codServico.'.jpg" class="ImgTd"></center></td>';
 									echo '<td>'.$counter.'</td>';
 									echo '<td>'.$nome.'</td>';
-									echo '<td>'.$descricao.'</td>';
+									echo '<td>'.substr($descricao,0,120).'...</td>';
 									if($estatus){
 										echo '<td >
 										<span id="status'.$codServico.'" value="Ativo">Ativo</span>
@@ -157,11 +157,11 @@
 										
 										<div class="form-group">
 											<label for="nome">Nome</label>
-											<input type="text" name="nome" id="nome" required class="inpForm"/ autocomplete="off">
+											<input type="text" name="nome" id="nome" required class="inpForm" autocomplete="off">
 										</div>
 										<div class="form-group">
 											<label for="description">Descrição</label>
-											<input type="text" name="description" id="description" required class="inpForm"/ autocomplete="off">
+											<textarea type="text" rows="16" name="description" id="description" required class="inpForm" autocomplete="off"></textarea>
 										</div>
 								</div>
 								<div class="modal-footer">
@@ -188,11 +188,11 @@
 									<form method="post" enctype="multipart/form-data"  id="formModifica" >
 										<div class="form-group">
 											<label for="nome">Nome</label>
-											<input type="text" name="modificanome" id="modificanome" required  class="form-control"/ autocomplete="off">
+											<input type="text" name="modificanome" id="modificanome" required  class="inpForm" autocomplete="off">
 										</div>
 										<div class="form-group">
 											<label for="description">Descrição</label>
-											<input type="text" name="modificadescription" id="modificadescription" required class="form-control"/ autocomplete="off">
+											<textarea type="text" rows="16" name="modificadescription" id="modificadescription" required class="inpForm" autocomplete="off"></textarea>
 										</div>
 									</div>
 								<div class="modal-footer">

@@ -407,16 +407,15 @@
 													<br><hr>
 													<label for="urlParceiro"> Adicione a URL do Parceiro: </label>
 													<input type="text" class="inpForm" name="urlParceiro" id="urlParceiro">
-													<button type="submit" class="btn btn-primary" id="salvarParceiro">Salvar</button>
-													<button type="button" class="btn btn-secondary" id="returnParceiro" data-dismiss="modal">Fechar</button>
-												</form>	
 											</div>
 										</div>
 									</div>
 
 								</div>
 								<div class="modal-footer">
-
+									<button type="submit" class="btn btn-primary" id="salvarParceiro">Salvar</button>
+									<button type="button" class="btn btn-secondary" id="returnParceiro" data-dismiss="modal">Fechar</button>
+									</form>
 								</div>
 							</div>
 						</div>
@@ -483,16 +482,16 @@
 													<br><hr>
 													<label for="urlCliente"> Adicione a URL do Parceiro: </label>
 													<input type="text" class="inpForm" name="urlCliente" id="urlCliente">
-													<button type="submit" class="btn btn-primary" id="salvarCliente" >Salvar</button>
-													<button type="button" class="btn btn-secondary" id="returnCliente" data-dismiss="modal">Fechar</button>
-													</form>	
+													
 												</div>
 											</div>
 										</div>
 									
 								</div>
 								<div class="modal-footer">
-
+									<button type="submit" class="btn btn-primary" id="salvarCliente" >Salvar</button>
+									<button type="button" class="btn btn-secondary" id="returnCliente" data-dismiss="modal">Fechar</button>
+									</form>	
 								</div>
 							</div>
 						</div>

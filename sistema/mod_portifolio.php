@@ -109,7 +109,7 @@ if(!isset($_SESSION['nome'])){
 								//echo '<td><button class="btn Botao" data-toggle="modal" id="previewImagem" data-target="#mostrarImagem" value="'.$codPortifolio.'" type="button">Imagens</button></td>';
 								echo '<td>'.$counter.'</td>';
 								echo '<td>'.$nome.'</td>';
-								echo '<td>'.$descricao.'</td>';
+								echo '<td>'.substr($descricao,0,120).'...</td>';
 								echo '<td>'.$linkYoutube.'</td>';
 								if($status){
 										echo '<td >
@@ -162,7 +162,7 @@ if(!isset($_SESSION['nome'])){
 									</div>
 									<div class="form-group">
 										<label for="descricaoPortifolio">Descrição</label>
-										<input type="text" name="descricaoPortifolio" id="descricaoPortifolio" class="inpForm"/ autocomplete="off">
+										<textarea type="text" rows="16" name="descricaoPortifolio" id="descricaoPortifolio" class="inpForm" autocomplete="off"></textarea>
 									</div>
 									<div class="form-group">
 										<label for="linkYoutube">Youtube Link</label>
@@ -197,15 +197,15 @@ if(!isset($_SESSION['nome'])){
 									<form method="post" enctype="multipart/form-data"  id="formPortifolioModifica" >						
 										<div class="form-group">
 											<label for="nomePortifolio">Nome</label>
-											<input type="text" name="modificanomePortifolio" id="modificanomePortifolio" class="inpForm" / autocomplete="off">
+											<input type="text" name="modificanomePortifolio" id="modificanomePortifolio" class="inpForm" autocomplete="off">
 										</div>
 										<div class="form-group">
 											<label for="descricaoPortifolio">Descrição</label>
-											<input type="text" name="modificadescricaoPortifolio" id="modificadescricaoPortifolio" class="inpForm"/ autocomplete="off">
+											<textarea type="text" rows="16" name="modificadescricaoPortifolio" id="modificadescricaoPortifolio" class="inpForm" autocomplete="off"></textarea>
 										</div>
 										<div class="form-group">
 											<label for="linkYoutube">Youtube Link</label>
-											<input type="text" name="modificalinkYoutube" id="modificalinkYoutube" class="inpForm"/ autocomplete="off">
+											<input type="text" name="modificalinkYoutube" id="modificalinkYoutube" class="inpForm" autocomplete="off">
 										</div>
 								</div>
 								<div class="modal-footer">

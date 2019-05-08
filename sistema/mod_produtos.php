@@ -105,7 +105,7 @@ if(!isset($_SESSION['nome'])){
 								echo '<tr class="odd gradeX">';
 								echo '<td> '.$counter.' </td>';
 								echo '<td>'.$nome.'</td>';
-								echo '<td>'.$descricao.'</td>';
+								echo '<td>'.substr($descricao,0,120).'</td>';
 								if($status){
 										echo '<td >
 										<span id="status'.$codProduto.'" value="Ativo">Ativo</span>
@@ -154,11 +154,11 @@ if(!isset($_SESSION['nome'])){
 									<input name="filesToUpload[]" class="inpForm" id="filesToUpload" type="file" multiple="" />
 									<div class="form-group">
 										<label for="nomeProduto">Nome</label>
-										<input type="text" name="nomeProduto" id="nomeProduto" required class="inpForm"/ autocomplete="off">
+										<input type="text" name="nomeProduto" id="nomeProduto" required class="inpForm" autocomplete="off">
 									</div>
 									<div class="form-group">
 										<label for="descricaoProduto">Descrição</label>
-										<input type="text" name="descricaoProduto" id="descricaoProduto" required class="inpForm"/ autocomplete="off">
+										<textarea type="text" rows="16" name="descricaoProduto" id="descricaoProduto" required class="inpForm" autocomplete="off"></textarea>
 									</div>
 								</div>
 								<div class="modal-footer">
@@ -190,11 +190,11 @@ if(!isset($_SESSION['nome'])){
 									
 									<div class="form-group">
 										<label for="nomeProduto">Nome</label>
-										<input type="text" name="modificanomeProduto" id="modificanomeProduto" required class="inpForm"/ autocomplete="off">
+										<input type="text" name="modificanomeProduto" id="modificanomeProduto" required class="inpForm" autocomplete="off">
 									</div>
 									<div class="form-group">
 										<label for="descricaoProduto">Descrição</label>
-										<input type="text" name="modificadescricaoProduto" id="modificadescricaoProduto" required class="inpForm"/ autocomplete="off">
+										<textarea type="text" rows="16" name="modificadescricaoProduto" id="modificadescricaoProduto" required class="inpForm" autocomplete="off"></textarea>
 									</div>
 								</div>
 								<div class="modal-footer">
