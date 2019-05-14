@@ -234,6 +234,7 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 .btn.btn-primary{
     background-color: #365C9A !important ;
     border-color: #365C9A !important ; 
+    margin: 0px !important ;
 }
 .btn.btn-primary:hover{
     background-color: rgb(45, 111, 218) !important ;
@@ -482,7 +483,7 @@ input[type='file'] {
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
-    margin: 10px;
+    margin-right: 10px;
     padding: 6px 20px
   }
   #inputcustom:hover{

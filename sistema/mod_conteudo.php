@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" rel="stylesheet">
 
-
+		<link rel="icon" href="../img/logoTMF.png" type="image/png">
         <title> Sistema de Gerenciamento | TMF </title>
         
     </head>
@@ -90,7 +90,7 @@
 								</div>
 								<div class="col-md-6">
 									<div class="card" style="width: auto;display:inline-block; height:auto;">
-										<img class="card-img-top" src="../img/Sistema/produtosCard.png" alt="Card image cap">
+										<img class="card-img-top" src="../img/Sistema/parceirosCard.png" alt="Card image cap">
 										<div class="card-body">
 											<h5 class="card-title">Parceiros</h5>
 											<p class="card-text">Clique no botão abaixo para editar as informações desta seção!</p>
@@ -113,7 +113,7 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="card" style="width: auto;display:inline-block; height:auto;">
-										<img class="card-img-top" src="../img/Sistema/portifolioCard.png" alt="Card image cap">
+										<img class="card-img-top" src="../img/Sistema/clientesCard.png" alt="Card image cap">
 										<div class="card-body">
 											<h5 class="card-title">Clientes</h5>
 											<p class="card-text">Clique no botão abaixo para editar as informações desta seção!</p>
@@ -152,16 +152,16 @@
 											<div class="row">
 												<div class="col-md-6" style="border-right:1px solid lightgray;">
 													<label for="indicador1"> Indicador 1: </label>
-													<input type="text" class="inpForm" id="indicador1" name="indicador1">
+													<input type="text" class="inpForm" id="indicador1" name="indicador1" autocomplete="off">
 													<label for="indicador1qt"> Quantidade: </label>
-													<input type="number" step="1" min="0" class="inpForm" id="indicador1qt" name="indicador1qt">
+													<input type="number" step="1" min="0" class="inpForm" id="indicador1qt" name="indicador1qt" autocomplete="off">
 													<br><hr>
 												</div>
 												<div class="col-md-6">
 													<label for="indicador2"> Indicador 2: </label>
-													<input type="text" class="inpForm" id="indicador2" name="indicador2">
+													<input type="text" class="inpForm" id="indicador2" name="indicador2" autocomplete="off">
 													<label for="indicador2qt"> Quantidade: </label>
-													<input type="number" step="1" min="0" class="inpForm" id="indicador2qt" name="indicador2qt">
+													<input type="number" step="1" min="0" class="inpForm" id="indicador2qt" name="indicador2qt" autocomplete="off">
 													<br><hr>
 												</div>
 											</div>
@@ -169,14 +169,14 @@
 											<div class="row">
 												<div class="col-md-6" style="border-right:1px solid lightgray;">
 													<label for="indicador3"> Indicador 3: </label>
-													<input type="text" class="inpForm" id="indicador3" name="indicador3">
+													<input type="text" class="inpForm" id="indicador3" name="indicador3" autocomplete="off">
 													<label for="indicador3qt"> Quantidade: </label>
 													<input type="number" step="1" min="0" class="inpForm" id="indicador3qt" name="indicador3qt">
 													<br><hr>
 												</div>
 												<div class="col-md-6">
 													<label for="indicador4"> Indicador 4: </label>
-													<input type="text" class="inpForm" id="indicador4" name="indicador4">
+													<input type="text" class="inpForm" id="indicador4" name="indicador4" autocomplete="off">
 													<label for="indicador4qt"> Quantidade: </label>
 													<input type="number" step="1" min="0" class="inpForm" id="indicador4qt" name="indicador4qt">
 													<br><hr>
@@ -185,7 +185,7 @@
 											<div class="row">
 												<div class="col-md-12">
 													<label for="textoSobre"> Texto Sobre a TMF: </label>
-													<textarea class="inpForm" id="textoSobre" name="textoSobre" rows="10" maxlength="720" placeholder="Máximo de 720 caracteres"></textarea>
+													<textarea class="inpForm" id="textoSobre" name="textoSobre" rows="10" maxlength="720" placeholder="Máximo de 720 caracteres" autocomplete="off"></textarea>
 												</div>
 											</div>
 										</div>
@@ -248,7 +248,7 @@
 											<div class="row">
 												<div class="col-md-12">
 													<label for="textoServicos"> Texto Serviços: </label>
-													<textarea class="inpForm" id="textoServicos" name="textoServicos" rows="10" maxlength="780" placeholder="Máximo de 780 caracteres"></textarea>
+													<textarea class="inpForm" id="textoServicos" name="textoServicos" rows="10" maxlength="780" placeholder="Máximo de 780 caracteres" autocomplete="off"></textarea>
 												</div>
 											</div>
 										</div>
@@ -400,13 +400,13 @@
 											<div class="col-md-12">
 												<form id="formParceiro" enctype="multipart/form-data">	
 													<label for="imgParceiro"> Adicione a imagem do Parceiro: </label>
-													<input type="file" class="inpForm" name="imgParceiro" id="imgParceiro">
+													<input type="file" class="inpForm" name="imgParceiro" id="imgParceiro" autocomplete="off">
 													<br><hr>
 													<label for="nomeParceiro"> Nome do parceiro: </label>
-													<input type="text" class="inpForm" name="nomeParceiro" id="nomeParceiro">
+													<input type="text" class="inpForm" name="nomeParceiro" id="nomeParceiro" autocomplete="off">
 													<br><hr>
 													<label for="urlParceiro"> Adicione a URL do Parceiro: </label>
-													<input type="text" class="inpForm" name="urlParceiro" id="urlParceiro">
+													<input type="text" class="inpForm" name="urlParceiro" id="urlParceiro" autocomplete="off">
 											</div>
 										</div>
 									</div>
@@ -475,13 +475,13 @@
 												<div class="col-md-12">
 													<form id="formCliente" enctype="multipart/form-data">	
 													<label for="imgCliente"> Adicione a imagem do Cliente: </label>
-													<input type="file" class="inpForm" name="imgCliente" id="imgCliente">
+													<input type="file" class="inpForm" name="imgCliente" id="imgCliente" autocomplete="off">
 													<br><hr>
 													<label for="nomeCliente"> Nome do cliente: </label>
-													<input type="text" class="inpForm" name="nomeCliente" id="nomeCliente">
+													<input type="text" class="inpForm" name="nomeCliente" id="nomeCliente" autocomplete="off">
 													<br><hr>
 													<label for="urlCliente"> Adicione a URL do Parceiro: </label>
-													<input type="text" class="inpForm" name="urlCliente" id="urlCliente">
+													<input type="text" class="inpForm" name="urlCliente" id="urlCliente" autocomplete="off">
 													
 												</div>
 											</div>

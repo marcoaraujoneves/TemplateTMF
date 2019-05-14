@@ -27,7 +27,7 @@ if(!isset($_SESSION['nome'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" rel="stylesheet">
 
-
+	<link rel="icon" href="../img/logoTMF.png" type="image/png">
     <title> Sistema de Gerenciamento | TMF </title>
 
 </head>

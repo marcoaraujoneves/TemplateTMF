@@ -20,8 +20,7 @@
         <link rel="stylesheet" href="css/responsividade.css">
         <link rel="stylesheet" href="css/card.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" rel="stylesheet"> 
-
-
+        <link rel="icon" href="img/logoTMF.png" type="image/png">
         <title> Indústria TMF | Home </title> 
 
     </head>
@@ -458,7 +457,7 @@
                         $linkParceiro = $row['linkParceiro'];
                         echo '<div class=" col-xl-2 col-md-2 col-sm-4 col-6 mx-auto text-center">';
                         echo ' <a href="'.$linkParceiro.'">';
-                        echo ' <img src="sistema/Img/Parceiros/'.$codParceiro.'.'.$extensao.'" class="img_patro-forne img-responsive">';
+                        echo ' <img src="sistema/Img/Parceiros/'.$codParceiro.'.'.$extensao.'" class="centro-vertical img_patro-forne img-responsive">';
                         echo ' </a>';
                         echo '</div>';
                     }
@@ -491,7 +490,7 @@
                         $linkCliente = $row['linkCliente'];
                         echo '<div class=" col-xl-2 col-md-2 col-sm-4 col-6 mx-auto text-center">';
                         echo ' <a href="'.$linkCliente.'">';
-                        echo ' <img src="sistema/Img/Clientes/'.$codCliente.'.'.$extensao.'" class="img_patro-forne img-responsive">';
+                        echo ' <img src="sistema/Img/Clientes/'.$codCliente.'.'.$extensao.'" class="centro-vertical  img_patro-forne img-responsive">';
                         echo ' </a>';
                         echo '</div>';
                     }
@@ -595,11 +594,24 @@
                                     <div class="float-right p-2">
                                         <button type="button" class="btn btn-primary" id="enviar" name="enviar"> Enviar </button>
                                     </div>
-                                    
                                 </div>
                             </form>
                         </div>
                     </div>
+                    <!--
+                    <div class="row ">
+                                        <div class="col-md-10 col-sm-12 d-flex justify-content-center y-auto">
+                                            <label for='anexar' id="inputcustom">Selecionar um arquivo &#187;</label>
+                                            <input type="file" class="form-control" id="anexar" name="_FILES" accept="image/*,.pdf"> 
+                                            <span style=" color: #365C9A;"id='file-name'>Vazio</span>
+                                        </div>
+                                        <div class="col-md-2 col-sm-12 d d-flex justify-content-center y-auto">
+                                            <button type="button p-0" class="btn btn-primary" id="enviar" name="enviar"> Enviar </button>
+                                        </div>
+>>>>>>> Marco Araujo: Inclusão do favicon, alteração das imagens em Conteúdo e melhoria no dissmiss dos modals
+                                    </div>
+
+                    -->
 
                     <div class="row" id="linha-mapa">
                         <div class="container-fluid" id="container-mapa">

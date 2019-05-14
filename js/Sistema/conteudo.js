@@ -221,7 +221,7 @@ $(document).ready(function(){
             method:'POST',
             data:$('#formParceiros').serialize(),
             success:function(data){
-
+                $('#btnParceiros').click();
             },
             error: function(){
                 $('#bodyParceiros').html('Houve um erro na requisição, tente novamente mais tarde!');
@@ -277,7 +277,7 @@ $(document).ready(function(){
             method:'POST',
             data:$('#formClientes').serialize(),
             success:function(data){
-                
+                $('#btnClientes').click();
             },
             error: function(){
                 $('#bodyClientes').html('Houve um erro na requisição, tente novamente mais tarde!');
