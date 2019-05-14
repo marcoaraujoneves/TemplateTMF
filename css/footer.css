@@ -74,6 +74,7 @@ footer{
 .titulos_rodape{
     color: #365C9A;
     /* font-size: 12px ; */
+    font-family: 'Roboto Slab', serif;
     font-weight: 500;
     text-align: center;
     border-bottom: 1pt solid #bac3ca;

@@ -73,7 +73,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-5 my-auto">
-                            <img src="img/tmf.png" class="img-fluid mx-auto d-block" style="margin-right:50px;">
+                            <img src="img/tmf.png" class="img-fluid mx-auto d-block rounded" style="margin-right:50px;">
                             <br>
                         </div>
                         <div class="col-md-7">
@@ -89,31 +89,31 @@
                     </div>
                 </div>
                 <div class="container-fluid mt-3 tema">
-                    <div class="row d-flex m-0 m-md-5 p-3 my-auto">
+                    <div class="row d-flex m-0 m-md-5 p-0 p-md-3 my-auto">
                         <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-3 m-0">
                             <div class="card border-danger d-flex justify-content-center p-3 sombra-cartao">
-                                <div class="text-info text-center"><h4 class="font_info_card text-capitalize" id="indicador1"> Projetos entregues</h4></div>
+                                <div class="text-info text-center"><h4 class="font_info_card text-uppercase" id="indicador1"> Projetos entregues</h4></div>
                                 <div class="linha_separadora"></div>
                                 <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero1">1</div></h2></div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-3 m-0">
                             <div class="card border-danger d-flex justify-content-center p-3 sombra-cartao">
-                                <div class="text-info text-center"><h4 class="font_info_card text-capitalize" id="indicador2">Anos no mercado</h4></div>
+                                <div class="text-info text-center"><h4 class="font_info_card text-uppercase" id="indicador2">Anos no mercado</h4></div>
                                 <div class="linha_separadora"></div>
                                 <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero2">1</div></h2></div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-3 m-0">
                             <div class="card border-danger d-flex justify-content-center p-3 sombra-cartao">
-                                <div class="text-info text-center"><h4 class="font_info_card text-capitalize" id="indicador3">Produtos próprios</h4></div>
+                                <div class="text-info text-center"><h4 class="font_info_card text-uppercase" id="indicador3">Produtos próprios</h4></div>
                                 <div class="linha_separadora"></div>
                                 <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero3">1</div></h2></div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-3 m-0">
                             <div class="card border-danger d-flex justify-content-center p-3 sombra-cartao">
-                                <div class="text-info text-center "><h4 class="font_info_card text-capitalize" id="indicador4">Opções de serviço</h4></div>
+                                <div class="text-info text-center "><h4 class="font_info_card text-uppercase" id="indicador4">Opções de serviço</h4></div>
                                 <div class="linha_separadora"></div>
                                 <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero4">1</div></h2></div>
                             </div>
@@ -144,7 +144,7 @@
                             <a href="servicos.php" id="vermais">Ver mais...</a>
                         </div>
 
-                        <div class="col-md-7 my-auto">
+                        <div class="col-md-7 mx-5 mx-md-0 my-3">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="container">
@@ -222,7 +222,7 @@
                             </h1>
                         </div>
                     </div>
-                    <div class="row mx-auto pb-5 pl-5 pr-5">
+                    <div class="row mx-auto pb-3 pb-md-5 pl-3 pl-md-5 pr-3 pr-md-5">
                         <?php 
                         include ('sistema/db.class.php');
                         $objDB = new db();
@@ -252,7 +252,7 @@
                             echo '</div>';
                             echo '<div class="descricaoProduto sombra-cartao">';
                             echo '<h4 class="nomeProdutoInterno"> '.$nomes.' </h4>';
-                            echo '<p class="text-justify px-2 py-1 " style="transition: display 1s linear 1s;">
+                            echo '<p class="text-justify px-3 py-1 " style="transition: display 1s linear 1s;">
                                             '.$descricao.'
                                             <br>
                                             <a href="#"> Ver mais... </a>
@@ -514,7 +514,7 @@
 
                     <div class="row">
                         <div class="col-lg-4 tema pt-3" id="contate-nos">
-                            <h3> Contate-nos</h3>
+                            <!-- <h3> Contate-nos</h3> -->
                             <div class="row p-2">
                                 <div class="col-md-12">
                                     <div class="icone-contatenos">
@@ -549,7 +549,7 @@
                             </div>
                         </div>
                         <div class="col-lg-8 pt-3 pt-lg-2" id="mande_mensagem">
-                            <h3> Mande uma mensagem </h3>
+                            <!-- <h3> Mande uma mensagem </h3> -->
                             <br>
                             <div id="sucesso" class="alert alert-success" role="alert" style="display:none;">
                                 Mensagem enviada com sucesso!
@@ -567,7 +567,7 @@
                                             <label class="txtForm" for="nome"> &ensp;Nome </label> <br>
                                             <input type="text" class="inpForm" id="nome" name="nome" autocomplete="off">
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-6 pt-3 pt-md-0">
                                             <label class="txtForm" for="telefone"> &ensp;Telefone </label> <br>
                                             <input type="text" class="inpForm" id="telefone" name="telefone" autocomplete="off" maxlength="15">
                                         </div>
@@ -592,7 +592,7 @@
                                         <input type="file" class="form-control" id="anexar" name="_FILES" accept="image/*,.pdf"> 
                                         <span style=" color: #365C9A ;border-radius: 5px"id='file-name'>Nome</span>
                                     </div>
-                                    <div class="float-right">
+                                    <div class="float-right p-2">
                                         <button type="button" class="btn btn-primary" id="enviar" name="enviar"> Enviar </button>
                                     </div>
                                     

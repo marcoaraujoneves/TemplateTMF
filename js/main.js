@@ -138,9 +138,9 @@ var servico4ID;
     
     $(window).on('scroll', function() {
 
-        if(windowTop >= 350){
+        if(windowTop >= 250 || innerWidth < 838){
             $('#logo_Menu').addClass("img_pequena");
-        } else if(windowTop < 350){
+        } else if(windowTop < 250 && innerWidth > 838){
             $('#logo_Menu').removeClass("img_pequena");
         }
         
@@ -157,11 +157,11 @@ var servico4ID;
                 $('#'+seccao).addClass("link_ativo");
             }
         }
-        if(windowTop >= 300){
-            $('#logo_Menu').addClass("img_pequena");
-        } else if(windowTop < 300){
-            $('#logo_Menu').removeClass("img_pequena");
-        }
+        // if(windowTop >= 300){
+        //     $('#logo_Menu').addClass("img_pequena");
+        // } else if(windowTop < 300){
+        //     $('#logo_Menu').removeClass("img_pequena");
+        // }
 
     });
 

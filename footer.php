@@ -29,13 +29,13 @@
         <div class="col-md-5">
             <h4 class="titulos_rodape">Principais Tags</h4>
             <div class="row">
-                <div class="col-md-6 text-left">
+                <div class="col-md-6 text-center text-md-left">
                     <p><span class="tags">Automação</span></p>
                     <p><span class="tags">Manutenção Preventiva</span></p>
                     <p><span class="tags">Máquinas Especiais</span></p>
                     <p><span class="tags">Projetos de Máquinas</span></p>
                 </div>
-                <div class="col-md-6 text-left">
+                <div class="col-md-6 text-center text-md-left">
                     <p><span class="tags">Projetos em Mecatrônica</span></p>
                     <p><span class="tags">Projetos Especiais</span></p>
                     <p><span class="tags">Tornearia</span></p>
