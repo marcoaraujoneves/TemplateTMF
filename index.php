@@ -407,10 +407,10 @@
                                         $nome = $row['nome'];
                                         $descricao = $row['descricao'];
 
-                                        echo '<div class="carousel-item pb-3 '.$active.'">';
-                                        echo '<img class="d-block w-100 imagem_port mx-auto" src="sistema/Img/Portifolio/'.$nome.'"  >';
+                                        echo '<div class="carousel-item pb-3 imagem_port_fundo mx-auto '.$active.' " style="background-image:url(sistema/Img/Portifolio/'.$nome.'">';
+                                        echo '<img class="d-block w-100 imagem_port_frente mx-auto" src="sistema/Img/Portifolio/'.$nome.'"  >';
                                         echo '<div class="carousel-caption mx-auto">';
-                                        echo '<p>'.$descricao.'.</p>';
+                                        echo '<p>'.$descricao.'<br><a href="portifolio.php" style="float:right; color:#f8aa00; text-decoration:underline; margin-right:10px">Saiba mais</a>'.'</p>';
                                         echo '</div>';
                                         echo '</div>';
                                         $cont_slide = $cont_slide + 1;
@@ -457,7 +457,7 @@
                         $linkParceiro = $row['linkParceiro'];
                         echo '<div class=" col-xl-2 col-md-2 col-sm-4 col-6 mx-auto text-center">';
                         echo ' <a href="'.$linkParceiro.'">';
-                        echo ' <img src="sistema/Img/Parceiros/'.$codParceiro.'.'.$extensao.'" class="centro-vertical img_patro-forne img-responsive">';
+                        echo ' <img src="sistema/Img/Parceiros/'.$codParceiro.'.'.$extensao.'" target="_blank" class="centro-vertical img_patro-forne img-responsive">';
                         echo ' </a>';
                         echo '</div>';
                     }
@@ -490,7 +490,7 @@
                         $linkCliente = $row['linkCliente'];
                         echo '<div class=" col-xl-2 col-md-2 col-sm-4 col-6 mx-auto text-center">';
                         echo ' <a href="'.$linkCliente.'">';
-                        echo ' <img src="sistema/Img/Clientes/'.$codCliente.'.'.$extensao.'" class="centro-vertical  img_patro-forne img-responsive">';
+                        echo ' <img src="sistema/Img/Clientes/'.$codCliente.'.'.$extensao.'" target="_blank" class="centro-vertical  img_patro-forne img-responsive">';
                         echo ' </a>';
                         echo '</div>';
                     }
