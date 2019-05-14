@@ -50,6 +50,7 @@
             }
         }
     </script>
+
     <body>
 
         <!-- Inclusão do cabeçalho do site -->
@@ -587,7 +588,9 @@
                                     </div>
                                     <br>
                                     <div class="float-left">
+                                        <label for='anexar' id="inputcustom">Selecionar um arquivo &#187;</label>
                                         <input type="file" class="form-control" id="anexar" name="_FILES" accept="image/*,.pdf"> 
+                                        <span style=" color: #365C9A ;border-radius: 5px"id='file-name'>Nome</span>
                                     </div>
                                     <div class="float-right">
                                         <button type="button" class="btn btn-primary" id="enviar" name="enviar"> Enviar </button>
@@ -621,6 +624,14 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/header.js"></script>
+    <script>
+        var $input    = document.getElementById('anexar'),
+        $fileName = document.getElementById('file-name');
+
+        $input.addEventListener('change', function(){
+        $fileName.textContent = this.value;
+        });
+    </script>
     <!-------------------------- scripts de contagem  ------------------------------------------>
 
   
