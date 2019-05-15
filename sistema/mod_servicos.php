@@ -153,8 +153,7 @@
 								</div>
 								<div class="modal-body">
 									<form method="post" enctype="multipart/form-data"  id="formServico" >
-										<input name="filesToUpload[]" class="inpForm" id="filesToUpload" type="file" multiple="" />
-										
+
 										<div class="form-group">
 											<label for="nome">Nome</label>
 											<input type="text" name="nome" id="nome" required class="inpForm" autocomplete="off">
@@ -163,6 +162,7 @@
 											<label for="description">Descrição</label>
 											<textarea type="text" rows="16" name="description" id="description" required class="inpForm" autocomplete="off"></textarea>
 										</div>
+										<input name="filesToUpload[]" class="inpForm jfilestyle" id="filesToUpload" type="file" multiple="" accept="image/*"/>
 								</div>
 								<div class="modal-footer">
 									<input type="submit" class="btn btn-success" id="batatas" name="batatas" value="Cadastrar"/>
@@ -253,6 +253,10 @@
     <script src="../bootstrap/js/bootstrap.min.js"></script>
     <script src="../js/Sistema/Sistema.js"></script>
 	<script src="../js/Sistema/servico.js"></script>
+	<script src="../js/Input/jquery-filestyle.min.js"></script>
+	<script>$(":file").jfilestyle('buttonBefore', true)</script>
+	<script>$(":file").jfilestyle('text', 'Selecionar imagens');</script>
+	<script>$(":file").jfilestyle('input',false);</script>
 </html>
  
 

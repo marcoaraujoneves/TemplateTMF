@@ -496,21 +496,12 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
     color: #000000;
     text-decoration: underline;
 }
-input[type='file'] {
-    display: none
-  }
+
 .descricaoProduto a:visited{
     color: #000000;
     text-decoration: underline;
 }
-#inputcustom {
-    background-color: #365C9A;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    margin-right: 10px;
-    padding: 6px 20px
-  }
+
   #inputcustom:hover{
     background-color:rgb(45, 111, 218);
   }
@@ -578,3 +569,7 @@ input[type='file'] {
     }
     
   }
+  /*--------------------------------------------------------------------*/
+/*------------------------ input file estilização --------------------------------*/
+
+.jfilestyle{display:inline-block;margin:0 0 10px;padding:0;position:relative;border-collapse:separate}div.jfilestyle input,div.jfilestyle label{padding:10px 15px;line-height:normal;font-size:14px;vertical-align:middle;font-family:sans-serif}div.jfilestyle input{border:2px solid #365C9A;background:#d9d9d9;margin:0 -5px 0 0;border-bottom-right-radius:5px; border-top-right-radius: 5px;color:#818181;cursor:default}div.jfilestyle label{display:inline-block; border:2px solid #365C9A ;background:#365C9A;color:white;text-align:center;margin:0;width:auto;border-top-left-radius:5px;border-bottom-left-radius:5px ;font-weight:400}div.jfilestyle.jfilestyle-corner input:last-child,div.jfilestyle.jfilestyle-corner label:last-child{margin-left:-1px}div.jfilestyle label[disabled]{pointer-events:none;opacity:.6;filter:alpha(opacity=65);cursor:not-allowed}div.jfilestyle label:hover{cursor:pointer;opacity:.9}div.jfilestyle .count-jfilestyle{background:#303030;color:#fff;border-radius:50%;padding:1px 5px;font-size:12px;vertical-align:middle}div.jfilestyle.jfilestyle-theme-blue label{border-color:#438eff;background:#438eff;color:#fff}div.jfilestyle.jfilestyle-theme-green label{border-color:#18a063;background:#18a063;color:#fff}div.jfilestyle.jfilestyle-theme-yellow label{border-color:#e8c821;background:#e8c821;color:#fff}div.jfilestyle.jfilestyle-theme-black label{border-color:#424242;background:#424242;color:#fff}div.jfilestyle.jfilestyle-theme-red label{border-color:#f33f3f;background:#f33f3f;color:#fff}div.jfilestyle.jfilestyle-theme-purple label{border-color:#873aff;background:#873aff;color:#fff}div.jfilestyle.jfilestyle-theme-asphalt label{border-color:#435673;background:#435673;color:#fff}

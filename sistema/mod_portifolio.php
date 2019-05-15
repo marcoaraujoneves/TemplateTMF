@@ -155,10 +155,9 @@ if(!isset($_SESSION['nome'])){
 							</div>
 							<div class="modal-body">
 								<form method="post" enctype="multipart/form-data"  id="formPortifolio" >
-									<input name="filesToUpload[]" class="inpForm" id="filesToUpload" type="file" multiple="" / >
 									<div class="form-group">
 										<label for="nomePortifolio">Nome</label>
-										<input type="text" name="nomePortifolio" id="nomePortifolio" class="inpForm" / autocomplete="off">
+										<input type="text" name="nomePortifolio" id="nomePortifolio" class="inpForm" autocomplete="off"/>
 									</div>
 									<div class="form-group">
 										<label for="descricaoPortifolio">Descrição</label>
@@ -166,8 +165,9 @@ if(!isset($_SESSION['nome'])){
 									</div>
 									<div class="form-group">
 										<label for="linkYoutube">Youtube Link</label>
-										<input type="text" name="linkYoutube" id="linkYoutube" class="inpForm"/ autocomplete="off">
+										<input type="text" name="linkYoutube" id="linkYoutube" class="inpForm" autocomplete="off"/>
 									</div>
+									<input name="filesToUpload[]" class="inpForm jfilestyle" id="filesToUpload" type="file" multiple="" accept="image/*" />
 								</div>
 								<div class="modal-footer">
 
@@ -264,6 +264,10 @@ if(!isset($_SESSION['nome'])){
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="../js/Sistema/Sistema.js"></script>
 <script src="../js/Sistema/portifolio.js"></script>
+<script src="../js/Input/jquery-filestyle.min.js"></script>
+<script>$(":file").jfilestyle('buttonBefore', true)</script>
+<script>$(":file").jfilestyle('text', 'Selecionar imagens');</script>
+<script>$(":file").jfilestyle('input',false);</script>
 </html>
 
 
