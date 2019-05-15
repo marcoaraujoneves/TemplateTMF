@@ -66,10 +66,10 @@
                 if($stmt->execute()){
                     echo 'Campanha enviada e salva!';
                 } else {
-                    echo 'Campanha enviada! Porém, houve um erro ao salvar a campanha.';
+                    echo 'Campanha enviada! Erro ao salvar a campanha.';
                 }
             } else {
-                echo 'Houve um erro ao enviar a campanha para os clientes ativos!';
+                echo 'Erro ao enviar a campanha para os clientes ativos!';
             }
         } else {
             echo 'Erro! Lista de clientes ativos vazia.';

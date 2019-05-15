@@ -24,10 +24,14 @@ function carregaMensagens(){
     $.ajax({
         url:'Mensagens/carregaMensagens.php',
         success:function(data){
-            $('#corpoMensagens').html(data);
+            if(data.indexOf("Erro") == -1){
+                $('#corpoMensagens').html(data);
+            }else {
+                ativaAlerta(data,3);
+            }
         },
         error:function(){
-            $('#corpoMensagens').html('<td colspan="5" style="text-align:center"> Houve um erro na requisição, favor tentar novamente mais tarde! </td>');
+            ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
         }
     });
 }
@@ -38,10 +42,14 @@ function carregaMensagem(codMsg){
         method:'POST',
         data:{codigo:codMsg},
         success:function(data){
-            $('#corpoModalMsg').html(data);
+            if(data.indexOf("Erro") == -1){
+                $('#corpoModalMsg').html(data);
+            }else {
+                ativaAlerta(data,3);
+            }
         },
         error:function(){
-            $('#corpoModalMsg').html('<h3 style="text-align:center"> Houve um erro na requisição, favor tentar novamente mais tarde! </h3>');
+            ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
         }
     });
 }
@@ -52,10 +60,14 @@ function deletaMensagem(codMsg){
         method:'POST',
         data:{codigo:codMsg},
         success:function(data){
-            carregaMensagens();
+            if(data.indexOf("Erro") == -1){
+                carregaMensagens();
+            }else {
+                ativaAlerta(data,3);
+            }
         },
         error:function(){
-            $('#corpoModalMsg').html('<h3 style="text-align:center"> Houve um erro na requisição, favor tentar novamente mais tarde! </h3>');
+            ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
         }
     });
 }
@@ -66,11 +78,15 @@ function trocaStatus(codMsg){
         method:'POST',
         data:{codigo:codMsg,status:$("#mudaStatus").attr('data-status')},
         success:function(data){
-            carregaMensagens();
-            carregaMensagem(codMsg);
+            if(data.indexOf("Erro") == -1){
+                carregaMensagens();
+                carregaMensagem(codMsg);
+            }else {
+                ativaAlerta(data,3);
+            }
         },
         error:function(){
-            $('#corpoModalMsg').html('<h3 style="text-align:center"> Houve um erro na requisição, favor tentar novamente mais tarde! </h3>');
+            ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
         }
     });
 }

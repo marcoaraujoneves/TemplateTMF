@@ -74,7 +74,11 @@ function carregaClientes(){
     $.ajax({
         url:'Newsletter/carregaClientes.php',
         success:function(data){
-            $('#corpoTbClientes').html(data);
+            if(data.indexOf("Erro") == -1){
+                $('#corpoTbClientes').html(data);
+            } else {
+                ativaAlerta(data,3);
+            }
         },
         error:function(){
             ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
@@ -88,7 +92,11 @@ function cadastraCliente(){
         method:'POST',
         data:$('#cadastraCliente').serialize(),
         success: function(data){
-            ativaAlerta(data,1);
+            if(data.indexOf("Erro") == -1){
+                ativaAlerta(data,1);
+            } else {
+                ativaAlerta(data,3);
+            }
             carregaClientes();
         },
         error: function(){
@@ -105,14 +113,18 @@ function carregaCliente(codCliente){
         data:{codigo:codCliente},
         dataType:"json",
         success:function(data){
-            console.log(data);
-            $('#nomeEdita').val(data.nome);
-            $('#emailEdita').val(data.email);
-            $('#statusEdita option').each(function(){
-                if($(this).val() == data.status){
-                    $(this).attr("selected",true);
-                }
-            });
+            if(data.indexOf("Erro") == -1){
+                $('#nomeEdita').val(data.nome);
+                $('#emailEdita').val(data.email);
+                $('#statusEdita option').each(function(){
+                    if($(this).val() == data.status){
+                        $(this).attr("selected",true);
+                    }
+                });
+            } else {
+                ativaAlerta(data,3);
+            }
+
         },
         error:function(){
             ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
@@ -126,7 +138,11 @@ function statusCliente(codCliente,statusAtual){
         method:'POST',
         data:{codigo:codCliente,status:statusAtual},
         success: function(){
-            carregaClientes();
+            if(data.indexOf("Erro") == -1){
+                carregaClientes();
+            } else {
+                ativaAlerta(data,3);
+            }
         },
         error: function(){
             ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
@@ -140,8 +156,12 @@ function editarCliente(){
         method:'POST',
         data:$('#formCliente').serialize(),
         success: function(data){
-            carregaClientes();
-            ativaAlerta(data,1);
+            if(data.indexOf("Erro") == -1){
+                carregaClientes();
+                ativaAlerta(data,1);
+            } else {
+                ativaAlerta(data,3);
+            }
         },
         error: function(){
             ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
@@ -155,8 +175,12 @@ function deletarCliente(codCliente){
         method:'POST',
         data:{codigo:codCliente},
         success: function(data){
-            carregaClientes();
-            ativaAlerta(data,1);
+            if(data.indexOf("Erro") == -1){
+                carregaClientes();
+                ativaAlerta(data,1);
+            }else {
+                ativaAlerta(data,3);
+            }
         },
         error: function(){
             ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
@@ -168,7 +192,11 @@ function carregaCampanhas(){
     $.ajax({
         url:'Newsletter/carregaCampanhas.php',
         success:function(data){
-            $('#corpoCampanhas').html(data);
+            if(data.indexOf("Erro") == -1){
+                $('#corpoCampanhas').html(data);
+            }else {
+                ativaAlerta(data,3);
+            }
         },
         error:function(){
             ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
@@ -183,10 +211,14 @@ function carregaCampanha(codCampanha){
         data:{codigo:codCampanha},
         dataType:"json",
         success:function(data){
-            $('#tagDetalheCampanha').html(data.tag);
-            $('#assuntoDetalheCampanha').html(data.assunto);
-            $('#dataDetalheCampanha').html(data.data);
-            $('#mensagemDetalheCampanha').html(data.mensagem);
+            if(data.indexOf("Erro") == -1){
+                $('#tagDetalheCampanha').html(data.tag);
+                $('#assuntoDetalheCampanha').html(data.assunto);
+                $('#dataDetalheCampanha').html(data.data);
+                $('#mensagemDetalheCampanha').html(data.mensagem);
+            }else {
+                ativaAlerta(data,3);
+            }
         },
         error:function(){
             ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
@@ -200,7 +232,11 @@ function enviaCampanha(){
         method:'POST',
         data:$('#formCampanha').serialize(),
         success: function(data){
-            ativaAlerta(data,1);
+            if(data.indexOf("Erro") == -1){
+                ativaAlerta(data,1);
+            }else {
+                ativaAlerta(data,3);
+            }
         },
         error: function(){
             ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
