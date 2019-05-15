@@ -1,6 +1,23 @@
 <?php
     echo "<span id='menuAtivo' style='display:none;'>".$_SESSION['menuAtivo']."</span>";
 ?>
+<style>
+#containerAlert{
+    width:56%;
+    position:fixed;
+    right:22%;
+    top:1px;
+    z-index:9999;
+}
+
+</style>
+<div id="containerAlert" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+    <strong id="mensagem-requisicao"> Campanha enviada! Porém, houve um erro ao salvar a campanha. </strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
 <ul type="none">
     <li class="itemMenuSistema" id="1">
         <i class="fa fa-flag" aria-hidden="true"></i>

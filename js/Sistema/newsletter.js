@@ -104,9 +104,9 @@ function carregaCliente(codCliente){
         dataType:"json",
         success:function(data){
             console.log(data);
-            $('#nome').val(data.nome);
-            $('#email').val(data.email);
-            $('#status option').each(function(){
+            $('#nomeEdita').val(data.nome);
+            $('#emailEdita').val(data.email);
+            $('#statusEdita option').each(function(){
                 if($(this).val() == data.status){
                     $(this).attr("selected",true);
                 }

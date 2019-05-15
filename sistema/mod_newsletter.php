@@ -308,7 +308,7 @@
                                                 <input type="hidden" id="codigoCliente" name="codigo">
                                                 <div class="col-md-12">
                                                     <label for="nome"> Nome: </label>
-                                                    <input type="text" class="inpForm" id="nome" name="nome">
+                                                    <input type="text" class="inpForm" id="nomeEdita" name="nome">
                                                     <br><hr>
                                                 </div>
                                             </div>
@@ -316,7 +316,7 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <label for="email"> E-mail: </label>
-                                                    <input type="email" class="inpForm" id="email" name="email">
+                                                    <input type="email" class="inpForm" id="emailEdita" name="email">
                                                     <br><hr>
                                                 </div>
                                             </div>
@@ -324,7 +324,7 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <label for="status"> Status: </label>
-                                                    <select class="inpForm" id="status" name="status">
+                                                    <select class="inpForm" id="statusEdita" name="status">
                                                         <option value="1"> Ativo </option>
                                                         <option value="0"> Inativo </option>
                                                     </select>
