@@ -77,7 +77,7 @@ function carregaClientes(){
             $('#corpoTbClientes').html(data);
         },
         error:function(){
-            $('#corpoTbClientes').html('<tr> <td colspan="5" style="text-align:center;">Houve um erro na requisição, por favor, tente novamente mais tarde!</td></tr>');
+            ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
         }
     });
 }
@@ -88,10 +88,12 @@ function cadastraCliente(){
         method:'POST',
         data:$('#cadastraCliente').serialize(),
         success: function(data){
+            ativaAlerta(data,1);
             carregaClientes();
         },
         error: function(){
-            alert('Ocorreu um erro');
+            ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
+            carregaClientes();
         }
     });
 }
@@ -113,7 +115,7 @@ function carregaCliente(codCliente){
             });
         },
         error:function(){
-            $('#corpoTbClientes').html('<tr> <td colspan="5" style="text-align:center;">Houve um erro na requisição, por favor, tente novamente mais tarde!</td></tr>');
+            ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
         }
     });
 }
@@ -123,25 +125,26 @@ function statusCliente(codCliente,statusAtual){
         url:'Newsletter/statusCliente.php',
         method:'POST',
         data:{codigo:codCliente,status:statusAtual},
-        success: function(data){
+        success: function(){
             carregaClientes();
         },
-        error: function(data){
-
+        error: function(){
+            ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
         }
     });
 }
 
-function editarCliente(codCliente){
+function editarCliente(){
     $.ajax({
         url:'Newsletter/editarCliente.php',
         method:'POST',
         data:$('#formCliente').serialize(),
         success: function(data){
             carregaClientes();
+            ativaAlerta(data,1);
         },
-        error: function(data){
-
+        error: function(){
+            ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
         }
     });
 }
@@ -153,9 +156,10 @@ function deletarCliente(codCliente){
         data:{codigo:codCliente},
         success: function(data){
             carregaClientes();
+            ativaAlerta(data,1);
         },
-        error: function(data){
-
+        error: function(){
+            ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
         }
     });
 }
@@ -167,7 +171,7 @@ function carregaCampanhas(){
             $('#corpoCampanhas').html(data);
         },
         error:function(){
-
+            ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
         }
     });
 }
@@ -185,7 +189,7 @@ function carregaCampanha(codCampanha){
             $('#mensagemDetalheCampanha').html(data.mensagem);
         },
         error:function(){
-
+            ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
         }
     });
 }
@@ -196,10 +200,10 @@ function enviaCampanha(){
         method:'POST',
         data:$('#formCampanha').serialize(),
         success: function(data){
-            alert(data);
+            ativaAlerta(data,1);
         },
         error: function(){
-
+            ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
         }
     });
 }

@@ -9,8 +9,12 @@
     $sql = "SELECT * FROM campanha WHERE codCampanha=".$_POST['codigo'];
     $resultado = mysqli_query($link,$sql);
 
-    $campanha = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
-    $campanha['data'] = date('d/m/Y H:i:s', strtotime($campanha['data']));
+    if($resultado){
+        $campanha = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
+        $campanha['data'] = date('d/m/Y H:i:s', strtotime($campanha['data']));
+        echo json_encode($campanha);
+    } else {
+        echo 'Erro ao carregar os dados da campanha!';
+    }
     
-    echo json_encode($campanha);
 ?>

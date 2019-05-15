@@ -8,5 +8,9 @@
 
     $resultado = mysqli_query($link, $sql);
     
-    echo($resultado);
+    if($resultado){
+        echo('Dados atualizados com sucesso!');
+    } else {
+        echo('Erro ao atualizar os dados do cliente!');
+    }
 ?>

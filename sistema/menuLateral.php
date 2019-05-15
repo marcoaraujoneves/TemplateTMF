@@ -9,14 +9,9 @@
     top:1px;
     z-index:9999;
 }
-
 </style>
-<div id="containerAlert" class="alert alert-success alert-dismissible fade show d-none" role="alert">
-    <strong id="mensagem-requisicao"> Campanha enviada! Porém, houve um erro ao salvar a campanha. </strong>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
-</div>
+
+<div id="containerAlert"></div>
 
 <ul type="none">
     <li class="itemMenuSistema" id="1">

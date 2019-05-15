@@ -28,6 +28,6 @@
         }
 
     } else {
-        echo('Erro ao realizar consulta no banco de dados');
+        echo('Erro ao carregar os dados dos clientes!');
     }
 ?>

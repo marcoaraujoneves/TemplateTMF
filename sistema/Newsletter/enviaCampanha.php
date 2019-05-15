@@ -72,9 +72,9 @@
                 echo 'Houve um erro ao enviar a campanha para os clientes ativos!';
             }
         } else {
-            echo 'Lista de clientes ativos vazia!';
+            echo 'Erro! Lista de clientes ativos vazia.';
         }
     } else {
-        echo 'Houve um erro ao buscar clientes na lista!';
+        echo 'Erro ao buscar clientes ativos na lista!';
     }
 ?>

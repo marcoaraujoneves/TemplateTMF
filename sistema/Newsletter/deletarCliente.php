@@ -9,8 +9,8 @@
     $resultado = mysqli_query($link,$sql);
 
     if($resultado){
-        echo 1;
+        echo('Cliente deletado com sucesso!');
     } else {
-        echo 0;
+        echo('Erro ao deletar o cliente!');
     }
 ?>

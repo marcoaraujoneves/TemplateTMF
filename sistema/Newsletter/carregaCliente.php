@@ -8,8 +8,11 @@
 
     $sql = "SELECT * FROM cliente WHERE codCliente=".$_POST['codigo'];
     $resultado = mysqli_query($link,$sql);
-
-    $cliente = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
+    if($resultado){
+        $cliente = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
+        echo json_encode($cliente);
+    } else {
+        echo 'Erro ao carregar os dados cliente!';
+    }
     
-    echo json_encode($cliente);
 ?>

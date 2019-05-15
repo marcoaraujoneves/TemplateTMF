@@ -12,6 +12,9 @@
   
     $sql = "UPDATE cliente SET status=$statusNovo WHERE codCliente=".$_POST['codigo'];
     $resultado = mysqli_query($link,$sql);
-    
-    echo($resultado);
+    if($resultado){
+        echo('Status atualizado!');
+    } else {
+        echo('Erro ao atualizar o status do cliente!');
+    }
 ?>

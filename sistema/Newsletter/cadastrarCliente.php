@@ -15,8 +15,8 @@
     $stmt->bind_param('ssi',$nome,$email,$status);
     
     if($stmt->execute()){
-        echo 1;
+        echo 'Cliente cadastrado com sucesso!';
     } else {
-        echo 0;
+        echo 'Erro ao cadastrar o cliente!';
     }   
 ?>
