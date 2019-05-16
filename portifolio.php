@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" rel="stylesheet">
-
+    <link rel="icon" href="img/logoTMF.png" type="image/png">
     <title> Indústria TMF | Home </title> 
     <noscript>
        <style>

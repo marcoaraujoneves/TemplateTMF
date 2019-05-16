@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" rel="stylesheet">
+    <link rel="icon" href="img/logoTMF.png" type="image/png">
     <title> Indústria TMF | Serviços </title> 
     <!-- ---------------------------------------slider link e metas ---------------------------------------------->
     <noscript>
