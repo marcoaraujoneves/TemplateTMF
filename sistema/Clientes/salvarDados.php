@@ -27,11 +27,11 @@
     /* echo $sql;die(); */
     if(mysqli_query($link, $sql0)) {
         if(mysqli_query($link, $sql)) {
-            echo "Record updated successfully";
+            echo "Dados salvos com sucesso!";
         } else {
-            echo "Error updating record: " . mysqli_error($link);
+            echo "Erro ao atualizar os dados! " . mysqli_error($link);
         }
     } else {
-        echo "Error updating record: " . mysqli_error($link);
+        echo "Erro ao atualizar os dados! " . mysqli_error($link);
     } 
  ?>

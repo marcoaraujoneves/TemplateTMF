@@ -39,7 +39,7 @@
             }
             echo $html;
         }else{
-            echo 0;
+            echo "Erro ao buscar clientes na lista!";
         }
     }else{
         echo '<div class="row"><div class="col-md-10"><label for="parceiro1"> Parceiro 1: </label><select class="inpForm" name="parceiro1" id="parceiro1"><option value="0"> - </option></select><br><hr></div><div class="col-md-2 my-auto mx-auto"><button type="button" class="btn btn-success btnAtivo" id="addParceiro" data-count="1" data-vazio="1"> + </button></div></div>';

@@ -7,6 +7,9 @@
     $sql = "DELETE FROM mensagem WHERE codMsg=".$_POST['codigo'];
 
     $mensagem = mysqli_query($link, $sql);
-    
-    echo($mensagem);
+    if($mensagem){
+        echo "Mensagem deletada com sucesso!";
+    } else {
+        echo "Erro ao deletar a mensagem!";
+    }
 ?>

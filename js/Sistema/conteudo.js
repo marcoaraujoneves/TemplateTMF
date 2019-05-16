@@ -6,7 +6,7 @@ $(document).ready(function(){
             url:'Sobre/carregaDados.php',
             dataType:"json",
             success:function(data){
-                if(data.indexOf("Erro") == -1){
+                if(typeof data !== 'string'){//(data.indexOf("Erro") == -1){
                     $('#indicador1qt').val(data.indicador1qt);
                     $('#indicador2qt').val(data.indicador2qt);
                     $('#indicador3qt').val(data.indicador3qt);
@@ -22,7 +22,7 @@ $(document).ready(function(){
                 }
             },
             error: function(){
-                $('#bodySobre').html('Houve um erro na requisição, tente novamente mais tarde!');
+                ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
             }
         });
     });
@@ -39,7 +39,7 @@ $(document).ready(function(){
             }
         },
         error: function(){
-            $('#bodyServicos').html('Houve um erro na requisição, tente novamente mais tarde!');
+            ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
         }
     });
     $(document).on('click','#btnServicos', function(){        
@@ -47,7 +47,7 @@ $(document).ready(function(){
             url:'Sobre/carregaDados.php',
             dataType:"json",
             success:function(data){
-                if(data.indexOf("Erro") == -1){
+                if(typeof data !== 'string'){//if(data.indexOf("Erro") == -1){
                     $('#textoServicos').val(data.textoServicos);
                     $('#servico1').val(data.servico1);
                     $('#servico2').val(data.servico2);
@@ -58,7 +58,7 @@ $(document).ready(function(){
                 }
             },
             error: function(){
-
+                ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
             }
         });
     });
@@ -75,7 +75,7 @@ $(document).ready(function(){
             }
         },
         error: function(){
-            $('#bodyProdutos').html('Houve um erro na requisição, tente novamente mais tarde!');
+            ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
         }
     });
 
@@ -84,7 +84,7 @@ $(document).ready(function(){
             url:'Sobre/carregaDados.php',
             dataType:"json",
             success:function(data){
-                if(data.indexOf("Erro") == -1){
+                if(typeof data !== 'string'){//if(data.indexOf("Erro") == -1){
                     $('#produto1').val(data.produto1);
                     $('#produto2').val(data.produto2);
                     $('#produto3').val(data.produto3);
@@ -93,7 +93,7 @@ $(document).ready(function(){
                 }
             },
             error: function(){
-                
+                ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
             }
         });
     });
@@ -111,7 +111,7 @@ $(document).ready(function(){
                 }
             },
             error: function(){
-                $('#bodySobre').html('Houve um erro na requisição, tente novamente mais tarde!');
+                ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
             }
         });
     });
@@ -129,7 +129,7 @@ $(document).ready(function(){
                 }
             },
             error: function(){
-                $('#bodyServicos').html('Houve um erro na requisição, tente novamente mais tarde!');
+                ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
             }
         });
     });
@@ -147,7 +147,7 @@ $(document).ready(function(){
                 }
             },
             error: function(){
-                $('#bodyProduto').html('Houve um erro na requisição, tente novamente mais tarde!');
+                ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
             }
         });
     });
@@ -179,7 +179,7 @@ $(document).ready(function(){
                 }
             },
             error: function(){
-                $('#bodyParceiros').html('Houve um erro na requisição, tente novamente mais tarde!');
+                ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
             }
         });
     });
@@ -200,7 +200,7 @@ $(document).ready(function(){
                     }
                 },
                 error: function(){
-                    $('#bodyParceiros').html('Houve um erro na requisição, tente novamente mais tarde!');
+                    ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
                 }
             });
         }
@@ -218,7 +218,7 @@ $(document).ready(function(){
                 }
             },
             error: function(){
-                $('#bodyParceiros').html('Houve um erro na requisição, tente novamente mais tarde!');
+                ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
             }
         });
     });
@@ -241,7 +241,7 @@ $(document).ready(function(){
                                 }
                             },
                             error: function(){
-                                $('#bodyClientes').html('Houve um erro na requisição, tente novamente mais tarde!');
+                                ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
                             }
                         }); 
                     }
@@ -250,7 +250,7 @@ $(document).ready(function(){
                 }
             },
             error: function(){
-                $('#bodyClientes').html('Houve um erro na requisição, tente novamente mais tarde!');
+                ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
             }
         });
     });
@@ -271,7 +271,7 @@ $(document).ready(function(){
                     }
                 },
                 error: function(){
-                    $('#bodyClientes').html('Houve um erro na requisição, tente novamente mais tarde!');
+                    ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
                 }
             }); 
         }
@@ -290,7 +290,7 @@ $(document).ready(function(){
                 }
             },
             error: function(){
-                $('#bodyClientes').html('Houve um erro na requisição, tente novamente mais tarde!');
+                ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
             }
         });
     });

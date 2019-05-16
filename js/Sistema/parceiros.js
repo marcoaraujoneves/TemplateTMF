@@ -10,15 +10,21 @@ $(document.body).ready(function(){
 			contentType:false,
 			cache:false,
 			
-			success: function( data )
-			{	
-				$('#modalCadastroParceiro').hide(); // esconde o modal
-	 	    			$("#returnParceiro").click(); // fecha o modal de fato
-	 	    			$('#formParceiro').each (function(){
-	 	    				this.reset();
-	 	    			});
-	 	    			
-	 	    		}
-	 	    	});
+			success: function( data ) {
+				if(data.indexOf("Erro") == -1){
+					ativaAlerta('Parceiro cadastrado com sucesso!',1);
+					$('#modalCadastroParceiro').hide(); // esconde o modal
+					$("#returnParceiro").click(); // fecha o modal de fato
+					$('#formParceiro').each (function(){
+						this.reset();
+					});
+				} else {
+					ativaAlerta(data,3);
+				}
+			},
+			error: function() {
+				ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
+			}
+		});
 	});
 });

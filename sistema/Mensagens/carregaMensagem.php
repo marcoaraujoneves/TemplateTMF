@@ -27,6 +27,6 @@
                 <span> Mensagem: </span>
                 <label style='text-align:justify;'>".$mensagem['mensagem']."</label>");
     }else{
-        echo '<td colspan="5" style="text-align:center"> Nenhuma mensagem cadastrada no sistema! </td>';
+        echo "Erro ao carregar os dados da mensagem!";
     }
 ?>

@@ -14,6 +14,6 @@
             echo ("<option value=".$resultado['codServico']."> ".$resultado['nome']." </option>");
         }
     }else{
-        echo 0;
+        echo "Erro ao carregar os dados!";
     }
  ?>

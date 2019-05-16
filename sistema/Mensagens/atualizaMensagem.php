@@ -13,6 +13,9 @@
     $sql = "UPDATE mensagem SET respondido=$statusNovo WHERE codMsg=".$_POST['codigo'];
 
     $mensagem = mysqli_query($link, $sql);
-    
-    echo($mensagem);
+    if($mensagem) {
+        echo "Dados atualizados com sucesso!";
+    } else {
+        echo "Erro ao atualizar os dados!";
+    }
 ?>

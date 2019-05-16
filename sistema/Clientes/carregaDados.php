@@ -14,6 +14,6 @@
             echo '<option value='.($row['codCliente']).'> '.($row['nome']).' </option>';
         }
     }else{
-        echo 0;
+        echo "Erro ao carregar os dados dos clientes!";
     }
  ?>

@@ -13,6 +13,6 @@
         $row = mysqli_fetch_array($resultado,MYSQLI_ASSOC);  
         echo json_encode($row); // retorna os dados para conferir o json
     }else{
-        echo 0;
+        echo "Erro ao carregar os dados!";
     }
  ?>
