@@ -252,7 +252,7 @@
                             echo '<div class="descricaoProduto sombra-cartao">';
                             echo '<h4 class="nomeProdutoInterno"> '.$nomes.' </h4>';
                             echo '<p class="text-justify px-3 py-1 " style="transition: display 1s linear 1s;">
-                                            '.$descricao.'
+                                            '.(substr($descricao,0,150)).'...
                                             <br>
                                             <a href="#"> Ver mais... </a>
                                         </p>';
@@ -410,7 +410,7 @@
                                         echo '<div class="carousel-item pb-3 imagem_port_fundo mx-auto '.$active.' " style="background-image:url(sistema/Img/Portifolio/'.$nome.'">';
                                         echo '<img class="d-block w-100 imagem_port_frente mx-auto" src="sistema/Img/Portifolio/'.$nome.'"  >';
                                         echo '<div class="carousel-caption mx-auto">';
-                                        echo '<p>'.$descricao.'<br><a href="portifolio.php" style="float:right; color:#f8aa00; text-decoration:underline; margin-right:10px">Saiba mais</a>'.'</p>';
+                                        echo '<p>'.(substr($descricao,0,250)).'<br><a href="portifolio.php" style="float:right; color:#f8aa00; text-decoration:underline; margin-right:10px">Saiba mais</a>'.'</p>';
                                         echo '</div>';
                                         echo '</div>';
                                         $cont_slide = $cont_slide + 1;
