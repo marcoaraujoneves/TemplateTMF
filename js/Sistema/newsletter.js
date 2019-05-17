@@ -17,7 +17,7 @@ $(document).ready(function(){
     $('#msg').keyup(function(event){
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if(keycode == 13){
-            //$(this).val(this.value+'\r\n')
+            $(this).val(this.value+'<br>')
         }
         $('#msgPre').html('&emsp;'+this.value.charAt(0).toUpperCase() + this.value.slice(1));
     });
@@ -76,6 +76,8 @@ function carregaClientes(){
         success:function(data){
             if(data.indexOf("Erro") == -1){
                 $('#corpoTbClientes').html(data);
+                $('#nome').val("");
+                $('#email').val("");
             } else {
                 ativaAlerta(data,3);
             }
@@ -113,7 +115,7 @@ function carregaCliente(codCliente){
         data:{codigo:codCliente},
         dataType:"json",
         success:function(data){
-            if(data.indexOf("Erro") == -1){
+            if(typeof data !== 'string'){
                 $('#nomeEdita').val(data.nome);
                 $('#emailEdita').val(data.email);
                 $('#statusEdita option').each(function(){
@@ -137,7 +139,7 @@ function statusCliente(codCliente,statusAtual){
         url:'Newsletter/statusCliente.php',
         method:'POST',
         data:{codigo:codCliente,status:statusAtual},
-        success: function(){
+        success: function(data){
             if(data.indexOf("Erro") == -1){
                 carregaClientes();
             } else {
@@ -211,7 +213,7 @@ function carregaCampanha(codCampanha){
         data:{codigo:codCampanha},
         dataType:"json",
         success:function(data){
-            if(data.indexOf("Erro") == -1){
+            if(typeof data !== 'string'){
                 $('#tagDetalheCampanha').html(data.tag);
                 $('#assuntoDetalheCampanha').html(data.assunto);
                 $('#dataDetalheCampanha').html(data.data);

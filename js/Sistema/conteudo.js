@@ -213,6 +213,7 @@ $(document).ready(function(){
             success:function(data){
                 if(data.indexOf("Erro") == -1){
                     $('#btnParceiros').click();
+                    ativaAlerta(data,1);
                 }else {
                     ativaAlerta(data,3);
                 }
@@ -285,6 +286,7 @@ $(document).ready(function(){
             success:function(data){
                 if(data.indexOf("Erro") == -1){
                     $('#btnClientes').click();
+                    ativaAlerta(data,1);
                 }else {
                     ativaAlerta(data,3);
                 }

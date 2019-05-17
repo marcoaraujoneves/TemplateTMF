@@ -170,8 +170,7 @@
                         <div class="tab-pane fade"  role="tabpanel" id="emailsEnviados">
                             <p>
                                 <br>
-                                A lista abaixo contém uma relação completa de todas as campanhas já realizadas. 
-                                Nos detalhes de cada uma é possível obter uma lista dos clientes para os quais a campanha foi enviada!
+                                A lista abaixo contém uma relação completa de todas as campanhas já realizadas.
                             </p>
                             <div class="table-responsive">
                                 <table id="listaEmail" class="table table-striped table-hover ">
@@ -204,16 +203,16 @@
                                 </div>
                                 <div class="modal-body" id="corpoModal">
                                     <span> Tag: </span>
-                                    <label id="tagDetalheCampanha"> PROMOÇÃO </label>
+                                    <label id="tagDetalheCampanha"> </label>
                                     <br><hr>
                                     <span> Assunto: </span>
-                                    <label id="assuntoDetalheCampanha"> 10% de desconto na compra da máquina </label>
+                                    <label id="assuntoDetalheCampanha"> </label>
                                     <br><hr>
                                     <span> Data: </span>
-                                    <label id="dataDetalheCampanha"> 12/12/2020 </label>
+                                    <label id="dataDetalheCampanha"> </label>
                                     <br><hr>
                                     <span> Mensagem: </span>
-                                    <label id="mensagemDetalheCampanha" style="text-align:justify;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean enim sem, gravida vel orci faucibus, mattis vehicula magna. In eu commodo lorem. Suspendisse non velit ut erat fringilla commodo. Phasellus nec rhoncus libero, ac elementum sem. Nullam tristique nulla eu facilisis dignissim.  </label>
+                                    <label id="mensagemDetalheCampanha" style="text-align:justify;"> </label>
 
                                 </div>
                                 <div class="modal-footer">
