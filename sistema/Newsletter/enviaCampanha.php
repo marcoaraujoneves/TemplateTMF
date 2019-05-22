@@ -21,18 +21,18 @@
             $assunto = "Desconto de 10% na compra da sua máquina";//$_POST['assunto'];
             $msg = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut ex molestie , euismod enim fringilla, consequat ante. ";//$_POST['msg'];
 
-            $cabecalho = '<div style="background-color: #365C9A; width:90%; margin-top:20px; margin-left:5%; border-radius:7px;z-index:2;"><img src="https://usinagemtmf.com.br/teste/teste/img/logoTMFBranco.png" style="height:70px;height:70px;margin:8px 0 8px 50%;"></div>';
+            $cabecalho = '<body style="background-color:lightgray;padding-top:6px;padding-bottom:5px;"><div style="background-color: #365C9A; width:90%; margin-top:20px; margin-left:5%; border-radius:7px;z-index:2;padding:5px;box-sizing:border-box;"><img src="https://usinagemtmf.com.br/teste/teste/img/logoTMFBranco.png" style="height:70px;height:70px;display: block;margin-left: auto;margin-right: auto;"></div>';
             $rodape = '<div style="width:80%; margin-left:10%; margin-top:15px;padding: 15px; text-align:center;">
-                    <a href="" target="_blank" style="text-decoration:none">
+                    <a href="https://pt-br.facebook.com/TMF-Ind%C3%BAstria-Mec%C3%A2nica-225711750889313/" target="_blank" style="text-decoration:none">
                         <img src="https://usinagemtmf.com.br/teste/teste/img/fb.png" style="height:20px;">
                     </a>
                     <a href="https://www.usinagemtmf.com.br" target="_blank" style="text-decoration:none">
                         <img src="https://usinagemtmf.com.br/teste/teste/img/site.png" style="height:20px;">
                     </a>
-                    <a href="" target="_blank" style="text-decoration:none">
+                    <a href="https://br.linkedin.com/company/industria-mecanica-t-m-f" target="_blank" style="text-decoration:none">
                         <img src="https://usinagemtmf.com.br/teste/teste/img/linkedin.png" style="height:20px;">
                     </a>
-                </div>';
+                </div></body>';
             $corpo ='<div style="background-color: white; width:90%; margin-top:-5px; margin-left:5%; border-radius:3px; padding: 15px;z-index:1;box-sizing:border-box">
                     <h3> Olá,</h3>
                     <p style="text-align:justify;">
@@ -55,7 +55,7 @@
             $headers .= "From: ".$emailSender."\r\n";
             $headers .= "Return-Path: ".$emailSender."\r\n";
             $headers .= "Reply-To: ".$emailRemetente."\r\n";
-            $envio = mail($listaClientes, "$tag $assunto", $msgHTML, $headers,$emailSender);
+            $envio = mail($listaClientes, "[$tag] $assunto", $msgHTML, $headers,$emailSender);
 
             if($envio) {
                 echo 'Campanha enviada';
