@@ -456,7 +456,7 @@
                         $extensao = $row['extensao'];
                         $linkParceiro = $row['linkParceiro'];
                         echo '<div class=" col-xl-2 col-md-2 col-sm-4 col-6 mx-auto text-center">';
-                        echo ' <a href="'.$linkParceiro.'">';
+                        echo ' <a href="'.$linkParceiro.'" target="_blank" >';
                         echo ' <img src="sistema/Img/Parceiros/'.$codParceiro.'.'.$extensao.'" target="_blank" class="centro-vertical img_patro-forne img-responsive">';
                         echo ' </a>';
                         echo '</div>';
@@ -489,7 +489,7 @@
                         $extensao = $row['extensao'];
                         $linkCliente = $row['linkCliente'];
                         echo '<div class=" col-xl-2 col-md-2 col-sm-4 col-6 mx-auto text-center">';
-                        echo ' <a href="'.$linkCliente.'">';
+                        echo ' <a href="'.$linkCliente.'" target="_blank" >';
                         echo ' <img src="sistema/Img/Clientes/'.$codCliente.'.'.$extensao.'" target="_blank" class="centro-vertical  img_patro-forne img-responsive">';
                         echo ' </a>';
                         echo '</div>';

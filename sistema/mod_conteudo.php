@@ -406,7 +406,7 @@
 													<input type="text" class="inpForm" name="nomeParceiro" id="nomeParceiro" autocomplete="off">
 													<br><hr>
 													<label for="urlParceiro"> Adicione a URL do Parceiro: </label>
-													<input type="text" class="inpForm" name="urlParceiro" id="urlParceiro" autocomplete="off">
+													<input type="text" class="inpForm" name="urlParceiro" id="urlParceiro" autocomplete="off" value="http://www.">
 											</div>
 										</div>
 									</div>
@@ -481,7 +481,7 @@
 													<input type="text" class="inpForm" name="nomeCliente" id="nomeCliente" autocomplete="off">
 													<br><hr>
 													<label for="urlCliente"> Adicione a URL do Parceiro: </label>
-													<input type="text" class="inpForm" name="urlCliente" id="urlCliente" autocomplete="off">
+													<input type="text" class="inpForm" name="urlCliente" id="urlCliente" autocomplete="off" value="http://www.">
 													
 												</div>
 											</div>
