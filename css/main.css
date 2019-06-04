@@ -4,6 +4,10 @@ body{
     overflow-x: hidden;
 }
 
+#_FILES{
+    position: fixed !important;
+}
+
 .container-titulos{
     padding: 15px;
 }
