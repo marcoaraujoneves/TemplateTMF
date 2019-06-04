@@ -6,7 +6,6 @@ include ('../../db.class.php');
 		$conn = $objDB->conecta_mysql();
 	$nome = $_POST['nome'];
 	$descricao = $_POST['description'];
-    $addremove = $_POST['addremove'];
 
 if(isset($_POST['nome'])){
 	$sql = "  
@@ -14,7 +13,7 @@ if(isset($_POST['nome'])){
     VALUES ('$nome','$descricao','1') ";
     $results = mysqli_query($conn, $sql);
     $batata = $conn->insert_id;
- echo $sql;
+ //echo $sql;
 
     $contador = 1;
 
@@ -37,26 +36,31 @@ if(isset($_POST['nome'])){
         $contador = $contador + 1;
         // Concatena a pasta com o nome
         $destino = '../../Img/Servicos/' . $galeriaServico;
-        echo $destino;
+        //echo $destino;
         // tenta mover o arquivo para o destino
         if ( @move_uploaded_file ( $filetempname, $destino ) ) {
-            echo 'Arquivo salvo com sucesso em : <strong>' . $destino . '</strong><br />';
-            echo ' < img src = "' . $destino . '" />';
+            //echo 'Arquivo salvo com sucesso em : <strong>' . $destino . '</strong><br />';
+            //echo ' < img src = "' . $destino . '" />';
             $sql = "  
             INSERT INTO imagemservico(nome,codServico)
             VALUES ('$galeriaServico','$batata') ";
-            $results = mysqli_query($conn, $sql);
-            echo $sql;
+            $resulta = mysqli_query($conn, $sql);
+            //echo $sql;
 
         }
-        else
-            echo 'Erro ao salvar o arquivo. Aparentemente você não tem permissão de escrita.<br />';
+      //  else
+            //echo 'Erro ao salvar o arquivo. Aparentemente você não tem permissão de escrita.<br />';
     }
 
 
 }
 
-
+if($results && $resulta ){
+            echo json_encode(array('status' => 'success','message'=> 'Serviço adicionado'));
+        }else{
+            echo json_encode(array('status' => 'error','message'=> 'Erro ao cadastrar serviço'));
+            
+        }
 
 
 ?>

@@ -2,7 +2,9 @@ $(document.body).ready(function(){
 var codServico;
 var addremove;
 
-
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
 
 $(document.body).on('click', '#batatas', function(){
 	$('#formServico').validate({
@@ -26,6 +28,7 @@ $(document.body).on('click', '#batatas', function(){
 				type: "POST",
 				url: "php/servico/cadastrarServico.php",
 				data: formData,
+				dataType: 'json',
 
         // Tell jQuery not to process data or worry about content-type
         // You *must* include these options!
@@ -36,12 +39,19 @@ $(document.body).on('click', '#batatas', function(){
         {	
 						$('#cadastrarServico').hide(); // esconde o modal
 	 	    			$("#returnServico").click(); // fecha o modal de fato
+	 	    			ativaAlerta(data.message,1);
 	 	    			$('#formServico').each (function(){
 	 	    				this.reset();
 	 	    			});
-	 	    			location.reload();
+	 	    			sleep(2000).then(() => {
+	 	    				location.reload();
+	 	    			});
+	 	    			//
 
-	 	    		}
+	 	    		},
+	 	    		error:function(){
+	 	    			ativaAlerta(data.message,2);
+	 	    		} 
 	 	    	});
 
 			return false;
@@ -112,16 +122,23 @@ $('#blah').attr('src', ''); // Clear the src
  $.ajax({  
  	url:"php/servico/excluirServico.php",  
  	method:"POST",  
- 	data:{codServico:codServico}, 
+ 	data:{codServico:codServico},
+ 	dataType: 'json', 
 
 
  	success:function(data)
  	{	
 						$('#excluirServico').hide(); // esconde o modal
 	 	    			$("#returnExcluir").click(); // fecha o modal de fato
-	 	    			location.reload();
+	 	    			ativaAlerta(data.message,1);
+	 	    			sleep(2000).then(() => {
+	 	    				location.reload();
+	 	    			});
 
-	 	    		}
+	 	    		},
+	 	    		error:function(){
+	 	    			ativaAlerta(data.message,2);
+	 	    		} 
 
 
 
@@ -177,6 +194,7 @@ $(document.body).on('click', '#modificabatatas', function(){
 				type: "POST",
 				url: "php/servico/modifica.php",
 				data: new FormData($('form')[1]),
+				dataType: 'json',
 
         // Tell jQuery not to process data or worry about content-type
         // You *must* include these options!
@@ -190,9 +208,15 @@ $(document.body).on('click', '#modificabatatas', function(){
 	 	    			$('#formModifica').each (function(){
 	 	    				this.reset();
 	 	    			});
-	 	    			location.reload();
+	 	    			ativaAlerta(data.message,1);
+	 	    			sleep(2000).then(() => {
+	 	    				location.reload();
+	 	    			});
 
-	 	    		}
+	 	    		},
+	 	    		error:function(){
+	 	    			ativaAlerta(data.message,2);
+	 	    		} 
 	 	    	});
 
 			return false;

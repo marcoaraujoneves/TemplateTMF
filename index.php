@@ -559,7 +559,7 @@
                             <div id="incompleto" class="alert alert-secondary" role="alert" style="display:none;">
                                 Por favor, informe todos os dados necessários!
                             </div>
-                            <form id="formularioContato" method="post">
+                            <form id="formularioContato" method="post" enctype="multipart/form-data">
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-6">
@@ -586,8 +586,9 @@
                                         </div>
                                     </div>
                                     <br>
+                                    <input type="hidden" name="pagina" id="pagina" value="Principal">
                                     <div class="float-left">
-                                        <input type="file"  class="form-control jfilestyle" id="anexar" name="_FILES" accept="image/*,.pdf"> 
+                                        <input type="file"  class="form-control jfilestyle" id="_FILES" name="_FILES" accept="image/*,.pdf"> 
                                     </div>
                                     <div class="float-right p-2">
                                         <button type="button" class="btn btn-primary" id="enviar" name="enviar"> Enviar </button>

@@ -75,7 +75,7 @@
 						</div>
 					</div>
 					<br>
-					<div class="table-responsive">
+					<div class="table-responsive" id="table-responsive">
 						<table  class="table table-striped table-hover Tabela" id="tb1">
 							<thead >
 								<tr>
@@ -164,10 +164,11 @@
 										</div>
 										<input name="filesToUpload[]" class="inpForm jfilestyle" id="filesToUpload" type="file" multiple="" accept="image/*"/>
 								</div>
+								<input type="hidden" id="addremove">
 								<div class="modal-footer">
 									<input type="submit" class="btn btn-success" id="batatas" name="batatas" value="Cadastrar"/>
 									<button type="button" class="btn btn-secondary" id="returnServico" data-dismiss="modal"> Cancelar </button>
-									<input type="hidden" id="addremove">
+									
 									</form>
 								</div>
 							</div>
@@ -254,6 +255,7 @@
     <script src="../js/Sistema/Sistema.js"></script>
 	<script src="../js/Sistema/servico.js"></script>
 	<script src="../js/Input/jquery-filestyle.min.js"></script>
+	
 	<script>$(":file").jfilestyle('buttonBefore', true)</script>
 	<script>$(":file").jfilestyle('text', 'Selecionar imagens');</script>
 	<script>$(":file").jfilestyle('input',false);</script>

@@ -9,6 +9,12 @@ $modificanome = isset($_POST['modificanome']) ? $_POST['modificanome'] : '';
 $modificadescription = isset($_POST['modificadescription']) ? $_POST['modificadescription'] : '';
 $query = "update servico set nome = '$modificanome', descricao ='$modificadescription' where codServico = '$modificacodigo'  ;";
 $resultado = mysqli_query($conn, $query);  
-echo $query;
+
+if($resultado){
+            echo json_encode(array('status' => 'success','message'=> 'Serviço alterado'));
+        }else{
+            echo json_encode(array('status' => 'error','message'=> 'Erro ao alterar serviço'));
+            
+        }
 
 ?>          

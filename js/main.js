@@ -171,7 +171,6 @@ var servico4ID;
 
     //Envio de e-mail com AJAX e PHP
     $('#enviar').click(function(){
-        $('.alert').css('display','none');
         var nome= $('#nome').val();
         var telefone= $('#telefone').val();
         var email= validaEmail($('#email').val());
@@ -179,24 +178,20 @@ var servico4ID;
 
         if(nome != '' &&  telefone != '' && email && mensagem != ''){
             $.ajax({
-                url:'contato.php',
+                url:'contatoAnexo.php',
                 method: 'post',
                 data: $('#formularioContato').serialize(),
                 success: function(data){
-                    if(data  == '1'){
-                        alert(data);
-                        $('.inpForm').val('');
-                        $('#sucesso').css('display','block');
-                    }
-                    else{
-                        alert(data);
-                        $('#fracasso').css('display','block');
-                    }
+                    if(data.indexOf("Erro") == -1){
+                    ativaAlerta(data,1);
+                }else {
+                    ativaAlerta(data,3);
+                }
                 }
             });
         }
         else{
-            $('#incompleto').css('display','block');  
+            alert("Error");
         }
     });
 
