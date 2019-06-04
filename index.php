@@ -87,38 +87,96 @@
                         </div>
                     </div>
                 </div>
-                <div class="container-fluid mt-3 tema">
-                    <div class="row d-flex m-0 m-md-5 p-0 p-md-3 my-auto">
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-3 m-0">
-                            <div class="card border-danger d-flex justify-content-center p-3 sombra-cartao">
-                                <div class="text-info text-center"><h4 class="font_info_card text-uppercase" id="indicador1"> Projetos entregues</h4></div>
-                                <div class="linha_separadora"></div>
-                                <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero1">1</div></h2></div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-3 m-0">
-                            <div class="card border-danger d-flex justify-content-center p-3 sombra-cartao">
-                                <div class="text-info text-center"><h4 class="font_info_card text-uppercase" id="indicador2">Anos no mercado</h4></div>
-                                <div class="linha_separadora"></div>
-                                <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero2">1</div></h2></div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-3 m-0">
-                            <div class="card border-danger d-flex justify-content-center p-3 sombra-cartao">
-                                <div class="text-info text-center"><h4 class="font_info_card text-uppercase" id="indicador3">Produtos próprios</h4></div>
-                                <div class="linha_separadora"></div>
-                                <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero3">1</div></h2></div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-3 m-0">
-                            <div class="card border-danger d-flex justify-content-center p-3 sombra-cartao">
-                                <div class="text-info text-center "><h4 class="font_info_card text-uppercase" id="indicador4">Opções de serviço</h4></div>
-                                <div class="linha_separadora"></div>
-                                <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero4">1</div></h2></div>
-                            </div>
+
+<!--Produtos-->
+<section id="secaoProdutos" class="secaoSite">
+                <div class="container-fluid tema">
+                    <div class="row">
+                        <div class="col-md-12 container-titulos">
+                            <h1 class="titulo_secoes_tema">
+                                Produtos
+                            </h1>
                         </div>
                     </div>
+                    <div class="row mx-auto pb-3 pb-md-5 pl-3 pl-md-5 pr-3 pr-md-5">
+                        <?php 
+                        include ('sistema/db.class.php');
+                        $objDB = new db();
+                        $conn = $objDB->conecta_mysql();
+                        $query_select = "SELECT imagemproduto.nome,produto.nome as nomes,codImagem,produto.codProduto, descricao FROM produto INNER Join imagemproduto on produto.codProduto = imagemproduto.codProduto where produto.codProduto in ( select produto2 from sobre) or produto.codProduto in ( select produto1 from sobre) or produto.codProduto in ( select produto3 from sobre) group by imagemproduto.codProduto ;";
+                        $result_select = mysqli_query($conn,$query_select) or die(mysql_error());
+                        $rows = array();
+                        $contadorProdutos = 0;
+                        while($row = mysqli_fetch_array($result_select))
+                            $rows[] = $row;
+                        foreach($rows as $row){
+                            $contadorProdutos = $contadorProdutos + 1;
+                            $codProduto = $row['codProduto'];
+                            $nome = $row['nome'];
+                            $nomes = $row['nomes'];
+                            $descricao = $row['descricao'];
+                            echo '<div class="col-12 col-sm-6 col-lg-3">';
+                            echo '<div class="cardProdutos">';
+                            echo '<div class="containerProduto sombra-cartao" id="cardProduto'.$contadorProdutos.'">';
+                            echo '<div class="cardProdutosImgContainer">';
+                            echo '<img src="sistema/Img/Produtos/'.$nome.'" class="img-fluid rounded my-auto mx-auto d-block">';
+                            echo '</div>';
+                            echo '<div class="cardProdutosDescricao">';
+                            echo '<div class="justify-content-center align-items-center d-flex nomeProduto">';
+                            echo '<h4> '.$nomes.' </h4>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '<div class="descricaoProduto sombra-cartao">';
+                            echo '<h4 class="nomeProdutoInterno"> '.$nomes.' </h4>';
+                            echo '<p class="text-justify px-3 py-1 " style="transition: display 1s linear 1s;">
+                                            '.(substr($descricao,0,150)).'...
+                                            <br>
+                                            <a href="#"> Ver mais... </a>
+                                        </p>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+                            
+                        }
+                        ?>                            
+                       
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <a href="produtos.php" style="text-decoration:none;">
+                                <div id="cardProdutosVerMais" class="sombra-cartao" style="box-sizing:border-box;border:2px solid #FFFFFF;background-color:#808080;border-bottom:none;height:80%;padding:10px;">
+                                    <h2 style="font-size:150px;text-align:center;color:#FFFFFF">+</span>
+                                </div>
+
+                                <div id="cardProdutosVerMaisDescricao" class="sombra-cartao" style="border:2px solid #FFFFFF;height:20%;">
+                                    <div class="justify-content-center align-items-center d-flex nomeProduto" style="margin-top:7px; display:inline-block;" >
+                                        <h4 id="nomeProduto"> Ver Mais </h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>             
                 </div>
+            </section>
+            <!--/PRODUTOS-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
             </section>
             <!--/SOBRE NÓS-->
 
@@ -210,112 +268,42 @@
                 </div>
             </section>
             <!--/SERVICOS-->
-
-            <!--Produtos-->
-            <section id="secaoProdutos" class="secaoSite">
-                <div class="container-fluid tema">
-                    <div class="row">
-                        <div class="col-md-12 container-titulos">
-                            <h1 class="titulo_secoes_tema">
-                                Produtos
-                            </h1>
-                        </div>
-                    </div>
-                    <div class="row mx-auto pb-3 pb-md-5 pl-3 pl-md-5 pr-3 pr-md-5">
-                        <?php 
-                        include ('sistema/db.class.php');
-                        $objDB = new db();
-                        $conn = $objDB->conecta_mysql();
-                        $query_select = "SELECT imagemproduto.nome,produto.nome as nomes,codImagem,produto.codProduto, descricao FROM produto INNER Join imagemproduto on produto.codProduto = imagemproduto.codProduto where produto.codProduto in ( select produto2 from sobre) or produto.codProduto in ( select produto1 from sobre) or produto.codProduto in ( select produto3 from sobre) group by imagemproduto.codProduto ;";
-                        $result_select = mysqli_query($conn,$query_select) or die(mysql_error());
-                        $rows = array();
-                        $contadorProdutos = 0;
-                        while($row = mysqli_fetch_array($result_select))
-                            $rows[] = $row;
-                        foreach($rows as $row){
-                            $contadorProdutos = $contadorProdutos + 1;
-                            $codProduto = $row['codProduto'];
-                            $nome = $row['nome'];
-                            $nomes = $row['nomes'];
-                            $descricao = $row['descricao'];
-                            echo '<div class="col-12 col-sm-6 col-lg-3">';
-                            echo '<div class="cardProdutos">';
-                            echo '<div class="containerProduto sombra-cartao" id="cardProduto'.$contadorProdutos.'">';
-                            echo '<div class="cardProdutosImgContainer">';
-                            echo '<img src="sistema/Img/Produtos/'.$nome.'" class="img-fluid rounded my-auto mx-auto d-block">';
-                            echo '</div>';
-                            echo '<div class="cardProdutosDescricao">';
-                            echo '<div class="justify-content-center align-items-center d-flex nomeProduto">';
-                            echo '<h4> '.$nomes.' </h4>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '<div class="descricaoProduto sombra-cartao">';
-                            echo '<h4 class="nomeProdutoInterno"> '.$nomes.' </h4>';
-                            echo '<p class="text-justify px-3 py-1 " style="transition: display 1s linear 1s;">
-                                            '.(substr($descricao,0,150)).'...
-                                            <br>
-                                            <a href="#"> Ver mais... </a>
-                                        </p>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</div>';
-                            
-                        }
-                        ?>                            
-                       
-                        <div class="col-12 col-sm-6 col-lg-3">
-                            <a href="produtos.php" style="text-decoration:none;">
-                                <div id="cardProdutosVerMais" class="sombra-cartao" style="box-sizing:border-box;border:2px solid #FFFFFF;background-color:#808080;border-bottom:none;height:80%;padding:10px;">
-                                    <h2 style="font-size:150px;text-align:center;color:#FFFFFF">+</span>
-                                </div>
-
-                                <div id="cardProdutosVerMaisDescricao" class="sombra-cartao" style="border:2px solid #FFFFFF;height:20%;">
-                                    <div class="justify-content-center align-items-center d-flex nomeProduto" style="margin-top:7px; display:inline-block;" >
-                                        <h4 id="nomeProduto"> Ver Mais </h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                        <!-- <div class="col-lg-6">
-                            <div class="row">
-                                <div class="col-md-6 text-center wrap">
-                                    <div class="card tile">
-                                        <img src="img/prod.png" alt="Avatar" class="img_prod">
-                                        <h2 class="animate-text">Nome do Produto 1</h2><!--Suporta 29 caracteres. Nome do produto
-                                        <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p><!--Suporta até 168 caracteres. Descrição
-                                    </div>
-                                </div>
-                                <div class="col-md-6 text-center wrap">
-                                    <div class="card tile">
-                                        <img src="img/prod.png" alt="Avatar" class="img_prod">
-                                        <h2 class="animate-text">Nome do Produto 2</h2><!--Suporta 29 caracteres papap
-                                        <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p><!--Suporta até 168 caracteres
-                                    </div>
-                                </div>
+<section>
+<div class="container-fluid mt-3 tema">
+                    <div class="row d-flex m-0 m-md-5 p-0 p-md-3 my-auto">
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-3 m-0">
+                            <div class="card border-danger d-flex justify-content-center p-3 sombra-cartao">
+                                <div class="text-info text-center"><h4 class="font_info_card text-uppercase" id="indicador1"> Projetos entregues</h4></div>
+                                <div class="linha_separadora"></div>
+                                <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero1">1</div></h2></div>
                             </div>
-                        </div>  
-                        <div class="col-lg-6">
-                            <div class="row">
-                                <div class="col-md-6 text-center wrap">
-                                    <div class="card tile">
-                                        <img src="img/prod.png" alt="Avatar" class="img_prod">
-                                            <h2 class="animate-text">Nome do Produto 3</h2>
-                                            <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>          
-                                    </div>
-                                </div>
-                                <div class="col-md-6 text-center wrap">
-                                    <div class="card tile">
-                                        <img src="img/prod.png" alt="Avatar" class="img_prod">
-                                            <h2 class="animate-text">Nome do Produto 4</h2>
-                                            <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>   
-                                            <br>       
-                        </div>-->
-                    
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-3 m-0">
+                            <div class="card border-danger d-flex justify-content-center p-3 sombra-cartao">
+                                <div class="text-info text-center"><h4 class="font_info_card text-uppercase" id="indicador2">Anos no mercado</h4></div>
+                                <div class="linha_separadora"></div>
+                                <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero2">1</div></h2></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-3 m-0">
+                            <div class="card border-danger d-flex justify-content-center p-3 sombra-cartao">
+                                <div class="text-info text-center"><h4 class="font_info_card text-uppercase" id="indicador3">Produtos próprios</h4></div>
+                                <div class="linha_separadora"></div>
+                                <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero3">1</div></h2></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-3 m-0">
+                            <div class="card border-danger d-flex justify-content-center p-3 sombra-cartao">
+                                <div class="text-info text-center "><h4 class="font_info_card text-uppercase" id="indicador4">Opções de serviço</h4></div>
+                                <div class="linha_separadora"></div>
+                                <div class="text-info text-center mt-2"><h2 class="font_info_card_num"><div id="numero4">1</div></h2></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </section>
-            <!--/PRODUTOS-->
+
+</section>
+            
             
             <!--PORTIFÓLIO-->
             <!-- <section id="secaoPortifolio" class="secaoSite">
