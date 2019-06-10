@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" rel="stylesheet">
     <link rel="icon" href="img/logoTMF.png" type="image/png">
-    <title> Indústria TMF | Home </title> 
+    <title> Indústria TMF | Portifólio </title> 
     <noscript>
        <style>
         .es-carousel ul{
