@@ -575,7 +575,7 @@
                                     </div>
                                     <br>
                                     <input type="hidden" name="pagina" id="pagina" value="Principal">
-                                    <div class="float-left">
+                                    <div class="float-left  p-2">
                                         <input type="file"  class="form-control jfilestyle" id="_FILES" name="_FILES" accept="image/*,.pdf"> 
                                     </div>
                                     <div class="float-right p-2">
@@ -626,6 +626,12 @@
     <script src="js/Input/jquery-filestyle.min.js"></script>
     <script>$(":file").jfilestyle('buttonBefore', true)</script>
     <script>$(":file").jfilestyle('text', 'Selecionar arquivo');</script>
+    <script>
+        if ($(window).width() < 530){
+            $(":file").jfilestyle('input',false);
+        }
+    </script>
+    
     <!-------------------------- scripts de contagem  ------------------------------------------>
 
   

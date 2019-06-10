@@ -28,24 +28,52 @@
 
         <div class="collapse navbar-collapse" id="menu-navegacao">
             <ul class="navbar-nav mx-auto my-auto">
-                <li class="nav-item navegacao"><a class="nav-link linkMenu link_ativo" id="link_secaoHome" href="#secaoHome">Home</a></li>
-                <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoSobre" href="#secaoSobre">Sobre nós</a></li>
-                <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoServicos" href="#secaoServicos">Serviços</a></li>
-                <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoProdutos" href="#secaoProdutos">Produtos</a></li>
-                <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoPortifolio" href="#secaoPortifolio">Portifólio</a></li>
-                <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoContato" href="#secaoContato">Contato</a></li>
+                <li class="nav-item navegacao"><a class="nav-link linkMenu link_ativo" id="link_secaoHome" href="index.php">Home</a></li>
+                <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoSobre" href="sobre.php">Sobre nós</a></li>
+                <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoServicos" href="servicos.php">Serviços</a></li>
+                <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoProdutos" href="produtos.php">Produtos</a></li>
+                <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoPortifolio" href="portifolio.php">Portifólio</a></li>
+                <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoContato" href="index.php#secaoContato">Contato</a></li>
             </ul>
         </div>
     </div>
 </nav>
 <script>
 var pagina = window.location.href
-if ( (pagina.search("produtos")!=-1)||(pagina.search("servicos")!=-1)||(pagina.search("portifolio")!=-1) ){
-    document.getElementById("link_secaoHome").href="index.php#secaoHome" ;
-    document.getElementById("link_secaoSobre").href="index.php#secaoSobre";
-    document.getElementById("link_secaoServicos").href="index.php#secaoServicos";
-    document.getElementById("link_secaoProdutos").href="index.php#secaoProdutos";
-    document.getElementById("link_secaoPortifolio").href="index.php#secaoPortifolio";
-    document.getElementById("link_secaoContato").href="index.php#secaoContato";
+if ( (pagina.search("sobre")!=-1)){
+    var element = document.getElementById("link_secaoSobre");
+    element.classList.add("link_ativo");
+    var element1 = document.getElementById("link_secaoHome");
+    element1.classList.remove("link_ativo");
 }
+if ( (pagina.search("servicos")!=-1)){
+    var element = document.getElementById("link_secaoServicos");
+    element.classList.add("link_ativo");
+    var element1 = document.getElementById("link_secaoHome");
+    element1.classList.remove("link_ativo");
+}
+if ( (pagina.search("produtos")!=-1)){
+    var element = document.getElementById("link_secaoProdutos");
+    element.classList.add("link_ativo");
+    var element1 = document.getElementById("link_secaoHome");
+    element1.classList.remove("link_ativo");
+}
+if ( (pagina.search("portifolio")!=-1)){
+    var element = document.getElementById("link_secaoPortifolio");
+    element.classList.add("link_ativo");
+    var element1 = document.getElementById("link_secaoHome");
+    element1.classList.remove("link_ativo");
+}
+if ( (pagina.search("contato")!=-1)){
+    var element = document.getElementById("link_secaoContato");
+    element.classList.add("link_ativo");
+    var element1 = document.getElementById("link_secaoHome");
+    element1.classList.remove("link_ativo");
+}
+// ||(pagina.search("servicos")!=-1)||(pagina.search("portifolio")!=-1)||(pagina.search("sobre")!=-1) 
+// document.getElementById("link_secaoSobre").href="index.php#secaoSobre";
+//     document.getElementById("link_secaoServicos").href="index.php#secaoServicos";
+//     document.getElementById("link_secaoProdutos").href="index.php#secaoProdutos";
+//     document.getElementById("link_secaoPortifolio").href="index.php#secaoPortifolio";
+//     document.getElementById("link_secaoContato").href="index.php#secaoContato";
 </script>
