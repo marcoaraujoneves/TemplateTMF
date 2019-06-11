@@ -30,8 +30,8 @@
             <ul class="navbar-nav mx-auto my-auto">
                 <li class="nav-item navegacao"><a class="nav-link linkMenu link_ativo" id="link_secaoHome" href="#secaoSobre">Home</a></li>
                 <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoSobre" href="sobre.php">Sobre nós</a></li>
-                <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoServicos" href="servicos.php">Serviços</a></li>
                 <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoProdutos" href="produtos.php">Produtos</a></li>
+                <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoServicos" href="servicos.php">Serviços</a></li>
                 <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoPortifolio" href="portifolio.php">Portifólio</a></li>
                 <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoContato" href="#secaoContato">Contato</a></li>
             </ul>
