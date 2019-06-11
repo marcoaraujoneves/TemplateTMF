@@ -28,12 +28,12 @@
 
         <div class="collapse navbar-collapse" id="menu-navegacao">
             <ul class="navbar-nav mx-auto my-auto">
-                <li class="nav-item navegacao"><a class="nav-link linkMenu link_ativo" id="link_secaoHome" href="index.php">Home</a></li>
+                <li class="nav-item navegacao"><a class="nav-link linkMenu link_ativo" id="link_secaoHome" href="#secaoSobre">Home</a></li>
                 <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoSobre" href="sobre.php">Sobre nós</a></li>
                 <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoServicos" href="servicos.php">Serviços</a></li>
                 <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoProdutos" href="produtos.php">Produtos</a></li>
                 <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoPortifolio" href="portifolio.php">Portifólio</a></li>
-                <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoContato" href="index.php#secaoContato">Contato</a></li>
+                <li class="nav-item navegacao"><a class="nav-link linkMenu" id="link_secaoContato" href="#secaoContato">Contato</a></li>
             </ul>
         </div>
     </div>
@@ -70,10 +70,8 @@ if ( (pagina.search("contato")!=-1)){
     var element1 = document.getElementById("link_secaoHome");
     element1.classList.remove("link_ativo");
 }
-// ||(pagina.search("servicos")!=-1)||(pagina.search("portifolio")!=-1)||(pagina.search("sobre")!=-1) 
-// document.getElementById("link_secaoSobre").href="index.php#secaoSobre";
-//     document.getElementById("link_secaoServicos").href="index.php#secaoServicos";
-//     document.getElementById("link_secaoProdutos").href="index.php#secaoProdutos";
-//     document.getElementById("link_secaoPortifolio").href="index.php#secaoPortifolio";
-//     document.getElementById("link_secaoContato").href="index.php#secaoContato";
+if((pagina.search("servicos")!=-1)||(pagina.search("portifolio")!=-1)||(pagina.search("sobre")!=-1)||(pagina.search("produtos")!=-1) ){
+    document.getElementById("link_secaoHome").href="index.php";
+    document.getElementById("link_secaoContato").href="index.php#secaoContato";
+}
 </script>
