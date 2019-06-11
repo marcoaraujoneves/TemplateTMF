@@ -58,7 +58,7 @@
 
     <!-- Corpo principal -->
     <main>
-        <section style="margin-top:140px;">
+        <section style="margin-top:110px;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 container-titulos">
@@ -66,6 +66,13 @@
                             <br>
                             Portifólio
                         </h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 container-titulos pb-2">
+                            <p style="text-align:justify">
+                                Lorem ipsum dolor sit amet, consecttur adipiscing elit. Done c rutrum feugiat augue. Aenean ac laoreet mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce egestas augue sit amet posuere volutpat. Ut a leo ut risus accumsan luctus id eu velit. Curabitur sodales pharetra lectus sit amet luctus. Integer dignissim laoreet velit non cursus. Suspendisse sit amet neque scelerisque, vehicula libero ac, fermentum neque. Integer lacinia pulvinar massa, sit amet egestas turpis pulvinar a.
+                            </p>
+                        </div>
                     </div>
                 </div>
 

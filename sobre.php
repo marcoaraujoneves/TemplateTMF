@@ -30,7 +30,7 @@
     
     <main>
         <!-- Introdução a empresa -->
-        <div class="container" style="margin-top:130px;">
+        <div class="container" style="margin-top:150px;">
             <div class="row">
                 <div class="col-md-12 container-titulos">
                     <h1 class="titulo_secoes">
