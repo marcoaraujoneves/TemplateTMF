@@ -67,8 +67,23 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 container-titulos pb-2">
-                        <p style="text-align:justify">
-                            Lorem ipsum dolor sit amet, consecttur adipiscing elit. Done c rutrum feugiat augue. Aenean ac laoreet mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce egestas augue sit amet posuere volutpat. Ut a leo ut risus accumsan luctus id eu velit. Curabitur sodales pharetra lectus sit amet luctus. Integer dignissim laoreet velit non cursus. Suspendisse sit amet neque scelerisque, vehicula libero ac, fermentum neque. Integer lacinia pulvinar massa, sit amet egestas turpis pulvinar a.
+                        <p class="text-justify">
+                            &emsp;
+                            Os serviços de usinagem compreendem todo o processo de fabricação de peças industriais e consistem no trabalho e na caracterização de uma peça a partir da matéria-prima por meio de ferramentas específicas capazes de alcançar um efeito preciso e muito próximo da perfeição. Nos serviços de usinagem estão inclusos os ofícios de serralheria, aplainamento, tornemento, fresagem, furação, brochamento, eletroerosão, caldeiraria, retífica, mandrilhamento e muitos outros.
+                        </p>
+                        <p class="text-justify">
+                            &emsp;
+                            Contando com a constante inovação tecnológica, os serviços de usinagem evoluíram muito, uma vez que eram realizados de forma artesanal e, atualmente, contam com equipamentos de alto padrão tecnológico que operam com mecanismo tradicional ou CNC (Comando Numérico Computadorizado), capazes de produzir peças metálicas ou de plástico de engenharia com elevada precisão para as mais diversas aplicações do setor industrial.
+                        </p>
+                        <h3 style="text-align:left;" class="subTituloSobre"> Serviços de Usinagem de Base e CNC </h3>
+                        <p class="text-justify">
+                            &emsp;
+                            Nos serviços de usinagem de base são realizadas as operações de torneamento, fresagem e soldas especiais com ferramentas de alta precisão no processo de fabricação de qualquer peça leve ou pesada, composta de plástico, metais ferrosos ou não ferrosos, usinadas ou fundidas, desenvolvidos a partir de moldes padrão, amostras ou projetos especiais conforme as necessidades do cliente. Com a tecnologia por CNC é possível desenvolver projetos com maior precisão por meio de comandos capazes de realizar cortes geométricos, dobras, estruturas com até 3 dimensões e promover uma linha de produção ou alterar características de determinado produto.
+                        </p>
+                        <h3 style="text-align:left;" class="subTituloSobre">Serviços de Usinagem de Campo</h3>
+                        <p class="text-justify">
+                            &emsp;
+                            Os serviços de usinagem de campo, também denominados usinagem in loco, têm como principal propósito realizar manutenções preventivas e corretivas, facilitando a manutenção de equipamentos sem que seja necessária a paralisação da produção por período prolongado. Essa modalidade de prestação de serviços de usinagem apresenta-se como uma solução prática para os clientes dos mais diversos setores que enfrentam problemas como as condições desfavoráveis de logística e complexidade para desmontagem do equipamento, contribuindo para o aumento da produção.
                         </p>
                     </div>
                 </div>

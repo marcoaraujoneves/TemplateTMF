@@ -77,7 +77,7 @@
                         </div>
                         <div class="col-md-7">
                             <!-- Texto com até 700 caracteres, minimo 530 -->
-                            <h3 style="text-align:right;" id="subTituloSobre"> Conheça a TMF </h3>
+                            <h3 style="text-align:right;" class="subTituloSobre"> Conheça a TMF </h3>
                             <p class="texto" style="text-align:justify;">
                                 &emsp;
                                 <span id="textoSobre">

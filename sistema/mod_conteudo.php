@@ -185,7 +185,7 @@
 											<div class="row">
 												<div class="col-md-12">
 													<label for="textoSobre"> Texto Sobre a TMF: </label>
-													<textarea class="inpForm" id="textoSobre" name="textoSobre" rows="10" maxlength="720" placeholder="Máximo de 720 caracteres" autocomplete="off"></textarea>
+													<textarea class="inpForm" id="textoSobre" name="textoSobre" rows="10" maxlength="1200" placeholder="Máximo de 1200 caracteres" autocomplete="off"></textarea>
 												</div>
 											</div>
 										</div>
@@ -248,7 +248,7 @@
 											<div class="row">
 												<div class="col-md-12">
 													<label for="textoServicos"> Texto Serviços: </label>
-													<textarea class="inpForm" id="textoServicos" name="textoServicos" rows="10" maxlength="780" placeholder="Máximo de 780 caracteres" autocomplete="off"></textarea>
+													<textarea class="inpForm" id="textoServicos" name="textoServicos" rows="10" maxlength="900" placeholder="Máximo de 900 caracteres" autocomplete="off"></textarea>
 												</div>
 											</div>
 										</div>

@@ -459,7 +459,7 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 
 /* Contato */
 
-#mande_mensagem h3, #subTituloSobre{
+#mande_mensagem h3, .subTituloSobre{
     text-align: center;
     font-family: 'Roboto Slab', serif;
     font-size: 33px;
@@ -468,7 +468,7 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 }
 
 
-#subTituloSobre{
+.subTituloSobre{
     color: #f8aa00;
 }
 
