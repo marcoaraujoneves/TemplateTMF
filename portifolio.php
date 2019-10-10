@@ -31,20 +31,20 @@
 </noscript>
 <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
    <div class="rg-image-wrapper">
-    {{if itemsCount > 1}}
-    <div class="rg-image-nav">
-      <a href="#" class="rg-image-nav-prev">Previous Image</a>
-      <a href="#" class="rg-image-nav-next">Next Image</a>
-  </div>
-  {{/if}}
-  <div class="rg-image"></div>
-  <div class="rg-loading"></div>
-  <div class="rg-caption-wrapper">
-     <div class="rg-caption" style="display:none;">
-      <p></p>
-  </div>
-</div>
-</div>
+        {{if itemsCount > 1}}
+        <div class="rg-image-nav">
+        <a href="#" class="rg-image-nav-prev"></a>
+        <a href="#" class="rg-image-nav-next"></a>
+        </div>
+        {{/if}}
+            <div class="rg-image"></div>
+        <div class="rg-loading"></div>
+        <div class="rg-caption-wrapper">
+            <div class="rg-caption" style="display:none;">
+            <p></p>
+        </div>
+        </div>
+    </div>
 </script>
 
 </head>
@@ -92,9 +92,11 @@
                     $nome = $row['nome'];
                     $link = $row['linkYoutube'];
                     $descricao = $row['descricao'];
+                    $matches=array();
                     $url = 'https://www.youtube.com/watch?v=u9-kU7gfuFA';
-                    preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $link, $matches);
-                    $newlink = $matches[1];
+
+                    $matches[0]=preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $link, $matches);
+                    $newlink = $matches[0];
                     echo '<div class="container d-flex justify-content-center">';
                     echo '<div class="row d-flex justify-content-center">';
                     if ($contadorPortifolio%2 == 0) {
@@ -162,6 +164,53 @@
 
             </section>
         </main>
+         <!---------------------------------- Modal ------------------------------------------->
+    <div class="modal fade" id="ModalProd" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
+                    <h5 class="modal-title" style="color: white;">Contato</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="txtForm" for="nome"> &ensp;Nome </label> <br>
+                                    <input type="text" class="inpForm" id="nome" name="nome" autocomplete="off" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="txtForm" for="telefone"> &ensp;Telefone </label> <br>
+                                    <input type="text" class="inpForm" id="telefone" name="telefone" autocomplete="off" required>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="txtForm" for="email"> &ensp;E-mail </label> <br>
+                                    <input type="email" class="inpForm" id="email" name="email" autocomplete="off" required>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="txtForm" for="mensagem"> &ensp;Mensagem </label> <br>
+                                    <textarea class="inpForm" id="mensagem" name="mensagem" rows="6" required> </textarea>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" id="enviar" name="enviar"  value="Enviar">  
+                </div>
+            </div>
+        </div>
+    </div> 
         <!-- Inclusão do rodapé do site -->
         <footer>
             <?php include_once('footer.php'); ?>
@@ -192,6 +241,7 @@
     <script type="text/javascript" src="js/Slider/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="js/Slider/jquery.elastislide.js"></script>
     <script type="text/javascript" src="js/Slider/gallery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     </html>
 
 <!-- MODELO

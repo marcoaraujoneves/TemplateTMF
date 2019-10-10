@@ -131,7 +131,7 @@
                             echo '<p class="text-justify px-3 py-1 " style="transition: display 1s linear 1s;">
                                             '.(substr($descricao,0,150)).'...
                                             <br>
-                                            <a href="#"> Ver mais... </a>
+                                            <a href="./produtos.php"> Ver mais... </a>
                                         </p>';
                             echo '</div>';
                             echo '</div>';

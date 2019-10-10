@@ -171,14 +171,15 @@ var servico4ID;
 
     //Envio de e-mail com AJAX e PHP
     $('#enviar').click(function(){
+        console.log('rabetao da Duda');
         var nome= $('#nome').val();
         var telefone= $('#telefone').val();
         var email= validaEmail($('#email').val());
         var mensagem= $('#mensagem').val();
 
-        if(nome != '' &&  telefone != '' && email && mensagem != ''){
+        if(nome.lenght!= 0 &&  telefone.lenght!= 0 && email.lenght!= 0 && mensagem.lenght!= 0){
             $.ajax({
-                url:'contatoAnexo.php',
+                url:'contato.php',
                 method: 'post',
                 data: $('#formularioContato').serialize(),
                 success: function(data){
@@ -189,9 +190,6 @@ var servico4ID;
                 }
                 }
             });
-        }
-        else{
-            alert("Error");
         }
     });
 

@@ -197,7 +197,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <input type="submit" class="btn btn-primary" id="enviar" name="enviar" value="Enviar">  
+                    <input type="submit" class="btn btn-primary" id="enviar" name="enviar"  value="Enviar">  
                 </div>
             </div>
         </div>
