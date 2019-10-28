@@ -56,7 +56,7 @@
     <!-- Corpo principal -->
     <main>
         <section id="secaoProdutos" class="secaoSite" style="margin-top:110px;" >
-            <div class="container container-fluid">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 container-titulos pb-2">
                         <h1 class="titulo_secoes">
@@ -67,8 +67,8 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 container-titulos pb-2">
-                        <p style="text-align:justify">
-                            Lorem ipsum dolor sit amet, consecttur adipiscing elit. Done c rutrum feugiat augue. Aenean ac laoreet mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce egestas augue sit amet posuere volutpat. Ut a leo ut risus accumsan luctus id eu velit. Curabitur sodales pharetra lectus sit amet luctus. Integer dignissim laoreet velit non cursus. Suspendisse sit amet neque scelerisque, vehicula libero ac, fermentum neque. Integer lacinia pulvinar massa, sit amet egestas turpis pulvinar a.
+                        <p style="text-align:center">
+                            Veja aqui os produtos disponíveis pela TMF!
                         </p>
                     </div>
                 </div>

@@ -59,7 +59,7 @@
     <!-- Corpo principal -->
     <main>
         <section style="margin-top:110px;">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 container-titulos">
                         <h1 class="titulo_secoes">
@@ -67,10 +67,10 @@
                             Portifólio
                         </h1>
                     </div>
-                    <div class="row">
+                    <div class="row mx-auto">
                         <div class="col-md-12 container-titulos pb-2">
-                            <p style="text-align:justify">
-                                Lorem ipsum dolor sit amet, consecttur adipiscing elit. Done c rutrum feugiat augue. Aenean ac laoreet mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce egestas augue sit amet posuere volutpat. Ut a leo ut risus accumsan luctus id eu velit. Curabitur sodales pharetra lectus sit amet luctus. Integer dignissim laoreet velit non cursus. Suspendisse sit amet neque scelerisque, vehicula libero ac, fermentum neque. Integer lacinia pulvinar massa, sit amet egestas turpis pulvinar a.
+                            <p style="text-align:center">
+                                Nesta página você poderá obter mais informações sobre os items que compõe o nosso Portifólio!
                             </p>
                         </div>
                     </div>
@@ -93,10 +93,13 @@
                     $link = $row['linkYoutube'];
                     $descricao = $row['descricao'];
                     $matches=array();
-                    $url = 'https://www.youtube.com/watch?v=u9-kU7gfuFA';
 
-                    $matches[0]=preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $link, $matches);
-                    $newlink = $matches[0];
+                    preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $link, $matches);
+                    if (!empty($matches)){
+                        $newlink = $matches[1];
+                    }
+                    
+                    
                     echo '<div class="container d-flex justify-content-center">';
                     echo '<div class="row d-flex justify-content-center">';
                     if ($contadorPortifolio%2 == 0) {
@@ -147,7 +150,10 @@
                         $nomeImagem = $linha['nome'];
                         echo '<li><a href="#"><img src="sistema/Img/Portifolio/'.$nomeImagem.' " data-large="sistema/Img/Portifolio/'.$nomeImagem.'  " data-description="" /></a></li>';
                     }
-                    echo '<li><a href="#"><img src="img/Slider/play.png" data-large="img/usinagem-1.jpg" data-description="" data-iframe="<iframe width=\'100%\' height=\'260\' src=\'https://www.youtube.com/embed/'.$newlink.'\' frameborder=\'0\' allow=\'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>"/></a></li>';
+                    if(isset($newlink)){
+                        echo '<li><a href="#"><img src="img/Slider/play.png" data-large="img/Slider/play.png" data-description="" data-iframe="<iframe width=\'100%\' height=\'260\' src=\'https://www.youtube.com/embed/'.$newlink.'\' frameborder=\'0\' allow=\'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>"/></a></li>';
+                    }
+                    
                     echo '</ul>';
                     echo '</div>';
                     echo '</div>';
