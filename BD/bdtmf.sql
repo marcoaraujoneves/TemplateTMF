@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 08-Out-2019 às 14:49
--- Versão do servidor: 10.1.38-MariaDB
--- versão do PHP: 7.3.2
+-- Generation Time: 28-Out-2019 às 16:34
+-- Versão do servidor: 10.1.37-MariaDB
+-- versão do PHP: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -112,7 +112,8 @@ CREATE TABLE `imagemportifolio` (
 INSERT INTO `imagemportifolio` (`codImagem`, `codPortifolio`, `nome`) VALUES
 (1, 10, '10-1.png'),
 (2, 10, '10-2.png'),
-(3, 12, '12-3.jpg');
+(4, 14, '14-1.jpg'),
+(5, 15, '15-1.jpg');
 
 -- --------------------------------------------------------
 
@@ -155,10 +156,7 @@ CREATE TABLE `imagemservico` (
 INSERT INTO `imagemservico` (`codImagem`, `codServico`, `nome`) VALUES
 (30, 65, '65-1.png'),
 (31, 66, '66-1.png'),
-(32, 67, '67-1.jpg'),
-(38, 73, '73-1.png'),
-(39, 73, '73-2.png'),
-(40, 73, '73-3.png');
+(32, 67, '67-1.jpg');
 
 -- --------------------------------------------------------
 
@@ -225,8 +223,9 @@ CREATE TABLE `portifolio` (
 --
 
 INSERT INTO `portifolio` (`codPortifolio`, `nome`, `descricao`, `linkYoutube`, `status`) VALUES
-(10, 'Máquina de empada', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ultricies lectus sed porta. Mauris eget feugiat magna. Pellentesque mollis eros', 'www.youtube.com/teste', 1),
-(12, 'Lorem ipsum', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ultricies lectus sed porta.Lorem ipsum dolor sit amet, consectetur adipiscing e', 'https://www.youtube.com', 1);
+(10, 'Máquina de empada', 'Bla', '', 1),
+(14, 'Novo Port', 'Mais um item', 'https://www.youtube.com/watch?v=XvCFwZlteZc', 1),
+(15, 'Terceiro', 'Terceiro item', 'https://www.youtube.com/watch?v=kLC0cX3rAX0', 1);
 
 -- --------------------------------------------------------
 
@@ -246,8 +245,8 @@ CREATE TABLE `produto` (
 --
 
 INSERT INTO `produto` (`codProduto`, `nome`, `descricao`, `status`) VALUES
-(35, 'Produto1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ultricies lectus sed porta.', 1),
-(38, 'Produto 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ultricies lectus sed porta.', 0),
+(35, 'Produto1', 'blas', 1),
+(38, 'Produto 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ultricies lectus sed porta.', 1),
 (39, 'Produto 3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ultricies lectus sed porta.', 1);
 
 -- --------------------------------------------------------
@@ -269,10 +268,9 @@ CREATE TABLE `servico` (
 --
 
 INSERT INTO `servico` (`codServico`, `nome`, `descricao`, `imagem`, `estatus`) VALUES
-(65, 'Manutenção Ferramentáriu', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ultricies lectus sed porta. Mauris eget feugiat magna. Pellentesque mollis eros sem, a scelerisque magna facilisis sed. Nunc ornare elit bibendum eros auctor, id luctus dolor accumsan. Pellentesque vulputate dignissim risus, tincidunt luctus tellus egestas quis!', '', 1),
+(65, 'Manutenção Ferramentária', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ultricies lectus sed porta. Mauris eget feugiat magna. Pellentesque mollis eros sem, a scelerisque magna facilisis sed. Nunc ornare elit bibendum eros auctor, id luctus dolor accumsan. Pellentesque vulputate dignissim risus, tincidunt luctus tellus egestas quis!', '', 1),
 (66, 'Projeto de Máquinas', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ultricies lectus sed porta. Mauris eget feugiat magna. Pellentesque mollis eros sem, a scelerisque magna facilisis sed. Nunc ornare elit bibendum eros auctor, id luctus dolor accumsan. Pellentesque vulputate dignissim risus, tincidunt luctus tellus egestas quis!', '', 1),
-(67, 'Tornearia', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ultricies lectus sed porta. Mauris eget feugiat magna. Pellentesque mollis eros sem, a scelerisque magna facilisis sed. Nunc ornare elit bibendum eros auctor, id luctus dolor accumsan. Pellentesque vulputate dignissim risus, tincidunt luctus tellus egestas quis!', '', 1),
-(73, 'Vent', 'asdsad asd as das asd das das das das das ads das asd asd asdsad asd as das asd das das das das das ads das asd asd asdsad asd as das asd das das das das das ads das asd asd asdsad asd as das asd das das das das das ads das asd asd asdsad asd as das asd das das das das das ads das asd asd asdsad asd as das asd das das das das das ads das asd asd asdsad asd as das asd das das das das das ads das asd asd asdsad asd as das asd das das das das das ads das asd asd ', '', 1);
+(67, 'Tornearia', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ultricies lectus sed porta. Mauris eget feugiat magna. Pellentesque mollis eros sem, a scelerisque magna facilisis sed. Nunc ornare elit bibendum eros auctor, id luctus dolor accumsan. Pellentesque vulputate dignissim risus, tincidunt luctus tellus egestas quis!', '', 1);
 
 -- --------------------------------------------------------
 
@@ -305,7 +303,7 @@ CREATE TABLE `sobre` (
 --
 
 INSERT INTO `sobre` (`indicador1qt`, `indicador2qt`, `indicador3qt`, `indicador4qt`, `indicador1`, `indicador2`, `indicador3`, `indicador4`, `textoSobre`, `textoServicos`, `servico1`, `servico2`, `servico3`, `servico4`, `produto1`, `produto2`, `produto3`) VALUES
-(57, 42, 52, 30, 'máquinas próprias', 'anos no mercado', 'serviços próprios', 'opções de produtos', 'Lorem ipsum dolor sit amet, consecttur adipiscing elit. Donec rutrum feugiat augue. Aenean ac laoreet mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce egestas augue sit amet posuere volutpat. Ut a leo ut risus accumsan luctus id eu velit. Curabitur sodales pharetra lectus sit amet luctus. Integer dignissim laoreet velit non cursus. Suspendisse sit amet neque scelerisque, vehicula libero ac, fermentum neque. Integer lacinia pulvinar massa, sit amet egestas turpis pulvinar a. Suspendisse hendrerit, ligula vel sagittis dignissim, odio lectus porta mauris, non sagittis velit arcu nec eros. Etiam non dui eu diam blandit mattis sit amet eu diam!', 'Lorem ipsum dolor sit amet, consecttur adipiscing elit. Done c rutrum feugiat augue. Aenean ac laoreet mi. Cão aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusquinha egestas augue sit amet posuere volutpat. Ut a leo ut risus accumsan luctus id eu velit. Curabitur sodales pharetra lectus sit amet luctus. Integer dignissim laoreet velit non cursus. Suspendisse sit amet neque scelerisque, vehicula libero ac, fermentum neque. Integer lacinia pulvinar massa, sit amet egestas turpis pulvinar a. Suspendisse hendrerit, marcoligula vel sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos!', 66, 65, 68, 67, 35, 38, 39);
+(99, 99, 99, 99, 'MÁQUINAS PRÓPRIAS', 'ANOS NO MERCADO', 'SERVIÇOS PRÓPRIOS', 'OPÇÕES DE PRODUTOS', '&emsp;\r\nA TMF Usinagem atua no ramo de usinagem de precisão desde 2010 e tem como principal objetivo oferecer soluções inovadoras no desenvolvimento e na fabricação de peças usinadas e mecanismos, utilizados em diversos segmentos, como: agrícola, automação comercial e bancária, aeroespacial, hospitalar entre outros.\r\n<br><br>\r\n&emsp;\r\n<strong><em>TMF Usinagem, precisão na fabricação de seus produtos!</em></strong>', 'Os serviços de usinagem compreendem todo o processo de fabricação de peças industriais e consistem no trabalho e na caracterização de uma peça a partir da matéria-prima por meio de ferramentas específicas capazes de alcançar um efeito preciso e muito próximo da perfeição. Nos serviços de usinagem estão inclusos os ofícios de serralheria, aplainamento, tornemento, fresagem, furação, brochamento, eletroerosão, caldeiraria, retífica, mandrilhamento e muitos outros.\r\n<br><br>\r\nContando com a constante inovação tecnológica, os serviços de usinagem evoluíram muito, uma vez que eram realizados de forma artesanal e, atualmente, contam com equipamentos de alto padrão tecnológico que operam com mecanismo tradicional ou CNC (Comando Numérico Computadorizado), capazes de produzir peças metálicas ou de plástico de engenharia com elevada precisão para as mais diversas aplicações do setor industrial. ', 66, 65, 65, 67, 35, 38, 39);
 
 -- --------------------------------------------------------
 
@@ -434,7 +432,7 @@ ALTER TABLE `clienteempresa`
 -- AUTO_INCREMENT for table `imagemportifolio`
 --
 ALTER TABLE `imagemportifolio`
-  MODIFY `codImagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `codImagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `imagemproduto`
@@ -464,7 +462,7 @@ ALTER TABLE `parceiros`
 -- AUTO_INCREMENT for table `portifolio`
 --
 ALTER TABLE `portifolio`
-  MODIFY `codPortifolio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `codPortifolio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `produto`
