@@ -1,3 +1,9 @@
+var dissmissAlert = '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+var mensagem = '';
+var alertSuccess = '<div class="alert alert-success alert-dismissible fade show" role="alert">';
+var alertDanger = '<div class="alert alert-danger alert-dismissible fade show" role="alert">';
+var alertWarning = '<div class="alert alert-warning alert-dismissible fade show" role="alert">';
+
 function ativaAlerta(texto,classe){
     mensagem = '<strong>'+ texto +'</strong>';
     switch(classe){
@@ -15,7 +21,6 @@ function ativaAlerta(texto,classe){
             break;
     }
 }
-
 $(document).ready(function(){
 var max1;
 var max2;
@@ -55,10 +60,10 @@ var servico4ID;
                 dataType:"json",
                 success:function(data){
                     
-                    $('#imgservico1').attr("src",'sistema/img/servicos/'+data[0].imagem);
-                    $('#imgservico2').attr("src",'sistema/img/servicos/'+data[1].imagem);
-                    $('#imgservico3').attr("src",'sistema/img/servicos/'+data[2].imagem);
-                    $('#imgservico4').attr("src",'sistema/img/servicos/'+data[3].imagem);
+                    $('#imgservico1').attr("src",'sistema/Img/Servicos/'+data[0].imagem);
+                    $('#imgservico2').attr("src",'sistema/Img/Servicos/'+data[1].imagem);
+                    $('#imgservico3').attr("src",'sistema/Img/Servicos/'+data[2].imagem);
+                    $('#imgservico4').attr("src",'sistema/Img/Servicos/'+data[3].imagem);
                     $('#nomeservico1').html(data[0].nome);
                     $('#nomeservico2').html(data[1].nome);
                     $('#nomeservico3').html(data[2].nome);
@@ -194,17 +199,17 @@ var servico4ID;
         var email= validaEmail($('#email').val());
         var mensagem= $('#mensagem').val();
 
-        if(nome.lenght!= 0 &&  telefone.lenght!= 0 && email.lenght!= 0 && mensagem.lenght!= 0){
+        if(nome.length!= 0 &&  telefone.length!= 0 && email.length!= 0 && mensagem.length!= 0){
             $.ajax({
                 url:'contato.php',
                 method: 'post',
                 data: $('#formularioContato').serialize(),
                 success: function(data){
                     if(data.indexOf("Erro") == -1){
-                    ativaAlerta(data,1);
-                }else {
-                    ativaAlerta(data,3);
-                }
+                        ativaAlerta(data,1);
+                    } else {
+                        ativaAlerta(data,3);
+                    }
                 }
             });
         }
