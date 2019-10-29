@@ -1,3 +1,21 @@
+function ativaAlerta(texto,classe){
+    mensagem = '<strong>'+ texto +'</strong>';
+    switch(classe){
+        case 1:
+            $('#containerAlert').html(alertSuccess+mensagem+dissmissAlert+'</div>');
+            break;
+        case 2:
+            $('#containerAlert').html(alertDanger+mensagem+dissmissAlert+'</div>');
+            break;
+        case 3:
+            $('#containerAlert').html(alertWarning+mensagem+dissmissAlert+'</div>');
+            break;
+        default:
+            $('#containerAlert').html(alertWarning+mensagem+dissmissAlert+'</div>');
+            break;
+    }
+}
+
 $(document).ready(function(){
 var max1;
 var max2;
@@ -171,7 +189,6 @@ var servico4ID;
 
     //Envio de e-mail com AJAX e PHP
     $('#enviar').click(function(){
-        console.log('rabetao da Duda');
         var nome= $('#nome').val();
         var telefone= $('#telefone').val();
         var email= validaEmail($('#email').val());
@@ -221,3 +238,4 @@ function validaEmail(email) {
     var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
     return regex.test(email);
 }
+
