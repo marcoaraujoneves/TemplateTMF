@@ -5,7 +5,7 @@
         private $host ='localhost';
         private $usuario = 'root';
         private $senha = '';
-        private $database='bdTMF';
+        private $database='bdtmf';
 
         public function conecta_mysql(){
             //criar a conexão

@@ -544,10 +544,10 @@
                             <div id="fracasso" class="alert alert-danger" role="alert" style="display:none;">
                                 Houve um erro ao enviar sua mensagem, por favor, tente novamente mais tarde ou entre em contato diretamente pelos canais ao lado!
                             </div>
-                            <div id="incompleto" class="alert alert-secondary" role="alert" style="display:none;">
-                                Por favor, informe todos os dados necessários!
+                            <div id="incompleto" class="alert alert-warning" role="alert" style="display:none;">
+                                Por favor, verifique se há informações faltando ou incorretas e tente novamente!
                             </div>
-                            <form id="formularioContato" method="post" enctype="multipart/form-data">
+                            <form id="formularioContato" method="POST" enctype="multipart/form-data">
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-6">
@@ -575,11 +575,14 @@
                                     </div>
                                     <br>
                                     <input type="hidden" name="pagina" id="pagina" value="Principal">
+
+                                    <!-- Limite de 32MB para envio de arquivos -->
+                                    <input type="hidden" name="MAX_FILE_SIZE" value="33554432">
                                     <div class="float-left  p-2">
-                                        <input type="file"  class="form-control jfilestyle" id="_FILES" name="_FILES" accept="image/*,.pdf"> 
+                                        <input type="file"  class="form-control jfilestyle" id="file" name="file[]" accept="image/*,.pdf" multiple="multiple"> 
                                     </div>
                                     <div class="float-right p-2">
-                                        <button type="button" class="btn btn-primary" id="enviar" name="enviar"> Enviar </button>
+                                        <button type="button" class="btn btn-primary inpForm" id="enviar" name="enviar"> Enviar </button>
                                     </div>
                                 </div>
                             </form>

@@ -193,16 +193,27 @@ var servico4ID;
    
 
     //Envio de e-mail com AJAX e PHP
-    $('#enviar').click(function(){
+    
+    $("form").get(0).reset();       //Limpa formulário
+
+    var envia = function(){
+        
+        var postData = new FormData($('form')[0]);
+
         var nome= $('#nome').val();
         var telefone= $('#telefone').val();
         var email= validaEmail($('#email').val());
         var mensagem= $('#mensagem').val();
 
-        if(nome.length!= 0 &&  telefone.length!= 0 && email.length!= 0 && mensagem.length!= 0){
+        if(nome.length!= 0 &&  telefone.length!= 0 && email != 0  && mensagem.length!= 0){
+
+            $('#enviar').off('click');
+            $('#enviar').addClass('disabled');
+            $('#enviar').prepend('<img id="spinner" src="img/spinner.gif" width="20">')
+
             $.ajax({
-                url:'contato.php',
-                method: 'post',
+                /*url:'mailer.php',
+                type: 'POST',
                 data: $('#formularioContato').serialize(),
                 success: function(data){
                     if(data.indexOf("Erro") == -1){
@@ -210,10 +221,43 @@ var servico4ID;
                     } else {
                         ativaAlerta(data,3);
                     }
+                }*/
+                type: 'POST',
+                url: 'mailer.php',
+                data: postData,
+                processData: false,
+                contentType: false,
+                success: function(data) {
+                    if(data.indexOf('Erro') == -1){
+                        $('.inpForm').val('');
+                        $('#sucesso').fadeIn(500);
+                        setTimeout(function() {
+                            $('#sucesso').fadeOut(1500);
+                        }, 5000);
+                        $('#enviar').removeClass('disabled');
+                        $('#spinner').remove();
+                        $('#enviar').on('click', envia);
+                    } else {
+                        $('#fracasso').fadeIn(500);
+                        setTimeout(function() {
+                            $('#fracasso').fadeOut(1500);
+                        }, 5000);
+                        $('#enviar').removeClass('disabled');
+                        $('#spinner').remove();
+                        $('#enviar').on('click', envia);
+                    }
                 }
+
             });
+        } else {
+            $('#incompleto').fadeIn(500);
+            setTimeout(function() {
+                $('#incompleto').fadeOut(1500);
+            }, 5000);
         }
-    });
+    }
+
+    $('#enviar').on('click', envia);
 
     $('.containerProduto').mouseover(function(){
         $('#'+this.id+' .descricaoProduto').animate({
