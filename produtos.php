@@ -114,7 +114,7 @@
                 echo '</div>';
                 echo '<div class="row text-center mt-3 pb-3">';
                 echo '<div class="col-12">';
-                echo '<input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#ModalProd" id="enviar" name="contratar" value="Contratar">';
+                echo '<input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#ModalProd" id="contratar" name="contratar" value="Contratar">';
                 echo '</div>';
                 echo '</div>';
                 echo '</div>';
@@ -157,7 +157,7 @@
     </main>
     <!---------------------------------- Modal ------------------------------------------->
     <div class="modal fade" id="ModalProd" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header" style="background-color: rgb(8, 21, 43);color: white;">
                     <h5 class="modal-title" style="color: white;">Contato</h5>
@@ -166,38 +166,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label class="txtForm" for="nome"> &ensp;Nome </label> <br>
-                                    <input type="text" class="inpForm" id="nome" name="nome" autocomplete="off" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="txtForm" for="telefone"> &ensp;Telefone </label> <br>
-                                    <input type="text" class="inpForm" id="telefone" name="telefone" autocomplete="off" required>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label class="txtForm" for="email"> &ensp;E-mail </label> <br>
-                                    <input type="email" class="inpForm" id="email" name="email" autocomplete="off" required>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label class="txtForm" for="mensagem"> &ensp;Mensagem </label> <br>
-                                    <textarea class="inpForm" id="mensagem" name="mensagem" rows="6" required> </textarea>
-                                </div>
-                            </div>
-                            <br>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <input type="submit" class="btn btn-primary" id="enviar" name="enviar"  value="Enviar">  
+                    <?php include_once('modalContato.php'); ?>
                 </div>
             </div>
         </div>
@@ -234,4 +203,14 @@
 <script type="text/javascript" src="js/Slider/jquery.elastislide.js"></script>
 <script type="text/javascript" src="js/Slider/gallery.js"></script>
 <!-- ---------------------------------------galeria scripts ---------------------------------------------------------------- -->
+<script type="text/javascript" src="js/modalContato.js"></script>
+<script src="js/Input/jquery-filestyle.min.js"></script>
+<script>$(":file").jfilestyle('buttonBefore', true)</script>
+<script>$(":file").jfilestyle('text', 'Selecionar arquivo');</script>
+<script>
+    if ($(window).width() < 530){
+        $(":file").jfilestyle('input',false);
+    }
+</script>
+
 </html>

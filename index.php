@@ -24,31 +24,7 @@
         <title> Indústria TMF | Home </title> 
 
     </head>
-    <script type="text/javascript">
-        /* Máscara Para digitação do número de telefone no formulário de contato */
-        function mascara(o,f){
-            v_obj=o
-            v_fun=f
-            setTimeout("execmascara()",1)
-        }
-        function execmascara(){
-            v_obj.value=v_fun(v_obj.value)
-        }
-        function mtel(v){
-            v=v.replace(/\D/g,"");
-            v=v.replace(/^(\d{2})(\d)/g,"($1) $2");
-            v=v.replace(/(\d)(\d{4})$/,"$1-$2");
-            return v;
-        }
-        function id( el ){
-            return document.getElementById( el );
-        }
-        window.onload = function(){
-            id('telefone').onkeypress = function(){
-                mascara( this, mtel );
-            }
-        }
-    </script>
+    
 
     <body>
 
@@ -88,8 +64,8 @@
                     </div>
                 </div>
 
-<!--Produtos-->
-<section id="secaoProdutos" class="secaoSite">
+            <!--Produtos-->
+            <section id="secaoProdutos" class="secaoSite">
                 <div class="container-fluid tema">
                     <div class="row">
                         <div class="col-md-12 container-titulos">
@@ -158,27 +134,6 @@
                 </div>
             </section>
             <!--/PRODUTOS-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-            </section>
-            <!--/SOBRE NÓS-->
 
             <!--SERVICOS-->
             <section id="secaoServicos" class="secaoSite">
@@ -268,8 +223,8 @@
                 </div>
             </section>
             <!--/SERVICOS-->
-<section>
-<div class="container-fluid mt-3 tema">
+            <section>
+                <div class="container-fluid mt-3 tema">
                     <div class="row d-flex m-0 m-md-5 p-0 p-md-3 my-auto">
                         <div class="col-md-3 col-sm-6 col-xs-6 col-6 d-flex justify-content-center mx-auto p-3 m-0">
                             <div class="card border-danger d-flex justify-content-center p-3 sombra-cartao">
@@ -301,8 +256,7 @@
                         </div>
                     </div>
                 </div>
-
-</section>
+            </section>
             
             
             <!--PORTIFÓLIO-->
@@ -626,6 +580,7 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/modalContato.js"></script>
     <script src="js/Input/jquery-filestyle.min.js"></script>
     <script>$(":file").jfilestyle('buttonBefore', true)</script>
     <script>$(":file").jfilestyle('text', 'Selecionar arquivo');</script>
@@ -639,27 +594,3 @@
 
   
 </html>
-
-<!-- MODELO
-
-    <section id="secaoModelo">
-        <div class="container">
-                <div class="row">
-                    <div class="col-md-12 container-titulos">
-                        <h1 class="titulo_secoes">
-                            Modelo
-                        </h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-
-                    </div>
-                <div class="col-md-6">
-
-                </div>
-                </div>
-            </div>
-    </section>
-
-/MODELO --> 
