@@ -12,23 +12,13 @@ $(document).ready(function(){
         var email= validaEmail($('#email').val());
         var mensagem= $('#mensagem').val();
 
-        if(nome.length!= 0 &&  telefone.length!= 0 && email != 0  && mensagem.length!= 0){
+        if(nome.length != 0 &&  telefone.length != 0 && email != 0  && mensagem.length != 0){
 
             $('#enviar').off('click');
             $('#enviar').addClass('disabled');
             $('#enviar').prepend('<img id="spinner" src="img/spinner.gif" width="20">')
 
             $.ajax({
-                /*url:'mailer.php',
-                type: 'POST',
-                data: $('#formularioContato').serialize(),
-                success: function(data){
-                    if(data.indexOf("Erro") == -1){
-                        ativaAlerta(data,1);
-                    } else {
-                        ativaAlerta(data,3);
-                    }
-                }*/
                 type: 'POST',
                 url: 'mailer.php',
                 data: postData,

@@ -99,57 +99,63 @@ $(document).ready(function(){
     });
 
     $(document).on('click','#salvarSobre', function(){
-        $.ajax({
-            url:'Sobre/salvarDadosSobre.php',
-            method:'POST',
-            data:$('#formSobre').serialize(),
-            success:function(data){
-                if(data.indexOf("Erro") == -1){
-                    ativaAlerta(data,1);
-                }else {
-                    ativaAlerta(data,3);
+        setTimeout(function(){
+            $.ajax({
+                url:'Sobre/salvarDadosSobre.php',
+                method:'POST',
+                data:$('#formSobre').serialize(),
+                success:function(data){
+                    if(data.indexOf("Erro") == -1){
+                        ativaAlerta(data,1);
+                    }else {
+                        ativaAlerta(data,3);
+                    }
+                },
+                error: function(){
+                    ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
                 }
-            },
-            error: function(){
-                ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
-            }
-        });
+            });
+        }, 500);
     });
 
     $(document).on('click','#salvarServicos', function(){
-        $.ajax({
-            url:'Sobre/salvarDadosServicos.php',
-            method:'POST',
-            data:$('#formServicos').serialize(),
-            success:function(data){
-                if(data.indexOf("Erro") == -1){
-                    ativaAlerta(data,1);
-                }else {
-                    ativaAlerta(data,3);
+        setTimeout(function(){
+            $.ajax({
+                url:'Sobre/salvarDadosServicos.php',
+                method:'POST',
+                data:$('#formServicos').serialize(),
+                success:function(data){
+                    if(data.indexOf("Erro") == -1){
+                        ativaAlerta(data,1);
+                    }else {
+                        ativaAlerta(data,3);
+                    }
+                },
+                error: function(){
+                    ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
                 }
-            },
-            error: function(){
-                ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
-            }
-        });
+            });
+        }, 500);
     });
 
     $(document).on('click','#salvarProdutos', function(){
-        $.ajax({
-            url:'Sobre/salvarDadosProdutos.php',
-            method:'POST',
-            data:$('#formProdutos').serialize(),
-            success:function(data){
-                if(data.indexOf("Erro") == -1){
-                    ativaAlerta(data,1);
-                }else {
-                    ativaAlerta(data,3);
+        setTimeout(function(){
+            $.ajax({
+                url:'Sobre/salvarDadosProdutos.php',
+                method:'POST',
+                data:$('#formProdutos').serialize(),
+                success:function(data){
+                    if(data.indexOf("Erro") == -1){
+                        ativaAlerta(data,1);
+                    }else {
+                        ativaAlerta(data,3);
+                    }
+                },
+                error: function(){
+                    ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
                 }
-            },
-            error: function(){
-                ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
-            }
-        });
+            });
+        }, 500);
     });
     
     var contadorParceiros=0;
@@ -206,22 +212,24 @@ $(document).ready(function(){
         }
     });
     $(document).on('click','#salvarParceiros',function(){
-        $.ajax({
-            url:'Parceiros/salvarDados.php',
-            method:'POST',
-            data:$('#formParceiros').serialize(),
-            success:function(data){
-                if(data.indexOf("Erro") == -1){
-                    $('#btnParceiros').click();
-                    ativaAlerta(data,1);
-                }else {
-                    ativaAlerta(data,3);
+        setTimeout(function(){
+            $.ajax({
+                url:'Parceiros/salvarDados.php',
+                method:'POST',
+                data:$('#formParceiros').serialize(),
+                success:function(data){
+                    if(data.indexOf("Erro") == -1){
+                        $('#btnParceiros').click();
+                        ativaAlerta(data,1);
+                    }else {
+                        ativaAlerta(data,3);
+                    }
+                },
+                error: function(){
+                    ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
                 }
-            },
-            error: function(){
-                ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
-            }
-        });
+            });
+        }, 500);
     });
 
     var contadorClientes=0;
@@ -279,21 +287,24 @@ $(document).ready(function(){
     });
 
     $(document).on('click','#salvarClientes',function(){
-        $.ajax({
-            url:'Clientes/salvarDados.php',
-            method:'POST',
-            data:$('#formClientes').serialize(),
-            success:function(data){
-                if(data.indexOf("Erro") == -1){
-                    $('#btnClientes').click();
-                    ativaAlerta(data,1);
-                }else {
-                    ativaAlerta(data,3);
+        setTimeout(function(){
+            $.ajax({
+                url:'Clientes/salvarDados.php',
+                method:'POST',
+                data:$('#formClientes').serialize(),
+                success:function(data){
+                    if(data.indexOf("Erro") == -1){
+                        $('#btnClientes').click();
+                        ativaAlerta(data,1);
+                    }else {
+                        ativaAlerta(data,3);
+                    }
+                },
+                error: function(){
+                    ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
                 }
-            },
-            error: function(){
-                ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
-            }
-        });
+            });
+        }, 500);
+        
     });
 });

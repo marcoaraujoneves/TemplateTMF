@@ -75,46 +75,47 @@
                         </div>
                     </div>
                     <div class="row mx-auto pb-3 pb-md-5 pl-3 pl-md-5 pr-3 pr-md-5">
-                        <?php 
-                        include ('sistema/db.class.php');
-                        $objDB = new db();
-                        $conn = $objDB->conecta_mysql();
-                        $query_select = "SELECT imagemproduto.nome,produto.nome as nomes,codImagem,produto.codProduto, descricao FROM produto INNER Join imagemproduto on produto.codProduto = imagemproduto.codProduto where produto.codProduto in ( select produto2 from sobre) or produto.codProduto in ( select produto1 from sobre) or produto.codProduto in ( select produto3 from sobre) group by imagemproduto.codProduto ;";
-                        $result_select = mysqli_query($conn,$query_select) or die(mysql_error());
-                        $rows = array();
-                        $contadorProdutos = 0;
-                        while($row = mysqli_fetch_array($result_select))
-                            $rows[] = $row;
-                        foreach($rows as $row){
-                            $contadorProdutos = $contadorProdutos + 1;
-                            $codProduto = $row['codProduto'];
-                            $nome = $row['nome'];
-                            $nomes = $row['nomes'];
-                            $descricao = $row['descricao'];
-                            echo '<div class="col-12 col-sm-6 col-lg-3">';
-                            echo '<div class="cardProdutos">';
-                            echo '<div class="containerProduto sombra-cartao" id="cardProduto'.$contadorProdutos.'">';
-                            echo '<div class="cardProdutosImgContainer">';
-                            echo '<img src="sistema/Img/Produtos/'.$nome.'" class="img-fluid rounded my-auto mx-auto d-block">';
-                            echo '</div>';
-                            echo '<div class="cardProdutosDescricao">';
-                            echo '<div class="justify-content-center align-items-center d-flex nomeProduto">';
-                            echo '<h4> '.$nomes.' </h4>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '<div class="descricaoProduto sombra-cartao">';
-                            echo '<h4 class="nomeProdutoInterno"> '.$nomes.' </h4>';
-                            echo '<p class="text-justify px-3 py-1 " style="transition: display 1s linear 1s;">
-                                            '.(substr($descricao,0,150)).'...
-                                            <br>
-                                            <a href="./produtos.php"> Ver mais... </a>
-                                        </p>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</div>';
-                            
-                        }
+                        <?php
+                            include_once('sistema/db.class.php');
+                            $objDB = new db();
+                            $conn = $objDB->conecta_mysql();
+                            $query_select = "SELECT imagemproduto.nome,produto.nome AS nomes,codImagem,produto.codProduto, descricao FROM produto
+                            INNER JOIN imagemproduto ON produto.codProduto = imagemproduto.codProduto WHERE produto.codProduto IN ( SELECT produto2 FROM sobre)
+                            OR produto.codProduto IN ( SELECT produto1 FROM sobre) OR produto.codProduto IN ( SELECT produto3 FROM sobre) GROUP BY imagemproduto.codProduto ;";
+                            $result_select = mysqli_query($conn,$query_select) or die(mysqli_error($conn));
+                            $rows = array();
+                            $contadorProdutos = 0;
+                            while($row = mysqli_fetch_array($result_select))
+                                $rows[] = $row;
+                            foreach($rows as $row){
+                                $contadorProdutos = $contadorProdutos + 1;
+                                $codProduto = $row['codProduto'];
+                                $nome = $row['nome'];
+                                $nomes = $row['nomes'];
+                                $descricao = $row['descricao'];
+                                echo '<div class="col-12 col-sm-6 col-lg-3">';
+                                echo '<div class="cardProdutos">';
+                                echo '<div class="containerProduto sombra-cartao" id="cardProduto'.$contadorProdutos.'">';
+                                echo '<div class="cardProdutosImgContainer">';
+                                echo '<img src="sistema/Img/Produtos/'.$nome.'" class="img-fluid rounded my-auto mx-auto d-block">';
+                                echo '</div>';
+                                echo '<div class="cardProdutosDescricao">';
+                                echo '<div class="justify-content-center align-items-center d-flex nomeProduto">';
+                                echo '<h4> '.$nomes.' </h4>';
+                                echo '</div>';
+                                echo '</div>';
+                                echo '<div class="descricaoProduto sombra-cartao">';
+                                echo '<h4 class="nomeProdutoInterno"> '.$nomes.' </h4>';
+                                echo '<p class="text-justify px-3 py-1 " style="transition: display 1s linear 1s;">
+                                                '.(substr($descricao,0,150)).'...
+                                                <br>
+                                                <a href="./produtos.php"> Ver mais... </a>
+                                            </p>';
+                                echo '</div>';
+                                echo '</div>';
+                                echo '</div>';
+                                echo '</div>';
+                            }
                         ?>                            
                        
                         <div class="col-12 col-sm-6 col-lg-3">
@@ -157,67 +158,52 @@
                         </div>
 
                         <div class="col-md-7 mx-5 mx-md-0 my-3">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12" style="padding:20px;">
-                                                <img src="img/usinagem.png" id="imgservico1" style="max-height:250px;" class="img-fluid rounded mx-auto d-block">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <h4 class="nomeServicos" id="nomeservico1"></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12" style="padding:20px;">
-                                                <img src="img/manutencao.png"  id="imgservico2" style="max-height:250px;" class="img-fluid rounded mx-auto d-block">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <h4 class="nomeServicos" id="nomeservico2"></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12" style="padding:20px;">
-                                                <img src="sistema/img/servico/tornearia.png" id="imgservico3" style="max-height:250px;" class="img-fluid rounded mx-auto d-block">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <h4 class="nomeServicos" id="nomeservico3"></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12" style="padding:20px;">
-                                                <img src="img/maquinas.png" id="imgservico4" style="max-height:250px;" class="img-fluid rounded mx-auto d-block">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <h4 class="nomeServicos" id="nomeservico4"></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <?php 
+                            include_once('sistema/db.class.php');
+                            $objDB = new db();
+                            $conn = $objDB->conecta_mysql();
+                            $query_select = "SELECT imagemservico.nome AS imgServ, servico.nome AS nomeServ FROM servico INNER JOIN imagemservico ON servico.codServico = imagemservico.codServico
+                                WHERE servico.codServico IN (SELECT servico1 FROM sobre) OR servico.codServico IN (SELECT servico2 FROM sobre) OR servico.codServico IN (SELECT servico3 FROM sobre) 
+                                OR servico.codServico IN (SELECT servico4 FROM sobre) GROUP BY imagemservico.codServico;";
+                            $result_select = mysqli_query($conn, $query_select) or die(mysqli_error($conn));
+                            $rows = array();
+                            while($row = mysqli_fetch_array($result_select)){
+                                $rows[] = $row;
+                            }
+
+                            $contadorServicos = 0;
+
+                            foreach($rows as $row){
+                                //var_dump($row);
+                                //die();
+                                //$codServico = $row['codServico'];
+                                $imgServ = $row['imgServ'];
+                                $nomeServ = $row['nomeServ'];
+                                if($contadorServicos % 2 == 0){
+                                    echo '<div class="row">';
+                                }
+                                echo '<div class="col-md-6">';
+                                echo '<div class="container">';
+                                echo '<div class="row">';
+                                echo '<div class="col-md-12" style="padding: 20px;">';
+                                echo '<img src="sistema/Img/Servicos/'.$imgServ.'" id="'.($contadorServicos + 1).'" style="max-height: 250px;" class="img-fluid rounded mx-auto d-block">';
+                                echo '</div>';
+                                echo '</div>';
+                                echo '<div class="row">';
+                                echo '<div class="col-md-12">';
+                                echo '<h4 class="nomeServicos" id="'.($contadorServicos + 1).'">'.$nomeServ.'</h4>';
+                                echo '</div>';
+                                echo '</div>';
+                                echo '</div>';
+                                echo '</div>';
+
+                                if($contadorServicos % 2 == 1){
+                                    echo '</div>';
+                                }
+
+                                $contadorServicos += 1;
+                            }
+                        ?>
                         </div>
                     </div>
                 </div>
