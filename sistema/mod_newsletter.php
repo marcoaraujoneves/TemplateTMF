@@ -93,7 +93,7 @@
                                     <div class="col-md-7" id="configEmail">
                                         <br>
                                         <form id="formCampanha">
-                                            <div class"container-fluid">
+                                            <div class="container-fluid">
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <input type="radio" class="inpFormRadio" id="promocao" value="PROMOÇÃO" name="tagEmailRadio" checked>

@@ -1,7 +1,7 @@
 $(document).ready(function(){
     //Envio de e-mail com AJAX e PHP
     
-    $("form").get(0).reset();       //Limpa formulário
+    $('form').get(0).reset();       //Limpa formulário
 
     var envia = function(){
         
@@ -16,7 +16,7 @@ $(document).ready(function(){
 
             $('#enviar').off('click');
             $('#enviar').addClass('disabled');
-            $('#enviar').prepend('<img id="spinner" src="img/spinner.gif" width="20">')
+            $('#enviar').prepend('<img id="spinner" src="img/spinner.gif" width="20">');
 
             $.ajax({
                 type: 'POST',

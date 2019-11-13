@@ -4,23 +4,55 @@
     $objDB = new db();
     $conexao = $objDB->conecta_mysql();
 
-    $listaClientes = '';
+    $listaEmailClientes = '';
+    //$listaNomeClientes = '';
 
-    $consulta = "SELECT email from cliente WHERE status=1";
-    $resultado = mysqli_query($conexao,$consulta);
+    $consultaEmailCliente = "SELECT email FROM cliente WHERE status=1";
+    $resultadoEmailCliente = mysqli_query($conexao, $consultaEmailCliente);
+
+    $consultaNomeCliente = "SELECT nome FROM cliente WHERE status=1";
+    $resultadoNomeCliente = mysqli_query($conexao, $consultaNomeCliente);
+
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+    use PHPMailer\PHPMailer\SMTP;
     
-    if($resultado){
+    require '../../PHPMailer/src/Exception.php';
+    require '../../PHPMailer/src/PHPMailer.php';
+    require '../../PHPMailer/src/SMTP.php';
+    
+    if($resultadoEmailCliente){
         
-        while($email = mysqli_fetch_array($resultado,MYSQLI_ASSOC)){
-            $listaClientes = $listaClientes.$email['email'].',';
+        while($email = mysqli_fetch_array($resultadoEmailCliente, MYSQLI_ASSOC)){
+            $listaEmailClientes = $listaEmailClientes.$email['email'].',';
         }
 
-        if($listaClientes != ''){
-            $listaClientes = substr($listaClientes, 0, -1);
-            $tag = "[PROMOÇÃO]";//$_POST['tagEmail']=='' ? $_POST['tagEmailRadio'] : $_POST['tagEmail'] ;
-            $assunto = "Desconto de 10% na compra da sua máquina";//$_POST['assunto'];
-            $msg = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut ex molestie , euismod enim fringilla, consequat ante. ";//$_POST['msg'];
+        //while($nome = mysqli_fetch_array($resultadoNomeCliente, MYSQLI_ASSOC)){
+        //    $listaNomeClientes = $listaNomeClientes.$nome['nome'].',';
+        //}
 
+        //$listaNomeClientes = explode(',', $listaNomeClientes);
+
+        if($listaEmailClientes != ''){
+
+            //Remetente e Destinatários
+            $emailSender = "ariel@serrajr.eng.br";
+            $emailSenderNome = 'TMF Usinagem';
+
+            $listaEmailClientes = substr($listaEmailClientes, 0, -1);
+
+            $listaEmailClientes = explode(',', $listaEmailClientes);
+            
+            //Assunto
+            if(isset($_POST['tagEmailRadio'])){
+                $tag = $_POST['tagEmailRadio'];
+            }
+
+            $tagTexto = strtoupper($_POST['tagEmail']);
+            $assunto = $_POST['assunto'];
+            $msg = $_POST['msg'];
+            
+            //Mensagem principal
             $cabecalho = '<body style="background-color:lightgray;padding-top:6px;padding-bottom:5px;"><div style="background-color: #365C9A; width:90%; margin-top:20px; margin-left:5%; border-radius:7px;z-index:2;padding:5px;box-sizing:border-box;"><img src="https://usinagemtmf.com.br/teste/teste/img/logoTMFBranco.png" style="height:70px;height:70px;display: block;margin-left: auto;margin-right: auto;"></div>';
             $rodape = '<div style="width:80%; margin-left:10%; margin-top:15px;padding: 15px; text-align:center;">
                     <a href="https://pt-br.facebook.com/TMF-Ind%C3%BAstria-Mec%C3%A2nica-225711750889313/" target="_blank" style="text-decoration:none">
@@ -34,7 +66,7 @@
                     </a>
                 </div></body>';
             $corpo ='<div style="background-color: white; width:90%; margin-top:-5px; margin-left:5%; border-radius:3px; padding: 15px;z-index:1;box-sizing:border-box">
-                    <h3> Olá,</h3>
+                    <h3> Olá, cliente!</h3>
                     <p style="text-align:justify;">
                         &emsp;'.$msg.'
                         <br><br>
@@ -44,32 +76,68 @@
                         Equipe TMF
                     </span>
                 </div>';
-
-            $emailSender = "marcoaraujoneves@gmail.com";
-            //$emailDestinatario = "marcoaraujo@serrajr.eng.br";
-
-            $emailRemetente = "Usinagem TMF";
             $msgHTML = $cabecalho.$corpo.$rodape;
-            $headers = "MIME-Version: 1.0\r\n";
-            $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-            $headers .= "From: ".$emailSender."\r\n";
-            $headers .= "Return-Path: ".$emailSender."\r\n";
-            $headers .= "Reply-To: ".$emailRemetente."\r\n";
-            $envio = mail($listaClientes, "[$tag] $assunto", $msgHTML, $headers,$emailSender);
 
-            if($envio) {
-                echo 'Campanha enviada';
-                die();    
+            //Cria objeto mail
+            $mail = new PHPMailer(true);
+
+            try {
+
+                //Configurações do Servidor SMTP (somente para teste em localhost xampp)
+
+                //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+                //$mail->isSMTP();                                            // Send using SMTP
+                //$mail->Host       = 'smtp.gmail.com';                       // Set the SMTP server to send through
+                //$mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+                //$mail->Username   = 'seuemail@serrajr.eng.br';              // SMTP username
+                //$mail->Password   = 'suasenha';                             // SMTP password
+                //$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+                //$mail->Port       = 587;                                    // TCP port to connect to
+
+                //Codificação da mensagem
+                $mail->Encoding = 'base64';
+                $mail->CharSet = "UTF-8";
+
+                //Recepientes
+                $mail->setFrom($emailSender, $emailSenderNome);
+
+                foreach($listaEmailClientes as $emailCliente){
+                    $mail->addBCC($emailCliente);
+                }
+
+                //Tag da mensagem
+                if(isset($tag)){
+                    $mail->Subject = "[$tag] $assunto";
+                } else {
+                    $mail->Subject = "[$tagTexto] $assunto";
+                }
+
+                //Conteúdo
+                $mail->isHTML(true);
+                $mail->Body = $msgHTML;
+
+                //Envia email
+                $mail->send();
+
+                //Monta a query a ser executada
                 $sql = "INSERT INTO campanha(tag,assunto,mensagem,data) VALUES(?,?,?,CURRENT_TIMESTAMP())";
                 $stmt = $conexao->prepare($sql);
-                $stmt->bind_param('sss',$tag,$assunto,$msg);
+
+                if(isset($tag)){
+                    $stmt->bind_param('sss',$tag,$assunto,$msg);
+                } else {
+                    $stmt->bind_param('sss',$tagTexto,$assunto,$msg);
+                }
+
+                //Executa a query no BD
                 if($stmt->execute()){
                     echo 'Campanha enviada e salva!';
                 } else {
-                    echo 'Campanha enviada! Erro ao salvar a campanha.';
+                    echo 'Campanha enviada! Porém, houve um erro ao salvar a campanha.';
                 }
-            } else {
-                echo 'Erro ao enviar a campanha para os clientes ativos!';
+
+            } catch(Exception $e) {
+                echo "A campanha não pode ser enviada. Erro: {$mail->ErrorInfo}";
             }
         } else {
             echo 'Erro! Lista de clientes ativos vazia.';

@@ -37,7 +37,7 @@
     try{
 
         //Configurações do Servidor SMTP (somente para teste em localhost xampp)
-		
+        
         //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
         //$mail->isSMTP();                                            // Send using SMTP
         //$mail->Host       = 'smtp.gmail.com';                       // Set the SMTP server to send through

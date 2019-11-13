@@ -63,10 +63,48 @@ $(document).ready(function(){
         $('#modalCampanha').modal('show');
     });
 
-    $(document).on('click','#enviaCampanha',function(){
-        enviaCampanha();
-        //console.log($('#formCampanha').serialize());
-    });
+    var enviaCampanha = function(){
+        var postData = new FormData($('#formCampanha')[0]);
+
+        var tag = $('input[name="tagEmailRadio"]:checked').val();
+        var tagTexto = $('#tagEmail').val();
+        var assunto = $('#assunto').val();
+        var mensagem = $('#msg').val();
+
+        if( ((tag === undefined) !== (tagTexto.length == 0)) && assunto.length != 0 && mensagem.length != 0){
+            $('#enviaCampanha').off('click');
+            $('#enviaCampanha').addClass('disabled');
+            $('#enviaCampanha').prepend('<img id="spinner" src="../img/spinner.gif" width="20">');
+        
+            $.ajax({
+                type: 'POST',
+                url: 'Newsletter/enviaCampanha.php',
+                data: postData,
+                processData: false,
+                contentType: false,
+                success: function(data){
+                    if(data.indexOf('Erro') == -1){
+                        $('.inpForm').val('');
+                        ativaAlerta(data, 1);
+                        $('#enviaCampanha').removeClass('disabled');
+                        $('#spinner').remove();
+                        $('#enviaCampanha').on('click', enviaCampanha);
+                    } else {
+                        ativaAlerta(data, 2);
+                        $('#enviaCampanha').removeClass('disabled');
+                        $('#spinner').remove();
+                        $('#enviaCampanha').on('click', enviaCampanha);
+                    }
+                }
+            });
+        } else {
+            ativaAlerta("Por favor, verifique se há informações faltando ou incorretas e tente novamente!", 3);
+        }
+    
+        
+    }
+
+    $('#enviaCampanha').on('click', enviaCampanha);
 
 });
 
@@ -223,24 +261,6 @@ function carregaCampanha(codCampanha){
             }
         },
         error:function(){
-            ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
-        }
-    });
-}
-
-function enviaCampanha(){
-    $.ajax({
-        url:'Newsletter/enviaCampanha.php',
-        method:'POST',
-        data:$('#formCampanha').serialize(),
-        success: function(data){
-            if(data.indexOf("Erro") == -1){
-                ativaAlerta(data,1);
-            }else {
-                ativaAlerta(data,3);
-            }
-        },
-        error: function(){
             ativaAlerta('Erro ao realizar a requisição, tente novamente mais tarde!',2);
         }
     });
