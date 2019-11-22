@@ -97,17 +97,17 @@
                                 echo '<div class="cardProdutos">';
                                 echo '<div class="containerProduto sombra-cartao" id="cardProduto'.$contadorProdutos.'">';
                                 echo '<div class="cardProdutosImgContainer">';
-                                echo '<img src="sistema/Img/Produtos/'.$nome.'" class="img-fluid rounded my-auto mx-auto d-block">';
+                                echo '<img src="sistema/Img/Produtos/'.$nome.'" class="img-fluid rounded my-auto mx-auto d-block" style="object-fit: cover">';
                                 echo '</div>';
                                 echo '<div class="cardProdutosDescricao">';
-                                echo '<div class="justify-content-center align-items-center d-flex nomeProduto">';
+                                echo '<div class="justify-content-center text-center align-items-center d-flex nomeProduto">';
                                 echo '<h4> '.$nomes.' </h4>';
                                 echo '</div>';
                                 echo '</div>';
                                 echo '<div class="descricaoProduto sombra-cartao">';
                                 echo '<h4 class="nomeProdutoInterno"> '.$nomes.' </h4>';
                                 echo '<p class="text-justify px-3 py-1 " style="transition: display 1s linear 1s;">
-                                                '.(substr($descricao,0,150)).'...
+                                                '.(substr($descricao,0,70)).'...
                                                 <br>
                                                 <a href="./produtos.php"> Ver mais... </a>
                                             </p>';
@@ -320,7 +320,7 @@
                                     <?php 
                                     $cont_slide = 0;
                                     $i = 0;
-                                    $query_select = "SELECT imagemportifolio.nome,codImagem,portifolio.codPortifolio, descricao FROM portifolio INNER Join imagemportifolio on portifolio.codPortifolio = imagemportifolio.codPortifolio where status ='1' group by imagemportifolio.codPortifolio 
+                                    $query_select = "SELECT imagemportifolio.nome AS imgNome, codImagem, portifolio.codPortifolio, portifolio.nome AS portNome, descricao FROM portifolio INNER Join imagemportifolio on portifolio.codPortifolio = imagemportifolio.codPortifolio where status ='1' group by imagemportifolio.codPortifolio 
                                     ;";
                                     $result_select = mysqli_query($conn,$query_select) or die(mysql_error());
                                     $rows = array();
@@ -330,15 +330,16 @@
                                         $active = "";
                                         if($cont_slide == 0){
                                             $active = "active";
-                                        } 
+                                        }
                                         $codPortifolio = $row['codPortifolio'];
-                                        $nome = $row['nome'];
+                                        $imgNome = $row['imgNome'];
                                         $descricao = $row['descricao'];
+                                        $portNome = $row['portNome'];
 
-                                        echo '<div class="carousel-item pb-3 imagem_port_fundo mx-auto '.$active.' " style="background-image:url(sistema/Img/Portifolio/'.$nome.'">';
-                                        echo '<img class="d-block w-100 imagem_port_frente mx-auto" src="sistema/Img/Portifolio/'.$nome.'"  >';
+                                        echo '<div class="carousel-item pb-3 imagem_port_fundo mx-auto '.$active.' " style="background-image:url(sistema/Img/Portifolio/'.$imgNome.'">';
+                                        echo '<img class="d-block w-100 imagem_port_frente mx-auto" src="sistema/Img/Portifolio/'.$imgNome.'"  >';
                                         echo '<div class="carousel-caption mx-auto">';
-                                        echo '<p>'.(substr($descricao,0,250)).'<br><a href="portifolio.php" style="float:right; color:#f8aa00; text-decoration:underline; margin-right:10px">Saiba mais</a>'.'</p>';
+                                        echo '<p>'.$portNome.' - '.(substr($descricao,0,250)).'<br><a href="portifolio.php" style="float:right; color:#f8aa00; text-decoration:underline; margin-right:10px">Saiba mais</a>'.'</p>';
                                         echo '</div>';
                                         echo '</div>';
                                         $cont_slide = $cont_slide + 1;
@@ -448,7 +449,7 @@
                                         <img class="img-responsive float-left d-inline-block" src='img/Contato/local.png'>
                                     </div>
                                     <div class="info-contatenos text-center">
-                                        <p class="m-0"><a href="https://goo.gl/maps/3fBXQVXTmBF2">Rua Prudente de Moraes, 200 <br> Duas Pedras, Nova Friburgo-RJ</p>
+                                        <p class="m-0"><a href="https://goo.gl/maps/3fBXQVXTmBF2">Rua Prudente de Moraes, 200 <br> Duas Pedras, Nova Friburgo-RJ</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -458,8 +459,8 @@
                                         <img class="img-responsive float-left d-inline-block" src='img/Contato/telefone.png'>
                                     </div>
                                     <div class="info-contatenos text-center">
-                                        <p class="m-0"><a href="tel:2225232525">(22) 2523-2525</a></p>
-                                        <p class="m-0"><a href="tel:2225289055">(22) 2528-9055</a></p>
+                                        <p class="m-0">&emsp;&emsp;<a href="tel:2225232525">(22) 2523-2525</a></p>
+                                        <p class="m-0"><img src="img/Contato/whatsapp-brands.svg" id="icone-whatsapp"><a href="https://wa.me/5522992891123">(22) 99289-1123</a></p>
                                     </div>
                                 </div>
                                 

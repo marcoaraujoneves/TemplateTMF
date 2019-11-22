@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 07-Nov-2019 às 20:36
+-- Generation Time: 22-Nov-2019 às 21:05
 -- Versão do servidor: 10.1.37-MariaDB
 -- versão do PHP: 7.3.0
 
@@ -46,7 +46,13 @@ INSERT INTO `campanha` (`codCampanha`, `tag`, `assunto`, `mensagem`, `data`) VAL
 (7, 'PROMOÇÃO', 'Nova máquina 10% off', 'Pellentesque consequat convallis orci. Donec eget eleifend erat. Praesent eget pretium ipsum. Sed vitae commodo eros. Nunc bibendum porta lectus, vel aliquet justo hendrerit interdum. Nam iaculis velit in sollicitudin ullamcorper. Vivamus consectetur mi et erat scelerisque dictum. ', '2019-04-17 10:44:35'),
 (8, 'AVISO', 'Nova máquina 10% off', 'dasdasdas', '2019-04-23 10:39:31'),
 (9, 'PROMOÇÃO', '', '', '2019-05-14 13:03:14'),
-(10, 'PROMOÇÃO', '', '', '2019-05-14 13:03:27');
+(10, 'PROMOÇÃO', '', '', '2019-05-14 13:03:27'),
+(11, 'PROMOÇÃO', 'Super Promoção', 'Super Promoção, venha conferir!', '2019-11-13 14:33:34'),
+(12, 'PROMOÇÃO', 'Super Promoção', 'Super Promoção Venha conferir', '2019-11-13 14:36:14'),
+(13, 'PROMOÇÃO', 'Teste', 'Super Promoção, venha conferir!', '2019-11-13 14:37:32'),
+(14, 'Teste', 'Teste! Não Perca!', 'Está é uma mensagem de teste! Promoção\r\n<br>çççççççççççççç\r\n<br>çççççççççççç\r\n<br>\r\n<br>Super legal\r\n<br>\r\n<br>Até às 15:00h', '2019-11-13 14:51:00'),
+(15, 'QUEIMA DE ESTOQUE', 'Promoção 10 anos TMF', 'Não perca esta oportunidade! Confira nossas ofertas\r\n<br>\r\n<br>Aberto até às 20h!\r\n<br>\r\n<br>????', '2019-11-13 14:54:10'),
+(16, 'NOVIDADE', 'Novo email', 'Esta é uma nova mensagem! ???? ? ? ?_? ??', '2019-11-13 15:15:29');
 
 -- --------------------------------------------------------
 
@@ -66,9 +72,10 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`codCliente`, `nome`, `email`, `status`) VALUES
-(1, 'Marco Araujo', 'marcoaraujoneves@gmail.com', b'1'),
-(2, 'Duda Machado', 'duda@duda.com', b'1'),
-(3, 'Marco Gomes', 'marcogomes@serrajr.eng.br', b'1');
+(1, 'Marco Araujo', 'marcoaraujoneves@gmail.com', b'0'),
+(2, 'Duda Machado', 'duda@duda.com', b'0'),
+(3, 'Marco Gomes', 'marcogomes@serrajr.eng.br', b'0'),
+(4, 'Ariel', 'ariel@serrajr.eng.br', b'1');
 
 -- --------------------------------------------------------
 
@@ -91,7 +98,7 @@ CREATE TABLE `clienteempresa` (
 INSERT INTO `clienteempresa` (`codCliente`, `nome`, `linkCliente`, `estatus`, `extensao`) VALUES
 (14, 'Ambev', 'https://www.ambev.com.br/', 1, 'jpeg'),
 (15, 'Serra Jr', 'https://www.serrajr.eng.br/', 1, 'png'),
-(16, 'dsdsadsa', 'http://www.serrajr.eng.br', 1, 'png');
+(16, 'dsdsadsa', 'http://www.serrajr.eng.br', 0, 'png');
 
 -- --------------------------------------------------------
 
@@ -110,10 +117,14 @@ CREATE TABLE `imagemportifolio` (
 --
 
 INSERT INTO `imagemportifolio` (`codImagem`, `codPortifolio`, `nome`) VALUES
-(1, 10, '10-1.png'),
-(2, 10, '10-2.png'),
 (4, 14, '14-1.jpg'),
-(5, 15, '15-1.jpg');
+(5, 15, '15-1.jpg'),
+(6, 16, '16-1.jpeg'),
+(7, 16, '16-2.jpeg'),
+(8, 16, '16-3.jpeg'),
+(9, 16, '16-4.jpeg'),
+(10, 16, '16-5.jpeg'),
+(11, 16, '16-6.jpeg');
 
 -- --------------------------------------------------------
 
@@ -132,10 +143,13 @@ CREATE TABLE `imagemproduto` (
 --
 
 INSERT INTO `imagemproduto` (`codImagem`, `codProduto`, `nome`) VALUES
-(1, 35, '35-1.png'),
-(2, 35, '35-2.png'),
-(9, 38, '38-1.png'),
-(10, 39, '39-1.png');
+(36, 44, '44-1.jpg'),
+(37, 44, '44-2.jpg'),
+(38, 44, '44-3.jpg'),
+(39, 44, '44-4.jpg'),
+(40, 44, '44-5.jpg'),
+(41, 44, '44-6.jpg'),
+(42, 45, '45-1.jpg');
 
 -- --------------------------------------------------------
 
@@ -202,9 +216,10 @@ CREATE TABLE `parceiros` (
 --
 
 INSERT INTO `parceiros` (`codParceiro`, `nome`, `linkParceiro`, `estatus`, `extensao`) VALUES
-(48, 'Serra Jr. Engenharia', 'https://www.serrajr.eng.br', 1, 'png'),
-(49, 'Ambev', 'https://www.ambev.com.br/', 1, 'jpeg'),
-(60, 'Telefonica', 'www.telefonica.com', 0, 'png');
+(48, 'Serra Jr. Engenharia', 'https://www.serrajr.eng.br', 0, 'png'),
+(49, 'Ambev', 'https://www.ambev.com.br/', 0, 'jpeg'),
+(60, 'Telefonica', 'www.telefonica.com', 0, 'png'),
+(61, 'SEBRAE', 'https://www.sebrae.com.br', 1, 'jpg');
 
 -- --------------------------------------------------------
 
@@ -225,9 +240,9 @@ CREATE TABLE `portifolio` (
 --
 
 INSERT INTO `portifolio` (`codPortifolio`, `nome`, `descricao`, `linkYoutube`, `status`) VALUES
-(10, 'Máquina de empada', 'Bla', '', 1),
 (14, 'Novo Port', 'Mais um item', 'https://www.youtube.com/watch?v=XvCFwZlteZc', 1),
-(15, 'Terceiro', 'Terceiro item', 'https://www.youtube.com/watch?v=kLC0cX3rAX0', 1);
+(15, 'Terceiro', 'Terceiro item', 'https://www.youtube.com/watch?v=kLC0cX3rAX0', 1),
+(16, 'Máquina de Empada', 'Inserir descrição da Máquina de Empada', 'https://www.youtube.com/watch?v=5Dd5F8CR-xQ', 1);
 
 -- --------------------------------------------------------
 
@@ -247,9 +262,8 @@ CREATE TABLE `produto` (
 --
 
 INSERT INTO `produto` (`codProduto`, `nome`, `descricao`, `status`) VALUES
-(35, 'Produto1', 'blas', 1),
-(38, 'Produto 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ultricies lectus sed porta.', 1),
-(39, 'Produto 3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ultricies lectus sed porta.', 1);
+(44, 'Trocador de Calor', 'Fabricado em aço inox 316L, soldado processo TIG, exemplo de processos de soldagem.', 1),
+(45, 'Engrenagem especial com eixo extriado', 'Descrição da Engrenagem', 1);
 
 -- --------------------------------------------------------
 
@@ -305,7 +319,7 @@ CREATE TABLE `sobre` (
 --
 
 INSERT INTO `sobre` (`indicador1qt`, `indicador2qt`, `indicador3qt`, `indicador4qt`, `indicador1`, `indicador2`, `indicador3`, `indicador4`, `textoSobre`, `textoServicos`, `servico1`, `servico2`, `servico3`, `servico4`, `produto1`, `produto2`, `produto3`) VALUES
-(99, 99, 99, 99, 'MÁQUINAS PRÓPRIAS', 'ANOS NO MERCADO', 'SERVIÇOS PRÓPRIOS', 'OPÇÕES DE PRODUTOS', '&emsp;\r\nA TMF Usinagem atua no ramo de usinagem de precisão desde 2010 e tem como principal objetivo oferecer soluções inovadoras no desenvolvimento e na fabricação de peças usinadas e mecanismos, utilizados em diversos segmentos, como: agrícola, automação comercial e bancária, aeroespacial, hospitalar entre outros.\r\n<br><br>\r\n&emsp;\r\n<strong><em>TMF Usinagem, precisão na fabricação de seus produtos!</em></strong>', 'Os serviços de usinagem compreendem todo o processo de fabricação de peças industriais e consistem no trabalho e na caracterização de uma peça a partir da matéria-prima por meio de ferramentas específicas capazes de alcançar um efeito preciso e muito próximo da perfeição. Nos serviços de usinagem estão inclusos os ofícios de serralheria, aplainamento, tornemento, fresagem, furação, brochamento, eletroerosão, caldeiraria, retífica, mandrilhamento e muitos outros.\r\n<br><br>\r\nContando com a constante inovação tecnológica, os serviços de usinagem evoluíram muito, uma vez que eram realizados de forma artesanal e, atualmente, contam com equipamentos de alto padrão tecnológico que operam com mecanismo tradicional ou CNC (Comando Numérico Computadorizado), capazes de produzir peças metálicas ou de plástico de engenharia com elevada precisão para as mais diversas aplicações do setor industrial. ', 66, 65, 65, 67, 35, 38, 39);
+(99, 99, 99, 99, 'MÁQUINAS PRÓPRIAS', 'ANOS NO MERCADO', 'SERVIÇOS PRÓPRIOS', 'OPÇÕES DE PRODUTOS', '&emsp;\r\nA TMF Usinagem atua no ramo de usinagem de precisão desde 2010 e tem como principal objetivo oferecer soluções inovadoras no desenvolvimento e na fabricação de peças usinadas e mecanismos, utilizados em diversos segmentos, como: agrícola, automação comercial e bancária, aeroespacial, hospitalar entre outros.\r\n<br><br>\r\n&emsp;\r\n<strong><em>TMF Usinagem, precisão na fabricação de seus produtos!</em></strong>', 'Os serviços de usinagem compreendem todo o processo de fabricação de peças industriais e consistem no trabalho e na caracterização de uma peça a partir da matéria-prima por meio de ferramentas específicas capazes de alcançar um efeito preciso e muito próximo da perfeição. Nos serviços de usinagem estão inclusos os ofícios de serralheria, aplainamento, tornemento, fresagem, furação, brochamento, eletroerosão, caldeiraria, retífica, mandrilhamento e muitos outros.\r\n<br><br>\r\nContando com a constante inovação tecnológica, os serviços de usinagem evoluíram muito, uma vez que eram realizados de forma artesanal e, atualmente, contam com equipamentos de alto padrão tecnológico que operam com mecanismo tradicional ou CNC (Comando Numérico Computadorizado), capazes de produzir peças metálicas ou de plástico de engenharia com elevada precisão para as mais diversas aplicações do setor industrial. ', 66, 65, 67, 66, 40, 44, 40);
 
 -- --------------------------------------------------------
 
@@ -416,13 +430,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT for table `campanha`
 --
 ALTER TABLE `campanha`
-  MODIFY `codCampanha` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `codCampanha` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `codCliente` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `codCliente` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `clienteempresa`
@@ -434,13 +448,13 @@ ALTER TABLE `clienteempresa`
 -- AUTO_INCREMENT for table `imagemportifolio`
 --
 ALTER TABLE `imagemportifolio`
-  MODIFY `codImagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `codImagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `imagemproduto`
 --
 ALTER TABLE `imagemproduto`
-  MODIFY `codImagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `codImagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `imagemservico`
@@ -452,25 +466,25 @@ ALTER TABLE `imagemservico`
 -- AUTO_INCREMENT for table `mensagem`
 --
 ALTER TABLE `mensagem`
-  MODIFY `codMsg` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `codMsg` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `parceiros`
 --
 ALTER TABLE `parceiros`
-  MODIFY `codParceiro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `codParceiro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT for table `portifolio`
 --
 ALTER TABLE `portifolio`
-  MODIFY `codPortifolio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `codPortifolio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `codProduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `codProduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `servico`

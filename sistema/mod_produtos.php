@@ -149,7 +149,7 @@ if(!isset($_SESSION['nome'])){
 								</button>
 							</div>
 							<div class="modal-body">
-								<form method="post" enctype="multipart/form-data"  id="formProduto" >									
+								<form method="post" enctype="multipart/form-data"  id="formProduto" >
 									<div class="form-group">
 										<label for="nomeProduto">Nome</label>
 										<input type="text" name="nomeProduto" id="nomeProduto" required class="inpForm" autocomplete="off">

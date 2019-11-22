@@ -7,12 +7,12 @@
             <h4 class="titulos_rodape">Menu</h4>
             <div class="coluna_menu">
                 <ul class="p-0" style="margin-left: calc(50% - 40px)">
-                    <li><a class="item_menu_rodape">> Início</a></li>
-                    <li><a class="item_menu_rodape">> Sobre</a></li>
-                    <li><a class="item_menu_rodape">> Produtos</a></li>
-                    <li><a class="item_menu_rodape">> Serviços</a></li>
-                    <li><a class="item_menu_rodape">> Portfólio</a></li>
-                    <li><a class="item_menu_rodape">> Contato</a></li>
+                    <li><a class="item_menu_rodape" href="index.php">> Início</a></li>
+                    <li><a class="item_menu_rodape" href="sobre.php">> Sobre</a></li>
+                    <li><a class="item_menu_rodape" href="produtos.php">> Produtos</a></li>
+                    <li><a class="item_menu_rodape" href="servicos.php">> Serviços</a></li>
+                    <li><a class="item_menu_rodape" href="portifolio.php">> Portfólio</a></li>
+                    <li><a class="item_menu_rodape" href="index.php#secaoContato">> Contato</a></li>
                 </ul>
             </div>
         </div>
@@ -22,6 +22,7 @@
             <ul> 
                 <li class="item_funcionamento"> <span class="pre_item_funcionamento">Local:</span> Rua Prudente De Morais, 200 - Lot. São João, Nova Friburgo - RJ </li>
                 <li class="item_funcionamento"> <span class="pre_item_funcionamento">Número para contato:</span> (22) 2523 - 2525 </li>
+                <li class="item_funcionamento"> <span class="pre_item_funcionamento">Whatsapp:</span><img src="img/Contato/whatsapp-brands.svg" id="icone-whatsapp">(22) 99289-1123</li>
                 <li class="item_funcionamento"> <span class="pre_item_funcionamento">Email para contato:</span> usinagemtmf@gmail.com </li>
             </ul>
         </div>
